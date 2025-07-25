@@ -1,19 +1,12 @@
 {
-  "name": "[internal-mod-name]",
-  "version": "0.0.0",
-  "title": "[MOD DISPLAY NAME]",
-  "author": "[YOUR MODS.FACTORIO.COM USERNAME]",
-  "homepage": "[HOMEPAGE/REPO URL]",
-  "description": "[SHORT DESCRIPTION]",
-  "factorio_version": "2.0",
-  "dependencies": [
-    "base"
-  ],
-  "quality_required": false,
-  "rail_bridges_required": false,
-  "space_travel_required": false,
-  "spoiling_required": false,
-  "freezing_required": false,
-  "segmented_units_required": false,
-  "expansion_shaders_required": false
-}
+    "name": "planetaris-unbounded",
+    "version": "0.0.7",
+    "title": "Planetaris Unbounded",
+    "author": "Syen",
+    "factorio_version": "2.0.41",
+    "dependencies": ["base >= 2.0.28",
+      "space-age",
+      "quality",
+      "PlanetsLib >= 1.1.38"],
+    "description": "Discover new places of the universe, starting from Arig a desert planet with limited resources."
+  }

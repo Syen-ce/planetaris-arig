@@ -1,0 +1,48 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2025-03-21
+  Features:
+	Sandstone (item)
+	Sandstone Path (Artificial Tile)
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2025-03-22
+  Features:
+	Added Sandist planet
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 2025-03-24
+Features:
+	Added Sandist basic generation
+	Added Sandist planet conditions
+	Added sand (tile)
+	Added sandstone (tile)
+	Added Sifter
+	Added Sifting and advanced sifting (recipe)
+	Added Sand (fluid)
+	Added Pure Sand (fluid)
+	Added Assembler 4
+	Added Hyper belt
+	Added Hyper underground belt
+	Added Hyper splitter
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2025-07-22
+Features:
+	Added Compressor
+	Added Quartz (item)
+	Added Silica (item)
+	Added Simulating Unit (item)
+	Added Glass (item)
+	Added Heavy glass (item)
+	Added Compression Rocket fuel (recipe)
+	Added Container 
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 2025-07-24
+Changes:
+	Changed rock and crash remnants generation
+  Balanced recipes
+  Renamed Sandist to Arig
+  Changed Compressor to Press
+---------------------------------------------------------------------------------------------------
