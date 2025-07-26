@@ -3,7 +3,7 @@
     "version": "0.0.7",
     "title": "Planetaris Unbounded",
     "author": "Syen",
-    "factorio_version": "2.0.41",
+    "factorio_version": "2.0",
     "dependencies": ["base >= 2.0.28",
       "space-age",
       "quality",
