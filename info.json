@@ -3,10 +3,15 @@
     "version": "0.0.7",
     "title": "Planetaris Unbounded",
     "author": "Syen",
-    "factorio_version": "2.0",
+    "factorio_version": "2.0.41",
     "dependencies": ["base >= 2.0.28",
       "space-age",
       "quality",
       "PlanetsLib >= 1.1.38"],
     "description": "Discover new places of the universe, starting from Arig a desert planet with limited resources."
+    "quality_required": true,
+    "rail_bridges_required": true,
+    "space_travel_required": true,
+    "spoiling_required": true,
+    "freezing_required": true,
   }
