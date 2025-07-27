@@ -44,9 +44,9 @@ planet_map_gen.arig = function()
           settings =
           {
             ["arig-sand"] = {},
-            ["sandstone-1"] = {},
-            ["sandstone-2"] = {},
-            ["sandstone-3"] = {},
+            ["planetaris-sandstone-1"] = {},
+            ["planetaris-sandstone-2"] = {},
+            ["planetaris-sandstone-3"] = {},
           }
         },
         ["decorative"] =

@@ -1,7 +1,7 @@
 data:extend({
 {
     type = "corpse",
-    name = "assembling-machine-4-remnants",
+    name = "planetaris-assembling-machine-4-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/assembling-machine-4.png",
     flags = {"placeable-neutral", "not-on-map"},
     hidden_in_factoriopedia = true,
@@ -27,7 +27,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "sifter-remnants",
+    name = "planetaris-sifter-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/sifter.png",
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     hidden_in_factoriopedia = true,
@@ -54,7 +54,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "press-remnants",
+    name = "planetaris-press-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/press.png",
     flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
     hidden_in_factoriopedia = true,
@@ -81,7 +81,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "container-remnants",
+    name = "planetaris-big-chest-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/container.png",
     flags = {"placeable-neutral", "not-on-map"},
     hidden_in_factoriopedia = true,
@@ -108,7 +108,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "hyper-transport-belt-remnants",
+    name = "planetaris-hyper-transport-belt-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/hyper-transport-belt.png",
     flags = {"placeable-neutral", "not-on-map"},
     hidden_in_factoriopedia = true,
@@ -135,7 +135,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "hyper-splitter-remnants",
+    name = "planetaris-hyper-splitter-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/hyper-splitter.png",
     flags = {"placeable-neutral", "not-on-map"},
     hidden_in_factoriopedia = true,
@@ -162,7 +162,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "hyper-splitter-remnants",
+    name = "planetaris-hyper-splitter-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/hyper-splitter.png",
     flags = {"placeable-neutral", "not-on-map"},
     hidden_in_factoriopedia = true,
@@ -189,7 +189,7 @@ data:extend({
   },
   {
     type = "corpse",
-    name = "hyper-underground-belt-remnants",
+    name = "planetaris-hyper-underground-belt-remnants",
     icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
     flags = {"placeable-neutral", "not-on-map", "building-direction-8-way"},
     hidden_in_factoriopedia = true,

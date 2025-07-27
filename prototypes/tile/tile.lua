@@ -169,10 +169,10 @@ local sandstone_foundation_transitions_between_transitions =
 data:extend({
   {
   type = "tile",
-  name = "sandstone-path",
+  name = "planetaris-sandstone-path",
   subgroup = "artificial-tiles",
   collision_mask = tile_collision_masks.ground(),
-  minable = {mining_time = 0.5, result = "sandstone-brick"},
+  minable = {mining_time = 0.5, result = "planetaris-sandstone-brick"},
   order = "a[artificial]-b[tier-2]-a[sandstone-path]",
   mined_sound = base_sounds.deconstruct_bricks(0.8),
   layer = 12,
@@ -252,15 +252,14 @@ data:extend({
   },
   {
     type = "tile",
-    name = "sandstone-foundation",
+    name = "planetaris-sandstone-foundation",
     order = "a[artificial]-d[utility]-b[sandstone-foundation]",
     subgroup = "artificial-tiles",
-    minable = {mining_time = 0.5, result = "sandstone-foundation"},
+    minable = {mining_time = 0.5, result = "planetaris-sandstone-foundation"},
     mined_sound = sounds.deconstruct_bricks(0.8),
     is_foundation = true,
     collision_mask = tile_collision_masks.ground(),
     layer = 11,
-    -- layer_group = "ground-artificial" -- should landfill be in the ground-artifical group?
 
     transitions = sandstone_foundation_transitions,
     transitions_between_transitions = sandstone_foundation_transitions_between_transitions,
@@ -311,8 +310,8 @@ data:extend({
     map_color = {r = 189, g = 158, b = 124},
     vehicle_friction_modifier = 4,
     walking_speed_modifier = 0.8,
-    default_cover_tile = "sandstone-path",
-    fluid = "sand",
+    default_cover_tile = "planetaris-sandstone-path",
+    fluid = "planetaris-sand",
     absorptions_per_second = nil,
     variants = tile_variations_template(
       "__planetaris-unbounded__/graphics/terrain/arig-sand/arig-sand.png", "__base__/graphics/terrain/masks/transition-4.png",
@@ -327,7 +326,7 @@ data:extend({
   },
 ------------------------------------------------------------------ arig sandstone
 {
-  name = "sandstone-1",
+  name = "planetaris-sandstone-1",
   type = "tile",
   order = "b[natural]-c[sand]-d[sandstone-1]",
   subgroup = "nauvis-tiles",
@@ -361,7 +360,7 @@ data:extend({
 
 },
 {
-  name = "sandstone-2",
+  name = "planetaris-sandstone-2",
   type = "tile",
   order = "b[natural]-c[sand]-e[sandstone-2]",
   subgroup = "nauvis-tiles",
@@ -395,7 +394,7 @@ data:extend({
 
 },
 {
-  name = "sandstone-3",
+  name = "planetaris-sandstone-3",
   type = "tile",
   order = "b[natural]-c[sand]-f[sandstone-3]",
   subgroup = "nauvis-tiles",
@@ -436,7 +435,7 @@ data:extend({
 return {
   ["arig-sand"] = arig_sand,
   ["arig-path"] = sandstone_path,
-  ["sandstone-1"] = sandstone_1,
-  ["sandstone-2"] = sandstone_2,
-  ["sandstone-3"] = sandstone_3,
+  ["planetaris-sandstone-1"] = sandstone_1,
+  ["planetaris-sandstone-2"] = sandstone_2,
+  ["planetaris-sandstone-3"] = sandstone_3,
 }

@@ -2,7 +2,12 @@
 
 local assemblingMachine3 = data.raw["assembling-machine"]["assembling-machine-3"]
 
-assemblingMachine3.next_upgrade = "assembling-machine-4"
+assemblingMachine3.next_upgrade = "planetaris-assembling-machine-4"
+
+
+data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "planetaris-hyper-transport-belt"
+data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "planetaris-hyper-underground-belt"
+data.raw["splitter"]["turbo-splitter"].next_upgrade = "planetaris-hyper-splitter"
 
 
 -- Add new sea tiles to Foundation
@@ -49,11 +54,11 @@ data.raw["furnace"]["steel-furnace"].surface_conditions = one_pressure_condition
 data.raw["boiler"]["boiler"].surface_conditions = one_pressure_condition()
 data.raw["inserter"]["burner-inserter"].surface_conditions = one_pressure_condition()
 
-table.insert(data.raw.lab["lab"].inputs, "compression-science-pack")
+table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
 
 
 table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
         type = "change-recipe-productivity",
-        recipe = "compression-rocket-fuel",
+        recipe = "planetaris-compression-rocket-fuel",
         change = 0.1}
       )

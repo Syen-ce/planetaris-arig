@@ -3,7 +3,7 @@ data:extend(
     {
 
         type = "recipe",
-        name = "sifter",     
+        name = "planetaris-sifter",     
         energy_required = 5,
         enabled = false,
         subgroup = "arig-production",
@@ -23,11 +23,11 @@ data:extend(
             {type = "item", name = "electronic-circuit", amount = 5},
             {type = "item", name = "pipe", amount = 2}
           },
-          results = {{type="item", name="sifter", amount=1}}
+          results = {{type="item", name="planetaris-sifter", amount=1}}
     },
     {
         type = "recipe",
-        name = "press",     
+        name = "planetaris-press",     
         energy_required = 5,
         enabled = false,
         subgroup = "arig-production",
@@ -47,11 +47,11 @@ data:extend(
             {type = "item", name = "electronic-circuit", amount = 30},
             {type = "item", name = "plastic-bar", amount = 10}
           },
-        results = {{type="item", name="press", amount=1}}
+        results = {{type="item", name="planetaris-press", amount=1}}
     },  
     {
         type = "recipe",
-        name = "sand-sifting",
+        name = "planetaris-sand-sifting",
         icons = {
           {
             icon = "__planetaris-unbounded__/graphics/icons/fluid/sand.png"
@@ -63,10 +63,10 @@ data:extend(
         enabled = false,
         auto_recycle = false,
         energy_required = 0.5,
-        ingredients = {{type = "fluid", name = "sand", amount = 600}},
+        ingredients = {{type = "fluid", name = "planetaris-sand", amount = 600}},
         results =
         {
-          {type = "fluid", name = "pure-sand",                  amount = 25, probability = 0.30, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "planetaris-pure-sand",   amount = 25, probability = 0.30, show_details_in_recipe_tooltip = false},
           {type = "fluid", name = "steam",                  amount = 60, probability = 0.25, temperature = 165, show_details_in_recipe_tooltip = false},
           {type = "item", name = "stone",                    amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},          
           {type = "item", name = "iron-ore",        amount = 1, probability = 0.20, show_details_in_recipe_tooltip = false},
@@ -78,7 +78,7 @@ data:extend(
       },
       {
         type = "recipe",
-        name = "advanced-sand-sifting",
+        name = "planetaris-advanced-sand-sifting",
         icons = {
           {
             icon = "__planetaris-unbounded__/graphics/icons/advanced-sand-sifting.png"
@@ -90,10 +90,10 @@ data:extend(
         enabled = false,
         auto_recycle = false,
         energy_required = 0.5,
-        ingredients = {{type = "fluid", name = "sand", amount = 600}},
+        ingredients = {{type = "fluid", name = "planetaris-sand", amount = 600}},
         results =
         {
-          {type = "fluid", name = "pure-sand",                  amount = 50, probability = 0.20, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "planetaris-pure-sand",   amount = 50, probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "fluid", name = "steam",                  amount = 50, probability = 0.30, show_details_in_recipe_tooltip = false},
           {type = "item", name = "calcite",             amount = 1, probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "item", name = "coal",               amount = 1, probability = 0.05, show_details_in_recipe_tooltip = false},
@@ -103,18 +103,18 @@ data:extend(
       },
       {
         type = "recipe",
-        name = "sandstone-brick",
+        name = "planetaris-sandstone-brick",
         category = "compressing",
         order = "a[sand-processing]-b[sand-processing]",
         icon = "__planetaris-unbounded__/graphics/icons/sandstone-brick.png",
         enabled = false,
         energy_required = 2,
-        ingredients = { { type = "fluid", name = "pure-sand", amount = 10 } },
-        results = { { type = "item", name = "sandstone-brick", amount = 10 } }
+        ingredients = { { type = "fluid", name = "planetaris-pure-sand", amount = 10 } },
+        results = { { type = "item", name = "planetaris-sandstone-brick", amount = 10 } }
     },
     {
       type = "recipe",
-      name = "sandstone-foundation",
+      name = "planetaris-sandstone-foundation",
       icons = {
         {icon = "__planetaris-unbounded__/graphics/icons/sandstone-foundation.png"}
       },
@@ -124,15 +124,15 @@ data:extend(
       energy_required = 10,
       ingredients = 
       { 
-        { type = "item", name = "sandstone-brick", amount = 20 },
+        { type = "item", name = "planetaris-sandstone-brick", amount = 20 },
         { type = "item", name = "stone-brick", amount = 10 },
         { type = "item", name = "steel-plate", amount = 2 }
       },
-      results = { { type = "item", name = "sandstone-foundation", amount = 10 } }
+      results = { { type = "item", name = "planetaris-sandstone-foundation", amount = 10 } }
   },
   {
     type = "recipe",
-    name = "glass-panel",
+    name = "planetaris-glass-panel",
     category = "smelting",
     subgroup = "arig-processes",
     auto_recycle = false,
@@ -140,17 +140,17 @@ data:extend(
     icon = "__planetaris-unbounded__/graphics/icons/glass-panel.png",
     energy_required = 3,
     ingredients = {
-      {type = "item", name = "pure-sand-barrel", amount = 2}
+      {type = "item", name = "planetaris-pure-sand-barrel", amount = 2}
     },
     results = {
-      {type="item", name="glass-panel", amount=1},
+      {type="item", name="planetaris-glass-panel", amount=1},
       {type="item", name="barrel", amount=2}
   },
     allow_productivity = true
   },
   {
     type = "recipe",
-    name = "heavy-glass",
+    name = "planetaris-heavy-glass",
     category = "advanced-crafting",
     auto_recycle = false,
     enabled = false,
@@ -165,15 +165,15 @@ data:extend(
       }
     },
     ingredients = {
-      {type="item", name="glass-panel", amount=1},
+      {type="item", name="planetaris-glass-panel", amount=1},
       {type="item", name="tungsten-plate", amount=3},
     },
-    results = {{type="item", name="heavy-glass", amount=1}},
+    results = {{type="item", name="planetaris-heavy-glass", amount=1}},
     allow_productivity = true
   },
   {
     type = "recipe",
-    name = "simulating-unit",
+    name = "planetaris-simulating-unit",
     category = "electromagnetics",
     enabled = false,
     energy_required = 15,
@@ -181,15 +181,15 @@ data:extend(
     ingredients =
     {
       {type = "item", name = "processing-unit", amount = 5},
-      {type = "item", name = "silica", amount = 5},
-      {type = "item", name = "heavy-glass", amount = 15},
+      {type = "item", name = "planetaris-silica", amount = 5},
+      {type = "item", name = "planetaris-heavy-glass", amount = 15},
     },
-    results = {{type="item", name="simulating-unit", amount=1}},
+    results = {{type="item", name="planetaris-simulating-unit", amount=1}},
     allow_productivity = true
   },
   {
     type = "recipe",
-    name = "quartz",
+    name = "planetaris-raw-quartz",
     category = "compressing",
     enabled = false,
     energy_required = 2,
@@ -198,14 +198,14 @@ data:extend(
     {
       {type = "fluid", name = "steam", amount = 20},
       {type = "fluid", name = "light-oil", amount = 20},
-      {type = "item", name = "sandstone-brick", amount = 2},
+      {type = "item", name = "planetaris-sandstone-brick", amount = 2},
     },
-    results = {{type="item", name="quartz", amount=1}},
+    results = {{type="item", name="planetaris-raw-quartz", amount=1}},
     allow_productivity = true
   },
   {
     type = "recipe",
-    name = "silica",
+    name = "planetaris-silica",
     category = "compressing",
     enabled = false,
     energy_required = 2,
@@ -213,15 +213,15 @@ data:extend(
     ingredients =
     {
       {type = "fluid", name = "sulfuric-acid", amount = 20},
-      {type = "item", name = "quartz", amount = 5},
+      {type = "item", name = "planetaris-raw-quartz", amount = 5},
       {type = "item", name = "calcite", amount = 1},
     },
-    results = {{type="item", name="silica", amount=1}},
+    results = {{type="item", name="planetaris-silica", amount=1}},
     allow_productivity = true
   },
     {
     type = "recipe",
-    name = "compression-rocket-fuel",
+    name = "planetaris-compression-rocket-fuel",
     category = "compressing",
     subgroup = "arig-processes",
     enabled = false,
@@ -238,8 +238,8 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "compression-science-pack",
-    category = "compressing", -- change to compression
+    name = "planetaris-compression-science-pack",
+    category = "compressing",
     enabled = false,
     icon = "__planetaris-unbounded__/graphics/icons/compression-science-pack.png",
     surface_conditions =
@@ -252,33 +252,33 @@ data:extend(
     },
     ingredients =
     {
-      {type = "item", name = "glass-panel", amount = 5},
-      {type = "item", name = "quartz", amount = 5},
-      {type = "item", name = "sandstone-brick", amount = 20},
+      {type = "item", name = "planetaris-glass-panel", amount = 5},
+      {type = "item", name = "planetaris-raw-quartz", amount = 5},
+      {type = "item", name = "planetaris-sandstone-brick", amount = 20},
 
     },
     energy_required = 10,
-    results = {{type="item", name="compression-science-pack", amount=1}},
+    results = {{type="item", name="planetaris-compression-science-pack", amount=1}},
     allow_productivity = false,
   },
     {
       type = "recipe",
-      name = "assembling-machine-4",
+      name = "planetaris-assembling-machine-4",
       category = "electromagnetics",
       enabled = false,
       energy_required = 10,
       ingredients =
       {
-        {type = "item", name = "simulating-unit", amount = 10},
+        {type = "item", name = "planetaris-simulating-unit", amount = 10},
         {type = "item", name = "speed-module-3", amount = 2},
         {type = "item", name = "assembling-machine-3", amount = 2}
       },
-      results = {{type="item", name="assembling-machine-4", amount=1}},
+      results = {{type="item", name="planetaris-assembling-machine-4", amount=1}},
       allow_productivity = false,
     },
     {
       type = "recipe",
-      name = "hyper-transport-belt",
+      name = "planetaris-hyper-transport-belt",
       category = "electromagnetics",
       surface_conditions =
     {
@@ -293,16 +293,16 @@ data:extend(
       ingredients =
       {
         {type = "item", name = "turbo-transport-belt", amount = 1},
-        {type = "item", name = "silica", amount = 2},
+        {type = "item", name = "planetaris-silica", amount = 2},
         {type = "fluid", name = "lubricant", amount = 20},
 
       },
-      results = {{type="item", name="hyper-transport-belt", amount=1}},
+      results = {{type="item", name="planetaris-hyper-transport-belt", amount=1}},
       allow_productivity = false,
     },
     {
       type = "recipe",
-      name = "hyper-splitter",
+      name = "planetaris-hyper-splitter",
       category = "electromagnetics",
       surface_conditions =
     {
@@ -318,14 +318,14 @@ data:extend(
       {
         {type = "item", name = "turbo-splitter", amount = 1},
         {type = "item", name = "processing-unit", amount = 2},
-        {type = "item", name = "silica", amount = 2},
+        {type = "item", name = "planetaris-silica", amount = 2},
       },
-      results = {{type="item", name="hyper-splitter", amount=1}},
+      results = {{type="item", name="planetaris-hyper-splitter", amount=1}},
       allow_productivity = false,
     },
     {
       type = "recipe",
-      name = "hyper-underground-belt",
+      name = "planetaris-hyper-underground-belt",
       category = "electromagnetics",
       surface_conditions =
     {
@@ -340,25 +340,25 @@ data:extend(
       ingredients =
       {
         {type = "item", name = "turbo-transport-belt", amount = 1},
-        {type = "item", name = "silica", amount = 3},
+        {type = "item", name = "planetaris-silica", amount = 3},
         {type = "fluid", name = "lubricant", amount = 30},
       },
-      results = {{type="item", name="hyper-underground-belt", amount=2}},
+      results = {{type="item", name="planetaris-hyper-underground-belt", amount=2}},
       allow_productivity = false,
     },
     {
       type = "recipe",
-      name = "big-chest",
+      name = "planetaris-big-chest",
       category = "advanced-crafting",
       energy_required = 20,
       enabled = false,
       ingredients =
       {
         {type = "item", name = "steel-plate", amount = 30},
-        {type = "item", name = "heavy-glass", amount = 30},
-        {type = "item", name = "silica", amount = 15},
+        {type = "item", name = "planetaris-heavy-glass", amount = 30},
+        {type = "item", name = "planetaris-silica", amount = 15},
       },
-      results = {{type="item", name="big-chest", amount=1}},
+      results = {{type="item", name="planetaris-big-chest", amount=1}},
       allow_productivity = false,
     },
 })
