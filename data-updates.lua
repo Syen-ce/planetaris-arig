@@ -1,7 +1,3 @@
-require("prototypes.entities.entities")
-require("prototypes.tile.tile")
-
-
 -- Set the next_upgrade property to point to assembling-machine-4
 
 local assemblingMachine3 = data.raw["assembling-machine"]["assembling-machine-3"]
