@@ -415,17 +415,16 @@ data:extend({
 
   data:extend({
     merge(cargo_drops_base, {
-      prerequisites = { "compression-science" }, -- Should be on the bottom row
       unit = {
         count =  500,
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
-          { "compression-science-pack", 1 },
           { "utility-science-pack", 1 },
+          { "compression-science-pack", 1 },
         },
         time = 60,
       },
-      allows_productivity = false,
+      prerequisites = { "compression-science" },
     })
   })
