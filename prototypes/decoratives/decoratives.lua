@@ -41,10 +41,12 @@ data:extend({
           mining_particle = "stone-particle",
           mining_time = 5,
           results = {
-            {type = "item", name = "iron-plate", amount_min = 10, amount_max = 18},
-            {type = "item", name = "copper-plate", amount_min = 10, amount_max = 18},
-            {type = "item", name = "electronic-circuit", amount_min = 2, amount_max = 5},
-
+            {type = "item", name = "iron-plate", amount_min = 10, amount_max = 20},
+            {type = "item", name = "copper-plate", amount_min = 10, amount_max = 20},
+            {type = "item", name = "electronic-circuit", amount_min = 2, amount_max = 10},
+            {type = "item", name = "steel-plate", amount_min = 5, amount_max = 15},
+            {type = "item", name = "transport-belt", amount_min = 10, amount_max = 30},
+            {type = "item", name = "inserter", amount_min = 2, amount_max = 5}            
         }
         },
         resistances =
