@@ -17,3 +17,7 @@ require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.autoplace-controls")
 require("prototypes.decoratives.decoratives")
+
+-- Compat
+
+require("compat.krastorio2-so")

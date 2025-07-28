@@ -33,7 +33,7 @@ data:extend({
     icon_size = 64,
     icon_mipmaps = 4, -- Optional, depending on how you want it to display
     subgroup = "production-machine",
-    order = "c[assembling-machine-4]",
+    order = "c[assembling-machine-4]-a",
     place_result = "planetaris-assembling-machine-4",
     stack_size = 50,
     },
