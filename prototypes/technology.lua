@@ -7,7 +7,6 @@ data:extend({
       name = "planet-discovery-arig",
       icons = PlanetsLib.technology_icon_constant_planet("__planetaris-unbounded__/graphics/technology/arig-discovery.png", 256),
       essential = true,
-      localised_description = {"space-location-description.arig"},
       effects = {
         {
           type = "unlock-space-location",
@@ -39,7 +38,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/sifting.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.sand-sifting"},
       effects = {
         {
           type = "unlock-recipe",
@@ -63,7 +61,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/glass-panel.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.glass"},
       effects = {
         {
           type = "unlock-recipe",
@@ -83,7 +80,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/compression.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.compression"},
       effects = {
         {
           type = "unlock-recipe",
@@ -116,7 +112,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/compression-science-pack.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.compression-science"},
       effects = {
         {
           type = "unlock-recipe",
@@ -137,7 +132,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/sandstone-foundation.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.sandstone-foundation"},
       effects = {
         {
           type = "unlock-recipe",
@@ -167,7 +161,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/advanced-sand-sifting.png",
       icon_size = 64,
       essential = true,
-      localised_description = {"space-location-description.advanced-sifting"},
       effects = {
         {
           type = "unlock-recipe",
@@ -197,7 +190,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/heavy-glass.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.simulating-unit"},
       effects = {
         {
           type = "unlock-recipe",
@@ -227,7 +219,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/silica.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.silica-processing"},
       effects = {
         {
           type = "unlock-recipe",
@@ -257,7 +248,6 @@ data:extend({
       icon = "__planetaris-unbounded__/graphics/technology/simulating-unit.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.simulating-unit"},
       effects = {
         {
           type = "unlock-recipe",
@@ -323,7 +313,6 @@ data:extend({
         name = "planetaris-automation-4",
         icon = "__planetaris-unbounded__/graphics/technology/automation-4.png",
         icon_size = 256,
-        localised_description = {"technology-description.automation-4"},
         effects =
         {
           {
