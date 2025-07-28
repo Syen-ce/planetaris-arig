@@ -21,3 +21,4 @@ require("prototypes.decoratives.decoratives")
 -- Compat
 
 require("compat.krastorio2-so")
+require("compat.resource-spawner-overhaul")
