@@ -11,9 +11,9 @@ data:extend(
         surface_conditions =
     {
       {
-        property = "pressure",
-        min = 5,
-        max = 50,
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
       }
     },
         ingredients =
@@ -35,9 +35,9 @@ data:extend(
         surface_conditions =
     {
       {
-        property = "pressure",
-        min = 5,
-        max = 50,
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
       }
     },
         ingredients =
@@ -159,9 +159,9 @@ data:extend(
     surface_conditions =
     {
       {
-        property = "pressure",
-        min = 5,
-        max = 50,
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
       }
     },
     ingredients = {
@@ -245,9 +245,9 @@ data:extend(
     surface_conditions =
     {
       {
-        property = "pressure",
-        min = 5,
-        max = 50,
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
       }
     },
     ingredients =
@@ -283,9 +283,9 @@ data:extend(
       surface_conditions =
     {
       {
-        property = "pressure",
-        min = 5,
-        max = 50,
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
       }
     },
       enabled = false,
@@ -307,9 +307,9 @@ data:extend(
       surface_conditions =
     {
       {
-        property = "pressure",
-        min = 5,
-        max = 50,
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
       }
     },
       enabled = false,
@@ -330,9 +330,9 @@ data:extend(
       surface_conditions =
     {
       {
-        property = "pressure",
-        min = 5,
-        max = 50,
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
       }
     },
       enabled = false,

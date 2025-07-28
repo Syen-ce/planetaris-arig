@@ -38,23 +38,34 @@ end
 
 -- Surface conditions
 
-local function twenty_pressure_condition()
-    return
-    {
-      {
-        property = "pressure",
-        min = 20
-      }
-    }
-  end
-
-data.raw["rail-ramp"]["rail-ramp"].surface_conditions = twenty_pressure_condition()
-data.raw["elevated-straight-rail"]["elevated-straight-rail"].surface_conditions = twenty_pressure_condition()
-data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"].surface_conditions = twenty_pressure_condition()
-data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].surface_conditions = twenty_pressure_condition()
-data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].surface_conditions = twenty_pressure_condition()
-data.raw["rail-support"]["rail-support"].surface_conditions = twenty_pressure_condition()
-
+table.insert(data.raw["rail-ramp"]["rail-ramp"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
+table.insert(data.raw["elevated-straight-rail"]["elevated-straight-rail"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
+table.insert(data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
+table.insert(data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
+table.insert(data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
+table.insert(data.raw["rail-support"]["rail-support"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
+table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
 
 table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
 
