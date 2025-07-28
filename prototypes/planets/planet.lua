@@ -40,7 +40,7 @@ PlanetsLib:extend({
             ["day-night-cycle"] = 1.5 * minute,
             ["magnetic-field"] = 120,
             ["solar-power"] = 250,
-            pressure = 5,
+            pressure = 10,
             gravity = 30,
         },
         persistent_ambient_sounds =
