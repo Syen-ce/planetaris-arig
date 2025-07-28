@@ -23,3 +23,4 @@ require("prototypes.decoratives.decoratives")
 
 require("compat.krastorio2-so")
 require("compat.resource-spawner-overhaul")
+require("compat.aai-industry")
