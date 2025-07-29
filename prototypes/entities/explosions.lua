@@ -5,7 +5,7 @@ local sounds = require("__base__.prototypes.entity.sounds")
 data:extend({
     {
         type = "explosion",
-        name = "assembling-machine-4-explosion",
+        name = "planetaris-assembling-machine-4-explosion",
         icon = "__planetaris-unbounded__/graphics/icons/assembling-machine-4.png",
         flags = {"not-on-map"},
         hidden = true,
@@ -91,7 +91,7 @@ data:extend({
       },
       {
     type = "explosion",
-    name = "sifter-explosion",
+    name = "planetaris-sifter-explosion",
     icon = "__planetaris-unbounded__/graphics/icons/sifter.png",
     flags = {"not-on-map"},
     hidden = true,
@@ -178,7 +178,7 @@ data:extend({
   },
       {
     type = "explosion",
-    name = "container-explosion",
+    name = "planetaris-big-chest-explosion",
     icon = "__planetaris-unbounded__/graphics/icons/container.png",
     flags = {"not-on-map"},
     hidden = true,
@@ -241,7 +241,7 @@ data:extend({
   },
       {
         type = "explosion",
-        name = "hyper-transport-belt-explosion-base",
+        name = "planetaris-hyper-transport-belt-explosion-base",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-transport-belt.png",
         flags = {"not-on-map"},
         hidden = true,
@@ -319,7 +319,7 @@ data:extend({
       },
       {
         type = "explosion",
-        name = "hyper-transport-belt-explosion",
+        name = "planetaris-hyper-transport-belt-explosion",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-transport-belt.png",
         flags = {"not-on-map"},
         hidden = true,
@@ -336,7 +336,7 @@ data:extend({
             {
               {
                 type = "create-explosion",
-                entity_name = "hyper-transport-belt-explosion-base",
+                entity_name = "planetaris-hyper-transport-belt-explosion-base",
                 offsets = {{0,0.3}},
                 offset_deviation = {{ -0.25, -0.25 }, { 0.25, 0.25 }},
               },
@@ -347,7 +347,7 @@ data:extend({
     
       {
         type = "explosion",
-        name = "hyper-underground-belt-explosion-base",
+        name = "planetaris-hyper-underground-belt-explosion-base",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
         flags = {"not-on-map"},
         hidden = true,
@@ -413,7 +413,7 @@ data:extend({
       },
       {
         type = "explosion",
-        name = "hyper-underground-belt-explosion",
+        name = "planetaris-hyper-underground-belt-explosion",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
         flags = {"not-on-map"},
         hidden = true,
@@ -430,7 +430,7 @@ data:extend({
             {
               {
                 type = "create-explosion",
-                entity_name = "hyper-underground-belt-explosion-base",
+                entity_name = "planetaris-hyper-underground-belt-explosion-base",
                 offsets = {{0,0.3}},
                 offset_deviation = {{ -0.25, -0.25 }, { 0.25, 0.25 }},
               },
@@ -441,7 +441,7 @@ data:extend({
     
       {
         type = "explosion",
-        name = "hyper-splitter-explosion",
+        name = "planetaris-hyper-splitter-explosion",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-splitter.png",
         flags = {"not-on-map"},
         hidden = true,

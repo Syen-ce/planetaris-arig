@@ -2,6 +2,7 @@ require("lib")
 require("prototypes.planets.planet")
 require("prototypes.planets.planet_arig_map_gen")
 require("prototypes.planets.planet_map_gen")
+require("prototypes.planets.surface-conditions")
 require("prototypes.entities.entities")
 require("prototypes.entities.remnants")
 require("prototypes.entities.explosions")
@@ -18,12 +19,16 @@ require("prototypes.technology")
 require("prototypes.autoplace-controls")
 require("prototypes.decoratives.decoratives")
 
-local construction_robot = data.raw["construction-robot"]["construction-robot"]
-if construction_robot then
-  construction_robot.energy_per_move = "5000J"  -- vanilla default
-end
+--------------------- Compat
 
-local logistic_robot = data.raw["logistic-robot"]["logistic-robot"]
-if logistic_robot then
-  logistic_robot.energy_per_move = "5000J"  -- vanilla default
+require("compat.krastorio2-so")
+require("compat.resource-spawner-overhaul")
+require("compat.aai-industry")
+require("compat.bzlead")
+require("compat.bztin")
+require("compat.crushing-industry")
+require("compat.wood-industry")
+
+if mods["any-planet-start"] then
+    APS.add_planet{name = "arig", filename = "__planetaris-unbounded__/compat/any-planet-start.lua", technology = "planet-discovery-arig"}
 end

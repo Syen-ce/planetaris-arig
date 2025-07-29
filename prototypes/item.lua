@@ -4,55 +4,83 @@ local item_tints = require("__base__.prototypes.item-tints")
 data:extend({
 {
     type = "item",
-    name = "press",
+    name = "planetaris-press",
     icon = "__planetaris-unbounded__/graphics/icons/press.png",
     subgroup = "production-machine",
     order = "e[chemical-plant]-c",
     inventory_move_sound = item_sounds.fluid_inventory_move,
     pick_sound = item_sounds.fluid_inventory_pickup,
     drop_sound = item_sounds.fluid_inventory_move,
-    place_result = "press",
+    place_result = "planetaris-press",
     stack_size = 50
   },
 {
     type = "item",
-    name = "sifter",
+    name = "planetaris-sifter",
     icon = "__planetaris-unbounded__/graphics/icons/sifter.png",
     subgroup = "production-machine",
     order = "e[chemical-plant]-b",
     inventory_move_sound = item_sounds.fluid_inventory_move,
     pick_sound = item_sounds.fluid_inventory_pickup,
     drop_sound = item_sounds.fluid_inventory_move,
-    place_result = "sifter",
+    place_result = "planetaris-sifter",
     stack_size = 10
   },
   {
     type = "item",
-    name = "assembling-machine-4",
+    name = "planetaris-assembling-machine-4",
     icon = "__planetaris-unbounded__/graphics/icons/assembling-machine-4.png",
     icon_size = 64,
     icon_mipmaps = 4, -- Optional, depending on how you want it to display
     subgroup = "production-machine",
-    order = "c[assembling-machine-4]",
-    place_result = "assembling-machine-4",
+    order = "c[assembling-machine-4]-a",
+    place_result = "planetaris-assembling-machine-4",
     stack_size = 50,
-    icons = {
-        {
-            icon = "__planetaris-unbounded__/graphics/icons/assembling-machine-4.png",
-            icon_size = 64,
-        }
-        }
     },
     {
+    type = "item",
+    name = "planetaris-sandstone-brick",
+    icon = "__planetaris-unbounded__/graphics/icons/sandstone-brick.png",
+    subgroup = "terrain",
+    order = "d[sandstone_brick]",
+    icon_size = 64,
+    stack_size = 100,
+    weight = 10 * kg,
+    place_as_tile = {
+        result = "planetaris-sandstone-path",
+        condition_size = 1,
+        condition = {layers={water_tile=true}}
+    },
+    drop_sound = {
+        aggregation = {
+            max_count = 1,
+            remove = true
+        },
+        filename = "__base__/sound/item/concrete-inventory-move.ogg",
+        volume = 0.6
+    },
+    pick_sound = {
+        aggregation = {
+            max_count = 1,
+            remove = true
+        },
+        filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
+        volume = 0.8
+    },
+    inventory_move_sound = {
+        filename = "__base__/sound/item/concrete-inventory-move.ogg",
+        volume = 0.5
+    }},
+    {
         type = "item",
-        name = "sandstone-foundation",
+        name = "planetaris-sandstone-foundation",
         icon = "__planetaris-unbounded__/graphics/icons/sandstone-foundation.png",
         subgroup = "terrain",
         order = "d[sandstone_brick]-b",
         stack_size = 100,
         weight = 10 * kg,
         place_as_tile = {
-            result = "sandstone-foundation",
+            result = "planetaris-sandstone-foundation",
             condition_size = 1,
             condition = {layers = {ground_tile = true}},
             tile_condition = {"arig-sand"}
@@ -63,7 +91,7 @@ data:extend({
     },
     {
         type = "item",
-        name = "glass-panel",
+        name = "planetaris-glass-panel",
         icon = "__planetaris-unbounded__/graphics/icons/glass-panel.png",
         subgroup = "arig-processes",
         order = "a[basic]-b",
@@ -76,7 +104,7 @@ data:extend({
     },
     {
         type = "item",
-        name = "heavy-glass",
+        name = "planetaris-heavy-glass",
         icon = "__planetaris-unbounded__/graphics/icons/heavy-glass.png",
         subgroup = "arig-processes",
         order = "c[advance]-a",
@@ -90,7 +118,7 @@ data:extend({
     },
     {
         type = "item",
-        name = "quartz",
+        name = "planetaris-raw-quartz",
         icon = "__planetaris-unbounded__/graphics/icons/quartz.png",
         subgroup = "arig-processes",
         order = "a[basic]-c",
@@ -103,7 +131,7 @@ data:extend({
     },
     {
         type = "item",
-        name = "silica",
+        name = "planetaris-silica",
         icon = "__planetaris-unbounded__/graphics/icons/silica.png",
         subgroup = "arig-processes",
         order = "c[advance]-b",
@@ -116,7 +144,7 @@ data:extend({
     },
     {
         type = "item",
-        name = "simulating-unit",
+        name = "planetaris-simulating-unit",
         icon = "__planetaris-unbounded__/graphics/icons/simulating-unit.png",
         subgroup = "arig-processes",
         order = "c[advance]-c",
@@ -129,7 +157,7 @@ data:extend({
     },
     {
         type = "tool",
-        name = "compression-science-pack",
+        name = "planetaris-compression-science-pack",
         icon = "__planetaris-unbounded__/graphics/icons/compression-science-pack.png",
         localised_description = {"item-description.science-pack"},
         subgroup = "science-pack",
@@ -148,7 +176,7 @@ data:extend({
     },
     {
         type = "item",
-        name = "hyper-transport-belt",
+        name = "planetaris-hyper-transport-belt",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-transport-belt.png",
         subgroup = "belt",
         color_hint = { text = "5" },
@@ -156,14 +184,14 @@ data:extend({
         inventory_move_sound = item_sounds.transport_belt_inventory_move,
         pick_sound = item_sounds.transport_belt_inventory_pickup,
         drop_sound = item_sounds.transport_belt_inventory_move,
-        place_result = "hyper-transport-belt",
+        place_result = "planetaris-hyper-transport-belt",
         default_import_location = "arig",
         stack_size = 100,
         weight = 20*kg
       },
       {
         type = "item",
-        name = "hyper-splitter",
+        name = "planetaris-hyper-splitter",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-splitter.png",
         subgroup = "belt",
         color_hint = { text = "5" },
@@ -171,14 +199,14 @@ data:extend({
         inventory_move_sound = item_sounds.mechanical_inventory_move,
         pick_sound = item_sounds.mechanical_inventory_pickup,
         drop_sound = item_sounds.mechanical_inventory_move,
-        place_result = "hyper-splitter",
+        place_result = "planetaris-hyper-splitter",
         default_import_location = "arig",
         stack_size = 50,
         weight = 40*kg
       },
       {
         type = "item",
-        name = "hyper-underground-belt",
+        name = "planetaris-hyper-underground-belt",
         icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
         subgroup = "belt",
         color_hint = { text = "5" },
@@ -186,63 +214,21 @@ data:extend({
         inventory_move_sound = item_sounds.mechanical_inventory_move,
         pick_sound = item_sounds.mechanical_inventory_pickup,
         drop_sound = item_sounds.mechanical_inventory_move,
-        place_result = "hyper-underground-belt",
+        place_result = "planetaris-hyper-underground-belt",
         stack_size = 50,
         default_import_location = "arig",
         weight = 40*kg
       },
       {
         type = "item",
-        name = "big-chest",
+        name = "planetaris-big-chest",
         icon = "__planetaris-unbounded__/graphics/icons/container.png",
         subgroup = "storage",
         order = "a[items]-d[big-chest]",
         inventory_move_sound = item_sounds.metal_chest_inventory_move,
         pick_sound = item_sounds.metal_chest_inventory_pickup,
         drop_sound = item_sounds.metal_chest_inventory_move,
-        place_result = "big-chest",
+        place_result = "planetaris-big-chest",
         stack_size = 50
       },
 })
-
-local sandstone_brick = {
-    type = "item",
-    name = "sandstone-brick",
-    icon = "__planetaris-unbounded__/graphics/icons/sandstone-brick.png",
-    subgroup = "terrain",
-    order = "d[sandstone_brick]",
-    icon_size = 64,
-    stack_size = 100,
-    weight = 10 * kg,
-    place_as_tile = {
-        result = "sandstone-path",
-        condition_size = 1,
-        condition = {layers={water_tile=true}}
-    },
-    drop_sound = {
-        aggregation = {
-            max_count = 1,
-            remove = true
-        },
-        filename = "__base__/sound/item/concrete-inventory-move.ogg",
-        volume = 0.6
-    },
-
-    pick_sound = {
-        aggregation = {
-            max_count = 1,
-            remove = true
-        },
-        filename = "__base__/sound/item/concrete-inventory-pickup.ogg",
-        volume = 0.8
-    },
-
-    inventory_move_sound = {
-        filename = "__base__/sound/item/concrete-inventory-move.ogg",
-        volume = 0.5
-    }
-}
-
-data:extend{sandstone_brick}
-
-return {sandstone_brick = sandstone_brick}

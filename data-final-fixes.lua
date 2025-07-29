@@ -1,1 +1,1 @@
-require("compat/any-planet-start")
+require("compat.castra")

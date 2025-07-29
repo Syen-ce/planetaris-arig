@@ -7,7 +7,6 @@ data:extend({
       name = "planet-discovery-arig",
       icons = PlanetsLib.technology_icon_constant_planet("__planetaris-unbounded__/graphics/technology/arig-discovery.png", 256),
       essential = true,
-      localised_description = {"space-location-description.arig"},
       effects = {
         {
           type = "unlock-space-location",
@@ -35,19 +34,18 @@ data:extend({
     -- Sand Sifting Technology
     {
       type = "technology",
-      name = "sand-sifting",
-      icon = "__planetaris-unbounded__/graphics/technology/sifting.png",  -- Main icon
+      name = "planetaris-sand-sifting",
+      icon = "__planetaris-unbounded__/graphics/technology/sifting.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.sand-sifting"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "sifter"
+          recipe = "planetaris-sifter"
         },
         {
             type = "unlock-recipe",
-            recipe = "sand-sifting"
+            recipe = "planetaris-sand-sifting"
           },
       },
       prerequisites = {"planet-discovery-arig"},
@@ -59,92 +57,88 @@ data:extend({
     },
     {
       type = "technology",
-      name = "glass",
-      icon = "__planetaris-unbounded__/graphics/technology/glass-panel.png",  -- Main icon
+      name = "planetaris-glass",
+      icon = "__planetaris-unbounded__/graphics/technology/glass-panel.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.glass"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "glass-panel"
+          recipe = "planetaris-glass-panel"
         },
       },
-      prerequisites = {"sand-sifting"},
+      prerequisites = {"planetaris-sand-sifting"},
       research_trigger = {
         type = "craft-item",
-        item = "sifter",
+        item = "planetaris-sifter",
       },
       order = "ea[arig]",
     },
     {
       type = "technology",
-      name = "compression",
+      name = "planetaris-compression",
       icon = "__planetaris-unbounded__/graphics/technology/compression.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.compression"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "press"
+          recipe = "planetaris-press"
         },
         {
           type = "unlock-recipe",
-          recipe = "sandstone-brick"
+          recipe = "planetaris-sandstone-brick"
         },
         {
           type = "unlock-recipe",
-          recipe = "quartz"
+          recipe = "planetaris-raw-quartz"
         },
                 {
           type = "unlock-recipe",
-          recipe = "compression-rocket-fuel"
+          recipe = "planetaris-compression-rocket-fuel"
         },
       },
-      prerequisites = {"sand-sifting"},
+      prerequisites = {"planetaris-sand-sifting"},
       research_trigger =     {
         type = "craft-item",
-        item = "glass-panel",
+        item = "planetaris-glass-panel",
         count = 100
       },
       order = "ea[arig]",
     },
     {
       type = "technology",
-      name = "compression-science",
+      name = "planetaris-compression-science",
       icon = "__planetaris-unbounded__/graphics/technology/compression-science-pack.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.compression-science"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "compression-science-pack"
+          recipe = "planetaris-compression-science-pack"
         },
       },
-      prerequisites = {"compression"},
+      prerequisites = {"planetaris-compression"},
       research_trigger =     {
         type = "craft-item",
-        item = "quartz",
+        item = "planetaris-raw-quartz",
         count = 100
       },
       order = "ea[arig]",
     },
     {
       type = "technology",
-      name = "sandstone-foundation",
+      name = "planetaris-sandstone-foundation",
       icon = "__planetaris-unbounded__/graphics/technology/sandstone-foundation.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.sandstone-foundation"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "sandstone-foundation"
+          recipe = "planetaris-sandstone-foundation"
         },
       },
-      prerequisites = {"compression-science"},
+      prerequisites = {"planetaris-compression-science"},
       unit =
       {
         count = 500,
@@ -155,7 +149,7 @@ data:extend({
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
         time = 120
       },
@@ -163,18 +157,17 @@ data:extend({
     },
     {
       type = "technology",
-      name = "advanced-sand-sifting",
+      name = "planetaris-advanced-sand-sifting",
       icon = "__planetaris-unbounded__/graphics/technology/advanced-sand-sifting.png",
       icon_size = 64,
       essential = true,
-      localised_description = {"space-location-description.advanced-sifting"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "advanced-sand-sifting"
+          recipe = "planetaris-advanced-sand-sifting"
         },
       },
-      prerequisites = {"compression-science"},
+      prerequisites = {"planetaris-compression-science"},
       unit =
       {
         count = 800,
@@ -185,7 +178,7 @@ data:extend({
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
         time = 120
       },
@@ -193,18 +186,17 @@ data:extend({
     },
     {
       type = "technology",
-      name = "heavy-glass",
+      name = "planetaris-heavy-glass",
       icon = "__planetaris-unbounded__/graphics/technology/heavy-glass.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.simulating-unit"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "heavy-glass"
+          recipe = "planetaris-heavy-glass"
         },
       },
-      prerequisites = {"compression-science","glass"},
+      prerequisites = {"planetaris-compression-science","planetaris-glass"},
       unit =
       {
         count = 500,
@@ -215,7 +207,7 @@ data:extend({
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
         time = 60
       },
@@ -223,18 +215,17 @@ data:extend({
     },
     {
       type = "technology",
-      name = "silica-processing",
+      name = "planetaris-silica-processing",
       icon = "__planetaris-unbounded__/graphics/technology/silica.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.silica-processing"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "silica"
+          recipe = "planetaris-silica"
         },
       },
-      prerequisites = {"compression-science"},
+      prerequisites = {"planetaris-compression-science"},
       unit =
       {
         count = 800,
@@ -245,7 +236,7 @@ data:extend({
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
         time = 120
       },
@@ -253,18 +244,17 @@ data:extend({
     },
     {
       type = "technology",
-      name = "simulating-unit",
+      name = "planetaris-simulating-unit",
       icon = "__planetaris-unbounded__/graphics/technology/simulating-unit.png",
       icon_size = 256,
       essential = true,
-      localised_description = {"space-location-description.simulating-unit"},
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "simulating-unit"
+          recipe = "planetaris-simulating-unit"
         },
       },
-      prerequisites = {"silica-processing"},
+      prerequisites = {"planetaris-silica-processing"},
       unit =
       {
         count = 800,
@@ -275,7 +265,7 @@ data:extend({
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
         time = 120
       },
@@ -283,25 +273,25 @@ data:extend({
     },
     {
       type = "technology",
-      name = "hyper-transport-belt",
+      name = "planetaris-hyper-transport-belt",
       icon = "__planetaris-unbounded__/graphics/technology/logistics-5.png",
       icon_size = 256,
       effects =
       {
         {
           type = "unlock-recipe",
-          recipe = "hyper-transport-belt"
+          recipe = "planetaris-hyper-transport-belt"
         },
         {
           type = "unlock-recipe",
-          recipe = "hyper-underground-belt"
+          recipe = "planetaris-hyper-underground-belt"
         },
         {
           type = "unlock-recipe",
-          recipe = "hyper-splitter"
+          recipe = "planetaris-hyper-splitter"
         },
       },
-      prerequisites = {"simulating-unit", "turbo-transport-belt"},
+      prerequisites = {"planetaris-simulating-unit", "turbo-transport-belt"},
       unit =
       {
         count = 5000,
@@ -313,25 +303,24 @@ data:extend({
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           {"metallurgic-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
         time = 60
       }
     },
     {
         type = "technology",
-        name = "automation-4",
+        name = "planetaris-automation-4",
         icon = "__planetaris-unbounded__/graphics/technology/automation-4.png",
         icon_size = 256,
-        localised_description = {"technology-description.automation-4"},
         effects =
         {
           {
             type = "unlock-recipe",
-            recipe = "assembling-machine-4"
+            recipe = "planetaris-assembling-machine-4"
           }
         },
-        prerequisites = {"simulating-unit","automation-3","heavy-glass"},
+        prerequisites = {"planetaris-simulating-unit","automation-3","planetaris-heavy-glass"},
         unit =
         {
           count = 5000,
@@ -342,24 +331,24 @@ data:extend({
             {"chemical-science-pack", 1},
             {"production-science-pack", 1},
             {"space-science-pack", 1},
-            {"compression-science-pack", 1},
+            {"planetaris-compression-science-pack", 1},
           },
           time = 120
         }
     },
     {
       type = "technology",
-      name = "big-chest",
+      name = "planetaris-big-chest",
       icon = "__planetaris-unbounded__/graphics/technology/container.png",
       icon_size = 256,
       effects =
       {
         {
           type = "unlock-recipe",
-          recipe = "big-chest"
+          recipe = "planetaris-big-chest"
         },
       },
-      prerequisites = {"silica-processing", "heavy-glass"},
+      prerequisites = {"planetaris-silica-processing", "planetaris-heavy-glass"},
       unit =
       {
         count = 5000,
@@ -371,25 +360,25 @@ data:extend({
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           {"metallurgic-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
         time = 60
       }
     },
       {
     type = "technology",
-    name = "quartz-productivity",
+    name = "planetaris-raw-quartz-productivity",
     icons = util.technology_icon_constant_recipe_productivity("__planetaris-unbounded__/graphics/technology/quartz.png"),
     icon_size = 256,
     effects =
     {
       {
         type = "change-recipe-productivity",
-        recipe = "quartz",
+        recipe = "planetaris-raw-quartz",
         change = 0.1
       },
     },
-    prerequisites = {"silica-processing", "compression-science"},
+    prerequisites = {"planetaris-silica-processing", "planetaris-compression-science"},
     unit =
     {
       count_formula = "1.5^L*1000",
@@ -401,7 +390,7 @@ data:extend({
           {"production-science-pack", 1},
           {"space-science-pack", 1},
           {"metallurgic-science-pack", 1},
-          {"compression-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
         },
       time = 60
     },
@@ -415,17 +404,16 @@ data:extend({
 
   data:extend({
     merge(cargo_drops_base, {
-      prerequisites = { "compression-science" }, -- Should be on the bottom row
       unit = {
         count =  500,
         ingredients = {
           { "automation-science-pack", 1 },
           { "logistic-science-pack", 1 },
-          { "compression-science-pack", 1 },
           { "utility-science-pack", 1 },
+          { "planetaris-compression-science-pack", 1 },
         },
         time = 60,
       },
-      allows_productivity = false,
+      prerequisites = { "planetaris-compression-science" },
     })
   })

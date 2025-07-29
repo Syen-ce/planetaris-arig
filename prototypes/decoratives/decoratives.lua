@@ -41,10 +41,12 @@ data:extend({
           mining_particle = "stone-particle",
           mining_time = 5,
           results = {
-            {type = "item", name = "iron-plate", amount_min = 10, amount_max = 18},
-            {type = "item", name = "copper-plate", amount_min = 10, amount_max = 18},
-            {type = "item", name = "electronic-circuit", amount_min = 2, amount_max = 5},
-
+            {type = "item", name = "iron-plate", amount_min = 10, amount_max = 20},
+            {type = "item", name = "copper-plate", amount_min = 10, amount_max = 20},
+            {type = "item", name = "electronic-circuit", amount_min = 2, amount_max = 10},
+            {type = "item", name = "steel-plate", amount_min = 5, amount_max = 15},
+            {type = "item", name = "transport-belt", amount_min = 10, amount_max = 30},
+            {type = "item", name = "inserter", amount_min = 2, amount_max = 5}            
         }
         },
         resistances =
@@ -838,7 +840,7 @@ data:extend({
       tile_layer = 255,
       autoplace =
       {
-        probability_expression = "-0.8 - 0.4 * min(0.5, abs(grass_noise)) + 0.04 * noise_layer_noise('sand-decal')\z
+        probability_expression = "-1.5 - 0.4 * min(0.5, abs(grass_noise)) + 0.04 * noise_layer_noise('sand-decal')\z
                                         + min(range_select(moisture, 0, 0.15, 0.4, -10, 1),\z
                                               range_select(aux, 0.0, 0.25, 0.4, -10, 1))"
       },

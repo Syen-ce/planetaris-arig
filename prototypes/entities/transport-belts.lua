@@ -28,20 +28,16 @@ local hyper_belt_animation_set =
 
 meld(hyper_belt_animation_set, belt_reader_gfx)
 
-data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "hyper-transport-belt";
-data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "hyper-underground-belt";
-data.raw["splitter"]["turbo-splitter"].next_upgrade = "hyper-splitter";
-
 data:extend({
 {
     type = "transport-belt",
-    name = "hyper-transport-belt",
+    name = "planetaris-hyper-transport-belt",
     icon = "__planetaris-unbounded__/graphics/icons/hyper-transport-belt.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "hyper-transport-belt"},
+    minable = {mining_time = 0.1, result = "planetaris-hyper-transport-belt"},
     max_health = 160,
-    corpse = "hyper-transport-belt-remnants",
-    dying_explosion = "hyper-transport-belt-explosion",
+    corpse = "planetaris-hyper-transport-belt-remnants",
+    dying_explosion = "planetaris-hyper-transport-belt-explosion",
     resistances =
     {
       {
@@ -64,20 +60,20 @@ data:extend({
     fast_replaceable_group = "transport-belt",
     related_underground_belt = "turbo-underground-belt",
     next_upgrade = nil,
-    speed = 0.200,
+    speed = 0.15625,
     connector_frame_sprites = transport_belt_connector_frame_sprites,
     circuit_connector = circuit_connector_definitions["belt"],
     circuit_wire_max_distance = transport_belt_circuit_wire_max_distance
   },
   {
     type = "underground-belt",
-    name = "hyper-underground-belt",
+    name = "planetaris-hyper-underground-belt",
     icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "hyper-underground-belt"},
+    minable = {mining_time = 0.1, result = "planetaris-hyper-underground-belt"},
     max_health = 170,
-    corpse = "hyper-underground-belt-remnants",
-    dying_explosion = "hyper-underground-belt-explosion",
+    corpse = "planetaris-hyper-underground-belt-remnants",
+    dying_explosion = "planetaris-hyper-underground-belt-explosion",
     max_distance = 11,
     heating_energy = "250kW",
     underground_sprite =
@@ -125,7 +121,7 @@ data:extend({
     animation_speed_coefficient = 32,
     belt_animation_set = hyper_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    speed = 0.200,
+    speed = 0.15625,
     structure =
     {
       direction_in =
@@ -224,13 +220,13 @@ data:extend({
   },
   {
     type = "splitter",
-    name = "hyper-splitter",
+    name = "planetaris-hyper-splitter",
     icon = "__planetaris-unbounded__/graphics/icons/hyper-splitter.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.1, result = "hyper-splitter"},
+    minable = {mining_time = 0.1, result = "planetaris-hyper-splitter"},
     max_health = 190,
-    corpse = "hyper-splitter-remnants",
-    dying_explosion = "hyper-splitter-explosion",
+    corpse = "planetaris-hyper-splitter-remnants",
+    dying_explosion = "planetaris-hyper-splitter-explosion",
     resistances =
     {
       {
@@ -247,7 +243,7 @@ data:extend({
     icon_draw_specification = {scale = 0.5},
     belt_animation_set = hyper_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    speed = 0.200,
+    speed = 0.15625,
     working_sound = sounds.express_splitter,
     related_transport_belt = "turbo-transport-belt",
     open_sound = sounds.machine_open,

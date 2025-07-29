@@ -2,7 +2,7 @@ data:extend(
 {
     {
         type = "fluid",
-        name = "sand",
+        name = "planetaris-sand",
         subgroup = "fluid",
         icon = "__planetaris-unbounded__/graphics/icons/fluid/sand.png",
         order = "b-b[vulcanus-Arig]-d",
@@ -14,7 +14,7 @@ data:extend(
       },
           {
       type = "fluid",
-      name = "pure-sand",
+      name = "planetaris-pure-sand",
       subgroup = "fluid",
       icon = "__planetaris-unbounded__/graphics/icons/fluid/pure-sand.png",
       icon_size = 64,

@@ -1,0 +1,76 @@
+{
+    "tile": [
+        ["sandstone-path", "planetaris-sandstone-path"],
+        ["sandstone-foundation", "planetaris-sandstone-foundation"],
+        ["sandstone-1", "planetaris-sandstone-1"],
+        ["sandstone-2", "planetaris-sandstone-2"],
+        ["sandstone-3", "planetaris-sandstone-3"]
+    ],
+    "fluid": [
+        ["sand", "planetaris-sand"],
+        ["pure-sand", "planetaris-sand"]
+    ],
+    "item": [
+        ["press", "planetaris-press"],
+        ["sifter", "planetaris-sifter"],
+        ["pure-sand-barrel", "planetaris-pure-sand-barrel"],
+        ["assembling-machine-4", "planetaris-assembling-machine-4"],
+        ["sandstone-brick", "planetaris-sandstone-brick"],
+        ["sandstone-foundation", "planetaris-sandstone-foundation"],
+        ["glass-panel", "planetaris-glass-panel"],
+        ["heavy-glass", "planetaris-heavy-glass"],
+        ["quartz", "planetaris-raw-quartz"],
+        ["silica", "planetaris-silica"],
+        ["simulating-unit", "planetaris-simulating-unit"],
+        ["compression-science-pack", "planetaris-compression-science-pack"],
+        ["hyper-transport-belt", "planetaris-hyper-transport-belt"],
+        ["hyper-splitter", "planetaris-hyper-splitter"],
+        ["hyper-underground-belt", "planetaris-hyper-underground-belt"],
+        ["big-chest", "planetaris-big-chest"]
+    ],
+    "entity": [
+        ["press", "planetaris-press"],
+        ["sifter", "planetaris-sifter"],
+        ["assembling-machine-4", "planetaris-assembling-machine-4"],
+        ["big-chest", "planetaris-big-chest"],
+        ["hyper-transport-belt", "planetaris-hyper-transport-belt"],
+        ["hyper-underground-belt", "planetaris-hyper-underground-belt"],
+        ["hyper-splitter", "planetaris-hyper-splitter"]
+    ],
+    "technology": [
+        ["sand-sifting", "planetaris-sand-sifting"],
+        ["glass", "planetaris-glass"],
+        ["compression", "planetaris-compression"],
+        ["compression-science", "planetaris-compression-science"],
+        ["sandstone-foundation", "planetaris-sandstone-foundation"],
+        ["advanced-sand-sifting", "planetaris-advanced-sand-sifting"],
+        ["heavy-glass", "planetaris-heavy-glass"],
+        ["silica-processing", "planetaris-silica-processing"],
+        ["simulating-unit", "planetaris-simulating-unit"],
+        ["hyper-transport-belt", "planetaris-hyper-transport-belt"],
+        ["automation-4", "planetaris-automation-4"], 
+        ["big-chest", "planetaris-big-chest"], 
+        ["quartz-productivity", "planetaris-raw-quartz-productivity"]    
+    ],
+    "recipe": [
+        ["press", "planetaris-press"],
+        ["sifter", "planetaris-sifter"],
+        ["sand-sifting", "planetaris-sand-sifting"],
+        ["advanced-sand-sifting", "planetaris-advanced-sand-sifting"],
+        ["sandstone-brick", "planetaris-sandstone-brick"],
+        ["sandstone-foundation", "planetaris-sandstone-foundation"],
+        ["glass-panel", "planetaris-glass-panel"],
+        ["heavy-glass", "planetaris-heavy-glass"],
+        ["simulating-unit", "planetaris-simulating-unit"],
+        ["quartz", "planetaris-raw-quartz"],
+        ["silica", "planetaris-silica"],
+        ["compression-rocket-fuel", "planetaris-compression-rocket-fuel"],
+        ["compression-science-pack", "planetaris-compression-science-pack"],
+        ["hyper-transport-belt", "planetaris-hyper-transport-belt"],
+        ["hyper-underground-belt", "planetaris-hyper-underground-belt"],
+        ["hyper-splitter", "planetaris-hyper-splitter"],
+        ["assembling-machine-4", "planetaris-assembling-machine-4"],
+        ["big-chest", "planetaris-big-chest"],
+        ["pure-sand-barrel", "planetaris-pure-sand-barrel"]
+    ]
+}
