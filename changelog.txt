@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.0
+Version: 0.0.8
 Date: 2025-07-29
   Features:
     - Added custom surface property for Arig
@@ -14,22 +14,19 @@ Date: 2025-07-29
     - Added compat with Castra
     - Added compat with Krastorio2 space out
     - Added compat with Resource spawner overhaul
-    - Set as incompatible with castra
   Bugfixes:
     - Changed color of sandstone foundation and bricks
     - deleted locale file inside english folder
     - Reduced the appereace of sand dunes on Arig
     - Reorder changelog
     - Technology descriptions not showing in game
-    - Transport belt
-    - Update of Updated info.json and locale files
-    - Updated data-update file
   Locale:
     - Added Chinese translation (zh-CN)
-    - Added descriptions for tech and entities
     - Added spanish translation (es_ES)
+    - Added descriptions for tech and entities
     - Added warning for Locked cargo drops on Arig
     - Updated locale files
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 2025-07-24
 Changes:
