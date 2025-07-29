@@ -60,7 +60,7 @@ data:extend({
     fast_replaceable_group = "transport-belt",
     related_underground_belt = "turbo-underground-belt",
     next_upgrade = nil,
-    speed = 0.118,
+    speed = 0.15625,
     connector_frame_sprites = transport_belt_connector_frame_sprites,
     circuit_connector = circuit_connector_definitions["belt"],
     circuit_wire_max_distance = transport_belt_circuit_wire_max_distance
@@ -121,7 +121,7 @@ data:extend({
     animation_speed_coefficient = 32,
     belt_animation_set = hyper_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    speed = 0.118,
+    speed = 0.15625,
     structure =
     {
       direction_in =
@@ -243,7 +243,7 @@ data:extend({
     icon_draw_specification = {scale = 0.5},
     belt_animation_set = hyper_belt_animation_set,
     fast_replaceable_group = "transport-belt",
-    speed = 0.118,
+    speed = 0.15625,
     working_sound = sounds.express_splitter,
     related_transport_belt = "turbo-transport-belt",
     open_sound = sounds.machine_open,
