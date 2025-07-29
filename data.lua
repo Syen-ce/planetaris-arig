@@ -28,3 +28,7 @@ require("compat.bzlead")
 require("compat.bztin")
 require("compat.crushing-industry")
 require("compat.wood-industry")
+
+if mods["any-planet-start"] then
+    APS.add_planet{name = "arig", filename = "__planetaris-unbounded__/compat/any-planet-start.lua", technology = "planet-discovery-arig"}
+end
