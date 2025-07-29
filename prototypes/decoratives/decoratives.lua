@@ -840,7 +840,7 @@ data:extend({
       tile_layer = 255,
       autoplace =
       {
-        probability_expression = "-0.8 - 0.4 * min(0.5, abs(grass_noise)) + 0.04 * noise_layer_noise('sand-decal')\z
+        probability_expression = "-1.5 - 0.4 * min(0.5, abs(grass_noise)) + 0.04 * noise_layer_noise('sand-decal')\z
                                         + min(range_select(moisture, 0, 0.15, 0.4, -10, 1),\z
                                               range_select(aux, 0.0, 0.25, 0.4, -10, 1))"
       },
