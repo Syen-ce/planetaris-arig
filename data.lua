@@ -19,10 +19,11 @@ require("prototypes.technology")
 require("prototypes.autoplace-controls")
 require("prototypes.decoratives.decoratives")
 
--- Compat
+--------------------- Compat
 
 require("compat.krastorio2-so")
 require("compat.resource-spawner-overhaul")
 require("compat.aai-industry")
 require("compat.bzlead")
 require("compat.bztin")
+require("compat.crushing-industry")

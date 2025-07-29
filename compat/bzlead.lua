@@ -1,6 +1,6 @@
 if not mods["bzlead"] then return end
 
----Add lead to progression on Arig
+---------------------Add lead to progression on Arig
 
 local arig_crash = data.raw["simple-entity"]["arig-big-sand-rock"].minable.results
 table.insert(arig_crash,

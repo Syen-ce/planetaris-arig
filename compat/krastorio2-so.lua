@@ -1,6 +1,6 @@
 if not mods["Krastorio2-spaced-out"] then return end
 
--- Add krastorio2 mmaterials to the progression
+--------------------- Add krastorio2 mmaterials to the progression
 
 local planetaris_sand_sifting = data.raw["recipe"]["planetaris-sand-sifting"].results
 table.insert(planetaris_sand_sifting,
