@@ -1,5 +1,3 @@
-local is_coke_enabled = settings.startup["alloy-smelting-coke"].value
-
 if not mods["wood-industry"] then return end
     
 if settings.startup["alloy-smelting-coke"].value then
