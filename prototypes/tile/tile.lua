@@ -1,7 +1,5 @@
-local item = require("__planetaris-unbounded__/prototypes/item")
 require("__base__/prototypes/tile/tiles")
 
-local sounds = require("__base__.prototypes.entity.sounds")
 local base_sounds = require("__base__/prototypes/entity/sounds")
 local base_tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local space_age_tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
@@ -110,6 +108,37 @@ local sandstone_transitions_between_transitions =
   }
 }
 
+-- Arig rock
+
+local fulgora_rock_sand_transitions =
+{
+  {
+    to_tiles = water_tile_type_names,
+    transition_group = water_transition_group_id,
+
+    background_layer_group = "water",
+    background_layer_offset = -5,
+    masked_background_layer_offset = 1,
+    offset_background_layer_by_tile_layer = false,
+
+    spritesheet = "__space-age__/graphics/terrain/water-transitions/fulgora-rock-slab-transition.png",
+    layout = tile_spritesheet_layout.transition_16_16_16_4_8_short,
+    background_enabled = false,
+    effect_map_layout =
+    {
+      spritesheet = "__space-age__/graphics/terrain/effect-maps/water-fulgora-sand-mask.png",
+      --tile_height = 2,
+      inner_corner_tile_height = 2,
+      outer_corner_tile_height = 2,
+      side_tile_height = 2,
+      u_transition_tile_height = 2,
+      o_transition_count = 1
+    },
+    background_mask_layout = tile_spritesheet_layout.simple_white_mask
+  },
+  ground_to_out_of_map_transition
+}
+
 -- Sanstone foundation
 
 local sandstone_foundation_transitions =
@@ -162,6 +191,40 @@ local sandstone_foundation_transitions_between_transitions =
     }
   },
 }
+
+local function transition_masks()
+  return {
+    mask_spritesheet = "__base__/graphics/terrain/masks/transition-1.png",
+    mask_layout =
+    {
+      scale = 0.5,
+      inner_corner =
+      {
+        count = 8,
+      },
+      outer_corner =
+      {
+        count = 8,
+        x = 64*9
+      },
+      side =
+      {
+        count = 8,
+        x = 64*9*2
+      },
+      u_transition =
+      {
+        count = 1,
+        x = 64*9*3
+      },
+      o_transition =
+      {
+        count = 1,
+        x = 64*9*4
+      }
+    }
+  }
+end
 
 ------------------------------------------------------------------ Sandstone Path
 
@@ -256,7 +319,7 @@ data:extend({
     order = "a[artificial]-d[utility]-b[sandstone-foundation]",
     subgroup = "artificial-tiles",
     minable = {mining_time = 0.5, result = "planetaris-sandstone-foundation"},
-    mined_sound = sounds.deconstruct_bricks(0.8),
+    mined_sound = base_sounds.deconstruct_bricks(0.8),
     is_foundation = true,
     collision_mask = tile_collision_masks.ground(),
     layer = 11,
@@ -283,9 +346,14 @@ data:extend({
   },
 })
 
-
-
-table.insert(water_tile_type_names, "arig-sand")
+data:extend({
+  {
+    type = "item-subgroup",
+    name = "arig-tiles",
+    group = "tiles",
+    order = "c"
+  }
+})
 
 data:extend({
   {
@@ -295,41 +363,49 @@ data:extend({
     name = "arig-sand",
     type = "tile",
     order = "a[oil]-b[shallow]",
-    subgroup = "nauvis-tiles",
+    subgroup = "arig-tiles",
     collision_mask = {layers={
       water_tile=true,
       resource=true,
-    --item=true,
-    --  player=true,
       floor=true,
       rail_support=true
     }},
     autoplace = {probability_expression = "clamp(0, 1, 1 - arig_island_elevation * 2) * ((control:arig_sand:frequency * 0.17) + (control:arig_sand:size * 6) * 0.5)"}, -- target coast at cliff elevation
     layer = 4,
     layer_group = "ground-natural",
-    map_color = {r = 189, g = 158, b = 124},
+    map_color = {189, 158, 124},
     vehicle_friction_modifier = 4,
     walking_speed_modifier = 0.8,
     default_cover_tile = "planetaris-sandstone-path",
     fluid = "planetaris-sand",
     absorptions_per_second = nil,
-    variants = tile_variations_template(
-      "__planetaris-unbounded__/graphics/terrain/arig-sand/arig-sand.png", "__base__/graphics/terrain/masks/transition-4.png",
+    variants =
+    {
+      transition = transition_masks(),
+      material_background =
       {
-        max_size = 4,
-        [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
-        [2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020}, },
-        [4] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020}, },
-        --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
-      }
-    )
+        picture = "__planetaris-unbounded__/graphics/terrain/arig-dune-sand.png",
+        line_length = 4,
+        count = 16,
+        scale = 0.5
+      },
+      material_texture_width_in_tiles = 10,
+      material_texture_height_in_tiles = 7
+    },
+    transitions = fulgora_rock_sand_transitions,
+    transitions_between_transitions = fulgora_sand_transitions_between_transitions,
+    walking_sound = sound_variations("__base__/sound/walking/sand", 9, 0.8, volume_multiplier("main-menu", 2.9)),
+    landing_steps_sound = space_age_tile_sounds.landing.sand,
+    driving_sound = sand_driving_sound,
+    ambient_sounds = sand_ambient_sound,
+    trigger_effect = tile_trigger_effects.sand_trigger_effect()
   },
 ------------------------------------------------------------------ arig sandstone
 {
   name = "planetaris-sandstone-1",
   type = "tile",
   order = "b[natural]-c[sand]-d[sandstone-1]",
-  subgroup = "nauvis-tiles",
+  subgroup = "arig-tiles",
   collision_mask = tile_collision_masks.ground(),
   autoplace = {probability_expression = 'max(expression_in_range_base(-10, -10, 0.25, 0.15),\z
                                              expression_in_range(5, inf, elevation, aux, -1.5, 0.5, 1.5, 1)) +\z
@@ -428,8 +504,44 @@ data:extend({
   trigger_effect = tile_trigger_effects.sand_trigger_effect(),
 
 },
+  {
+    name = "planetaris-arig-rock",
+    type = "tile",
+    order = "b[natural]-d[rock]",
+    subgroup = "arig-tiles",
+    collision_mask = tile_collision_masks.ground(),
+    autoplace = {
+      probability_expression = 'max(expression_in_range_base(-10, -10, 0.25, 0.15),\z
+                                             expression_in_range(5, inf, elevation + 1, aux, -1.5, 0.5, 1.5, 1)) +\z
+                                         noise_layer_noise(37)'},
+    layer = 9,
+    map_color={135, 105, 75},
+    vehicle_friction_modifier = 4,
+    absorptions_per_second = nil,
+    variants =
+    {
+      transition = transition_masks(),
+      material_background =
+      {
+        picture = "__planetaris-unbounded__/graphics/terrain/arig-rock.png",
+        line_length = 8,
+        count = 16,
+        scale = 0.5
+      },
+      material_texture_width_in_tiles = 8,
+      material_texture_height_in_tiles = 8
+    },
+    transitions = sandstone_transitions,
+    transitions_between_transitions = sandstone_transitions_between_transitions,
+    walking_sound = space_age_tile_sounds.walking.rocky_stone({modifiers = volume_multiplier("main-menu", 2.9)}),
+    landing_steps_sound = space_age_tile_sounds.landing.rock,
+    driving_sound = base_tile_sounds.driving.stone,
+    scorch_mark_color = {155, 125, 90},
+    trigger_effect = tile_trigger_effects.sand_trigger_effect()
+  },
 })
 
+table.insert(water_tile_type_names, "arig-sand")
 
 -- Return the necessary data for the tile (optional but for clarity)
 return {

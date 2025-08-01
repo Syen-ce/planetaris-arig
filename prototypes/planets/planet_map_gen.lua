@@ -47,6 +47,7 @@ planet_map_gen.arig = function()
             ["planetaris-sandstone-1"] = {},
             ["planetaris-sandstone-2"] = {},
             ["planetaris-sandstone-3"] = {},
+            ["planetaris-arig-rock"] = {},
           }
         },
         ["decorative"] =
@@ -60,7 +61,6 @@ planet_map_gen.arig = function()
             ["arig-brown-fluff-dry"] = {},
             ["arig-white-desert-bush"] = {},
             ["arig-small-sand-rock"] = {},
-            ["arig-medium-sand-rock"] = {},
           }
         },
         ["entity"] =
@@ -69,6 +69,7 @@ planet_map_gen.arig = function()
           {
             ["stone"] = {},
             ["arig-big-sand-rock"] = {},
+            ["arig-medium-sand-rock"] = {},
             ["heavy-oil-geyser"] = {},
             ["arig-crash"] = {},
           }

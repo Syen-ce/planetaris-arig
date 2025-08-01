@@ -254,26 +254,52 @@ data:extend({
       },
       {
         name = "arig-medium-sand-rock",
-        type = "optimized-decorative",
+        type = "simple-entity",
+        flags = {"placeable-neutral", "placeable-off-grid"},
         order = "d[remnants]-d[sand-rock]-b[medium]",
-        collision_mask = {layers = {water_tile = true, doodad = true}},
-        collision_box = {{-1.5, -0.5}, {1.5, 0.5}},
-        render_layer = "floor",
-        autoplace =
+        collision_mask = {layers = {water_tile = true, player = true}},
+        collision_box = {{-0.2, 0}, {0.8, 1}},
+        selection_box = {{-0.2, 0}, {0.8, 1}},
+        icon = "__base__/graphics/icons/big-sand-rock.png",
+        subgroup = "grass",
+        render_layer = "object",
+        deconstruction_alternative = "big-rock",
+        autoplace = {
+           probability_expression = 
+            "0.0001 * (0.1 * (rock_cluster_mask)) \z
+            + ((rock_frequency_scaled) + 0.006 * ((rock_size_scaled) - 0.3)) \z
+            * (clamp( (rock_size_scaled) - abs(rock_cluster_noise), 0, 1))",
+           local_expressions = {
+              rock_size = "control:arig_rocks:size",
+              rock_frequency = "control:arig_rocks:frequency",
+              rock_size_scaled = "rock_size * (0.06)",
+              rock_frequency_scaled = "rock_frequency * (2)",
+              rock_cluster_noise = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 4, persistence = 0.5, input_scale = 1, output_scale = 1}",
+              rock_cluster_mask = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 3, persistence = 0.6, input_scale = 1, output_scale = 1}",
+          },
+        },
+        dying_trigger_effect = decorative_trigger_effects.medium_rock(),
+        minable =
         {
-          control = "arig_rocks",
-          order = "a[doodad]-a[rock]-c[medium]",
-          probability_expression = "multiplier * rock_frequency * (region_box + (rock_size * 0.5) - penalty)",
-          local_expressions =
+          mining_particle = "stone-particle",
+          mining_time = 1,
+          results = {
+            {type = "item", name = "stone", amount_min = 5, amount_max = 12},
+            {type = "item", name = "coal", amount_min = 5, amount_max = 12},
+            {type = "item", name = "iron-ore", amount_min = 5, amount_max = 12},
+            {type = "item", name = "copper-ore", amount_min = 5, amount_max = 12},
+        }
+        },
+        resistances =
+        {
           {
-            multiplier = 3,
-            penalty = 1.5,
-          region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
-                            range_select{input = temperature, from = 5, to = 10, slope = 0.5, min = -10, max = 1})",
-            rock_size = "control:arig_rocks:size",
-            rock_frequency = "control:arig_rocks:frequency"
+            type = "fire",
+            percent = 100
           }
         },
+        map_color = {129, 105, 78},
+        count_as_rock_for_filtered_deconstruction = true,
+        mined_sound = sounds.deconstruct_bricks(1.0),
         trigger_effect = decorative_trigger_effects.medium_rock(),
         pictures =
         {
@@ -417,19 +443,19 @@ data:extend({
         render_layer = "floor",
         autoplace =
         {
-          control = "arig_rocks",
-          order = "a[doodad]-a[rock]-d[small]",
-          placement_density = 2,
-          probability_expression = "multiplier * rock_frequency * (region_box + (rock_size) - penalty)",
-          local_expressions =
-          {
-            multiplier = 1.5,
-            penalty = 1,
-            region_box = "range_select_base(moisture, 0.35, 1, 0.2, -10, 0)",
-            rock_size = "control:arig_rocks:size",
-            rock_frequency = "control:arig_rocks:frequency",
-          }
-        },
+           probability_expression = 
+            "0.0001 * (0.1 * (rock_cluster_mask)) \z
+            + ((rock_frequency_scaled) + 0.006 * ((rock_size_scaled) - 0.3)) \z
+            * (clamp( (rock_size_scaled) - abs(rock_cluster_noise), 0, 1))",
+           local_expressions = {
+              rock_size = "control:arig_rocks:size",
+              rock_frequency = "control:arig_rocks:frequency",
+              rock_size_scaled = "rock_size * (0.05)",
+              rock_frequency_scaled = "rock_frequency * (10)",
+              rock_cluster_noise = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 4, persistence = 0.5, input_scale = 1, output_scale = 1}",
+              rock_cluster_mask = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 3, persistence = 0.6, input_scale = 1, output_scale = 1}",
+          },
+      },
         walking_sound = tile_sounds.walking.pebble,
         trigger_effect = decorative_trigger_effects.small_rock(),
         pictures =

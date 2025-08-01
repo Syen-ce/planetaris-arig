@@ -83,7 +83,7 @@ data:extend({
   {
     type = "noise-expression",
     name = "arig_island_temperature",
-    expression = "temperature_basic + 100",  -- Temperature, similar to Aquilo setup
+    expression = "temperature_basic + 100", 
   },
   {
     type = "noise-expression",
