@@ -475,9 +475,10 @@ data:extend({
   order = "b[natural]-c[sand]-f[sandstone-3]",
   subgroup = "nauvis-tiles",
   collision_mask = tile_collision_masks.ground(),
-  autoplace = {probability_expression = 'max(expression_in_range_base(-10, -10, 0.25, 0.15),\z
-                                             expression_in_range(5, inf, elevation, aux, -1.5, 0.5, 1.5, 1)) +\z
-                                         noise_layer_noise(36)'},
+    autoplace = {
+      probability_expression = 'max(expression_in_range_base(-10, -10, 0.25, 0.15),\z
+                                             expression_in_range(5, inf, elevation + 2, aux, -1.5, 0.5, 1.5, 1)) +\z
+                                         noise_layer_noise(35)'},
   layer = 8,
 
   variants = tile_variations_template(
