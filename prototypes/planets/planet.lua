@@ -82,7 +82,7 @@ PlanetsLib:extend({
             },
             color1 = {0.961, 0.957, 0.922, 0.7},
             color2 = {0.922, 0.875, 0.725, 0.7},
-            tick_factor = 0.000001,
+            tick_factor = 0.00001,
           },
           clouds =
           {

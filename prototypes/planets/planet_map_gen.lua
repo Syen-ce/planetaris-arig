@@ -56,11 +56,14 @@ planet_map_gen.arig = function()
           {
             ["arig-red-desert-decal"] = {},
             ["arig-sand-decal"] = {},
-            ["arig-sand-dune-decal"] = {},
+            --["arig-sand-dune-decal"] = {},
             ["arig-brown-fluff"] = {},
             ["arig-brown-fluff-dry"] = {},
-            ["arig-white-desert-bush"] = {},
+            --["arig-white-desert-bush"] = {},
             ["arig-small-sand-rock"] = {},
+            ["arig-small-cactus"] = {},
+            ["arig-crack-decal"] = {},
+            ["arig-crack-decal-large"] = {},
           }
         },
         ["entity"] =

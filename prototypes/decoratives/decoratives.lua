@@ -6,6 +6,7 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local decorative_trigger_effects = require("__base__/prototypes/decorative/decorative-trigger-effects")
 
 local base_decorative_sprite_priority = "extra-high"
+local decal_tile_layer = 255
 
 data:extend({
     {
@@ -439,8 +440,9 @@ data:extend({
         type = "optimized-decorative",
         order = "d[remnants]-d[sand-rock]-a[small]",
         collision_mask = {layers = {water_tile = true, doodad = true}},
-        collision_box = {{-1.5, -0.5}, {1.5, 0.5}},
+        collision_box = {{0, 0}, {1, 1}},
         render_layer = "floor",
+        tile_layer = decal_tile_layer - 1,
         autoplace =
         {
            probability_expression = 
@@ -856,6 +858,97 @@ data:extend({
         }
       }
     },
+       {
+      name = "arig-small-cactus",
+      type = "optimized-decorative",
+      order = "b[decorative]-g[fluff]-a[normal]-a[brown]",
+      collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
+      collision_mask = {layers={doodad=true, water_tile=true}, not_colliding_with_itself=false},
+      walking_sound = tile_sounds.walking.big_bush,
+      trigger_effect = decorative_trigger_effects.brown_fluff(),
+      tile_layer = decal_tile_layer,
+      minimal_separation = 1,
+      autoplace =
+      {
+        order = "a[doodad]-i[fluff]-a",
+        probability_expression = "-2.6 + rpi(1.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box * (arig_sand_solid * 0.02)",
+        local_expressions =
+        {
+          region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
+                            range_select{input = temperature, from = 5, to = 50, slope = 0.5, min = -10, max = 1})"
+        }
+      },
+      pictures =
+      {
+        --cactus
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 61,
+          shift = util.by_pixel(3, -1.75),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 61,
+          shift = util.by_pixel(2.75, 0),
+          scale = 0.5
+        },
+      },
+    },
+    {
+     name = "arig-crack-decal",
+     type = "optimized-decorative",
+     order = "b[decorative]-b[red-desert-decal]",
+     collision_box = {{-1, -1}, {1, 1}},
+      collision_mask = {layers={water_tile=true, doodad=true}, colliding_with_tiles_only=true},
+      render_layer = "decals",
+      tile_layer = decal_tile_layer -5,
+      walking_sound = tile_sounds.walking.pebble,
+      autoplace =
+      {
+        order = "c[doodad]-z",
+        probability_expression = "-1.9 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
+        local_expressions =
+        {
+          region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.1, to = 0.6, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 14, to = 20, slope = 0.5, min = -10, max = 1}),\z
+                            min(range_select{input = moisture, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 10, to = 14, slope = 0.5, min = -10, max = 1}))"
+        }
+      },
+      pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-cracks/arig-cracks-", "large-", 128, 20)
+    },
+      {
+    name = "arig-crack-decal-large",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]-b[sand]",
+    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_mask = {layers={water_tile=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer =  decal_tile_layer -4,
+    walking_sound = tile_sounds.walking.pebble,
+      autoplace =
+      {
+        order = "c[doodad]-z",
+        probability_expression = "-1.5 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
+        local_expressions =
+        {
+          region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.1, to = 0.6, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 14, to = 20, slope = 0.5, min = -10, max = 1}),\z
+                            min(range_select{input = moisture, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 10, to = 14, slope = 0.5, min = -10, max = 1}))"
+        }
+      },
+    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-cracks/arig-cracks-", "huge-", 256, 20)
+  },
     {
       name = "arig-sand-dune-decal",
       type = "optimized-decorative",

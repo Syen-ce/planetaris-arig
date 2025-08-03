@@ -48,7 +48,7 @@ local fog = {
   local arig_weather = table.deepcopy(weather)
   arig_weather.cluster_count = 2
   arig_weather.action_delivery.source_effects.smoke_name= "arig_sand"
-  arig_weather.action_delivery.source_effects.speed = {0.32, 0}
+  arig_weather.action_delivery.source_effects.speed = {-0.32, 0}
   arig_weather.action_delivery.source_effects.speed_multiplier = 1
 
   local arig_fog = table.deepcopy(fog)
