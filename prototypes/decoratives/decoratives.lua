@@ -5,6 +5,8 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 
 local decorative_trigger_effects = require("__base__/prototypes/decorative/decorative-trigger-effects")
 
+local tintable_rock_tint = {0.82, 0.604, 0.427}
+
 local base_decorative_sprite_priority = "extra-high"
 local decal_tile_layer = 255
 
@@ -441,8 +443,7 @@ data:extend({
         order = "d[remnants]-d[sand-rock]-a[small]",
         collision_mask = {layers = {water_tile = true, doodad = true}},
         collision_box = {{0, 0}, {1, 1}},
-        render_layer = "floor",
-        tile_layer = decal_tile_layer - 1,
+        tile_layer = 253,
         autoplace =
         {
            probability_expression = 
@@ -863,10 +864,11 @@ data:extend({
       type = "optimized-decorative",
       order = "b[decorative]-g[fluff]-a[normal]-a[brown]",
       collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
-      collision_mask = {layers={doodad=true, water_tile=true}, not_colliding_with_itself=false},
+      collision_mask = {layers={doodad=true, water_tile=true}, not_colliding_with_itself=true},
       walking_sound = tile_sounds.walking.big_bush,
       trigger_effect = decorative_trigger_effects.brown_fluff(),
-      tile_layer = decal_tile_layer,
+      render_layer = "object",
+      tile_layer = 255,
       minimal_separation = 1,
       autoplace =
       {
@@ -896,6 +898,78 @@ data:extend({
           height = 61,
           shift = util.by_pixel(2.75, 0),
           scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(2.75, 0),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(12, -8),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(15, -20),
+          scale = 0.8
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(30, -20),
+          scale = 1
         },
       },
     },
@@ -948,6 +1022,54 @@ data:extend({
         }
       },
     pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-cracks/arig-cracks-", "huge-", 256, 20)
+  },
+    --- ROCK CLUSTERS
+  {
+    name = "arig-tiny-rock-cluster",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]-b[sand]",
+    collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
+    collision_mask = {layers={water_tile=true, doodad=true}, colliding_with_tiles_only=true},
+    render_layer = "decorative",
+    tile_layer =  253,
+    walking_sound = tile_sounds.walking.pebble,
+    autoplace =
+    {
+      order = "d[ground-surface]-i[rock]-c[cluster]",
+      placement_density = 2,
+      probability_expression = "vulcanus_rock_cluster"
+    },
+    pictures = get_decal_pictures("__space-age__/graphics/decorative/tiny-volcanic-rock-cluster/tiny-volcanic-rock-cluster-", "", 128, 8,tintable_rock_tint,true)
+  },
+    --- SAND DUNES
+  {
+    name = "arig-dune-decal",
+    type = "optimized-decorative",
+    order = "a[fulgora]-b[decorative]",
+    collision_box = {{-5, -5}, {5, 5}},
+    collision_mask = {layers={water_tile=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer = 220,
+    autoplace = {
+      order = "d[ground-surface]-h[dune]-a[relief]",
+      probability_expression = "vulcanus_dune_decal"
+    },
+    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-dune-decal/arig-dune-decal-", "", 512, 20)
+  },
+  {
+    name = "arig-pumice-relief-decal",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]",
+    collision_box = {{-5, -5}, {5, 5}},
+    collision_mask = {layers={water_tile=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer = 220,
+    walking_sound = tile_sounds.walking.pebble,
+    autoplace = {
+      order = "d[ground-surface]-d[relief]-b[rocky]",
+      probability_expression = "pumice_relief_decal"
+    },
+    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-relief-decal/arig-pumice-relief-", "", 1024, 19)
   },
     {
       name = "arig-sand-dune-decal",

@@ -64,6 +64,9 @@ planet_map_gen.arig = function()
             ["arig-small-cactus"] = {},
             ["arig-crack-decal"] = {},
             ["arig-crack-decal-large"] = {},
+            ["arig-tiny-rock-cluster"] = {},
+            ["arig-dune-decal"] = {},
+            ["arig-pumice-relief-decal"] = {},
           }
         },
         ["entity"] =
