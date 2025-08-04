@@ -313,6 +313,8 @@ data:extend({
         name = "planetaris-automation-4",
         icon = "__planetaris-unbounded__/graphics/technology/automation-4.png",
         icon_size = 256,
+        localised_name = {"technology-name.planetaris-automation-4"},
+        localised_description = {"technology-description.planetaris-automation-4"},
         effects =
         {
           {
