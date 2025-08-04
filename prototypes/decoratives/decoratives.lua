@@ -5,7 +5,10 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 
 local decorative_trigger_effects = require("__base__/prototypes/decorative/decorative-trigger-effects")
 
+local tintable_rock_tint = {0.82, 0.604, 0.427}
+
 local base_decorative_sprite_priority = "extra-high"
+local decal_tile_layer = 255
 
 data:extend({
     {
@@ -39,7 +42,7 @@ data:extend({
         minable =
         {
           mining_particle = "stone-particle",
-          mining_time = 5,
+          mining_time = 3,
           results = {
             {type = "item", name = "iron-plate", amount_min = 10, amount_max = 20},
             {type = "item", name = "copper-plate", amount_min = 10, amount_max = 20},
@@ -254,26 +257,52 @@ data:extend({
       },
       {
         name = "arig-medium-sand-rock",
-        type = "optimized-decorative",
+        type = "simple-entity",
+        flags = {"placeable-neutral", "placeable-off-grid"},
         order = "d[remnants]-d[sand-rock]-b[medium]",
-        collision_mask = {layers = {water_tile = true, doodad = true}},
-        collision_box = {{-1.5, -0.5}, {1.5, 0.5}},
-        render_layer = "floor",
-        autoplace =
+        collision_mask = {layers = {water_tile = true, player = true}},
+        collision_box = {{-0.2, 0}, {0.8, 1}},
+        selection_box = {{-0.2, 0}, {0.8, 1}},
+        icon = "__base__/graphics/icons/big-sand-rock.png",
+        subgroup = "grass",
+        render_layer = "object",
+        deconstruction_alternative = "big-rock",
+        autoplace = {
+           probability_expression = 
+            "0.0001 * (0.1 * (rock_cluster_mask)) \z
+            + ((rock_frequency_scaled) + 0.006 * ((rock_size_scaled) - 0.3)) \z
+            * (clamp( (rock_size_scaled) - abs(rock_cluster_noise), 0, 1))",
+           local_expressions = {
+              rock_size = "control:arig_rocks:size",
+              rock_frequency = "control:arig_rocks:frequency",
+              rock_size_scaled = "rock_size * (0.06)",
+              rock_frequency_scaled = "rock_frequency * (2)",
+              rock_cluster_noise = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 4, persistence = 0.5, input_scale = 1, output_scale = 1}",
+              rock_cluster_mask = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 3, persistence = 0.6, input_scale = 1, output_scale = 1}",
+          },
+        },
+        dying_trigger_effect = decorative_trigger_effects.medium_rock(),
+        minable =
         {
-          control = "arig_rocks",
-          order = "a[doodad]-a[rock]-c[medium]",
-          probability_expression = "multiplier * rock_frequency * (region_box + (rock_size * 0.5) - penalty)",
-          local_expressions =
+          mining_particle = "stone-particle",
+          mining_time = 1,
+          results = {
+            {type = "item", name = "stone", amount_min = 5, amount_max = 12},
+            {type = "item", name = "coal", amount_min = 5, amount_max = 12},
+            {type = "item", name = "iron-ore", amount_min = 5, amount_max = 12},
+            {type = "item", name = "copper-ore", amount_min = 5, amount_max = 12},
+        }
+        },
+        resistances =
+        {
           {
-            multiplier = 3,
-            penalty = 1.5,
-          region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
-                            range_select{input = temperature, from = 5, to = 10, slope = 0.5, min = -10, max = 1})",
-            rock_size = "control:arig_rocks:size",
-            rock_frequency = "control:arig_rocks:frequency"
+            type = "fire",
+            percent = 100
           }
         },
+        map_color = {129, 105, 78},
+        count_as_rock_for_filtered_deconstruction = true,
+        mined_sound = sounds.deconstruct_bricks(1.0),
         trigger_effect = decorative_trigger_effects.medium_rock(),
         pictures =
         {
@@ -413,23 +442,23 @@ data:extend({
         type = "optimized-decorative",
         order = "d[remnants]-d[sand-rock]-a[small]",
         collision_mask = {layers = {water_tile = true, doodad = true}},
-        collision_box = {{-1.5, -0.5}, {1.5, 0.5}},
-        render_layer = "floor",
+        collision_box = {{0, 0}, {1, 1}},
+        tile_layer = 253,
         autoplace =
         {
-          control = "arig_rocks",
-          order = "a[doodad]-a[rock]-d[small]",
-          placement_density = 2,
-          probability_expression = "multiplier * rock_frequency * (region_box + (rock_size) - penalty)",
-          local_expressions =
-          {
-            multiplier = 1.5,
-            penalty = 1,
-            region_box = "range_select_base(moisture, 0.35, 1, 0.2, -10, 0)",
-            rock_size = "control:arig_rocks:size",
-            rock_frequency = "control:arig_rocks:frequency",
-          }
-        },
+           probability_expression = 
+            "0.0001 * (0.1 * (rock_cluster_mask)) \z
+            + ((rock_frequency_scaled) + 0.006 * ((rock_size_scaled) - 0.3)) \z
+            * (clamp( (rock_size_scaled) - abs(rock_cluster_noise), 0, 1))",
+           local_expressions = {
+              rock_size = "control:arig_rocks:size",
+              rock_frequency = "control:arig_rocks:frequency",
+              rock_size_scaled = "rock_size * (0.05)",
+              rock_frequency_scaled = "rock_frequency * (10)",
+              rock_cluster_noise = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 4, persistence = 0.5, input_scale = 1, output_scale = 1}",
+              rock_cluster_mask = "multioctave_noise{ x = x, y = y, seed0 = map_seed, seed1 = map_seed + 5678, octaves = 3, persistence = 0.6, input_scale = 1, output_scale = 1}",
+          },
+      },
         walking_sound = tile_sounds.walking.pebble,
         trigger_effect = decorative_trigger_effects.small_rock(),
         pictures =
@@ -830,214 +859,218 @@ data:extend({
         }
       }
     },
-    {
-      name = "arig-sand-dune-decal",
+       {
+      name = "arig-small-cactus",
       type = "optimized-decorative",
-      order = "b[decorative]-b[red-desert-decal]",
-      collision_box = {{-1.78125, -1.34375}, {1.78125, 1.34375}},
-      collision_mask = {layers={doodad=true, ground_tile=true}, not_colliding_with_itself=true},
-      render_layer = "decals",
+      order = "b[decorative]-g[fluff]-a[normal]-a[brown]",
+      collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
+      collision_mask = {layers={doodad=true, water_tile=true}, not_colliding_with_itself=true},
+      walking_sound = tile_sounds.walking.big_bush,
+      trigger_effect = decorative_trigger_effects.brown_fluff(),
+      render_layer = "object",
       tile_layer = 255,
+      minimal_separation = 1,
       autoplace =
       {
-        probability_expression = "-1.5 - 0.4 * min(0.5, abs(grass_noise)) + 0.04 * noise_layer_noise('sand-decal')\z
-                                        + min(range_select(moisture, 0, 0.15, 0.4, -10, 1),\z
-                                              range_select(aux, 0.0, 0.25, 0.4, -10, 1))"
+        order = "a[doodad]-i[fluff]-a",
+        probability_expression = "-2.6 + rpi(1.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box * (arig_sand_solid * 0.02)",
+        local_expressions =
+        {
+          region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
+                            range_select{input = temperature, from = 5, to = 50, slope = 0.5, min = -10, max = 1})"
+        }
       },
       pictures =
       {
-        --dune
+        --cactus
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-00.png",
-          width = 212,
-          height = 168,
-          shift = util.by_pixel(-8, 0),
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 61,
+          shift = util.by_pixel(3, -1.75),
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-01.png",
-          width = 211,
-          height = 148,
-          shift = util.by_pixel(5.75, -3.5),
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 61,
+          shift = util.by_pixel(2.75, 0),
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-02.png",
-          width = 260,
-          height = 184,
-          shift = util.by_pixel(3, 1),
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(2.75, 0),
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-03.png",
-          width = 129,
-          height = 181,
-          shift = util.by_pixel(0.75, 1.75),
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(12, -8),
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-04.png",
-          width = 196,
-          height = 184,
-          shift = util.by_pixel(-3.5, -1.5),
-          scale = 0.5
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-05.png",
-          width = 215,
-          height = 184,
-          shift = util.by_pixel(-1.25, -1),
-          scale = 0.5
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-06.png",
-          width = 218,
-          height = 179,
-          shift = util.by_pixel(6.5, 4.25),
-          scale = 0.5
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-07.png",
-          width = 250,
-          height = 183,
-          shift = util.by_pixel(17.5, 3.25),
-          scale = 0.5
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-08.png",
-          width = 260,
-          height = 176,
-          shift = util.by_pixel(5, 0.5),
-          scale = 0.5
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(15, -20),
+          scale = 0.8
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-09.png",
-          width = 260,
-          height = 184,
-          shift = util.by_pixel(-5.5, -1),
-          scale = 0.5
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-10.png",
-          width = 233,
-          height = 183,
-          shift = util.by_pixel(-13.75, 1.25),
-          scale = 0.5
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(30, -20),
+          scale = 1
         },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-11.png",
-          width = 172,
-          height = 184,
-          shift = util.by_pixel(-9.5, 2),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-12.png",
-          width = 260,
-          height = 166,
-          shift = util.by_pixel(2.5, -6.5),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-13.png",
-          width = 259,
-          height = 172,
-          shift = util.by_pixel(4.75, -1),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-14.png",
-          width = 199,
-          height = 184,
-          shift = util.by_pixel(-2.25, -2),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-15.png",
-          width = 214,
-          height = 184,
-          shift = util.by_pixel(8.5, -3),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-17.png",
-          width = 222,
-          height = 153,
-          shift = util.by_pixel(-3, -0.25),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-18.png",
-          width = 247,
-          height = 184,
-          shift = util.by_pixel(4.25, -2.5),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-19.png",
-          width = 211,
-          height = 184,
-          shift = util.by_pixel(-5.75, -3),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-20.png",
-          width = 248,
-          height = 183,
-          shift = util.by_pixel(-1.5, 2.25),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-21.png",
-          width = 176,
-          height = 184,
-          shift = util.by_pixel(6.5, 1.5),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-22.png",
-          width = 208,
-          height = 185,
-          shift = util.by_pixel(9, -1.75),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-25.png",
-          width = 260,
-          height = 184,
-          shift = util.by_pixel(1.5, -1.5),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-26.png",
-          width = 134,
-          height = 184,
-          shift = util.by_pixel(-0.5, -1),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-27.png",
-          width = 127,
-          height = 165,
-          shift = util.by_pixel(26.25, 1.25),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-28.png",
-          width = 258,
-          height = 158,
-          shift = util.by_pixel(-2.5, -4.5),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-dune-decal/sand-dune-decal-29.png",
-          width = 180,
-          height = 184,
-          shift = util.by_pixel(-3.5, -2),
-          scale = 0.5
-        }
-      }
+      },
     },
+    {
+     name = "arig-crack-decal",
+     type = "optimized-decorative",
+     order = "b[decorative]-b[red-desert-decal]",
+     collision_box = {{-1, -1}, {1, 1}},
+      collision_mask = {layers={water_tile=true, doodad=true}, colliding_with_tiles_only=true},
+      render_layer = "decals",
+      tile_layer = decal_tile_layer -5,
+      walking_sound = tile_sounds.walking.pebble,
+      autoplace =
+      {
+        order = "c[doodad]-z",
+        probability_expression = "-1.9 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
+        local_expressions =
+        {
+          region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.1, to = 0.6, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 14, to = 20, slope = 0.5, min = -10, max = 1}),\z
+                            min(range_select{input = moisture, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 10, to = 14, slope = 0.5, min = -10, max = 1}))"
+        }
+      },
+      pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-cracks/arig-cracks-", "large-", 128, 20)
+    },
+      {
+    name = "arig-crack-decal-large",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]-b[sand]",
+    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_mask = {layers={water_tile=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer =  decal_tile_layer -4,
+    walking_sound = tile_sounds.walking.pebble,
+      autoplace =
+      {
+        order = "c[doodad]-z",
+        probability_expression = "-1.5 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
+        local_expressions =
+        {
+          region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.1, to = 0.6, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 14, to = 20, slope = 0.5, min = -10, max = 1}),\z
+                            min(range_select{input = moisture, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = aux, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
+                                range_select{input = temperature, from = 10, to = 14, slope = 0.5, min = -10, max = 1}))"
+        }
+      },
+    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-cracks/arig-cracks-", "huge-", 256, 20)
+  },
+    --- ROCK CLUSTERS
+  {
+    name = "arig-tiny-rock-cluster",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]-b[sand]",
+    collision_box = {{-0.2, -0.2}, {0.2, 0.2}},
+    collision_mask = {layers={water_tile=true, doodad=true}, colliding_with_tiles_only=true},
+    render_layer = "decorative",
+    tile_layer =  253,
+    walking_sound = tile_sounds.walking.pebble,
+    autoplace =
+    {
+      order = "d[ground-surface]-i[rock]-c[cluster]",
+      placement_density = 2,
+      probability_expression = "vulcanus_rock_cluster"
+    },
+    pictures = get_decal_pictures("__space-age__/graphics/decorative/tiny-volcanic-rock-cluster/tiny-volcanic-rock-cluster-", "", 128, 8,tintable_rock_tint,true)
+  },
+    --- SAND DUNES
+  {
+    name = "arig-dune-decal",
+    type = "optimized-decorative",
+    order = "a[fulgora]-b[decorative]",
+    collision_box = {{-5, -5}, {5, 5}},
+    collision_mask = {layers={water_tile=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer = 220,
+    autoplace = {
+      order = "d[ground-surface]-h[dune]-a[relief]",
+      probability_expression = "vulcanus_dune_decal"
+    },
+    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-dune-decal/arig-dune-decal-", "", 512, 20)
+  },
+  {
+    name = "arig-pumice-relief-decal",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]",
+    collision_box = {{-5, -5}, {5, 5}},
+    collision_mask = {layers={water_tile=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer = 220,
+    walking_sound = tile_sounds.walking.pebble,
+    autoplace = {
+      order = "d[ground-surface]-d[relief]-b[rocky]",
+      probability_expression = "pumice_relief_decal"
+    },
+    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-relief-decal/arig-pumice-relief-", "", 1024, 19)
+  },
     {
       name = "arig-brown-fluff",
       type = "optimized-decorative",
@@ -1400,193 +1433,6 @@ data:extend({
           width = 46,
           height = 33,
           shift = util.by_pixel(1, -1.25),
-          scale = 0.5
-        }
-      }
-    },
-    {
-      name = "arig-white-desert-bush",
-      type = "optimized-decorative",
-      order = "b[decorative]-g[red-desert-bush]",
-      collision_box = {{-0.5, -0.5}, {0.5, 0.5}},
-      collision_mask = {layers={doodad=true, water_tile=true}, not_colliding_with_itself=true},
-      walking_sound = tile_sounds.walking.big_bush,
-      trigger_effect = decorative_trigger_effects.white_desert_bush(),
-      autoplace =
-      {
-        order = "a[doodad]-g[asterisk]-b",
-        probability_expression = "-1.9 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
-        local_expressions =
-        {
-          region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z
-                                range_select{input = aux, from = 0.1, to = 0.6, slope = 0.05, min = -10, max = 1},\z
-                                range_select{input = temperature, from = 14, to = 20, slope = 0.5, min = -10, max = 1}),\z
-                            min(range_select{input = moisture, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
-                                range_select{input = aux, from = 0.8, to = 1, slope = 0.05, min = -10, max = 1},\z
-                                range_select{input = temperature, from = 10, to = 14, slope = 0.5, min = -10, max = 1}))"
-        }
-      },
-      pictures =
-      {
-        --wdbush
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-00.png",
-          priority = base_decorative_sprite_priority,
-          width = 62,
-          height = 40,
-          shift = util.by_pixel(5.5, -3.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-01.png",
-          priority = base_decorative_sprite_priority,
-          width = 57,
-          height = 49,
-          shift = util.by_pixel(5.75, -3.75),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-02.png",
-          priority = base_decorative_sprite_priority,
-          width = 63,
-          height = 39,
-          shift = util.by_pixel(4.25, -2.75),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-03.png",
-          priority = base_decorative_sprite_priority,
-          width = 71,
-          height = 46,
-          shift = util.by_pixel(4.75, -3.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-04.png",
-          priority = base_decorative_sprite_priority,
-          width = 68,
-          height = 45,
-          shift = util.by_pixel(4, -4.25),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-05.png",
-          priority = base_decorative_sprite_priority,
-          width = 52,
-          height = 42,
-          shift = util.by_pixel(4.5, -2.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-06.png",
-          priority = base_decorative_sprite_priority,
-          width = 83,
-          height = 54,
-          shift = util.by_pixel(5.75, -4.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-07.png",
-          priority = base_decorative_sprite_priority,
-          width = 78,
-          height = 62,
-          shift = util.by_pixel(7, -3),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-08.png",
-          priority = base_decorative_sprite_priority,
-          width = 91,
-          height = 60,
-          shift = util.by_pixel(6.25, -2.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-09.png",
-          priority = base_decorative_sprite_priority,
-          width = 78,
-          height = 49,
-          shift = util.by_pixel(3, -4.75),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-10.png",
-          priority = base_decorative_sprite_priority,
-          width = 72,
-          height = 59,
-          shift = util.by_pixel(6, -1.75),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-11.png",
-          priority = base_decorative_sprite_priority,
-          width = 93,
-          height = 51,
-          shift = util.by_pixel(4.25, -2.25),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-12.png",
-          priority = base_decorative_sprite_priority,
-          width = 58,
-          height = 47,
-          shift = util.by_pixel(4, -6.25),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-13.png",
-          priority = base_decorative_sprite_priority,
-          width = 69,
-          height = 54,
-          shift = util.by_pixel(9.25, -4),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-14.png",
-          priority = base_decorative_sprite_priority,
-          width = 69,
-          height = 43,
-          shift = util.by_pixel(5.25, -3.25),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-15.png",
-          priority = base_decorative_sprite_priority,
-          width = 55,
-          height = 38,
-          shift = util.by_pixel(8.75, -3.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-16.png",
-          priority = base_decorative_sprite_priority,
-          width = 48,
-          height = 38,
-          shift = util.by_pixel(-0.5, -2),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-17.png",
-          priority = base_decorative_sprite_priority,
-          width = 43,
-          height = 33,
-          shift = util.by_pixel(2.25, -5.25),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-18.png",
-          priority = base_decorative_sprite_priority,
-          width = 46,
-          height = 35,
-          shift = util.by_pixel(3.5, -1.75),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/decorative/white-desert-bush/white-desert-bush-19.png",
-          priority = base_decorative_sprite_priority,
-          width = 45,
-          height = 27,
-          shift = util.by_pixel(3.75, -2.75),
           scale = 0.5
         }
       }

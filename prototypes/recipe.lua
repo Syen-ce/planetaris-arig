@@ -339,7 +339,7 @@ data:extend(
       icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
       ingredients =
       {
-        {type = "item", name = "turbo-transport-belt", amount = 1},
+        {type = "item", name = "turbo-underground-belt", amount = 1},
         {type = "item", name = "planetaris-silica", amount = 3},
         {type = "fluid", name = "lubricant", amount = 30},
       },

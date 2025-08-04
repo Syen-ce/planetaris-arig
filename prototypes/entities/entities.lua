@@ -10,13 +10,14 @@ local hit_effects = require("__base__/prototypes/entity/hit-effects")
 data:extend({
     scaled_cliff(
       {
-        mod_name = "__planetaris-unbounded__",       -- Replace with your mod name
-        name = "arig-cliff",               -- Name of your custom cliff
-        map_color = {144, 119, 87},           -- Color of the cliff on the map
-        suffix = "arig",                   -- Suffix to differentiate from other cliffs
-        scale = 1.0,                          -- Scaling factor for your custom cliff (adjust as needed)
-        has_lower_layer = true,               -- Whether the cliff has a lower layer
-        factoriopedia_simulation = simulations.factoriopedia_cliff  -- Add any custom simulation if needed
+        mod_name = "__planetaris-unbounded__",
+        name = "arig-cliff",
+        map_color = {144, 119, 87},
+        suffix = "arig",
+        scale = 1.0,
+        has_lower_layer = true,
+        icon = "__planetaris-unbounded__/graphics/icons/cliff-arig.png",
+        factoriopedia_simulation = simulations.factoriopedia_cliff 
       }
     )
 })
