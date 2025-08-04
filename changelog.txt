@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025-08-04
+  Features:
+    - Added cactus decal on Arig
+    - Added pebbels, dunes and rock decals
+  Optimizations:
+    - Optimized graphics
+  Compatibility:
+    - Added compat for celestial weather
+    - Celestial Weather mod marked as optional
+  Bugfixes:
+    - Fixed error in english locale
+    - Hyper underground belts now use Turbo underground belts
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2025-07-29
   Features:
