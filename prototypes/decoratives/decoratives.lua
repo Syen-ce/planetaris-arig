@@ -42,7 +42,7 @@ data:extend({
         minable =
         {
           mining_particle = "stone-particle",
-          mining_time = 5,
+          mining_time = 3,
           results = {
             {type = "item", name = "iron-plate", amount_min = 10, amount_max = 20},
             {type = "item", name = "copper-plate", amount_min = 10, amount_max = 20},
