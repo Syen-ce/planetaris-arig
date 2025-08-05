@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2025-08-05
+  Features:
+    - Items are destroyed when dropped on Arig's sand
+    - Added smoke particle when an item is destroyed on sand
+  Compatibility:
+    - Add compat with Muluna
+  Balancing:
+    - Balanced sifting recipies (Sand sifting: Pure sand 25/30% -> 25/25%, Steam 60/25% -> 50/22%, Coal 1% -> 8%, Stone 5% -> 4%. Advanced sand sifting: Pure sand 50/20% -> 50/30%, Steam 50/30% -> 50/10%, Calcite 20% -> 25%, Sulfur 25% -> 20%, Coal 5% -> 15%)
+---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: 2025-08-04
+  Bugfixes:
+    - Fixed bug in optional mod list
+    - Fixed automation 4 technology not showing name and description
+---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2025-08-04
   Features:
@@ -86,4 +102,5 @@ Version: 0.0.3
 Date: 2025-03-21
   Features:
     - Sandstone (item)
+
     - Sandstone Path (Artificial Tile)
