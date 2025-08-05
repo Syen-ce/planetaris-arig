@@ -22,6 +22,50 @@ water_transition_group_id = water_transition_group_id or 1
 out_of_map_transition_group_id = out_of_map_transition_group_id or 2
 
 
+data:extend({
+  {
+      type = "trivial-smoke",
+      name = "sand-smoke",
+      color = {0.949, 0.918, 0.867},
+      duration = 5,
+      fade_in_duration = 1,
+      fade_away_duration = 1,
+      start_scale = 0.05,
+      end_scale = 0.05,
+      render_layer = "higher-object-under",
+      affected_by_wind = true,
+      cyclic =  true,
+      animation = {
+        width = 152,
+        height = 120,
+        line_length = 5,
+        frame_count = 60,
+        shift = {0, 0},
+        priority = "high",
+        animation_speed = 0.25,
+        filename = "__planetaris-unbounded__/graphics/entity/sand-smoke/smoke.png",
+        flags = { "smoke" },
+        scale = 0.5
+      }
+      
+  }
+})
+
+local destroyed_item_trigger =
+{
+  type = "direct",
+  action_delivery =
+  {
+    type = "instant",
+    source_effects =
+    {
+      type = "create-trivial-smoke",
+      smoke_name = "sand-smoke",
+      starting_frame_deviation = 5
+    }
+  }
+}
+
 
 -- Sandstone
 
@@ -379,6 +423,8 @@ data:extend({
     default_cover_tile = "planetaris-sandstone-path",
     fluid = "planetaris-sand",
     absorptions_per_second = nil,
+    destroys_dropped_items = true,
+    default_destroyed_dropped_item_trigger = destroyed_item_trigger,
     variants =
     {
       transition = transition_masks(),
