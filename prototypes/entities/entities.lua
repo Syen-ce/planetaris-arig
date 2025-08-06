@@ -576,4 +576,48 @@ graphics_set =
   circuit_connector = circuit_connector_definitions["accumulator"],
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
+  {
+    type = "solar-panel",
+    name = "planetaris-advanced-solar-panel",
+    icon = "__planetaris-unbounded__/graphics/icons/advanced-solar-panel.png",
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.2, result = "planetaris-advanced-solar-panel"},
+    fast_replaceable_group = "solar-panel",
+    max_health = 400,
+    corpse = "solar-panel-remnants",
+    dying_explosion = "solar-panel-explosion",
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    damaged_trigger_effect = hit_effects.entity(),
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "solar"
+    },
+    picture =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/advanced-solar-panel/advanced-solar-panel.png",
+          priority = "high",
+          width = 384,
+          height = 384,
+          shift = util.by_pixel(0, 5),
+          scale = 0.38
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/advanced-solar-panel/advanced-solar-panel-shadow.png",
+          priority = "high",
+          width = 384,
+          height = 384,
+          shift = util.by_pixel(6.5, 7.5),
+          draw_as_shadow = true,
+          scale = 0.38
+        }
+      }
+    },
+    impact_category = "glass",
+    production = "120kW"
+  },
 })

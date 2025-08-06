@@ -367,6 +367,35 @@ data:extend({
         time = 60
       }
     },
+    {
+      type = "technology",
+      name = "planetaris-advanced-solar-panel",
+      icon = "__planetaris-unbounded__/graphics/technology/advanced-solar-panel.png",
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-advanced-solar-panel"
+        },
+      },
+      prerequisites = {"planetaris-glass", "planetaris-silica-processing"},
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+        },
+        time = 60
+      }
+    },
       {
     type = "technology",
     name = "planetaris-raw-quartz-productivity",
