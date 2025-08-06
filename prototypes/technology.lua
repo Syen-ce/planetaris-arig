@@ -353,7 +353,7 @@ data:extend({
       prerequisites = {"planetaris-silica-processing", "planetaris-heavy-glass"},
       unit =
       {
-        count = 5000,
+        count = 2000,
         ingredients =
         {
           {"automation-science-pack", 1},
