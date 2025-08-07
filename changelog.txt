@@ -1,3 +1,13 @@
+Version: 1.4.0
+Date: 2025-08-07
+  Feature:
+    - Added advanced solar panel
+  Balancing:
+    - Reduced cost to unlock Container from 5000 to 2000
+  Compatibility:
+    - Any planet start: Solar panels are unlock before automation science, Added new recipe for small power poles
+  Locale:
+    - Updated Chinese translation
 ---------------------------------------------------------------------------------------------------
 Version: 1.3.0
 Date: 2025-08-05
@@ -104,3 +114,4 @@ Date: 2025-03-21
     - Sandstone (item)
 
     - Sandstone Path (Artificial Tile)
+
