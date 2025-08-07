@@ -231,4 +231,17 @@ data:extend({
         place_result = "planetaris-big-chest",
         stack_size = 50
       },
+        {
+        type = "item",
+        name = "planetaris-advanced-solar-panel",
+        icon = "__planetaris-unbounded__/graphics/icons/advanced-solar-panel.png",
+        subgroup = "energy",
+        order = "d[solar-panel]-b[advanced-solar-panel]",
+        inventory_move_sound = item_sounds.electric_large_inventory_move,
+        pick_sound = item_sounds.electric_large_inventory_pickup,
+        drop_sound = item_sounds.electric_large_inventory_move,
+        place_result = "planetaris-advanced-solar-panel",
+        stack_size = 20,
+        weight = 20*kg,
+     },
 })

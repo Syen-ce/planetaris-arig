@@ -361,4 +361,17 @@ data:extend(
       results = {{type="item", name="planetaris-big-chest", amount=1}},
       allow_productivity = false,
     },
+      {
+      type = "recipe",
+      name = "planetaris-advanced-solar-panel",
+      energy_required = 20,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "solar-panel", amount = 1},
+        {type = "item", name = "planetaris-glass-panel", amount = 4},
+        {type = "item", name = "planetaris-silica", amount = 2}
+      },
+      results = {{type="item", name="planetaris-advanced-solar-panel", amount=1}}
+    },
 })
