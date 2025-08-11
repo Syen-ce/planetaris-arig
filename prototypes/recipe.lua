@@ -8,6 +8,7 @@ data:extend(
         name = "planetaris-sifter",     
         energy_required = 5,
         enabled = false,
+        auto_recycle = false,
         subgroup = "arig-production",
         order = "a",
         surface_conditions =
@@ -32,6 +33,7 @@ data:extend(
         name = "planetaris-press",     
         energy_required = 5,
         enabled = false,
+        auto_recycle = false,
         subgroup = "arig-production",
         order = "a-b",
         surface_conditions =
@@ -110,6 +112,7 @@ data:extend(
         order = "a[sand-processing]-b[sand-processing]",
         icon = "__planetaris-unbounded__/graphics/icons/sandstone-brick.png",
         enabled = false,
+        auto_recycle = false,
         energy_required = 2,
         ingredients = { { type = "fluid", name = "planetaris-pure-sand", amount = 10 } },
         results = { { type = "item", name = "planetaris-sandstone-brick", amount = 10 } }
@@ -123,6 +126,7 @@ data:extend(
       category = "compressing",
       order = "a[sand-processing]-b[sand-processing]-b",
       enabled = false,
+      auto_recycle = false,
       energy_required = 10,
       ingredients = 
       { 
@@ -178,6 +182,7 @@ data:extend(
     name = "planetaris-simulating-unit",
     category = "electromagnetics",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     icon = "__planetaris-unbounded__/graphics/icons/simulating-unit.png",
     ingredients =
@@ -194,6 +199,7 @@ data:extend(
     name = "planetaris-raw-quartz",
     category = "compressing",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     icon = "__planetaris-unbounded__/graphics/icons/quartz.png",
     ingredients =
@@ -277,6 +283,7 @@ data:extend(
     name = "planetaris-compression-science-pack",
     category = "compressing",
     enabled = false,
+    auto_recycle = false,
     icon = "__planetaris-unbounded__/graphics/icons/compression-science-pack.png",
     surface_conditions =
     {
