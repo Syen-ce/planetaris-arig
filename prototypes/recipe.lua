@@ -238,6 +238,40 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "planetaris-advanced-heavy-oil-cracking",
+    category = "chemistry",
+    subgroup = "arig-processes",
+    enabled = false,
+    energy_required = 2,
+    icon = "__planetaris-unbounded__/graphics/icons/advanced-heavy-oil-cracking.png",
+    ingredients =
+    {
+      {type = "fluid", name = "water", amount = 40},
+      {type = "fluid", name = "heavy-oil", amount = 40}
+    },
+    results = {
+      {type = "fluid", name = "light-oil", amount = 30},
+      {type = "fluid", name = "petroleum-gas", amount = 20}
+    },
+    allow_productivity = true,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
+      }
+    },
+    crafting_machine_tint =
+    {
+      primary = {r = 1.000, g = 0.642, b = 0.261, a = 1.000}, -- #ffa342ff
+      secondary = {r = 1.000, g = 0.722, b = 0.376, a = 1.000}, -- #ffb85fff
+      tertiary = {r = 0.854, g = 0.659, b = 0.576, a = 1.000}, -- #d9a892ff
+      quaternary = {r = 1.000, g = 0.494, b = 0.271, a = 1.000}, -- #ff7e45ff
+    }
+  },
+  {
+    type = "recipe",
     name = "planetaris-compression-science-pack",
     category = "compressing",
     enabled = false,
