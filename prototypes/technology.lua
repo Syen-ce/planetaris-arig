@@ -113,9 +113,33 @@ data:extend({
           type = "unlock-recipe",
           recipe = "planetaris-raw-quartz"
         },
-                {
+        {
           type = "unlock-recipe",
           recipe = "planetaris-compression-rocket-fuel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-sulfur"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-plastic-bar"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-solid-fuel-from-heavy-oil"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-solid-fuel-from-light-oil"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-solid-fuel-from-petroleum-gas"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-carbon"
         },
       },
       prerequisites = {"planetaris-sand-sifting"},

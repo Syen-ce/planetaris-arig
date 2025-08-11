@@ -1,5 +1,7 @@
 data:extend(
 {
+
+  -------------------------------------------------------------------------- Arig
     {
 
         type = "recipe",
@@ -408,4 +410,115 @@ data:extend(
       },
       results = {{type="item", name="planetaris-advanced-solar-panel", amount=1}}
     },
+
+    -- Base recipes to compression
+    
+  {
+    type = "recipe",
+    name = "planetaris-sulfur",
+    localised_name = {"", {"item-name.sulfur"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"item-description.sulfur"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 4,
+    ingredients =
+    {
+      {type = "fluid", name = "water", amount = 20}, -- Better than chemistry
+      {type = "fluid", name = "petroleum-gas", amount = 30}
+    },
+    results = {{type="item", name="sulfur", amount=1}},
+    allow_productivity = true
+  },
+    {
+    type = "recipe",
+    name = "planetaris-plastic-bar",
+    localised_name = {"", {"item-name.plastic-bar"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"item-description.plastic-bar"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "petroleum-gas", amount = 25}, -- Better than chemistry
+      {type = "item", name = "coal", amount = 1}
+    },
+    results = {{type="item", name="plastic-bar", amount=3}}, -- Better than chemistry
+    allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "planetaris-solid-fuel-from-heavy-oil",
+    localised_name = {"", {"recipe-name.solid-fuel-from-heavy-oil"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"recipe-description.solid-fuel-from-heavy-oil"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    icon = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "heavy-oil", amount = 20}
+    },
+    results = {{type="item", name="solid-fuel", amount=1}},
+    allow_productivity = true
+  },
+    {
+    type = "recipe",
+    name = "planetaris-solid-fuel-from-light-oil",
+    localised_name = {"", {"recipe-name.solid-fuel-from-light-oil"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"recipe-description.solid-fuel-from-light-oil"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "light-oil", amount = 10}
+    },
+    results = {{type="item", name="solid-fuel", amount=1}},
+    allow_productivity = true
+  },
+    {
+    type = "recipe",
+    name = "planetaris-solid-fuel-from-petroleum-gas",
+    localised_name = {"", {"recipe-name.solid-fuel-from-petroleum-gas"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"recipe-description.solid-fuel-from-petroleum-gas"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    icon = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "petroleum-gas", amount = 20}
+    },
+    results = {{type="item", name="solid-fuel", amount=1}},
+    allow_productivity = true
+  },
+      {
+    type = "recipe",
+    name = "planetaris-carbon",
+    localised_name = {"", {"item-name.carbon"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"item-description.carbon"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "item", name = "coal", amount = 2},
+      {type = "fluid", name = "sulfuric-acid", amount = 15}, -- Better than chemistry
+    },
+    results = {{type="item", name="carbon", amount=1}},
+    allow_productivity = true
+  },
 })

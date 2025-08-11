@@ -1,9 +1,9 @@
 -- Set the next_upgrade property to point to assembling-machine-4
 
 local assemblingMachine3 = data.raw["assembling-machine"]["assembling-machine-3"]
-
 assemblingMachine3.next_upgrade = "planetaris-assembling-machine-4"
 
+-- Set Upgrade for level 5 belts
 
 data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "planetaris-hyper-transport-belt"
 data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "planetaris-hyper-underground-belt"
