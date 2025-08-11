@@ -1,3 +1,13 @@
+Version: 1.5.0
+Date: 2025-08-11
+  Feature:
+    - Added Advanced heavy oil cracking recipe
+    - Added sulfur, plastic, carbon and solid fuel recipes to the press
+  Balancing:
+    - Increased steam from sifting recipes (Sand Sifting: 50 -> 60, Advanced sand sifting: 50 -> 70)
+  Bugfixes:
+    - Adjusted recycling for Silica, Press and Sifter
+---------------------------------------------------------------------------------------------------
 Version: 1.4.0
 Date: 2025-08-07
   Feature:
@@ -114,4 +124,5 @@ Date: 2025-03-21
     - Sandstone (item)
 
     - Sandstone Path (Artificial Tile)
+
 
