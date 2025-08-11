@@ -56,6 +56,26 @@ data:extend({
       order = "ea[arig]",
     },
     {
+    type = "technology",
+    name = "planetaris-advanced-heavy-oil-cracking",
+    icon = "__base__/graphics/technology/oil-gathering.png",
+    icon_size = 256,
+    prerequisites = {"planetaris-sand-sifting"},
+    effects =
+    {
+      {
+        type = "unlock-recipe",
+        recipe = "planetaris-advanced-heavy-oil-cracking"
+      }
+    },
+    research_trigger =
+    {
+      type = "mine-entity",
+      entity = "heavy-oil-geyser"
+    },
+    order = "ea[arig]",
+    },
+    {
       type = "technology",
       name = "planetaris-glass",
       icon = "__planetaris-unbounded__/graphics/technology/glass-panel.png",
@@ -93,9 +113,33 @@ data:extend({
           type = "unlock-recipe",
           recipe = "planetaris-raw-quartz"
         },
-                {
+        {
           type = "unlock-recipe",
           recipe = "planetaris-compression-rocket-fuel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-sulfur"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-plastic-bar"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-solid-fuel-from-heavy-oil"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-solid-fuel-from-light-oil"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-solid-fuel-from-petroleum-gas"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-carbon"
         },
       },
       prerequisites = {"planetaris-sand-sifting"},

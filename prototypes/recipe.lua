@@ -1,11 +1,14 @@
 data:extend(
 {
+
+  -------------------------------------------------------------------------- Arig
     {
 
         type = "recipe",
         name = "planetaris-sifter",     
         energy_required = 5,
         enabled = false,
+        auto_recycle = false,
         subgroup = "arig-production",
         order = "a",
         surface_conditions =
@@ -30,6 +33,7 @@ data:extend(
         name = "planetaris-press",     
         energy_required = 5,
         enabled = false,
+        auto_recycle = false,
         subgroup = "arig-production",
         order = "a-b",
         surface_conditions =
@@ -67,7 +71,7 @@ data:extend(
         results =
         {
           {type = "fluid", name = "planetaris-pure-sand",   amount = 25, probability = 0.25, show_details_in_recipe_tooltip = false},
-          {type = "fluid", name = "steam",                  amount = 50, probability = 0.22, temperature = 165, show_details_in_recipe_tooltip = false},         
+          {type = "fluid", name = "steam",                  amount = 60, probability = 0.22, temperature = 165, show_details_in_recipe_tooltip = false},         
           {type = "item", name = "iron-ore",                amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "item", name = "copper-ore",              amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "item", name = "coal",                    amount = 1,  probability = 0.08, show_details_in_recipe_tooltip = false},
@@ -94,7 +98,7 @@ data:extend(
         results =
         {
           {type = "fluid", name = "planetaris-pure-sand", amount = 50, probability = 0.30, show_details_in_recipe_tooltip = false},
-          {type = "fluid", name = "steam",                amount = 50, probability = 0.10, temperature = 165, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "steam",                amount = 70, probability = 0.10, temperature = 165, show_details_in_recipe_tooltip = false},
           {type = "item", name = "calcite",               amount = 1,  probability = 0.25, show_details_in_recipe_tooltip = false},
           {type = "item", name = "sulfur",                amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "item", name = "coal",                  amount = 1,  probability = 0.15, show_details_in_recipe_tooltip = false},
@@ -108,6 +112,7 @@ data:extend(
         order = "a[sand-processing]-b[sand-processing]",
         icon = "__planetaris-unbounded__/graphics/icons/sandstone-brick.png",
         enabled = false,
+        auto_recycle = false,
         energy_required = 2,
         ingredients = { { type = "fluid", name = "planetaris-pure-sand", amount = 10 } },
         results = { { type = "item", name = "planetaris-sandstone-brick", amount = 10 } }
@@ -121,6 +126,7 @@ data:extend(
       category = "compressing",
       order = "a[sand-processing]-b[sand-processing]-b",
       enabled = false,
+      auto_recycle = false,
       energy_required = 10,
       ingredients = 
       { 
@@ -176,6 +182,7 @@ data:extend(
     name = "planetaris-simulating-unit",
     category = "electromagnetics",
     enabled = false,
+    auto_recycle = false,
     energy_required = 15,
     icon = "__planetaris-unbounded__/graphics/icons/simulating-unit.png",
     ingredients =
@@ -192,6 +199,7 @@ data:extend(
     name = "planetaris-raw-quartz",
     category = "compressing",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     icon = "__planetaris-unbounded__/graphics/icons/quartz.png",
     ingredients =
@@ -238,9 +246,44 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "planetaris-advanced-heavy-oil-cracking",
+    category = "chemistry",
+    subgroup = "arig-processes",
+    enabled = false,
+    energy_required = 2,
+    icon = "__planetaris-unbounded__/graphics/icons/advanced-heavy-oil-cracking.png",
+    ingredients =
+    {
+      {type = "fluid", name = "water", amount = 40},
+      {type = "fluid", name = "heavy-oil", amount = 40}
+    },
+    results = {
+      {type = "fluid", name = "light-oil", amount = 30},
+      {type = "fluid", name = "petroleum-gas", amount = 20}
+    },
+    allow_productivity = true,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
+      }
+    },
+    crafting_machine_tint =
+    {
+      primary = {r = 1.000, g = 0.642, b = 0.261, a = 1.000}, -- #ffa342ff
+      secondary = {r = 1.000, g = 0.722, b = 0.376, a = 1.000}, -- #ffb85fff
+      tertiary = {r = 0.854, g = 0.659, b = 0.576, a = 1.000}, -- #d9a892ff
+      quaternary = {r = 1.000, g = 0.494, b = 0.271, a = 1.000}, -- #ff7e45ff
+    }
+  },
+  {
+    type = "recipe",
     name = "planetaris-compression-science-pack",
     category = "compressing",
     enabled = false,
+    auto_recycle = false,
     icon = "__planetaris-unbounded__/graphics/icons/compression-science-pack.png",
     surface_conditions =
     {
@@ -374,4 +417,115 @@ data:extend(
       },
       results = {{type="item", name="planetaris-advanced-solar-panel", amount=1}}
     },
+
+    -- Base recipes to compression
+    
+  {
+    type = "recipe",
+    name = "planetaris-sulfur",
+    localised_name = {"", {"item-name.sulfur"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"item-description.sulfur"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 4,
+    ingredients =
+    {
+      {type = "fluid", name = "water", amount = 20}, -- Better than chemistry
+      {type = "fluid", name = "petroleum-gas", amount = 30}
+    },
+    results = {{type="item", name="sulfur", amount=1}},
+    allow_productivity = true
+  },
+    {
+    type = "recipe",
+    name = "planetaris-plastic-bar",
+    localised_name = {"", {"item-name.plastic-bar"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"item-description.plastic-bar"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "petroleum-gas", amount = 25}, -- Better than chemistry
+      {type = "item", name = "coal", amount = 1}
+    },
+    results = {{type="item", name="plastic-bar", amount=3}}, -- Better than chemistry
+    allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "planetaris-solid-fuel-from-heavy-oil",
+    localised_name = {"", {"recipe-name.solid-fuel-from-heavy-oil"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"recipe-description.solid-fuel-from-heavy-oil"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    icon = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "heavy-oil", amount = 20}
+    },
+    results = {{type="item", name="solid-fuel", amount=1}},
+    allow_productivity = true
+  },
+    {
+    type = "recipe",
+    name = "planetaris-solid-fuel-from-light-oil",
+    localised_name = {"", {"recipe-name.solid-fuel-from-light-oil"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"recipe-description.solid-fuel-from-light-oil"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "light-oil", amount = 10}
+    },
+    results = {{type="item", name="solid-fuel", amount=1}},
+    allow_productivity = true
+  },
+    {
+    type = "recipe",
+    name = "planetaris-solid-fuel-from-petroleum-gas",
+    localised_name = {"", {"recipe-name.solid-fuel-from-petroleum-gas"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"recipe-description.solid-fuel-from-petroleum-gas"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    icon = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "fluid", name = "petroleum-gas", amount = 20}
+    },
+    results = {{type="item", name="solid-fuel", amount=1}},
+    allow_productivity = true
+  },
+      {
+    type = "recipe",
+    name = "planetaris-carbon",
+    localised_name = {"", {"item-name.carbon"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"item-description.carbon"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 1,
+    ingredients =
+    {
+      {type = "item", name = "coal", amount = 2},
+      {type = "fluid", name = "sulfuric-acid", amount = 15}, -- Better than chemistry
+    },
+    results = {{type="item", name="carbon", amount=1}},
+    allow_productivity = true
+  },
 })
