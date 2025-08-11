@@ -67,7 +67,7 @@ data:extend(
         results =
         {
           {type = "fluid", name = "planetaris-pure-sand",   amount = 25, probability = 0.25, show_details_in_recipe_tooltip = false},
-          {type = "fluid", name = "steam",                  amount = 50, probability = 0.22, temperature = 165, show_details_in_recipe_tooltip = false},         
+          {type = "fluid", name = "steam",                  amount = 60, probability = 0.22, temperature = 165, show_details_in_recipe_tooltip = false},         
           {type = "item", name = "iron-ore",                amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "item", name = "copper-ore",              amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "item", name = "coal",                    amount = 1,  probability = 0.08, show_details_in_recipe_tooltip = false},
@@ -94,7 +94,7 @@ data:extend(
         results =
         {
           {type = "fluid", name = "planetaris-pure-sand", amount = 50, probability = 0.30, show_details_in_recipe_tooltip = false},
-          {type = "fluid", name = "steam",                amount = 50, probability = 0.10, temperature = 165, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "steam",                amount = 70, probability = 0.10, temperature = 165, show_details_in_recipe_tooltip = false},
           {type = "item", name = "calcite",               amount = 1,  probability = 0.25, show_details_in_recipe_tooltip = false},
           {type = "item", name = "sulfur",                amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
           {type = "item", name = "coal",                  amount = 1,  probability = 0.15, show_details_in_recipe_tooltip = false},
