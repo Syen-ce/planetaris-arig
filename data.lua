@@ -18,6 +18,7 @@ require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.autoplace-controls")
 require("prototypes.decoratives.decoratives")
+require("prototypes.tips-and-tricks")
 
 --------------------- Compat
 
