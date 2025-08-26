@@ -152,6 +152,7 @@ data:extend(
       {type="item", name="planetaris-glass-panel", amount=1},
       {type="item", name="barrel", amount=2}
   },
+    main_product = "planetaris-glass-panel",
     allow_productivity = true
   },
   {
