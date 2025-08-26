@@ -573,6 +573,13 @@ graphics_set =
       }
     }
   },
+  surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0.1,
+      }
+    },
   circuit_connector = circuit_connector_definitions["accumulator"],
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
