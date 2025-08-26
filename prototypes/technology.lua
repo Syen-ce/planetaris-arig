@@ -96,6 +96,30 @@ data:extend({
     },
     {
       type = "technology",
+      name = "planetaris-water-harvesting",
+      icon = "__planetaris-unbounded__/graphics/technology/water-harvesting.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-water-harvester"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-water-harvesting"
+        },
+      },
+      prerequisites = {"planetaris-glass"},
+      research_trigger =     {
+        type = "craft-item",
+        item = "planetaris-glass-panel",
+        count = 25
+      },
+      order = "ea[arig]",
+    },
+    {
+      type = "technology",
       name = "planetaris-compression",
       icon = "__planetaris-unbounded__/graphics/technology/compression.png",
       icon_size = 256,
@@ -424,6 +448,39 @@ data:extend({
         },
       },
       prerequisites = {"planetaris-glass", "planetaris-silica-processing"},
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+        },
+        time = 60
+      }
+    },
+    {
+      type = "technology",
+      name = "planetaris-supported-solar-panel",
+      icon = "__planetaris-unbounded__/graphics/technology/supported-solar-panel.png",
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-supported-solar-panel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-high-support-electric-pole"
+        },
+      },
+      prerequisites = {"planetaris-heavy-glass", "planetaris-advanced-solar-panel"},
       unit =
       {
         count = 2000,

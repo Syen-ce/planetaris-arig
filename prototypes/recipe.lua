@@ -417,6 +417,54 @@ data:extend(
       },
       results = {{type="item", name="planetaris-advanced-solar-panel", amount=1}}
     },
+    {
+      type = "recipe",
+      name = "planetaris-supported-solar-panel",
+      energy_required = 30,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-advanced-solar-panel", amount = 1},
+        {type = "item", name = "steel-plate", amount = 20},
+        {type = "item", name = "planetaris-heavy-glass", amount = 1}
+      },
+      results = {{type="item", name="planetaris-supported-solar-panel", amount=1}}
+    },
+    {
+      type = "recipe",
+      name = "planetaris-high-support-electric-pole",
+      energy_required = 10,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "copper-cable", amount = 1},
+        {type = "item", name = "steel-plate", amount = 5},
+        {type = "item", name = "planetaris-raw-quartz", amount = 1}
+      },
+      results = {{type="item", name="planetaris-high-support-electric-pole", amount=1}}
+    },
+    {
+      type = "recipe",
+      name = "planetaris-water-harvester",
+      subgroup = "arig-processes",
+      energy_required = 30,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "solar-panel", amount = 1},
+        {type = "item", name = "steel-plate", amount = 20},
+        {type = "item", name = "planetaris-glass-panel", amount = 1}
+      },
+      surface_conditions =
+    {
+      {
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
+      }
+    },
+      results = {{type="item", name="planetaris-water-harvester", amount=1}}
+    },
 
     -- Base recipes to compression
     
@@ -528,4 +576,19 @@ data:extend(
     results = {{type="item", name="carbon", amount=1}},
     allow_productivity = true
   },
+
+    -- Water harvesting
+
+    {
+      type = "recipe",
+      name = "planetaris-water-harvesting",
+      category = "water-production",
+      subgroup = "arig-processes",
+      icon = "__base__/graphics/icons/fluid/water.png",
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="water", amount=100}},
+      allow_productivity = true
+    },
 })
