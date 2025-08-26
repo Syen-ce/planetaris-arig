@@ -696,7 +696,7 @@ graphics_set =
     corpse = "small-electric-pole-remnants",
     dying_explosion = "small-electric-pole-explosion",
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    collision_mask = {layers = {ground_tile = true}},
+    collision_mask = {layers = {ground_tile = true},{rail_support = true}},
     selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
     damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2}, {0.2, 0.2}}),
     drawing_box_vertical_extension = 2.2,

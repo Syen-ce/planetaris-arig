@@ -28,6 +28,7 @@ require("compat.aai-industry")
 require("compat.bzlead")
 require("compat.bztin")
 require("compat.crushing-industry")
+require("compat.cloud-city")
 require("compat.wood-industry")
 require("compat.planet-muluna")
 

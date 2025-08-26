@@ -412,7 +412,6 @@ data:extend({
       water_tile=true,
       resource=true,
       floor=true,
-      rail_support=true
     }},
     autoplace = {probability_expression = "clamp(0, 1, 1 - arig_island_elevation * 2) * ((control:arig_sand:frequency * 0.17) + (control:arig_sand:size * 6) * 0.5)"}, -- target coast at cliff elevation
     layer = 4,
