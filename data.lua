@@ -1,4 +1,5 @@
 require("lib")
+require("prototypes.achievements")
 require("prototypes.planets.planet")
 require("prototypes.planets.planet_arig_map_gen")
 require("prototypes.planets.planet_map_gen")
