@@ -30,6 +30,7 @@ require("compat.bzlead")
 require("compat.bztin")
 require("compat.crushing-industry")
 require("compat.cloud-city")
+require("compat.igrys")
 require("compat.wood-industry")
 require("compat.planet-muluna")
 

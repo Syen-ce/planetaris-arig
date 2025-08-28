@@ -549,3 +549,5 @@ data:extend({
       prerequisites = { "planetaris-compression-science" },
     })
   })
+
+PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
