@@ -1,4 +1,4 @@
-[<img src="https://gist.githubusercontent.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/bb4634715f95ebb209b4e0bcdd4d2d98fe64c64c/discord-compact.svg"/>](https://www.discord.gg/factorio)
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/Mu7zkD7THf)
 
 # Welcome to Planetaris Unbounded
 

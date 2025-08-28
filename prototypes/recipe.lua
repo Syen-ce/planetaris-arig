@@ -70,11 +70,11 @@ data:extend(
         ingredients = {{type = "fluid", name = "planetaris-sand", amount = 600}},
         results =
         {
-          {type = "fluid", name = "planetaris-pure-sand",   amount = 25, probability = 0.25, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "planetaris-pure-sand",   amount = 10, probability = 0.25, show_details_in_recipe_tooltip = false},
           {type = "fluid", name = "steam",                  amount = 60, probability = 0.22, temperature = 165, show_details_in_recipe_tooltip = false},         
-          {type = "item", name = "iron-ore",                amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "copper-ore",              amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "coal",                    amount = 1,  probability = 0.08, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "iron-ore",                amount = 2,  probability = 0.20, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "copper-ore",              amount = 2,  probability = 0.20, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "coal",                    amount = 2,  probability = 0.08, show_details_in_recipe_tooltip = false},
           {type = "item", name = "stone",                   amount = 1,  probability = 0.04, show_details_in_recipe_tooltip = false}, 
           {type = "item", name = "sulfur",                  amount = 1,  probability = 0.01, show_details_in_recipe_tooltip = false},
         },
@@ -97,7 +97,7 @@ data:extend(
         ingredients = {{type = "fluid", name = "planetaris-sand", amount = 600}},
         results =
         {
-          {type = "fluid", name = "planetaris-pure-sand", amount = 50, probability = 0.30, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "planetaris-pure-sand", amount = 10, probability = 0.30, show_details_in_recipe_tooltip = false},
           {type = "fluid", name = "steam",                amount = 70, probability = 0.10, temperature = 165, show_details_in_recipe_tooltip = false},
           {type = "item", name = "calcite",               amount = 1,  probability = 0.25, show_details_in_recipe_tooltip = false},
           {type = "item", name = "sulfur",                amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
@@ -152,6 +152,7 @@ data:extend(
       {type="item", name="planetaris-glass-panel", amount=1},
       {type="item", name="barrel", amount=2}
   },
+    main_product = "planetaris-glass-panel",
     allow_productivity = true
   },
   {
@@ -417,6 +418,54 @@ data:extend(
       },
       results = {{type="item", name="planetaris-advanced-solar-panel", amount=1}}
     },
+    {
+      type = "recipe",
+      name = "planetaris-supported-solar-panel",
+      energy_required = 30,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-advanced-solar-panel", amount = 1},
+        {type = "item", name = "steel-plate", amount = 20},
+        {type = "item", name = "planetaris-heavy-glass", amount = 1}
+      },
+      results = {{type="item", name="planetaris-supported-solar-panel", amount=1}}
+    },
+    {
+      type = "recipe",
+      name = "planetaris-high-support-electric-pole",
+      energy_required = 10,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "copper-cable", amount = 1},
+        {type = "item", name = "steel-plate", amount = 5},
+        {type = "item", name = "planetaris-raw-quartz", amount = 1}
+      },
+      results = {{type="item", name="planetaris-high-support-electric-pole", amount=1}}
+    },
+    {
+      type = "recipe",
+      name = "planetaris-water-harvester",
+      subgroup = "arig-processes",
+      energy_required = 30,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "solar-panel", amount = 1},
+        {type = "item", name = "steel-plate", amount = 20},
+        {type = "item", name = "planetaris-glass-panel", amount = 1}
+      },
+      surface_conditions =
+    {
+      {
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
+      }
+    },
+      results = {{type="item", name="planetaris-water-harvester", amount=1}}
+    },
 
     -- Base recipes to compression
     
@@ -528,4 +577,19 @@ data:extend(
     results = {{type="item", name="carbon", amount=1}},
     allow_productivity = true
   },
+
+    -- Water harvesting
+
+    {
+      type = "recipe",
+      name = "planetaris-water-harvesting",
+      category = "water-production",
+      subgroup = "arig-processes",
+      icon = "__base__/graphics/icons/fluid/water.png",
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="water", amount=100}},
+      allow_productivity = true
+    },
 })

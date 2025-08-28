@@ -1,6 +1,31 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 2025-28-11
+  Features:
+    - Added Supported Solar panel
+    - Added High support electric pole
+    - Added Water harvester
+    - Added Arig briefing to the tips and tricks page
+    - Added 3 new achievements
+    - Added default import locations to items
+    - Added Vulcanus music to Arig
+  Balancing:
+    - Doubled iron, copper and coal obtained from sifting
+    - Reduced pure sand from sifting recipe from 25 -> 10
+    - Reduced pure sand from advanced sifting recipe from 50 -> 10
+  Optimizations:
+    - Optimized graphics
+  Compatibility:
+    - Supported solar panels and high support electric poles cannot be placed on gas gigants of cloud city mod
+    - Added compat with Igrys glass, both glasses are now interchangable.
+  Bugfixes:
+    - Fixed hyper transport belt using turbo underground belts instead of hyper underground belts
+    - Fixed glass panel having separated item and recipe
+    - Fixed container being able to be placed on space platforms
+---------------------------------------------------------------------------------------------------
 Version: 1.5.0
 Date: 2025-08-11
-  Feature:
+  Features:
     - Added Advanced heavy oil cracking recipe
     - Added sulfur, plastic, carbon and solid fuel recipes to the press
   Balancing:
@@ -10,7 +35,7 @@ Date: 2025-08-11
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.0
 Date: 2025-08-07
-  Feature:
+  Features:
     - Added advanced solar panel
   Balancing:
     - Reduced cost to unlock Container from 5000 to 2000

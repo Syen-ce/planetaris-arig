@@ -12,7 +12,7 @@ data:extend({
     pick_sound = item_sounds.fluid_inventory_pickup,
     drop_sound = item_sounds.fluid_inventory_move,
     place_result = "planetaris-press",
-    stack_size = 50
+    stack_size = 50,
   },
 {
     type = "item",
@@ -24,7 +24,7 @@ data:extend({
     pick_sound = item_sounds.fluid_inventory_pickup,
     drop_sound = item_sounds.fluid_inventory_move,
     place_result = "planetaris-sifter",
-    stack_size = 10
+    stack_size = 10,
   },
   {
     type = "item",
@@ -114,7 +114,7 @@ data:extend({
         inventory_move_sound = item_sounds.metal_small_inventory_move,
         pick_sound = item_sounds.metal_small_inventory_pickup,
         drop_sound = item_sounds.metal_small_inventory_move,
-        random_tint_color = item_tints.iron_rust
+        random_tint_color = item_tints.iron_rust,
     },
     {
         type = "item",
@@ -187,7 +187,7 @@ data:extend({
         place_result = "planetaris-hyper-transport-belt",
         default_import_location = "arig",
         stack_size = 100,
-        weight = 20*kg
+        weight = 20*kg,
       },
       {
         type = "item",
@@ -202,7 +202,7 @@ data:extend({
         place_result = "planetaris-hyper-splitter",
         default_import_location = "arig",
         stack_size = 50,
-        weight = 40*kg
+        weight = 40*kg,
       },
       {
         type = "item",
@@ -217,7 +217,7 @@ data:extend({
         place_result = "planetaris-hyper-underground-belt",
         stack_size = 50,
         default_import_location = "arig",
-        weight = 40*kg
+        weight = 40*kg,
       },
       {
         type = "item",
@@ -229,7 +229,7 @@ data:extend({
         pick_sound = item_sounds.metal_chest_inventory_pickup,
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-big-chest",
-        stack_size = 50
+        stack_size = 50,
       },
         {
         type = "item",
@@ -244,4 +244,63 @@ data:extend({
         stack_size = 20,
         weight = 20*kg,
      },
+     {
+        type = "item",
+        name = "planetaris-supported-solar-panel",
+        icon = "__planetaris-unbounded__/graphics/icons/supported-solar-panel.png",
+        subgroup = "energy",
+        order = "d[solar-panel]-c[supported-solar-panel]",
+        inventory_move_sound = item_sounds.electric_large_inventory_move,
+        pick_sound = item_sounds.electric_large_inventory_pickup,
+        drop_sound = item_sounds.electric_large_inventory_move,
+        place_result = "planetaris-supported-solar-panel",
+        stack_size = 20,
+        weight = 20*kg,
+     },
+     {
+        type = "item",
+        name = "planetaris-high-support-electric-pole",
+        icon = "__planetaris-unbounded__/graphics/icons/high-support-electric-pole.png",
+        subgroup = "energy-pipe-distribution",
+        order = "a[energy]-e[planetaris-high-support-electric-pole]",
+        inventory_move_sound = item_sounds.electric_large_inventory_move,
+        pick_sound = item_sounds.electric_large_inventory_pickup,
+        drop_sound = item_sounds.electric_large_inventory_move,
+        place_result = "planetaris-high-support-electric-pole",
+        stack_size = 50,
+        weight = 10*kg,
+     },
+     {
+        type = "item",
+        name = "planetaris-water-harvester",
+        icon = "__planetaris-unbounded__/graphics/icons/water-harvester.png",
+        subgroup = "production-machine",
+        order = "e[chemical-plant]-d",
+        inventory_move_sound = item_sounds.electric_large_inventory_move,
+        pick_sound = item_sounds.electric_large_inventory_pickup,
+        drop_sound = item_sounds.electric_large_inventory_move,
+        place_result = "planetaris-water-harvester",
+        stack_size = 50,
+        weight = 20*kg,
+     },
 })
+
+PlanetsLib.set_default_import_location("planetaris-press", "arig")
+PlanetsLib.set_default_import_location("planetaris-sifter", "arig")
+PlanetsLib.set_default_import_location("planetaris-assembling-machine-4", "arig")
+PlanetsLib.set_default_import_location("planetaris-sandstone-brick", "arig")
+PlanetsLib.set_default_import_location("planetaris-sandstone-foundation", "arig")
+PlanetsLib.set_default_import_location("planetaris-glass-panel", "arig")
+PlanetsLib.set_default_import_location("planetaris-heavy-glass", "arig")
+PlanetsLib.set_default_import_location("planetaris-raw-quartz", "arig")
+PlanetsLib.set_default_import_location("planetaris-silica", "arig")
+PlanetsLib.set_default_import_location("planetaris-simulating-unit", "arig")
+PlanetsLib.set_default_import_location("planetaris-compression-science-pack", "arig")
+PlanetsLib.set_default_import_location("planetaris-hyper-transport-belt", "arig")
+PlanetsLib.set_default_import_location("planetaris-hyper-splitter", "arig")
+PlanetsLib.set_default_import_location("planetaris-hyper-underground-belt", "arig")
+PlanetsLib.set_default_import_location("planetaris-big-chest", "arig")
+PlanetsLib.set_default_import_location("planetaris-advanced-solar-panel", "arig")
+PlanetsLib.set_default_import_location("planetaris-supported-solar-panel", "arig")
+PlanetsLib.set_default_import_location("planetaris-high-support-electric-pole", "arig")
+PlanetsLib.set_default_import_location("planetaris-water-harvester", "arig")

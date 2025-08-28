@@ -573,6 +573,13 @@ graphics_set =
       }
     }
   },
+  surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0.1,
+      }
+    },
   circuit_connector = circuit_connector_definitions["accumulator"],
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
@@ -620,4 +627,290 @@ graphics_set =
     impact_category = "glass",
     production = "120kW"
   },
+  {
+    type = "solar-panel",
+    name = "planetaris-supported-solar-panel",
+    icon = "__planetaris-unbounded__/graphics/icons/supported-solar-panel.png",
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.5, result = "planetaris-supported-solar-panel"},
+    fast_replaceable_group = nil,
+    max_health = 300,
+    corpse = "solar-panel-remnants",
+    dying_explosion = "solar-panel-explosion",
+    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    collision_mask = {layers = {ground_tile = true},{rail_support = true}},
+    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    damaged_trigger_effect = hit_effects.entity(),
+    drawing_box_vertical_extension = 1.2,
+    tile_buildability_rules =
+    {
+      {
+        area = {{-1.8, -2.8}, {1.8, 2.8}},
+        required_tiles = {layers = {water_tile = true}},
+        colliding_tiles = {layers = {ground_tile = true}},
+        remove_on_collision = true
+      }
+    },
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "solar"
+    },
+    picture =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/supported-solar-panel/supported-solar-panel.png",
+          priority = "high",
+          width = 200,
+          height = 245,
+          shift = util.by_pixel(0, -10),
+          scale = 0.6
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/supported-solar-panel/supported-solar-panel-shadow.png",
+          priority = "high",
+          width = 384,
+          height = 384,
+          shift = util.by_pixel(12, 20),
+          draw_as_shadow = true,
+          scale = 0.6
+        }
+      }
+    },
+    water_reflection = {
+      pictures = {
+          filename = "__planetaris-unbounded__/graphics/entity/supported-solar-panel/supported-solar-panel-reflection.png",
+          priority = "high",
+          width = 424,
+          height = 424,
+          shift = util.by_pixel(0, 5),
+          scale = 0.6
+        },
+    },
+    impact_category = "glass",
+    production = "120kW"
+  },
+  {
+    type = "electric-pole",
+    name = "planetaris-high-support-electric-pole",
+    icon = "__planetaris-unbounded__/graphics/icons/high-support-electric-pole.png",
+    quality_indicator_scale = 0.75,
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.1, result = "planetaris-high-support-electric-pole"},
+    max_health = 150,
+    corpse = "small-electric-pole-remnants",
+    dying_explosion = "small-electric-pole-explosion",
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    collision_mask = {layers = {ground_tile = true},{rail_support = true}},
+    selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2}, {0.2, 0.2}}),
+    drawing_box_vertical_extension = 2.2,
+    maximum_wire_distance = 6.5,
+    supply_area_distance = 1.5,
+    impact_category = "wood",
+    open_sound = sounds.electric_network_open,
+    close_sound = sounds.electric_network_close,
+    fast_replaceable_group = "electric-pole",
+    pictures =
+    {
+      layers =
+      {
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/high-support-electric-pole/high-support-electric-pole.png",
+          priority = "extra-high",
+          width = 72,
+          height = 220,
+          direction_count = 4,
+          shift = util.by_pixel(1.5, -42.5),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/high-support-electric-pole/high-support-electric-pole-shadow.png",
+          priority = "extra-high",
+          width = 256,
+          height = 74,
+          direction_count = 4,
+          shift = util.by_pixel(51, 3),
+          draw_as_shadow = true,
+          scale = 0.5
+        }
+      }
+    },
+    connection_points =
+    {
+      {
+        shadow =
+        {
+          copper = util.by_pixel(48.5, 2.5),
+          red = util.by_pixel(61.0, 4.5),
+          green = util.by_pixel(35.5, 4.0)
+        },
+        wire =
+        {
+          copper = util.by_pixel(0.0, -32.5),
+          red = util.by_pixel(13.0, -31.0),
+          green = util.by_pixel(-12.5, -31.0)
+        }
+      },
+      {
+        shadow =
+        {
+          copper = util.by_pixel(49.5, 4.0),
+          red = util.by_pixel(60.0, 9.0),
+          green = util.by_pixel(42.5, -4.0)
+        },
+        wire =
+        {
+          copper = util.by_pixel(1.5, -31.0),
+          red = util.by_pixel(12.0, -26.0),
+          green = util.by_pixel(-6.0, -39.5)
+        }
+      },
+      {
+        shadow =
+        {
+          copper = util.by_pixel(50.5, 5.5),
+          red = util.by_pixel(52.5, 14.5),
+          green = util.by_pixel(53.5, -3.5)
+        },
+        wire =
+        {
+          copper = util.by_pixel(2.5, -29.5),
+          red = util.by_pixel(4.0, -21.0),
+          green = util.by_pixel(5.0, -39.5)
+        }
+      },
+      {
+        shadow =
+        {
+          copper = util.by_pixel(48.5, -1.5),
+          red = util.by_pixel(38.0, 3.5),
+          green = util.by_pixel(56.0, -9.0)
+        },
+        wire =
+        {
+          copper = util.by_pixel(0.5, -36.5),
+          red = util.by_pixel(-10.5, -31.5),
+          green = util.by_pixel(8.0, -43.5)
+        }
+      }
+    },
+    radius_visualisation_picture =
+    {
+      filename = "__planetaris-unbounded__/graphics/entity/high-support-electric-pole/high-support-electric-pole-visualization.png",
+      width = 12,
+      height = 12,
+      priority = "extra-high-no-scale"
+    },
+    water_reflection =
+    {
+      pictures =
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/high-support-electric-pole/high-support-electric-pole-reflection.png",
+        priority = "extra-high",
+        width = 12,
+        height = 28,
+        shift = util.by_pixel(5, 40),
+        variation_count = 4,
+        scale = 5
+      },
+      rotate = false,
+      orientation_to_variation = true
+    }
+  },
+  {
+  type = "assembling-machine",
+  name = "planetaris-water-harvester",
+  icon = "__planetaris-unbounded__/graphics/icons/water-harvester.png",
+  flags = {"placeable-neutral", "placeable-player", "player-creation"},
+  minable = {mining_time = 0.5, result = "planetaris-water-harvester"},
+  fast_replaceable_group = nil,
+  max_health = 200,
+  corpse = "planetaris-press-remnants",
+  dying_explosion = "accumulator-explosion",
+  open_sound = sounds.metallic_chest_open,
+  close_sound = sounds.metallic_chest_close,
+  heating_energy = "100kW",
+  resistances =
+  {
+    {
+      type = "fire",
+      percent = 20
+    },
+    {
+      type = "impact",
+      percent = 20
+    }
+  },
+  collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+  selection_box = {{-1, -1}, {1, 1}},
+  damaged_trigger_effect = hit_effects.entity(),
+  drawing_box_vertical_extension = 0.3,
+  impact_category = "metal",
+  icon_draw_specification = {scale = 0.5},
+  graphics_set =
+    {
+      animation = make_4way_animation_from_spritesheet({ layers =
+      {
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/water-harvester/water-harvester.png",
+          width = 384,
+          height = 384,
+          frame_count = 1,
+          line_length = 1,
+          animation_speed = 0.5,
+          shift = util.by_pixel(0, 0),
+          scale = 0.32
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/entity/water-harvester/water-harvester-shadow.png",
+          width = 384,
+          height = 384,
+          repeat_count = 1,
+          shift = util.by_pixel(0, 0),
+          draw_as_shadow = true,
+          scale = 0.32
+        }
+      }}),
+    },
+      fluid_boxes =
+    {
+      {
+        production_type = "output",
+        pipe_covers = pipecoverspictures(),
+        volume = 100,
+        pipe_connections =
+        {
+          {
+            flow_direction = "output",
+            direction = defines.direction.east,
+            position = {0.5, -0.5}
+          }
+        }
+      },
+    },
+  surface_conditions =
+    {
+      {
+        property = "planetaris-dust-concentration",
+        min = 50,
+        max = 100,
+      }
+    },
+  crafting_categories = {"water-production"},
+  crafting_speed = 1,
+  energy_source =
+  {
+    type = "electric",
+    usage_priority = "secondary-input",
+    emissions_per_minute = { pollution = 0.5 }
+  },
+  energy_usage = "10kW",
+  module_slots = 1,
+  allowed_effects = {"speed", "productivity"},
+  circuit_connector = circuit_connector_definitions["assembling-machine"],
+  circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance
+},
 })

@@ -1,4 +1,5 @@
 require("lib")
+require("prototypes.achievements")
 require("prototypes.planets.planet")
 require("prototypes.planets.planet_arig_map_gen")
 require("prototypes.planets.planet_map_gen")
@@ -18,6 +19,7 @@ require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.autoplace-controls")
 require("prototypes.decoratives.decoratives")
+require("prototypes.tips-and-tricks")
 
 --------------------- Compat
 
@@ -27,6 +29,8 @@ require("compat.aai-industry")
 require("compat.bzlead")
 require("compat.bztin")
 require("compat.crushing-industry")
+require("compat.cloud-city")
+require("compat.igrys")
 require("compat.wood-industry")
 require("compat.planet-muluna")
 
