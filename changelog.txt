@@ -9,6 +9,10 @@ Date: 2025-28-11
     - Added 3 new achievements
     - Added default import locations to items
     - Added Vulcanus music to Arig
+  Balancing:
+    - Doubled iron, copper and coal obtained from sifting
+    - Reduced pure sand from sifting recipe from 25 -> 10
+    - Reduced pure sand from advanced sifting recipe from 50 -> 10
   Optimizations:
     - Optimized graphics
   Compatibility:
