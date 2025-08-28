@@ -41,13 +41,14 @@ if not mods["Igrys"] then return end
         {
           type = "unlock-recipe",
           recipe = "planetaris-glass-panel-to-igrys-glass"
-        })
-
-    table.insert(data.raw["technology"]["igrys-glassworking"].effects,
+        }
+      )
+    table.insert(data.raw["technology"]["planetaris-glass"].effects,
         {
           type = "unlock-recipe",
           recipe = "igrys-glass-to-planetaris-glass-panel"
-        })
+        }
+      )
 
 if settings.startup["igrys-unique-glass"].value then
     data.raw["recipe"]["planetaris-glass-panel-to-igrys-glass"].localised_name = {"", {"item-name.igrys-unique-glass"}, " (", {"space-location-name.arig"}, ")"}
