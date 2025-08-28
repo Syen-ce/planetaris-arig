@@ -12,8 +12,8 @@ PlanetsLib:extend({
                 type = "space-location",
                 name = "star",
             },
-            distance = 10,
-            orientation = 0.8,
+            distance = 12.5,
+            orientation = 0.35,
         },
         subgroup = "planets",
         label_orientation = 0.55,
@@ -23,7 +23,7 @@ PlanetsLib:extend({
         starmap_icon_size = 500,
         map_gen_settings = planet_map_gen.arig(),
         gravity_pull = 10,
-        draw_orbit = false,
+        draw_orbit = true,
         magnitude = 1.6,
         order = "f[arig]",
         solar_power_in_space = 600,
@@ -155,5 +155,17 @@ data:extend({
         length = 15000,
         icon_size = 64,
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
+    },
+    {
+        type = "space-connection",
+        name = "nauvis-arig",
+        subgroup = "planet-connections",
+        from = "nauvis",
+        to = "arig", 
+        length = 10000,
+        icon_size = 64,
+        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
     }
 })
+
+PlanetsLib.borrow_music(data.raw["planet"]["vulcanus"], data.raw["planet"]["arig"])

@@ -13,7 +13,6 @@ data:extend({
     drop_sound = item_sounds.fluid_inventory_move,
     place_result = "planetaris-press",
     stack_size = 50,
-    PlanetsLib.set_default_import_location("planetaris-press", "arig")
   },
 {
     type = "item",
@@ -26,7 +25,6 @@ data:extend({
     drop_sound = item_sounds.fluid_inventory_move,
     place_result = "planetaris-sifter",
     stack_size = 10,
-    PlanetsLib.set_default_import_location("planetaris-sifter", "arig")
   },
   {
     type = "item",
@@ -38,7 +36,6 @@ data:extend({
     order = "c[assembling-machine-4]-a",
     place_result = "planetaris-assembling-machine-4",
     stack_size = 50,
-    PlanetsLib.set_default_import_location("planetaris-assembling-machine-4", "arig")
     },
     {
     type = "item",
@@ -73,9 +70,7 @@ data:extend({
     inventory_move_sound = {
         filename = "__base__/sound/item/concrete-inventory-move.ogg",
         volume = 0.5
-    },
-    PlanetsLib.set_default_import_location("planetaris-sandstone-brick", "arig")
-    },
+    }},
     {
         type = "item",
         name = "planetaris-sandstone-foundation",
@@ -93,7 +88,6 @@ data:extend({
         inventory_move_sound = item_sounds.landfill_inventory_move,
         pick_sound = item_sounds.landfill_inventory_pickup,
         drop_sound = item_sounds.landfill_inventory_move,
-        PlanetsLib.set_default_import_location("planetaris-sandstone-foundation", "arig")
     },
     {
         type = "item",
@@ -107,7 +101,6 @@ data:extend({
         inventory_move_sound = item_sounds.low_density_inventory_move,
         pick_sound = item_sounds.low_density_inventory_pickup,
         drop_sound = item_sounds.low_density_inventory_move,
-        PlanetsLib.set_default_import_location("planetaris-glass-panel", "arig")
     },
     {
         type = "item",
@@ -122,7 +115,6 @@ data:extend({
         pick_sound = item_sounds.metal_small_inventory_pickup,
         drop_sound = item_sounds.metal_small_inventory_move,
         random_tint_color = item_tints.iron_rust,
-        PlanetsLib.set_default_import_location("planetaris-heavy-glass", "arig")
     },
     {
         type = "item",
@@ -136,7 +128,6 @@ data:extend({
         inventory_move_sound = item_sounds.sulfur_inventory_move,
         pick_sound = item_sounds.resource_inventory_pickup,
         drop_sound = item_sounds.sulfur_inventory_move,
-        PlanetsLib.set_default_import_location("planetaris-raw-quartz", "arig")
     },
     {
         type = "item",
@@ -150,7 +141,6 @@ data:extend({
         pick_sound = item_sounds.resource_inventory_pickup,
         drop_sound = item_sounds.sulfur_inventory_move,
         weight = 10*kg,
-        PlanetsLib.set_default_import_location("planetaris-silica", "arig")
     },
     {
         type = "item",
@@ -164,7 +154,6 @@ data:extend({
         pick_sound = item_sounds.resource_inventory_pickup,
         drop_sound = item_sounds.sulfur_inventory_move,
         weight = 10*kg,
-        PlanetsLib.set_default_import_location("planetaris-simulating-unit", "arig")
     },
     {
         type = "tool",
@@ -184,7 +173,6 @@ data:extend({
         durability_description_key = "description.science-pack-remaining-amount-key",
         factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
         durability_description_value = "description.science-pack-remaining-amount-value",
-        PlanetsLib.set_default_import_location("planetaris-compression-science-pack", "arig")
     },
     {
         type = "item",
@@ -200,7 +188,6 @@ data:extend({
         default_import_location = "arig",
         stack_size = 100,
         weight = 20*kg,
-        PlanetsLib.set_default_import_location("planetaris-hyper-transport-belt", "arig")
       },
       {
         type = "item",
@@ -216,7 +203,6 @@ data:extend({
         default_import_location = "arig",
         stack_size = 50,
         weight = 40*kg,
-        PlanetsLib.set_default_import_location("planetaris-hyper-splitter", "arig")
       },
       {
         type = "item",
@@ -232,7 +218,6 @@ data:extend({
         stack_size = 50,
         default_import_location = "arig",
         weight = 40*kg,
-        PlanetsLib.set_default_import_location("planetaris-hyper-underground-belt", "arig")
       },
       {
         type = "item",
@@ -245,7 +230,6 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-big-chest",
         stack_size = 50,
-        PlanetsLib.set_default_import_location("planetaris-big-chest", "arig")
       },
         {
         type = "item",
@@ -259,7 +243,6 @@ data:extend({
         place_result = "planetaris-advanced-solar-panel",
         stack_size = 20,
         weight = 20*kg,
-        PlanetsLib.set_default_import_location("planetaris-advanced-solar-panel", "arig")
      },
      {
         type = "item",
@@ -273,7 +256,6 @@ data:extend({
         place_result = "planetaris-supported-solar-panel",
         stack_size = 20,
         weight = 20*kg,
-        PlanetsLib.set_default_import_location("planetaris-supported-solar-panel", "arig")
      },
      {
         type = "item",
@@ -287,7 +269,6 @@ data:extend({
         place_result = "planetaris-high-support-electric-pole",
         stack_size = 50,
         weight = 10*kg,
-        PlanetsLib.set_default_import_location("planetaris-high-support-electric-pole", "arig")
      },
      {
         type = "item",
@@ -301,6 +282,25 @@ data:extend({
         place_result = "planetaris-water-harvester",
         stack_size = 50,
         weight = 20*kg,
-        PlanetsLib.set_default_import_location("planetaris-water-harvester", "arig")
      },
 })
+
+PlanetsLib.set_default_import_location("planetaris-press", "arig")
+PlanetsLib.set_default_import_location("planetaris-sifter", "arig")
+PlanetsLib.set_default_import_location("planetaris-assembling-machine-4", "arig")
+PlanetsLib.set_default_import_location("planetaris-sandstone-brick", "arig")
+PlanetsLib.set_default_import_location("planetaris-sandstone-foundation", "arig")
+PlanetsLib.set_default_import_location("planetaris-glass-panel", "arig")
+PlanetsLib.set_default_import_location("planetaris-heavy-glass", "arig")
+PlanetsLib.set_default_import_location("planetaris-raw-quartz", "arig")
+PlanetsLib.set_default_import_location("planetaris-silica", "arig")
+PlanetsLib.set_default_import_location("planetaris-simulating-unit", "arig")
+PlanetsLib.set_default_import_location("planetaris-compression-science-pack", "arig")
+PlanetsLib.set_default_import_location("planetaris-hyper-transport-belt", "arig")
+PlanetsLib.set_default_import_location("planetaris-hyper-splitter", "arig")
+PlanetsLib.set_default_import_location("planetaris-hyper-underground-belt", "arig")
+PlanetsLib.set_default_import_location("planetaris-big-chest", "arig")
+PlanetsLib.set_default_import_location("planetaris-advanced-solar-panel", "arig")
+PlanetsLib.set_default_import_location("planetaris-supported-solar-panel", "arig")
+PlanetsLib.set_default_import_location("planetaris-high-support-electric-pole", "arig")
+PlanetsLib.set_default_import_location("planetaris-water-harvester", "arig")
