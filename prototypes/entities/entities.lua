@@ -673,9 +673,9 @@ graphics_set =
           priority = "high",
           width = 384,
           height = 384,
-          shift = util.by_pixel(12, 20),
+          shift = util.by_pixel(28, 34),
           draw_as_shadow = true,
-          scale = 0.6
+          scale = 0.5
         }
       }
     },
