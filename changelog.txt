@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.1
+Date: 2025-28-11
+  Bugfixes:
+    - Fixed start error using Igrys and Metals & Stars at the same time.
+    - Fixed supported solar panel shadow position
+---------------------------------------------------------------------------------------------------
 Version: 1.6.0
 Date: 2025-28-11
   Features:
