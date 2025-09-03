@@ -552,8 +552,11 @@ data:extend({
     })
   })
 
+<<<<<<< HEAD
 PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
 
+=======
+>>>>>>> 31547cb08b3ca6e61ca5ced9f4aa20e37f6e2049
 -----------------------------------------------------------------
 --------------------------- Hyarion
 -----------------------------------------------------------------
@@ -712,4 +715,8 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
       },
       prerequisites = { "planetaris-polishing-science-pack" },
     })
+<<<<<<< HEAD
   })
+=======
+  })
+>>>>>>> 31547cb08b3ca6e61ca5ced9f4aa20e37f6e2049
