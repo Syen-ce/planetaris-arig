@@ -3,11 +3,12 @@ local item_tints = require("__base__.prototypes.item-tints")
 
 data:extend({
 {
+    ------------------- Arig
     type = "item",
     name = "planetaris-press",
     icon = "__planetaris-unbounded__/graphics/icons/press.png",
-    subgroup = "production-machine",
-    order = "e[chemical-plant]-c",
+    subgroup = "arig-production",
+    order = "a-b",
     inventory_move_sound = item_sounds.fluid_inventory_move,
     pick_sound = item_sounds.fluid_inventory_pickup,
     drop_sound = item_sounds.fluid_inventory_move,
@@ -18,8 +19,8 @@ data:extend({
     type = "item",
     name = "planetaris-sifter",
     icon = "__planetaris-unbounded__/graphics/icons/sifter.png",
-    subgroup = "production-machine",
-    order = "e[chemical-plant]-b",
+    subgroup = "arig-production",
+    order = "a-a",
     inventory_move_sound = item_sounds.fluid_inventory_move,
     pick_sound = item_sounds.fluid_inventory_pickup,
     drop_sound = item_sounds.fluid_inventory_move,
@@ -244,4 +245,253 @@ data:extend({
         stack_size = 20,
         weight = 20*kg,
      },
+  {
+    type = "item",
+    name = "planetaris-raw-diamond",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/raw-diamond-1.png",
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-diamond-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-diamond-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-diamond-3.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-diamond-4.png", scale = 0.5, mipmap_count = 4 },
+    },
+    subgroup = "hyarion-processes",
+    order = "b-a[raw]",
+    stack_size = 100,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-polished-diamond",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/polished-diamond.png",
+    subgroup = "hyarion-processes",
+    order = "b-b[polished]",
+    stack_size = 50,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  }, 
+
+-----------------------------------------------------------------
+--------------------------- Hyarion
+-----------------------------------------------------------------
+     
+  {
+    type = "item",
+    name = "planetaris-quartz-furnace",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/quartz-furnace.png",
+    subgroup = "hyarion-production",
+    order = "a-a",
+    place_result = "planetaris-quartz-furnace",
+    stack_size = 50,
+    weight = 20*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.fluid_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-polisher",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/polisher.png",
+    subgroup = "hyarion-production",
+    order = "a-b",
+    place_result = "planetaris-polisher",
+    stack_size = 50,
+    weight = 40*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.fluid_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
+  },
+     {
+    type = "item",
+    name = "hyarion-big-mining-drill",
+    icon = "__skewer_shattered_planet_assets__/graphics/icons/deep_mining_drill.png",
+    subgroup = "extraction-machine",
+    color_hint = { text = "1" },
+    order = "a[items]-d[big-mining-drill]",
+    inventory_move_sound = item_sounds.drill_inventory_move,
+    pick_sound = item_sounds.drill_inventory_pickup,
+    drop_sound = item_sounds.drill_inventory_move,
+    place_result = "hyarion-big-mining-drill",
+    stack_size = 20,
+    weight = 40*kg,
+    random_tint_color = item_tints.iron_rust
+  },
+
+    --- Metallic
+    
+  {
+    type = "item",
+    name = "planetaris-metallic-ore",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-ore.png",
+    subgroup = "hyarion-processes",
+    order = "a-a[ore]-b",
+    stack_size = 100,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+
+    --- Gems
+
+  {
+    type = "item",
+    name = "planetaris-polished-quartz",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/polished-quartz.png",
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/polished-quartz-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/polished-quartz-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/polished-quartz-3.png", scale = 0.5, mipmap_count = 4 },
+    },
+    subgroup = "hyarion-processes",
+    order = "b-b[polished]",
+    stack_size = 50,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-raw-emerald",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/raw-emerald-1.png",
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-emerald-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-emerald-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-emerald-3.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-emerald-4.png", scale = 0.5, mipmap_count = 4 },
+    },
+    subgroup = "hyarion-processes",
+    order = "b-a[raw]",
+    stack_size = 100,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-polished-emerald",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/polished-emerald.png",
+    subgroup = "hyarion-processes",
+    order = "b-b[polished]",
+    stack_size = 50,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-raw-ruby",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/raw-ruby-1.png",
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-ruby-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-ruby-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-ruby-3.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-ruby-4.png", scale = 0.5, mipmap_count = 4 },
+    },
+    subgroup = "hyarion-processes",
+    order = "b-a[raw]",
+    stack_size = 100,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-polished-ruby",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/polished-ruby.png",
+    subgroup = "hyarion-processes",
+    order = "b-b[polished]",
+    stack_size = 50,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-raw-sapphire",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/raw-sapphire-1.png",
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-sapphire-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-sapphire-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-sapphire-3.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/raw-sapphire-4.png", scale = 0.5, mipmap_count = 4 },
+    },
+    subgroup = "hyarion-processes",
+    order = "b-a[raw]",
+    stack_size = 100,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-polished-sapphire",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/polished-sapphire.png",
+    subgroup = "hyarion-processes",
+    order = "b-b[polished]",
+    stack_size = 50,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+   {
+      type = "tool",
+      name = "planetaris-polishing-science-pack",
+      icon = "__planetaris-unbounded-assets__/graphics/icons/polishing-science-pack.png",
+      localised_description = {"item-description.science-pack"},
+      subgroup = "science-pack",
+      order = "h-c",
+      stack_size = 200,
+      default_import_location = "hyarion",
+
+      inventory_move_sound = item_sounds.science_inventory_move,
+      pick_sound = item_sounds.science_inventory_pickup,
+      drop_sound = item_sounds.science_inventory_move,
+      weight = 1*kg,
+      durability = 1,
+      durability_description_key = "description.science-pack-remaining-amount-key",
+      factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
+      durability_description_value = "description.science-pack-remaining-amount-value",
+  },
 })

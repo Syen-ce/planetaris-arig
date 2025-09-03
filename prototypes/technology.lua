@@ -1,6 +1,8 @@
 local lib = require("lib")
 local merge = lib.merge
 
+
+-- ARIG
 data:extend({
     {
       type = "technology",
@@ -430,11 +432,11 @@ data:extend({
   },
   })
   
-  local cargo_drops_base =
+  local arig_cargo_drops_base =
 	PlanetsLib.cargo_drops_technology_base("arig", "__planetaris-unbounded__/graphics/technology/arig-cargo-drops.png", 256)
 
   data:extend({
-    merge(cargo_drops_base, {
+    merge(arig_cargo_drops_base, {
       unit = {
         count =  500,
         ingredients = {
@@ -446,5 +448,165 @@ data:extend({
         time = 60,
       },
       prerequisites = { "planetaris-compression-science" },
+    })
+  })
+
+-----------------------------------------------------------------
+--------------------------- Hyarion
+-----------------------------------------------------------------
+  
+  data:extend({
+    {
+      type = "technology",
+      name = "planet-discovery-hyarion",
+      icons = PlanetsLib.technology_icon_constant_planet("__planetaris-unbounded-assets__/graphics/technology/hyarion-discovery.png", 256),
+      essential = true,
+      effects = {
+        {
+          type = "unlock-space-location",
+          space_location = "hyarion",
+          use_icon_overlay_constant = true
+        }
+      },
+      prerequisites = {
+        "planetaris-compression-science",
+      },
+      unit = {
+        count = 8000,
+        ingredients = {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"agricultural-science-pack", 1},
+          {"electromagnetic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1}
+        },
+        time = 30,
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-quartz-furnace",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/quartz-furnace.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-quartz-furnace"
+        },
+      },
+      prerequisites = {"planet-discovery-hyarion"},
+      research_trigger = {
+        type = "mine-entity",
+        entity = "hyarion-quartz-ore"
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-metallic-ore-processing",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/quartz-furnace.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-burner-drill-alternative"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-metallic-smelting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-metallic-sifting"
+        },
+      },
+      prerequisites = {"planetaris-quartz-furnace"},
+      research_trigger = {
+        type = "mine-entity",
+        entity = "hyarion-metallic-ore"
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-polishing",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/polishing.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polisher"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-quartz"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-emerald"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-ruby"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-sapphire"
+        },
+      },
+      prerequisites = {"planetaris-quartz-furnace", "planetaris-metallic-ore-processing"},
+      research_trigger = {
+        type = "build-entity",
+        entity = "planetaris-quartz-furnace"
+      },
+      order = "e-b[hyarion]",
+    },
+      {
+      type = "technology",
+      name = "planetaris-polishing-science-pack",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/polishing-science-pack.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polishing-science-pack"
+        },
+      },
+      prerequisites = {"planetaris-polishing"},
+      research_trigger = {
+        type = "craft-item",
+        item = "planetaris-polished-quartz",
+        count = 100
+      },
+      order = "e-b[hyarion]",
+    },
+  })
+
+    local hyarion_cargo_drops_base =
+	PlanetsLib.cargo_drops_technology_base("hyarion", "__planetaris-unbounded-assets__/graphics/technology/hyarion-discovery.png", 256)
+
+  data:extend({
+    merge(hyarion_cargo_drops_base, {
+      unit = {
+        count =  500,
+        ingredients = {
+          { "automation-science-pack", 1 },
+          { "logistic-science-pack", 1 },
+          { "utility-science-pack", 1 },
+          {"space-science-pack", 1},
+          { "planetaris-compression-science-pack", 1 },
+          { "planetaris-polishing-science-pack", 1 },
+        },
+        time = 60,
+      },
+      prerequisites = { "planetaris-polishing-science-pack" },
     })
   })

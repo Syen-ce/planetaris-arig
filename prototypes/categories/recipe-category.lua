@@ -2,10 +2,14 @@ data:extend(
 {
   {
     type = "recipe-category",
-    name = "sand-processing",
+    name = "sifting",
   },
   {
     type = "recipe-category",
     name = "compressing",
+  },
+  {
+    type = "recipe-category",
+    name = "polishing",
   },
 })

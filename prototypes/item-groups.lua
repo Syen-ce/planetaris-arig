@@ -8,8 +8,24 @@ data:extend(
   },
   {
     type = "item-subgroup",
+    name = "hyarion-processes",
+    group = "intermediate-products",
+    order = "k-c"
+  },
+  -------------------------------------------------------------------------- LOGISTICS
+
+  -------------------------------------------------------------------------- PRODUCTION
+  {
+    type = "item-subgroup",
     name = "arig-production",
     group = "production",
-    order = "k-b"
+    order = "e-f"
   },
+  {
+    type = "item-subgroup",
+    name = "hyarion-production",
+    group = "production",
+    order = "e-g"
+  },
+  -------------------------------------------------------------------------- SPACE
 })

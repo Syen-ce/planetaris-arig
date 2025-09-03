@@ -7,7 +7,6 @@ data:extend(
         energy_required = 5,
         enabled = false,
         subgroup = "arig-production",
-        order = "a",
         surface_conditions =
     {
       {
@@ -31,7 +30,6 @@ data:extend(
         energy_required = 5,
         enabled = false,
         subgroup = "arig-production",
-        order = "a-b",
         surface_conditions =
     {
       {
@@ -57,7 +55,7 @@ data:extend(
             icon = "__planetaris-unbounded__/graphics/icons/fluid/sand.png"
           }
         },
-        category = "sand-processing",
+        category = "sifting",
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sand-processing]",
         enabled = false,
@@ -84,7 +82,7 @@ data:extend(
             icon = "__planetaris-unbounded__/graphics/icons/advanced-sand-sifting.png"
           }
         },
-        category = "sand-processing",
+        category = "sifting",
         subgroup = "arig-processes",
         order = "a[sand-processing]-b[sand-processing]",
         enabled = false,
@@ -374,4 +372,210 @@ data:extend(
       },
       results = {{type="item", name="planetaris-advanced-solar-panel", amount=1}}
     },
+
+-----------------------------------------------------------------
+--------------------------- Hyarion
+-----------------------------------------------------------------
+
+    {
+      type = "recipe",
+      name = "planetaris-quartz-furnace",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-raw-quartz", amount = 5},
+        {type = "item", name = "carbon", amount = 1},
+      },
+      results = {{type="item", name="planetaris-quartz-furnace", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-polisher",
+      category = "advanced-crafting",
+      energy_required = 10,
+      enabled = false,
+      surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+      ingredients =
+      {
+        {type = "item", name = "planetaris-raw-quartz", amount = 50},
+        {type = "item", name = "iron-plate", amount = 25},
+        {type = "item", name = "electronic-circuit", amount = 10},
+      },
+      results = {{type="item", name="planetaris-polisher", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-burner-drill-alternative",
+      category = "crafting",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "iron-plate", amount = 3},
+        {type = "item", name = "iron-gear-wheel", amount = 3},
+        {type = "item", name = "planetaris-quartz-furnace", amount = 1},
+      },
+      results = {{type="item", name="burner-mining-drill", amount=1}},
+      allow_productivity = false,
+    },
+
+    -- Metallics
+
+    {
+      type = "recipe",
+      name = "planetaris-metallic-smelting",
+      icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-ore.png",
+      category = "smelting",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-metallic-ore", amount = 5},
+      },
+      results = {
+          {type = "item", name = "iron-plate",                amount = 1,  probability = 0.60, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "copper-plate",              amount = 1,  probability = 0.40, show_details_in_recipe_tooltip = false},
+    },
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-metallic-sifting",
+      icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-ore.png",
+      category = "sifting",
+      subgroup = "hyarion-processes",
+      energy_required = 10,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-metallic-ore", amount = 5},
+      },
+      results = {
+        {type="item", name="iron-ore", amount=4},
+        {type="item", name="copper-ore", amount=1}
+    },
+
+      allow_productivity = true,
+    },
+
+    --- Polishing
+
+    {
+      type = "recipe",
+      name = "planetaris-polishing-compound",
+      category = "polishing",
+      energy_required = 10,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "lava", amount = 50},
+        {type = "item", name = "iron-ore", amount = 15},
+      },
+      results = {{type="fluid", name="planetaris-polishing-compound", amount=40}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-polished-quartz",
+      category = "polishing",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-raw-quartz", amount = 5},
+      },
+      results = {{type="item", name="planetaris-polished-quartz", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-polished-emerald",
+      category = "polishing",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-raw-emerald", amount = 5},
+      },
+      results = {{type="item", name="planetaris-polished-emerald", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-polished-ruby",
+      category = "polishing",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-raw-ruby", amount = 5},
+      },
+      results = {{type="item", name="planetaris-polished-ruby", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-polished-sapphire",
+      category = "polishing",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-raw-sapphire", amount = 5},
+      },
+      results = {{type="item", name="planetaris-polished-sapphire", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-polished-sapphire",
+      category = "polishing",
+      energy_required = 5,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-raw-sapphire", amount = 5},
+      },
+      results = {{type="item", name="planetaris-polished-sapphire", amount=1}},
+      allow_productivity = false,
+    },
+  {
+    type = "recipe",
+    name = "planetaris-polishing-science-pack",
+    category = "compressing",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+    ingredients =
+    {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-polished-quartz", amount = 5},
+        {type = "item", name = "planetaris-polished-ruby", amount = 5},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
+    },
+    energy_required = 10,
+    results = {{type="item", name="planetaris-polishing-science-pack", amount=1}},
+    allow_productivity = false,
+  },
 })

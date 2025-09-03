@@ -68,6 +68,7 @@ table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
       })
 
 table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
+table.insert(data.raw.lab["lab"].inputs, "planetaris-polishing-science-pack")
 
 
 table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
