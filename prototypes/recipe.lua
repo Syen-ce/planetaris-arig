@@ -416,7 +416,6 @@ data:extend(
       },
       results = {{type="item", name="planetaris-advanced-solar-panel", amount=1}}
     },
-<<<<<<< HEAD
     {
       type = "recipe",
       name = "planetaris-supported-solar-panel",
@@ -592,9 +591,6 @@ data:extend(
       allow_productivity = true
     },
     
-=======
-
->>>>>>> 31547cb08b3ca6e61ca5ced9f4aa20e37f6e2049
 -----------------------------------------------------------------
 --------------------------- Hyarion
 -----------------------------------------------------------------

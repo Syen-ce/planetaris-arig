@@ -25,10 +25,7 @@ require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.autoplace-controls")
 require("prototypes.decoratives.decoratives")
-<<<<<<< HEAD
 require("prototypes.tips-and-tricks")
-=======
->>>>>>> 31547cb08b3ca6e61ca5ced9f4aa20e37f6e2049
 require("prototypes.particles")
 
 --------------------- Compat

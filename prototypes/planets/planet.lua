@@ -340,10 +340,6 @@ data:extend({
         order = "d-d",
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
     },
-<<<<<<< HEAD
 })
 
 PlanetsLib.borrow_music(data.raw["planet"]["vulcanus"], data.raw["planet"]["arig"])
-=======
-})
->>>>>>> 31547cb08b3ca6e61ca5ced9f4aa20e37f6e2049

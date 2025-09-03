@@ -245,7 +245,6 @@ data:extend({
         stack_size = 20,
         weight = 20*kg,
      },
-<<<<<<< HEAD
      {
         type = "item",
         name = "planetaris-supported-solar-panel",
@@ -285,8 +284,6 @@ data:extend({
         stack_size = 50,
         weight = 20*kg,
      },
-=======
->>>>>>> 31547cb08b3ca6e61ca5ced9f4aa20e37f6e2049
   {
     type = "item",
     name = "planetaris-raw-diamond",
@@ -536,7 +533,6 @@ data:extend({
       factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
       durability_description_value = "description.science-pack-remaining-amount-value",
   },
-<<<<<<< HEAD
 })
 
 PlanetsLib.set_default_import_location("planetaris-press", "arig")
@@ -558,6 +554,3 @@ PlanetsLib.set_default_import_location("planetaris-advanced-solar-panel", "arig"
 PlanetsLib.set_default_import_location("planetaris-supported-solar-panel", "arig")
 PlanetsLib.set_default_import_location("planetaris-high-support-electric-pole", "arig")
 PlanetsLib.set_default_import_location("planetaris-water-harvester", "arig")
-=======
-})
->>>>>>> 31547cb08b3ca6e61ca5ced9f4aa20e37f6e2049
