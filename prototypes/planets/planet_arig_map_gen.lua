@@ -1,4 +1,4 @@
-local tile = require("prototypes/tile/tile")
+local tile = require("prototypes/tile/arig-tile")
 local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 
 

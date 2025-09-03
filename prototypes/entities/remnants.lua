@@ -214,4 +214,34 @@ data:extend({
       scale = 0.5
     }
   },
+
+-------------------Hyarion
+
+  {
+    type = "corpse",
+    name = "planetaris-quartz-furnace-remnants",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/quartz-furnace.png",
+    flags = {"placeable-neutral", "building-direction-8-way", "not-on-map"},
+    hidden_in_factoriopedia = true,
+    subgroup = "smelting-machine-remnants",
+    order = "a-a-a",
+    selection_box = {{-1, -1}, {1, 1}},
+    tile_width = 2,
+    tile_height = 2,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    expires = false,
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation = make_rotated_animation_variations_from_sheet(1,
+    {
+      filename = "__planetaris-unbounded-assets__/graphics/entity/quartz-furnace/remnants/quartz-furnace-remnants.png",
+      line_length = 1,
+      width = 152,
+      height = 130,
+      direction_count = 1,
+      shift = util.by_pixel(0, 9.5),
+      scale = 0.5
+    })
+  },
 })
