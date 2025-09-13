@@ -225,6 +225,7 @@ data:extend(
     category = "compressing",
     subgroup = "arig-processes",
     enabled = false,
+    auto_recycle = false,
     energy_required = 2,
     icon = "__planetaris-unbounded__/graphics/icons/compression-rocket-fuel.png",
     ingredients =
