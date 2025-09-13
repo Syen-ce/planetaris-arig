@@ -38,6 +38,7 @@ end
 
 -- Surface conditions
 
+-- No buildable on Arig
 table.insert(data.raw["rail-ramp"]["rail-ramp"].surface_conditions, {
         property = "planetaris-dust-concentration",
         max = 50
@@ -67,8 +68,28 @@ table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
         max = 50
       })
 
+-- No buildable on Hyarion      
+data.raw["lightning-attractor"]["lightning-collector"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 50
+      }}
+data.raw["lightning-attractor"]["lightning-rod"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 50
+      }}
+data.raw["fusion-generator"]["fusion-generator"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 50
+      }}
+data.raw["reactor"]["nuclear-reactor"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 50
+      }}
+      
+-- Adding science packs
 table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
 table.insert(data.raw.lab["lab"].inputs, "planetaris-polishing-science-pack")
+table.insert(data.raw.lab["lab"].inputs, "planetaris-refraction-science-pack")
 
 
 table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {

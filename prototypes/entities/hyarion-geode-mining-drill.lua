@@ -117,7 +117,7 @@ local function bmd_sprite_load(file_name, table)
 
   table.priority = "high"
   table.scale = 0.7
-  table.filename = "__planetaris-unbounded__/graphics/entity/hyarion-big-mining-drill/" ..
+  table.filename = "__planetaris-unbounded__/graphics/entity/hyarion-geode-mining-drill/" ..
   direction_long .. "big-mining-drill-" .. file_name
   return util.sprite_load(table.filename  ,table)
 end
@@ -556,10 +556,10 @@ data:extend(
 {
   {
     type = "mining-drill",
-    name = "hyarion-big-mining-drill",
+    name = "hyarion-geode-mining-drill",
     icon = "__space-age__/graphics/icons/big-mining-drill.png",
     flags = {"placeable-neutral", "player-creation"},
-    minable = {mining_time = 0.3, result = "hyarion-big-mining-drill"},
+    minable = {mining_time = 0.3, result = "hyarion-geode-mining-drill"},
     max_health = 300,
     resource_categories = {"geode"},
     corpse = "big-mining-drill-remnants",

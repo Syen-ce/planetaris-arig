@@ -151,7 +151,7 @@ PlanetsLib:extend({
                 type = "space-location",
                 name = "star",
             },
-            distance = 17.5,
+            distance = 22.5,
             orientation = 0.5,
         },
         subgroup = "planets",
@@ -182,6 +182,163 @@ PlanetsLib:extend({
             pressure = 7000,
             gravity = 60,
         },
+        lightning_properties =
+    {
+      lightnings_per_chunk_per_tick = 1 / (60 * 20), --cca once per chunk every 10 seconds (600 ticks)
+      search_radius = 10.0,
+      lightning_types = {"refraction-ray"},
+      lightning_multiplier_at_day = 1,
+      lightning_multiplier_at_night = 0.5,
+      priority_rules =
+      {
+        {
+          type = "id",
+          string = "lightning-collector",
+          priority_bonus = 10000
+        },
+        {
+          type = "prototype",
+          string = "lightning-attractor",
+          priority_bonus = 1000
+        },
+        {
+          type = "prototype",
+          string = "furnace",
+          priority_bonus = 10
+        },
+        {
+          type = "prototype",
+          string = "pipe",
+          priority_bonus = 1
+        },
+        {
+          type = "prototype",
+          string = "pump",
+          priority_bonus = 1
+        },
+        {
+          type = "prototype",
+          string = "offshore-pump",
+          priority_bonus = 1
+        },
+        {
+          type = "prototype",
+          string = "electric-pole",
+          priority_bonus = 10
+        },
+        {
+          type = "prototype",
+          string = "power-switch",
+          priority_bonus = 10
+        },
+        {
+          type = "prototype",
+          string = "logistic-robot",
+          priority_bonus = 100
+        },
+        {
+          type = "prototype",
+          string = "construction-robot",
+          priority_bonus = 100
+        },
+        {
+          type = "impact-soundset",
+          string = "metal",
+          priority_bonus = 1
+        }
+      },
+      exemption_rules =
+      {
+        {
+          type = "prototype",
+          string = "rail-support",
+        },
+        {
+          type = "prototype",
+          string = "legacy-straight-rail",
+        },
+        {
+          type = "prototype",
+          string = "legacy-curved-rail",
+        },
+        {
+          type = "prototype",
+          string = "straight-rail",
+        },
+        {
+          type = "prototype",
+          string = "curved-rail-a",
+        },
+        {
+          type = "prototype",
+          string = "curved-rail-b",
+        },
+        {
+          type = "prototype",
+          string = "half-diagonal-rail",
+        },
+        {
+          type = "prototype",
+          string = "rail-ramp",
+        },
+        {
+          type = "prototype",
+          string = "elevated-straight-rail",
+        },
+        {
+          type = "prototype",
+          string = "elevated-curved-rail-a",
+        },
+        {
+          type = "prototype",
+          string = "elevated-curved-rail-b",
+        },
+        {
+          type = "prototype",
+          string = "elevated-half-diagonal-rail",
+        },
+        {
+          type = "prototype",
+          string = "rail-signal",
+        },
+        {
+          type = "prototype",
+          string = "rail-chain-signal",
+        },
+        {
+          type = "prototype",
+          string = "locomotive",
+        },
+        {
+          type = "prototype",
+          string = "artillery-wagon",
+        },
+        {
+          type = "prototype",
+          string = "cargo-wagon",
+        },
+        {
+          type = "prototype",
+          string = "fluid-wagon",
+        },
+        {
+          type = "prototype",
+          string = "land-mine",
+        },
+        {
+          type = "prototype",
+          string = "wall",
+        },
+        {
+          type = "prototype",
+          string = "tree",
+        },
+        {
+          type = "countAsRockForFilteredDeconstruction",
+          string = "true",
+        },
+      }
+    },
         persistent_ambient_sounds =
           {
             base_ambience = {filename = "__space-age__/sound/wind/base-wind-fulgora.ogg", volume = 0.5},
@@ -327,7 +484,7 @@ data:extend({
         length = 30000,
         icon_size = 64,
         order = "d-c",
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
+        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
     },
     {
         type = "space-connection",
@@ -338,8 +495,9 @@ data:extend({
         length = 30000,
         icon_size = 64,
         order = "d-d",
-        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
+        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
     },
 })
 
 PlanetsLib.borrow_music(data.raw["planet"]["vulcanus"], data.raw["planet"]["arig"])
+PlanetsLib.borrow_music(data.raw["planet"]["fulgora"], data.raw["planet"]["hyarion"])

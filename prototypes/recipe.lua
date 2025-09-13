@@ -10,14 +10,6 @@ data:extend(
         enabled = false,
         auto_recycle = false,
         subgroup = "arig-production",
-        surface_conditions =
-    {
-      {
-        property = "planetaris-dust-concentration",
-        min = 50,
-        max = 100,
-      }
-    },
         ingredients =
         {
             {type = "item", name = "iron-plate", amount = 10},
@@ -178,23 +170,6 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "planetaris-simulating-unit",
-    category = "electromagnetics",
-    enabled = false,
-    auto_recycle = false,
-    energy_required = 15,
-    icon = "__planetaris-unbounded__/graphics/icons/simulating-unit.png",
-    ingredients =
-    {
-      {type = "item", name = "processing-unit", amount = 5},
-      {type = "item", name = "planetaris-silica", amount = 5},
-      {type = "item", name = "planetaris-heavy-glass", amount = 15},
-    },
-    results = {{type="item", name="planetaris-simulating-unit", amount=1}},
-    allow_productivity = true
-  },
-  {
-    type = "recipe",
     name = "planetaris-raw-quartz",
     category = "compressing",
     enabled = false,
@@ -206,6 +181,24 @@ data:extend(
       {type = "fluid", name = "steam", amount = 20},
       {type = "fluid", name = "light-oil", amount = 20},
       {type = "item", name = "planetaris-sandstone-brick", amount = 2},
+    },
+    results = {{type="item", name="planetaris-raw-quartz", amount=1}},
+    allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "planetaris-advanced-raw-quartz",
+    category = "compressing",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    icon = "__planetaris-unbounded__/graphics/icons/quartz.png",
+    ingredients =
+    {
+      {type = "fluid", name = "steam", amount = 20},
+      {type = "fluid", name = "light-oil", amount = 5},
+      {type = "item", name = "planetaris-sandstone-brick", amount = 2},
+      {type = "item", name = "coal", amount = 1},
     },
     results = {{type="item", name="planetaris-raw-quartz", amount=1}},
     allow_productivity = true
@@ -464,6 +457,23 @@ data:extend(
     },
       results = {{type="item", name="planetaris-water-harvester", amount=1}}
     },
+      {
+    type = "recipe",
+    name = "planetaris-raw-diamond",
+    category = "compressing",
+    subgroup = "arig-processes",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 2,
+    ingredients =
+    {
+      {type = "item", name = "planetaris-raw-quartz", amount = 5},
+      {type = "fluid", name = "planetaris-pure-sand", amount = 15},
+      {type = "item", name = "carbon", amount = 10},
+    },
+    results = {{type="item", name="planetaris-raw-diamond", amount=1}},
+    allow_productivity = true
+  },
     
     -- Base recipes to compression
     
@@ -598,7 +608,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-quartz-furnace",
-      energy_required = 5,
+      energy_required = 1,
       enabled = false,
       ingredients =
       {
@@ -606,6 +616,52 @@ data:extend(
         {type = "item", name = "carbon", amount = 1},
       },
       results = {{type="item", name="planetaris-quartz-furnace", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-light-ray-collector",
+      energy_required = 2,
+      enabled = false,
+      surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+      ingredients =
+      {
+        {type = "item", name = "planetaris-raw-quartz", amount = 5},
+        {type = "item", name = "iron-plate", amount = 5},
+        {type = "item", name = "copper-cable", amount = 3},
+      },
+      results = {{type="item", name="planetaris-light-ray-collector", amount=1}},
+      allow_productivity = false,
+    },
+      {
+      type = "recipe",
+      name = "planetaris-big-light-ray-collector",
+      category = "electromagnetics",
+      energy_required = 4,
+      enabled = false,
+      surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+      ingredients =
+      {
+        {type = "item", name = "planetaris-polished-quartz", amount = 10},
+        {type = "item", name = "steel-plate", amount = 10},
+        {type = "item", name = "advanced-circuit", amount = 5},
+        {type = "item", name = "planetaris-heavy-glass", amount = 2},
+      },
+      results = {{type="item", name="planetaris-big-light-ray-collector", amount=1}},
       allow_productivity = false,
     },
     {
@@ -633,7 +689,32 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "hyarion-geode-mining-drill",
+      category = "advanced-crafting",
+      energy_required = 10,
+      enabled = false,
+      surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+      ingredients =
+      {
+        {type = "item", name = "burner-mining-drill", amount = 2},
+        {type = "item", name = "planetaris-polished-quartz", amount = 10},
+        {type = "item", name = "steel-plate", amount = 10},
+        {type = "item", name = "electronic-circuit", amount = 5},
+      },
+      results = {{type="item", name="hyarion-geode-mining-drill", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
       name = "planetaris-burner-drill-alternative",
+      localised_name = {"", {"item-name.burner-drill"}, " (", {"space-location-name.hyarion"}, ")"},
       category = "crafting",
       energy_required = 5,
       enabled = false,
@@ -652,8 +733,9 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-metallic-smelting",
-      icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-ore.png",
+      icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-smelting.png",
       category = "smelting",
+      subgroup = "hyarion-processes",
       energy_required = 5,
       enabled = false,
       ingredients =
@@ -661,7 +743,7 @@ data:extend(
         {type = "item", name = "planetaris-metallic-ore", amount = 5},
       },
       results = {
-          {type = "item", name = "iron-plate",                amount = 1,  probability = 0.60, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "iron-plate",                amount = 1,  probability = 0.80, show_details_in_recipe_tooltip = false},
           {type = "item", name = "copper-plate",              amount = 1,  probability = 0.40, show_details_in_recipe_tooltip = false},
     },
       allow_productivity = false,
@@ -669,7 +751,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-metallic-sifting",
-      icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-ore.png",
+      icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-sifting.png",
       category = "sifting",
       subgroup = "hyarion-processes",
       energy_required = 10,
@@ -760,22 +842,22 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "planetaris-polished-sapphire",
+      name = "planetaris-polished-diamond",
       category = "polishing",
       energy_required = 5,
       enabled = false,
       ingredients =
       {
         {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
-        {type = "item", name = "planetaris-raw-sapphire", amount = 5},
+        {type = "item", name = "planetaris-raw-diamond", amount = 5},
       },
-      results = {{type="item", name="planetaris-polished-sapphire", amount=1}},
+      results = {{type="item", name="planetaris-polished-diamond", amount=1}},
       allow_productivity = false,
     },
   {
     type = "recipe",
     name = "planetaris-polishing-science-pack",
-    category = "compressing",
+    category = "polishing",
     enabled = false,
     surface_conditions =
     {
@@ -796,4 +878,150 @@ data:extend(
     results = {{type="item", name="planetaris-polishing-science-pack", amount=1}},
     allow_productivity = false,
   },
+    --- Rocket parts
+    {
+      type = "recipe",
+      name = "planetaris-polishing-carbon-fiber",
+      category = "polishing",
+      energy_required = 3,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "lava", amount = 30},
+        {type = "item", name = "carbon", amount = 10},
+      },
+      results = {{type="item", name="carbon-fiber", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-hyarion-rocket-fuel",
+      category = "polishing",
+      energy_required = 3,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-polished-quartz", amount = 2},
+        {type = "item", name = "carbon", amount = 5},
+      },
+      results = {{type="item", name="rocket-fuel", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-hyarion-rocket-part",
+      energy_required = 3,
+      enabled = false,
+      hide_from_player_crafting = true,
+      auto_recycle = false,
+      category = "rocket-building",
+      ingredients =
+      {
+        {type = "item", name = "engine-unit", amount = 10},
+        {type = "item", name = "carbon-fiber", amount = 10},
+        {type = "item", name = "rocket-fuel", amount = 10}
+      },
+      results = {{type="item", name="rocket-part", amount=1}},
+      allow_productivity = true
+    },
+    --- Refraction
+  {
+    type = "recipe",
+    name = "planetaris-refraction-science-pack",
+    category = "compressing",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+    ingredients =
+    {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-fiber-optics-cable", amount = 5},
+        {type = "item", name = "planetaris-nanoscale-lens", amount = 5},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
+    },
+    energy_required = 10,
+    results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
+    allow_productivity = false,
+  },
+    {
+      type = "recipe",
+      name = "planetaris-fiber-optics-cable",
+      category = "electromagnetics",
+      energy_required = 2,
+      enabled = false,
+      surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+      ingredients =
+      {
+        {type = "item", name = "planetaris-polished-diamond", amount = 4},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 2},
+        {type = "item", name = "plastic-bar", amount = 5},
+      },
+      results = {{type="item", name="planetaris-fiber-optics-cable", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-nanoscale-lens",
+      category = "polishing",
+      energy_required = 3,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 15},
+        {type = "item", name = "planetaris-glass-panel", amount = 2},
+        {type = "item", name = "planetaris-polished-diamond", amount = 5},
+      },
+      results = {{type="item", name="planetaris-nanoscale-lens", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-ruby-laser",
+      category = "electromagnetics",
+      energy_required = 4,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "steel-plate", amount = 5},
+        {type = "item", name = "planetaris-polished-quartz", amount = 2},
+        {type = "item", name = "planetaris-polished-ruby", amount = 8},
+        {type = "item", name = "planetaris-heavy-glass", amount = 5},
+      },
+      results = {{type="item", name="planetaris-ruby-laser", amount=1}},
+      allow_productivity = false,
+    },
+  {
+    type = "recipe",
+    name = "planetaris-simulating-unit",
+    category = "electromagnetics",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 15,
+    icon = "__planetaris-unbounded__/graphics/icons/simulating-unit.png",
+    ingredients =
+    {
+      {type = "item", name = "processing-unit", amount = 1},
+      {type = "item", name = "supercapacitor", amount = 1},
+      {type = "item", name = "planetaris-fiber-optics-cable", amount = 2},
+      {type = "item", name = "planetaris-silica", amount = 5},
+    },
+    results = {{type="item", name="planetaris-simulating-unit", amount=1}},
+    allow_productivity = true
+  },
 })
+
+PlanetsLib.assign_rocket_part_recipe("hyarion","planetaris-hyarion-rocket-part")

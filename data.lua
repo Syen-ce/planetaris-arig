@@ -10,7 +10,7 @@ require("prototypes.entities.remnants")
 require("prototypes.entities.explosions")
 require("prototypes.entities.resources")
 require("prototypes.entities.transport-belts")
-require("prototypes.entities.hyarion-big-mining-drill")
+require("prototypes.entities.hyarion-geode-mining-drill")
 require("prototypes.entities.polisher")
 require("prototypes.circuit-connector-definitions")
 require("prototypes.item")
@@ -24,7 +24,8 @@ require("prototypes.item-groups")
 require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.autoplace-controls")
-require("prototypes.decoratives.decoratives")
+require("prototypes.decoratives.arig-decoratives")
+require("prototypes.decoratives.hyarion-decoratives")
 require("prototypes.tips-and-tricks")
 require("prototypes.particles")
 
@@ -42,5 +43,6 @@ require("compat.wood-industry")
 require("compat.planet-muluna")
 
 if mods["any-planet-start"] then
-    APS.add_planet{name = "arig", filename = "__planetaris-unbounded__/compat/any-planet-start.lua", technology = "planet-discovery-arig"}
+    APS.add_planet{name = "arig", filename = "__planetaris-unbounded__/compat/any-planet-start-arig.lua", technology = "planet-discovery-arig"}
+    APS.add_planet{name = "hyarion", filename = "__planetaris-unbounded__/compat/any-planet-start-hyarion.lua", technology = "planet-discovery-hyarion"}
 end

@@ -1285,4 +1285,184 @@ data:extend({
       }
     }
   },
+{
+    type = "lightning-attractor",
+    name = "planetaris-light-ray-collector",
+    efficiency = 0.2,
+    range_elongation = 15.0,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "500MJ",
+      usage_priority = "primary-output",
+      output_flow_limit = "500MJ",
+      drain = "2.5MJ"
+    },
+    icon = "__planetaris-unbounded-assets__/graphics/icons/light-ray-collector.png",
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.2, result = "planetaris-light-ray-collector"},
+    max_health = 200,
+    corpse = "lightning-rod-remnants",
+    dying_explosion = "medium-electric-pole-explosion",
+    factoriopedia_simulation = simulations.factoriopedia_lightning_rod,
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 50
+      },
+      {
+        type = "electric",
+        percent = 100
+      }
+    },
+    collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    lightning_strike_offset = {0, -4.1},
+    damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2},{0.2, 0.2}}),
+    drawing_box_vertical_extension = 1.5,
+    open_sound = sounds.electric_network_open,
+    close_sound = sounds.electric_network_close,
+    working_sound =
+    {
+      main_sounds =
+      {
+        {
+          sound =
+          {
+            filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-charge.ogg",
+            volume = 0.5,
+            audible_distance_modifier = 0.5,
+          },
+          match_volume_to_activity = true,
+          activity_to_volume_modifiers = {offset = 2, inverted = true},
+        },
+        {
+          sound =
+          {
+            filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-discharge.ogg",
+            volume = 0.5,
+            audible_distance_modifier = 0.5,
+          },
+          match_volume_to_activity = true,
+          activity_to_volume_modifiers = {offset = 1},
+        }
+      },
+      max_sounds_per_prototype = 3,
+    },
+    chargable_graphics = require("__planetaris-unbounded__.prototypes.entities.light-ray-collector"),
+    water_reflection =
+    {
+      pictures =
+      {
+        filename = "__planetaris-unbounded-assets__/graphics/entity/light-ray-collector/light-ray-collector-reflection.png",
+        priority = "extra-high",
+        width = 11,
+        height = 30,
+        shift = util.by_pixel(0, 50),
+        variation_count = 1,
+        scale = 1
+      },
+      rotate = false,
+      orientation_to_variation = false
+    },
+      surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+  },
+{
+    type = "lightning-attractor",
+    name = "planetaris-big-light-ray-collector",
+    efficiency = 0.7,
+    range_elongation = 25.0,
+    energy_source =
+    {
+      type = "electric",
+      buffer_capacity = "1000MJ",
+      usage_priority = "primary-output",
+      output_flow_limit = "1000MJ",
+      drain = "3.5MJ"
+    },
+    icon = "__planetaris-unbounded-assets__/graphics/icons/big-light-ray-collector.png",
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {mining_time = 0.3, result = "planetaris-big-light-ray-collector"},
+    max_health = 350,
+    corpse = "accumulator-remnants",
+    dying_explosion = "accumulator-explosion",
+    factoriopedia_simulation = simulations.factoriopedia_lightning_rod,
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      },
+      {
+        type = "electric",
+        percent = 100
+      }
+    },
+    collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
+    selection_box = {{-1, -1}, {1, 1}},
+    lightning_strike_offset = {0, -4.1},
+    damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2},{0.2, 0.2}}),
+    drawing_box_vertical_extension = 2,
+    open_sound = sounds.electric_network_open,
+    close_sound = sounds.electric_network_close,
+    working_sound =
+    {
+      main_sounds =
+      {
+        {
+          sound =
+          {
+            filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-charge.ogg",
+            volume = 0.5,
+            audible_distance_modifier = 0.5,
+          },
+          match_volume_to_activity = true,
+          activity_to_volume_modifiers = {offset = 2, inverted = true},
+        },
+        {
+          sound =
+          {
+            filename = "__space-age__/sound/entity/lightning-attractor/lightning-attractor-discharge.ogg",
+            volume = 0.5,
+            audible_distance_modifier = 0.5,
+          },
+          match_volume_to_activity = true,
+          activity_to_volume_modifiers = {offset = 1},
+        }
+      },
+      max_sounds_per_prototype = 3,
+    },
+    chargable_graphics = require("__planetaris-unbounded__.prototypes.entities.big-light-ray-collector"),
+    water_reflection =
+    {
+      pictures =
+      {
+        filename = "__planetaris-unbounded-assets__/graphics/entity/big-light-ray-collector/big-light-ray-collector-reflection.png",
+        priority = "extra-high",
+        width = 11,
+        height = 30,
+        shift = util.by_pixel(0, 50),
+        variation_count = 1,
+        scale = 1
+      },
+      rotate = false,
+      orientation_to_variation = false
+    },
+      surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+  },
 })

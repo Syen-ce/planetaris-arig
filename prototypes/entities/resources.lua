@@ -183,7 +183,7 @@ data:extend ({
       minable =
     {
       mining_particle = "hyarion-quartz-ore-particle",
-      mining_time = 5,
+      mining_time = 2,
       result = "carbon",
     },
       walking_sound = base_tile_sounds.walking.ore,
@@ -205,7 +205,7 @@ data:extend ({
       minable =
     {
       mining_particle = "hyarion-quartz-ore-particle",
-      mining_time = 5,
+      mining_time = 2,
       result = "planetaris-raw-quartz",
     },
       walking_sound = base_tile_sounds.walking.ore,
@@ -227,7 +227,7 @@ data:extend ({
       minable =
     {
       mining_particle = "hyarion-metallic-ore-particle",
-      mining_time = 5,
+      mining_time = 1,
       result = "planetaris-metallic-ore"
     },
       walking_sound = base_tile_sounds.walking.ore,
@@ -243,7 +243,7 @@ data:extend ({
   {
         type = "resource",
         name = "emerald-geode",
-        icon = "__planetaris-unbounded__/graphics/icons/heavy-oil-resource.png",
+        icon = "__planetaris-unbounded-assets__/graphics/icons/emerald-geode.png",
         flags = {"placeable-neutral"},
         category = "geode",
         subgroup = "mineable-fluids",
@@ -306,15 +306,15 @@ data:extend ({
             count = 1,
             render_layer = "smoke",
             animation = {
-              filename = "__planetaris-unbounded__/graphics/entity/heavy-oil/oil-smoke-outer.png",
-              frame_count = 47,
-              line_length = 16,
-              width = 90,
+              filename = "__planetaris-unbounded-assets__/graphics/entity/geode-effects/geode-shining.png",
+              frame_count = 42,
+              line_length = 10,
+              width = 150,
               height = 188,
               animation_speed = 0.3,
               shift = util.by_pixel(-2, 24 -152),
               scale = 1.5,
-              tint = util.multiply_color({r=0.3, g=0.3, b=0.3}, 0.2)
+              tint = util.multiply_color({r=0.8, g=1, b=0.8}, 1)
             }
           },
           {
@@ -329,7 +329,7 @@ data:extend ({
               animation_speed = 0.3,
               shift = util.by_pixel(0, 24 -78),
               scale = 1.5,
-              tint = util.multiply_color({r=0.4, g=0.4, b=0.4}, 0.2)
+              tint = util.multiply_color({r=0.0, g=0.1, b=0.0}, 0.2)
             }
           }
         },
@@ -339,7 +339,7 @@ data:extend ({
       {
         type = "resource",
         name = "ruby-geode",
-        icon = "__planetaris-unbounded__/graphics/icons/heavy-oil-resource.png",
+        icon = "__planetaris-unbounded-assets__/graphics/icons/ruby-geode.png",
         flags = {"placeable-neutral"},
         category = "geode",
         subgroup = "mineable-fluids",
@@ -402,15 +402,15 @@ data:extend ({
             count = 1,
             render_layer = "smoke",
             animation = {
-              filename = "__planetaris-unbounded__/graphics/entity/heavy-oil/oil-smoke-outer.png",
-              frame_count = 47,
-              line_length = 16,
-              width = 90,
+              filename = "__planetaris-unbounded-assets__/graphics/entity/geode-effects/geode-shining.png",
+              frame_count = 42,
+              line_length = 10,
+              width = 150,
               height = 188,
               animation_speed = 0.3,
               shift = util.by_pixel(-2, 24 -152),
               scale = 1.5,
-              tint = util.multiply_color({r=0.3, g=0.3, b=0.3}, 0.2)
+              tint = util.multiply_color({r=1, g=0.8, b=0.8}, 1)
             }
           },
           {
@@ -435,7 +435,7 @@ data:extend ({
       {
         type = "resource",
         name = "sapphire-geode",
-        icon = "__planetaris-unbounded__/graphics/icons/heavy-oil-resource.png",
+        icon = "__planetaris-unbounded-assets__/graphics/icons/sapphire-geode.png",
         flags = {"placeable-neutral"},
         category = "geode",
         subgroup = "mineable-fluids",
@@ -490,7 +490,7 @@ data:extend ({
             {
               priority = "extra-high",
               scale = 0.5,
-              frame_count = 32,
+              frame_count = 28,
               animation_speed = 0.2,
             })
           },
@@ -498,15 +498,15 @@ data:extend ({
             count = 1,
             render_layer = "smoke",
             animation = {
-              filename = "__planetaris-unbounded__/graphics/entity/heavy-oil/oil-smoke-outer.png",
-              frame_count = 47,
-              line_length = 16,
-              width = 90,
+              filename = "__planetaris-unbounded-assets__/graphics/entity/geode-effects/geode-shining.png",
+              frame_count = 42,
+              line_length = 10,
+              width = 150,
               height = 188,
               animation_speed = 0.3,
               shift = util.by_pixel(-2, 24 -152),
               scale = 1.5,
-              tint = util.multiply_color({r=0.3, g=0.3, b=0.3}, 0.2)
+              tint = util.multiply_color({r=0.8, g=0.8, b=1}, 1)
             }
           },
           {

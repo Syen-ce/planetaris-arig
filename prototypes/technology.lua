@@ -314,35 +314,6 @@ data:extend({
     },
     {
       type = "technology",
-      name = "planetaris-simulating-unit",
-      icon = "__planetaris-unbounded__/graphics/technology/simulating-unit.png",
-      icon_size = 256,
-      essential = true,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-simulating-unit"
-        },
-      },
-      prerequisites = {"planetaris-silica-processing"},
-      unit =
-      {
-        count = 800,
-        ingredients =
-        {
-          {"automation-science-pack", 1},
-          {"logistic-science-pack", 1},
-          {"chemical-science-pack", 1},
-          {"production-science-pack", 1},
-          {"space-science-pack", 1},
-          {"planetaris-compression-science-pack", 1},
-        },
-        time = 120
-      },
-      order = "ea[arig]",
-    },
-    {
-      type = "technology",
       name = "planetaris-hyper-transport-belt",
       icon = "__planetaris-unbounded__/graphics/technology/logistics-5.png",
       icon_size = 256,
@@ -377,36 +348,6 @@ data:extend({
         },
         time = 60
       }
-    },
-    {
-        type = "technology",
-        name = "planetaris-automation-4",
-        icon = "__planetaris-unbounded__/graphics/technology/automation-4.png",
-        icon_size = 256,
-        localised_name = {"technology-name.planetaris-automation-4"},
-        localised_description = {"technology-description.planetaris-automation-4"},
-        effects =
-        {
-          {
-            type = "unlock-recipe",
-            recipe = "planetaris-assembling-machine-4"
-          }
-        },
-        prerequisites = {"planetaris-simulating-unit","automation-3","planetaris-heavy-glass"},
-        unit =
-        {
-          count = 5000,
-          ingredients =
-          {
-            {"automation-science-pack", 1},
-            {"logistic-science-pack", 1},
-            {"chemical-science-pack", 1},
-            {"production-science-pack", 1},
-            {"space-science-pack", 1},
-            {"planetaris-compression-science-pack", 1},
-          },
-          time = 120
-        }
     },
     {
       type = "technology",
@@ -628,6 +569,10 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           type = "unlock-recipe",
           recipe = "planetaris-metallic-sifting"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-light-ray-collector"
+        },
       },
       prerequisites = {"planetaris-quartz-furnace"},
       research_trigger = {
@@ -649,12 +594,54 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
         },
         {
           type = "unlock-recipe",
+          recipe = "planetaris-polishing-compound"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "planetaris-polished-quartz"
         },
         {
           type = "unlock-recipe",
           recipe = "planetaris-polished-emerald"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polishing-carbon-fiber"
+        },
+      },
+      prerequisites = {"planetaris-quartz-furnace", "planetaris-metallic-ore-processing"},
+      research_trigger = {
+        type = "build-entity",
+        entity = "planetaris-quartz-furnace"
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-geode-mining-drill",
+      icon = "__space-age__/graphics/technology/big-mining-drill.png",
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "unlock-recipe",
+          recipe = "hyarion-geode-mining-drill"
+        }
+      },
+      prerequisites = {"planetaris-polishing"},
+      research_trigger =
+      {
+        type = "build-entity",
+        entity = "planetaris-polisher"
+      }
+    },
+    {
+      type = "technology",
+      name = "planetaris-geode-processing",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/sapphire-tech.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
         {
           type = "unlock-recipe",
           recipe = "planetaris-polished-ruby"
@@ -664,10 +651,10 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           recipe = "planetaris-polished-sapphire"
         },
       },
-      prerequisites = {"planetaris-quartz-furnace", "planetaris-metallic-ore-processing"},
+      prerequisites = {"planetaris-geode-mining-drill"},
       research_trigger = {
         type = "build-entity",
-        entity = "planetaris-quartz-furnace"
+        entity = "hyarion-geode-mining-drill"
       },
       order = "e-b[hyarion]",
     },
@@ -683,11 +670,297 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           recipe = "planetaris-polishing-science-pack"
         },
       },
-      prerequisites = {"planetaris-polishing"},
+      prerequisites = {"planetaris-geode-processing", "planetaris-polishing"},
       research_trigger = {
         type = "craft-item",
         item = "planetaris-polished-quartz",
         count = 100
+      },
+      order = "e-b[hyarion]",
+    },
+      {
+      type = "technology",
+      name = "planetaris-diamond-production",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/diamond-tech.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-raw-diamond"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-diamond"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack"},
+      unit =
+      {
+        count = 1500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 120
+      },
+      order = "e-b[hyarion]",
+    },
+        {
+      type = "technology",
+      name = "planetaris-big-light-ray-collector",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/big-light-ray-collector.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-big-light-ray-collector"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack"},
+      unit =
+      {
+        count = 1000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+          {
+      type = "technology",
+      name = "planetaris-advanced-raw-quartz",
+      icon = "__planetaris-unbounded__/graphics/technology/quartz.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-advanced-raw-quartz"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-production"},
+      unit =
+      {
+        count = 500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+          {
+      type = "technology",
+      name = "planetaris-nanoscale-lens",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/nanoscale-lens.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-nanoscale-lens"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-production","planetslib-hyarion-cargo-drops"},
+      unit =
+      {
+        count = 1500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+          {
+      type = "technology",
+      name = "planetaris-ruby-laser",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/ruby-laser.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-ruby-laser"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack","planetslib-hyarion-cargo-drops"},
+      unit =
+      {
+        count = 800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-fiber-optics",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/nanoscale-lens.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-fiber-optics-cable"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack","planetslib-hyarion-cargo-drops"},
+      unit =
+      {
+        count = 1000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "e-b[hyarion]",
+    },
+      {
+      type = "technology",
+      name = "planetaris-simulating-unit",
+      icon = "__planetaris-unbounded__/graphics/technology/simulating-unit.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-simulating-unit"
+        },
+      },
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetslib-hyarion-cargo-drops","planetaris-fiber-optics"},
+      unit =
+      {
+        count = 800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 120
+      },
+      order = "e-b[hyarion]",
+    },
+      {
+        type = "technology",
+        name = "planetaris-automation-4",
+        icon = "__planetaris-unbounded__/graphics/technology/automation-4.png",
+        icon_size = 256,
+        localised_name = {"technology-name.planetaris-automation-4"},
+        localised_description = {"technology-description.planetaris-automation-4"},
+        effects =
+        {
+          {
+            type = "unlock-recipe",
+            recipe = "planetaris-assembling-machine-4"
+          }
+        },
+        prerequisites = {"planetaris-simulating-unit","automation-3","planetaris-heavy-glass"},
+        unit =
+        {
+          count = 5000,
+          ingredients =
+          {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          },
+          time = 120
+        }
+    },
+      {
+      type = "technology",
+      name = "planetaris-refraction-science-pack",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/refraction-science-pack.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-refraction-science-pack"
+        },
+      },
+      prerequisites = {"planetaris-fiber-optics","planetaris-nanoscale-lens","planetaris-simulating-unit"},
+      unit =
+      {
+        count = 2000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          { "agricultural-science-pack", 1 },
+          { "electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+        },
+        time = 60
       },
       order = "e-b[hyarion]",
     },

@@ -14,6 +14,7 @@ data:extend({
     drop_sound = item_sounds.fluid_inventory_move,
     place_result = "planetaris-press",
     stack_size = 50,
+    default_import_location = "arig",
   },
 {
     type = "item",
@@ -26,6 +27,7 @@ data:extend({
     drop_sound = item_sounds.fluid_inventory_move,
     place_result = "planetaris-sifter",
     stack_size = 10,
+    default_import_location = "arig",
   },
   {
     type = "item",
@@ -37,6 +39,7 @@ data:extend({
     order = "c[assembling-machine-4]-a",
     place_result = "planetaris-assembling-machine-4",
     stack_size = 50,
+    default_import_location = "arig",
     },
     {
     type = "item",
@@ -47,6 +50,7 @@ data:extend({
     icon_size = 64,
     stack_size = 100,
     weight = 10 * kg,
+    default_import_location = "arig",
     place_as_tile = {
         result = "planetaris-sandstone-path",
         condition_size = 1,
@@ -98,6 +102,7 @@ data:extend({
         order = "a[basic]-b",
         stack_size = 100,
         weight = 5*kg,
+        default_import_location = "arig",
 
         inventory_move_sound = item_sounds.low_density_inventory_move,
         pick_sound = item_sounds.low_density_inventory_pickup,
@@ -111,6 +116,7 @@ data:extend({
         order = "c[advance]-a",
         stack_size = 50,
         weight = 10*kg,
+        default_import_location = "arig",
 
         inventory_move_sound = item_sounds.metal_small_inventory_move,
         pick_sound = item_sounds.metal_small_inventory_pickup,
@@ -125,6 +131,7 @@ data:extend({
         order = "a[basic]-c",
         stack_size = 100,
         weight = 5*kg,
+        default_import_location = "arig",
 
         inventory_move_sound = item_sounds.sulfur_inventory_move,
         pick_sound = item_sounds.resource_inventory_pickup,
@@ -137,6 +144,7 @@ data:extend({
         subgroup = "arig-processes",
         order = "c[advance]-b",
         stack_size = 100,
+        default_import_location = "arig",
 
         inventory_move_sound = item_sounds.sulfur_inventory_move,
         pick_sound = item_sounds.resource_inventory_pickup,
@@ -150,6 +158,7 @@ data:extend({
         subgroup = "arig-processes",
         order = "c[advance]-c",
         stack_size = 100,
+        default_import_location = "arig",
 
         inventory_move_sound = item_sounds.sulfur_inventory_move,
         pick_sound = item_sounds.resource_inventory_pickup,
@@ -244,6 +253,8 @@ data:extend({
         place_result = "planetaris-advanced-solar-panel",
         stack_size = 20,
         weight = 20*kg,
+        default_import_location = "arig",
+
      },
      {
         type = "item",
@@ -257,6 +268,7 @@ data:extend({
         place_result = "planetaris-supported-solar-panel",
         stack_size = 20,
         weight = 20*kg,
+        default_import_location = "arig",
      },
      {
         type = "item",
@@ -270,19 +282,21 @@ data:extend({
         place_result = "planetaris-high-support-electric-pole",
         stack_size = 50,
         weight = 10*kg,
+        default_import_location = "arig",
      },
      {
         type = "item",
         name = "planetaris-water-harvester",
         icon = "__planetaris-unbounded__/graphics/icons/water-harvester.png",
-        subgroup = "production-machine",
-        order = "e[chemical-plant]-d",
+        subgroup = "arig-production",
+        order = "a-c",
         inventory_move_sound = item_sounds.electric_large_inventory_move,
         pick_sound = item_sounds.electric_large_inventory_pickup,
         drop_sound = item_sounds.electric_large_inventory_move,
         place_result = "planetaris-water-harvester",
         stack_size = 50,
         weight = 20*kg,
+        default_import_location = "arig",
      },
   {
     type = "item",
@@ -299,7 +313,7 @@ data:extend({
     order = "b-a[raw]",
     stack_size = 100,
     weight = 5*kg,
-    default_import_location = "hyarion",
+    default_import_location = "arig",
 
     inventory_move_sound = item_sounds.sulfur_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,
@@ -329,8 +343,38 @@ data:extend({
     name = "planetaris-quartz-furnace",
     icon = "__planetaris-unbounded-assets__/graphics/icons/quartz-furnace.png",
     subgroup = "hyarion-production",
-    order = "a-a",
+    order = "a-a-c",
     place_result = "planetaris-quartz-furnace",
+    stack_size = 50,
+    weight = 20*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.fluid_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-light-ray-collector",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/light-ray-collector.png",
+    subgroup = "hyarion-production",
+    order = "a-a-a",
+    place_result = "planetaris-light-ray-collector",
+    stack_size = 50,
+    weight = 20*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.fluid_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-big-light-ray-collector",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/big-light-ray-collector.png",
+    subgroup = "hyarion-production",
+    order = "a-a-b",
+    place_result = "planetaris-big-light-ray-collector",
     stack_size = 50,
     weight = 20*kg,
     default_import_location = "hyarion",
@@ -356,15 +400,15 @@ data:extend({
   },
      {
     type = "item",
-    name = "hyarion-big-mining-drill",
-    icon = "__skewer_shattered_planet_assets__/graphics/icons/deep_mining_drill.png",
+    name = "hyarion-geode-mining-drill",
+    icon = "__space-age__/graphics/icons/big-mining-drill.png",
     subgroup = "extraction-machine",
     color_hint = { text = "1" },
     order = "a[items]-d[big-mining-drill]",
     inventory_move_sound = item_sounds.drill_inventory_move,
     pick_sound = item_sounds.drill_inventory_pickup,
     drop_sound = item_sounds.drill_inventory_move,
-    place_result = "hyarion-big-mining-drill",
+    place_result = "hyarion-geode-mining-drill",
     stack_size = 20,
     weight = 40*kg,
     random_tint_color = item_tints.iron_rust
@@ -533,24 +577,65 @@ data:extend({
       factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
       durability_description_value = "description.science-pack-remaining-amount-value",
   },
-})
+    --- Refraction
+  {
+    type = "item",
+    name = "planetaris-fiber-optics-cable",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/fiber-optics-cable.png",
+    subgroup = "hyarion-processes",
+    order = "c[refraction]-a",
+    stack_size = 200,
+    weight = 5*kg,
+    default_import_location = "hyarion",
 
-PlanetsLib.set_default_import_location("planetaris-press", "arig")
-PlanetsLib.set_default_import_location("planetaris-sifter", "arig")
-PlanetsLib.set_default_import_location("planetaris-assembling-machine-4", "arig")
-PlanetsLib.set_default_import_location("planetaris-sandstone-brick", "arig")
-PlanetsLib.set_default_import_location("planetaris-sandstone-foundation", "arig")
-PlanetsLib.set_default_import_location("planetaris-glass-panel", "arig")
-PlanetsLib.set_default_import_location("planetaris-heavy-glass", "arig")
-PlanetsLib.set_default_import_location("planetaris-raw-quartz", "arig")
-PlanetsLib.set_default_import_location("planetaris-silica", "arig")
-PlanetsLib.set_default_import_location("planetaris-simulating-unit", "arig")
-PlanetsLib.set_default_import_location("planetaris-compression-science-pack", "arig")
-PlanetsLib.set_default_import_location("planetaris-hyper-transport-belt", "arig")
-PlanetsLib.set_default_import_location("planetaris-hyper-splitter", "arig")
-PlanetsLib.set_default_import_location("planetaris-hyper-underground-belt", "arig")
-PlanetsLib.set_default_import_location("planetaris-big-chest", "arig")
-PlanetsLib.set_default_import_location("planetaris-advanced-solar-panel", "arig")
-PlanetsLib.set_default_import_location("planetaris-supported-solar-panel", "arig")
-PlanetsLib.set_default_import_location("planetaris-high-support-electric-pole", "arig")
-PlanetsLib.set_default_import_location("planetaris-water-harvester", "arig")
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-nanoscale-lens",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/nanoscale-lens.png",
+    subgroup = "hyarion-processes",
+    order = "c[refraction]-b",
+    stack_size = 100,
+    weight = 10*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-ruby-laser",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/ruby-laser.png",
+    subgroup = "hyarion-processes",
+    order = "c[refraction]-c",
+    stack_size = 50,
+    weight = 10*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
+  {
+    type = "tool",
+    name = "planetaris-refraction-science-pack",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/refraction-science-pack.png",
+      subgroup = "science-pack",
+      order = "h-d-b",
+    stack_size = 200,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.science_inventory_move,
+    pick_sound = item_sounds.science_inventory_pickup,
+    drop_sound = item_sounds.science_inventory_move,
+    weight = 1*kg,
+    durability = 1,
+    durability_description_key = "description.science-pack-remaining-amount-key",
+    factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
+    durability_description_value = "description.science-pack-remaining-amount-value",
+  },
+})
