@@ -859,7 +859,7 @@ data:extend({
         }
       }
     },
-       {
+{
       name = "arig-small-cactus",
       type = "optimized-decorative",
       order = "b[decorative]-g[fluff]-a[normal]-a[brown]",
@@ -880,6 +880,131 @@ data:extend({
                             range_select{input = temperature, from = 5, to = 50, slope = 0.5, min = -10, max = 1})"
         }
       },
+      pictures =
+      {
+        --cactus
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 61,
+          shift = util.by_pixel(3, -1.75),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 61,
+          shift = util.by_pixel(2.75, 0),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(2.75, 0),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(12, -8),
+          scale = 0.5
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(15, -20),
+          scale = 0.8
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(25, -20),
+          scale = 1
+        },
+        {
+          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
+          priority = base_decorative_sprite_priority,
+          width = 92,
+          height = 90,
+          shift = util.by_pixel(30, -20),
+          scale = 1
+        },
+      },
+    },
+       {
+      name = "arig-small-cactus-plant",
+      type = "simple-entity",
+      flags = {"placeable-neutral", "placeable-off-grid"},
+      icon = "__planetaris-unbounded__/graphics/icons/small-cactus.png",
+      subgroup = "grass",
+      order = "b[decorative]-z-b",
+      collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
+      selection_box = {{-0.3, -0.3}, {0.3, 0.3}},
+      collision_mask = {layers = {water_tile = true, player = true}},
+      walking_sound = tile_sounds.walking.big_bush,
+      damaged_trigger_effect = hit_effects.rock(),
+      dying_trigger_effect = decorative_trigger_effects.big_rock(),
+      mining_sound = sound_variations("__space-age__/sound/mining/axe-mining-boompuff", 5, 0.6),
+      render_layer = "object",
+      max_health = 100,
+      autoplace =
+      {
+        order = "a[doodad]-i[fluff]-a",
+        probability_expression = "-2.6 + rpi(1.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box * (arig_sand_solid * 0.02)",
+        local_expressions =
+        {
+          region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
+                            range_select{input = temperature, from = 5, to = 50, slope = 0.5, min = -10, max = 1})"
+        }
+      },
+        minable =
+        {
+          mining_particle = "stone-particle",
+          mining_time = 1,
+          results = nil,
+        },
       pictures =
       {
         --cactus

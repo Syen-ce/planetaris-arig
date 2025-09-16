@@ -214,6 +214,33 @@ data:extend({
       scale = 0.5
     }
   },
+  {
+    type = "corpse",
+    name = "arig-roboport-remnants",
+    icon = "__planetaris-unbounded__/graphics/icons/arig-roboport.png",
+    flags = {"placeable-neutral", "not-on-map"},
+    hidden_in_factoriopedia = true,
+    subgroup = "logistic-network-remnants",
+    order = "a-h-b",
+    selection_box = {{-2, -2}, {2, 2}},
+    tile_width = 3,
+    tile_height = 3,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    expires = false,
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation = make_rotated_animation_variations_from_sheet (2,
+    {
+      filename = "__planetaris-unbounded__/graphics/entity/arig-roboport/remnants/roboport-remnants.png",
+      line_length = 1,
+      width = 364,
+      height = 358,
+      direction_count = 1,
+      shift = util.by_pixel(2, 8),
+      scale = 0.5
+    })
+  },
 
 -------------------Hyarion
 

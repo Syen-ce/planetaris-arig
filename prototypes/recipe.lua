@@ -397,6 +397,20 @@ data:extend(
       results = {{type="item", name="planetaris-big-chest", amount=1}},
       allow_productivity = false,
     },
+    {
+      type = "recipe",
+      name = "planetaris-arig-roboport",
+      enabled = false,
+      energy_required = 5,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-glass-panel", amount = 10},
+        {type = "item", name = "steel-plate", amount = 25},
+        {type = "item", name = "iron-gear-wheel", amount = 25},
+        {type = "item", name = "advanced-circuit", amount = 35}
+      },
+      results = {{type="item", name="planetaris-arig-roboport", amount=1}}
+    },
       {
       type = "recipe",
       name = "planetaris-advanced-solar-panel",

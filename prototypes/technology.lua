@@ -314,6 +314,35 @@ data:extend({
     },
     {
       type = "technology",
+      name = "planetaris-arig-roboport",
+      icon = "__planetaris-unbounded__/graphics/technology/arig-roboport.png",
+      icon_size = 256,
+      effects =
+      {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-arig-roboport"
+        },
+      },
+      prerequisites = {"planetaris-glass", "planetaris-compression-science"},
+      unit =
+      {
+        count = 800,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+        },
+        time = 120
+      }
+    },
+    {
+      type = "technology",
       name = "planetaris-hyper-transport-belt",
       icon = "__planetaris-unbounded__/graphics/technology/logistics-5.png",
       icon_size = 256,

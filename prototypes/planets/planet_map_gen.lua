@@ -59,7 +59,6 @@ planet_map_gen.arig = function()
             ["arig-brown-fluff"] = {},
             ["arig-brown-fluff-dry"] = {},
             ["arig-small-sand-rock"] = {},
-            ["arig-small-cactus"] = {},
             ["arig-crack-decal"] = {},
             ["arig-crack-decal-large"] = {},
             ["arig-tiny-rock-cluster"] = {},
@@ -74,6 +73,7 @@ planet_map_gen.arig = function()
             ["stone"] = {},
             ["arig-big-sand-rock"] = {},
             ["arig-medium-sand-rock"] = {},
+            ["arig-small-cactus-plant"] = {},
             ["heavy-oil-geyser"] = {},
             ["arig-crash"] = {},
           }
