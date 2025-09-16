@@ -16,4 +16,8 @@ data:extend(
     type = "recipe-category",
     name = "polishing",
   },
+  {
+    type = "recipe-category",
+    name = "refraction",
+  },
 })

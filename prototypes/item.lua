@@ -421,7 +421,7 @@ data:extend({
     name = "planetaris-metallic-ore",
     icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-ore.png",
     subgroup = "hyarion-processes",
-    order = "a-a[ore]-b",
+    order = "a-a[ore]-a",
     stack_size = 100,
     weight = 5*kg,
     default_import_location = "hyarion",
@@ -558,6 +558,206 @@ data:extend({
     pick_sound = item_sounds.resource_inventory_pickup,
     drop_sound = item_sounds.sulfur_inventory_move,
   },
+  {
+    type = "item",
+    name = "planetaris-charged-gem",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/charged-gem-1.png",
+    subgroup = "hyarion-processes",
+    order = "c[refraction]-d[charged]-b",
+    fuel_category = "refraction",
+    burnt_result = "planetaris-unstable-shard",
+    fuel_value = "1GJ",
+    stack_size = 50,
+    weight = 100*kg,
+    default_import_location = "hyarion",
+
+    spoil_ticks = 5 * minute,
+    spoil_result = "planetaris-polished-quartz",
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
+  {
+    type = "capsule",
+    name = "planetaris-unstable-gem",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/unstable-gem-1.png",
+    subgroup = "hyarion-processes",
+    order = "c[refraction]-d[charged]-d",
+    flags = {"hide-from-bonus-gui"},
+    capsule_action =
+    {
+      type = "destroy-cliffs",
+      radius = 4,
+      attack_parameters =
+      {
+        type = "projectile",
+        activation_type = "throw",
+        ammo_category = "grenade",
+        cooldown = 30,
+        projectile_creation_distance = 0.6,
+        range = 10,
+        ammo_type =
+        {
+          target_type = "position",
+          action =
+          {
+            type = "direct",
+            action_delivery =
+            {
+              type = "projectile",
+              projectile = "unstable-gem",
+              starting_speed = 0.3
+            }
+          }
+        }
+      }
+    },
+
+    spoil_ticks = 15 * minute,
+    spoil_to_trigger_result =
+    {
+      items_per_trigger = 25,
+      trigger =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "instant",
+            target_effects =
+            {
+              {
+                type = "create-entity",
+                entity_name = "medium-explosion"
+              },
+              {
+                type = "create-entity",
+                entity_name = "small-scorchmark-tintable",
+                check_buildability = true
+              },
+              {
+                type = "invoke-tile-trigger",
+                repeat_count = 1
+              },
+              {
+                type = "destroy-decoratives",
+                from_render_layer = "decorative",
+                to_render_layer = "object",
+                include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+                include_decals = false,
+                invoke_decorative_trigger = true,
+                decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+                radius = 1.25 -- large radius for demostrative purposes
+              }
+            }
+          }
+        },
+        {
+          type = "area",
+          radius = 1,
+          action_delivery =
+          {
+            type = "instant",
+            target_effects =
+            {
+              {
+                type = "damage",
+                damage = {amount = 150, type = "explosion"}
+              },
+              {
+                type = "create-entity",
+                entity_name = "explosion"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    stack_size = 20,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.explosive_inventory_move,
+    pick_sound = item_sounds.explosive_inventory_pickup,
+    drop_sound = item_sounds.explosive_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-unstable-shard",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/unstable-shard-1.png",
+    subgroup = "hyarion-processes",
+    order = "c[refraction]-d[charged]-c",
+    stack_size = 50,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    spoil_ticks = 2.5 * minute,
+    spoil_to_trigger_result =
+    {
+      items_per_trigger = 25,
+      trigger =
+      {
+        {
+          type = "direct",
+          action_delivery =
+          {
+            type = "instant",
+            target_effects =
+            {
+              {
+                type = "create-entity",
+                entity_name = "medium-explosion"
+              },
+              {
+                type = "create-entity",
+                entity_name = "small-scorchmark-tintable",
+                check_buildability = true
+              },
+              {
+                type = "invoke-tile-trigger",
+                repeat_count = 1
+              },
+              {
+                type = "destroy-decoratives",
+                from_render_layer = "decorative",
+                to_render_layer = "object",
+                include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+                include_decals = false,
+                invoke_decorative_trigger = true,
+                decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+                radius = 1.25 -- large radius for demostrative purposes
+              }
+            }
+          }
+        },
+        {
+          type = "area",
+          radius = 1,
+          action_delivery =
+          {
+            type = "instant",
+            target_effects =
+            {
+              {
+                type = "damage",
+                damage = {amount = 80, type = "explosion"}
+              },
+              {
+                type = "create-entity",
+                entity_name = "explosion"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    inventory_move_sound = item_sounds.sulfur_inventory_move,
+    pick_sound = item_sounds.resource_inventory_pickup,
+    drop_sound = item_sounds.sulfur_inventory_move,
+  },
    {
       type = "tool",
       name = "planetaris-polishing-science-pack",
@@ -578,6 +778,21 @@ data:extend({
       durability_description_value = "description.science-pack-remaining-amount-value",
   },
     --- Refraction
+  {
+    type = "item",
+    name = "planetaris-refraction-plant",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/refraction-plant.png",
+    subgroup = "hyarion-production",
+    order = "a-d",
+    place_result = "planetaris-refraction-plant",
+    stack_size = 50,
+    weight = 40*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.fluid_inventory_move,
+    pick_sound = item_sounds.brick_inventory_pickup,
+    drop_sound = item_sounds.brick_inventory_move,
+  },
   {
     type = "item",
     name = "planetaris-fiber-optics-cable",
@@ -614,6 +829,20 @@ data:extend({
     order = "c[refraction]-c",
     stack_size = 50,
     weight = 10*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-crystalization-motor",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/crystalization-motor.png",
+    subgroup = "hyarion-processes",
+    order = "c[refraction]-d-a",
+    stack_size = 200,
+    weight = 5*kg,
     default_import_location = "hyarion",
 
     inventory_move_sound = item_sounds.wire_inventory_move,

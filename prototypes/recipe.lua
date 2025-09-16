@@ -737,6 +737,7 @@ data:extend(
       icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-smelting.png",
       category = "smelting",
       subgroup = "hyarion-processes",
+      order = "a-a-b",
       energy_required = 5,
       enabled = false,
       ingredients =
@@ -755,6 +756,7 @@ data:extend(
       icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-sifting.png",
       category = "sifting",
       subgroup = "hyarion-processes",
+      order = "a-a-b",
       energy_required = 10,
       enabled = false,
       ingredients =
@@ -877,13 +879,15 @@ data:extend(
     },
     energy_required = 10,
     results = {{type="item", name="planetaris-polishing-science-pack", amount=1}},
-    allow_productivity = false,
+    allow_productivity = true,
   },
     --- Rocket parts
     {
       type = "recipe",
       name = "planetaris-polishing-carbon-fiber",
       category = "polishing",
+      subgroup = "hyarion-processes",
+      order = "x-a",
       energy_required = 3,
       enabled = false,
       ingredients =
@@ -892,12 +896,14 @@ data:extend(
         {type = "item", name = "carbon", amount = 10},
       },
       results = {{type="item", name="carbon-fiber", amount=1}},
-      allow_productivity = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
       name = "planetaris-hyarion-rocket-fuel",
       category = "polishing",
+      subgroup = "hyarion-processes",
+      order = "x-a",
       energy_required = 3,
       enabled = false,
       ingredients =
@@ -907,7 +913,7 @@ data:extend(
         {type = "item", name = "carbon", amount = 5},
       },
       results = {{type="item", name="rocket-fuel", amount=1}},
-      allow_productivity = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -929,8 +935,8 @@ data:extend(
     --- Refraction
   {
     type = "recipe",
-    name = "planetaris-refraction-science-pack",
-    category = "compressing",
+    name = "planetaris-refraction-plant",
+    category = "electromagnetics",
     enabled = false,
     surface_conditions =
     {
@@ -942,13 +948,15 @@ data:extend(
     },
     ingredients =
     {
-        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
-        {type = "item", name = "planetaris-fiber-optics-cable", amount = 5},
-        {type = "item", name = "planetaris-nanoscale-lens", amount = 5},
-        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
+      {type = "item", name = "planetaris-crystalization-motor", amount = 5},
+      {type = "item", name = "planetaris-nanoscale-lens", amount = 20},
+      {type = "item", name = "planetaris-fiber-optics-cable", amount = 50},
+      {type = "item", name = "planetaris-simulating-unit", amount = 20},
+      {type = "item", name = "holmium-plate", amount = 100},
+
     },
-    energy_required = 10,
-    results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
+    energy_required = 15,
+    results = {{type="item", name="planetaris-refraction-plant", amount=1}},
     allow_productivity = false,
   },
     {
@@ -972,7 +980,7 @@ data:extend(
         {type = "item", name = "plastic-bar", amount = 5},
       },
       results = {{type="item", name="planetaris-fiber-optics-cable", amount=1}},
-      allow_productivity = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -987,7 +995,7 @@ data:extend(
         {type = "item", name = "planetaris-polished-diamond", amount = 5},
       },
       results = {{type="item", name="planetaris-nanoscale-lens", amount=1}},
-      allow_productivity = false,
+      allow_productivity = true,
     },
     {
       type = "recipe",
@@ -1003,6 +1011,54 @@ data:extend(
         {type = "item", name = "planetaris-heavy-glass", amount = 5},
       },
       results = {{type="item", name="planetaris-ruby-laser", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-crystalization-motor",
+      category = "electromagnetics",
+      energy_required = 3,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "engine-unit", amount = 2},
+        {type = "item", name = "planetaris-polished-quartz", amount = 10},
+        {type = "item", name = "planetaris-polished-emerald", amount = 5},
+        {type = "item", name = "electronic-circuit", amount = 2},
+      },
+      results = {{type="item", name="planetaris-crystalization-motor", amount=1}},
+      allow_productivity = true,
+    },
+--- Refraction gems
+    {
+      type = "recipe",
+      name = "planetaris-charged-gem",
+      category = "refraction",
+      energy_required = 10,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 20},
+        {type = "item", name = "planetaris-polished-quartz", amount = 5},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 10},
+      },
+      results = {{type="item", name="planetaris-charged-gem", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-unstable-gem",
+      category = "polishing",
+      energy_required = 10,
+      enabled = false,
+      ingredients =
+      {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 20},
+        {type = "item", name = "planetaris-polished-quartz", amount = 5},
+        {type = "item", name = "planetaris-unstable-shard", amount = 10},
+        {type = "item", name = "planetaris-polished-ruby", amount = 5},
+      },
+      results = {{type="item", name="planetaris-unstable-gem", amount=1}},
       allow_productivity = false,
     },
   {
@@ -1022,6 +1078,31 @@ data:extend(
     },
     results = {{type="item", name="planetaris-simulating-unit", amount=1}},
     allow_productivity = true
+  },
+    {
+    type = "recipe",
+    name = "planetaris-refraction-science-pack",
+    category = "compressing",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+        
+      }
+    },
+    ingredients =
+    {
+        {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+        {type = "item", name = "planetaris-fiber-optics-cable", amount = 5},
+        {type = "item", name = "planetaris-nanoscale-lens", amount = 5},
+        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
+    },
+    energy_required = 10,
+    results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
+    allow_productivity = true,
   },
 })
 

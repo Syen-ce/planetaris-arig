@@ -1465,4 +1465,125 @@ data:extend({
       }
     },
   },
+{
+    type = "burner-generator",
+    name = "planetaris-refraction-plant",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/refraction-plant.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    minable = {mining_time = 0.8, results = {{type = "item", name = "planetaris-refraction-plant", amount = 1}}},
+    max_health = 1000,
+    fast_replaceable_group = nil,
+    corpse = data.raw["fusion-reactor"]["fusion-reactor"].corpse,
+    dying_explosion = "big-explosion",
+    resistances = {
+        {type = "physical", percent = 50},
+        {type = "fire",     percent = 20},
+        {type = "impact",   percent = 100},
+    },
+
+    heating_energy = "500kW",
+    neighbour_bonus = 1,
+    module_slots = nil,
+
+    collision_box = {{-2.7, -2.7}, {2.7, 2.7}},
+    selection_box = {{-3, -3}, {3, 3}},
+    drawing_box_vertical_extension = 1,
+    damaged_trigger_effect = hit_effects.entity(),
+    graphics_set = {
+        animation = polisher_animation,
+        working_visualisations = working_visualisations
+    },
+  
+    impact_category = data.raw["assembling-machine"]["electromagnetic-plant"].impact_category,
+    open_sound = table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].open_sound),
+    close_sound = table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].close_sound),
+    working_sound = {
+      sound = sound_variations("__base__/sound/nuclear-reactor", 2, 0.55, volume_multiplier("main-menu", 0.8)),
+      max_sounds_per_prototype = 3,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20
+    },
+    idle_sound = {filename = "__base__/sound/idle1.ogg"},
+
+    result_inventory_size = 2,
+    consumption = "10MW",
+    max_power_output = "20MW",
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-output"
+    },
+    burner =
+    {
+      type = "burner",
+      fuel_categories = {"refraction"},
+      effectivity = 1,
+      fuel_inventory_size = 1,
+      burnt_inventory_size = 1,
+      light_flicker =
+      {
+        color = {0,0,0},
+        minimum_intensity = 0.7,
+        maximum_intensity = 0.95
+      }
+    },
+
+    animation =
+    {
+      north = {
+        layers =
+        {
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/refraction-plant/refraction-plant-hr-working-glow.png",
+            width = 400,
+            height = 450,
+            frame_count = 60,
+            line_length = 8,
+            animation_speed = 1,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5
+          },
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/refraction-plant/refraction-plant-hr-shadow.png",
+            width = 700,
+            height = 600,          
+            repeat_count = 60,
+            draw_as_shadow = true,
+            shift = util.by_pixel(0, 0),
+            scale = 0.5
+          },
+        }
+      }
+    },
+
+    idle_animation =
+    {
+      north = {
+        layers = {
+      {
+      filename = "__planetaris-unbounded-assets__/graphics/entity/refraction-plant/refraction-plant-hr-animation-1.png",
+      frame_count = 60,
+      line_length = 8,
+      width = 400,
+      height = 450,
+      animation_speed = 0.5,
+      shift = util.by_pixel(0, 0),
+      scale = 0.5
+      },
+      {
+        filename = "__planetaris-unbounded-assets__/graphics/entity/refraction-plant/refraction-plant-hr-shadow.png",
+        width = 700,
+        height = 600,          
+        repeat_count = 60,
+        draw_as_shadow = true,
+        shift = util.by_pixel(0, 0),
+        scale = 0.5
+      },
+    }}},
+
+    icon_draw_specification = {scale = 1.75, shift = {0, -0.3}},
+    circuit_connector = circuit_connector_definitions["foundry"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+}
 })

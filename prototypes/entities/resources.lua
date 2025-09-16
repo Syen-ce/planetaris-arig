@@ -176,13 +176,13 @@ data:extend ({
 
     resource(
     {
-      name = "hyarion-carbon-ore",
+      name = "planetaris-carbon-ore",
       subgroup = "hyarion-processes",
       order = "a-a-a",
       map_color = {r = 1/256, g = 1/256, b = 1/256, a = 1.000},
       minable =
     {
-      mining_particle = "hyarion-quartz-ore-particle",
+      mining_particle = "planetaris-quartz-ore-particle",
       mining_time = 2,
       result = "carbon",
     },
@@ -198,13 +198,13 @@ data:extend ({
 
   resource(
     {
-      name = "hyarion-quartz-ore",
+      name = "planetaris-quartz-ore",
       subgroup = "hyarion-processes",
       order = "a-a-a",
       map_color = {r = 256/256, g = 256/256, b = 256/256, a = 1.000},
       minable =
     {
-      mining_particle = "hyarion-quartz-ore-particle",
+      mining_particle = "planetaris-quartz-ore-particle",
       mining_time = 2,
       result = "planetaris-raw-quartz",
     },
@@ -220,13 +220,13 @@ data:extend ({
 
   resource(
     {
-      name = "hyarion-metallic-ore",
+      name = "planetaris-metallic-ore",
       subgroup = "hyarion-processes",
       order = "a-a-a",
       map_color = {r = 0/256, g = 256/256, b = 256/256, a = 1.000},
       minable =
     {
-      mining_particle = "hyarion-metallic-ore-particle",
+      mining_particle = "planetaris-metallic-ore-particle",
       mining_time = 1,
       result = "planetaris-metallic-ore"
     },
@@ -247,7 +247,7 @@ data:extend ({
         flags = {"placeable-neutral"},
         category = "geode",
         subgroup = "mineable-fluids",
-        order="a-b-a",
+        order="a-b-b",
         infinite = true,
         highlight = true,
         minimum = 50000,
@@ -343,7 +343,7 @@ data:extend ({
         flags = {"placeable-neutral"},
         category = "geode",
         subgroup = "mineable-fluids",
-        order="a-b-a",
+        order="a-b-b",
         infinite = true,
         highlight = true,
         minimum = 60000,
@@ -439,7 +439,7 @@ data:extend ({
         flags = {"placeable-neutral"},
         category = "geode",
         subgroup = "mineable-fluids",
-        order="a-b-a",
+        order="a-b-b",
         infinite = true,
         highlight = true,
         minimum = 60000,

@@ -142,21 +142,21 @@ local particles =
 {
     make_particle
     {
-        name = "hyarion-carbon-ore-particle",
+        name = "planetaris-carbon-ore-particle",
         life_time = 180,
         pictures = particle_animations.get_old_calcite_particle_pictures(),
         shadows = particle_animations.get_old_stone_particle_shadow_pictures()
     },
     make_particle
     {
-        name = "hyarion-quartz-ore-particle",
+        name = "planetaris-quartz-ore-particle",
         life_time = 180,
         pictures = particle_animations.get_old_calcite_particle_pictures(),
         shadows = particle_animations.get_old_stone_particle_shadow_pictures()
   },
   make_particle
     {
-        name = "hyarion-metallic-ore-particle",
+        name = "planetaris-metallic-ore-particle",
         life_time = 180,
         pictures = particle_animations.get_old_calcite_particle_pictures(),
         shadows = particle_animations.get_old_stone_particle_shadow_pictures()

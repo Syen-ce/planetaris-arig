@@ -546,7 +546,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
       prerequisites = {"planet-discovery-hyarion"},
       research_trigger = {
         type = "mine-entity",
-        entity = "hyarion-quartz-ore"
+        entity = "planetaris-quartz-ore"
       },
       order = "e-b[hyarion]",
     },
@@ -577,7 +577,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
       prerequisites = {"planetaris-quartz-furnace"},
       research_trigger = {
         type = "mine-entity",
-        entity = "hyarion-metallic-ore"
+        entity = "planetaris-metallic-ore"
       },
       order = "e-b[hyarion]",
     },
