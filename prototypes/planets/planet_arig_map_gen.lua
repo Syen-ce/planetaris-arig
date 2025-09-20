@@ -2,8 +2,7 @@ local tile = require("prototypes/tile/arig-tile")
 local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 
 
-local arig_cliff = table.deepcopy(data.raw["cliff"]["cliff"])  
-arig_cliff.name = "arig-cliff" 
+local arig_cliff = data.raw["cliff"]["arig-cliff"] 
 
 arig_cliff.autoplace = {
   control = "arig_cliff",

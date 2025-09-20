@@ -138,6 +138,17 @@ local make_particle = function(params)
 
 end
 
+local small_smoke_trigger_effect = function()
+  return
+  {
+    type = "create-trivial-smoke",
+    smoke_name = "smoke-explosion-particle-small",
+    starting_frame_deviation = 0,
+    offset_deviation = {{-0.03, -0.03}, {0.03, 0.03}},
+    speed_from_center = nil
+  }
+end
+
 local particles =
 {
     make_particle
@@ -160,6 +171,38 @@ local particles =
         life_time = 180,
         pictures = particle_animations.get_old_calcite_particle_pictures(),
         shadows = particle_animations.get_old_stone_particle_shadow_pictures()
+  },
+
+--- Stone
+
+  make_particle
+  {
+    name = "hyarion-stone-particle-small",
+    pictures = particle_animations.get_stone_particle_small_pictures ({ tint = {1, 1, 1, 1}}),
+    shadows = particle_animations.get_stone_particle_small_pictures({ tint = shadowtint(), shift = util.by_pixel (1,0)}),
+    regular_trigger_effect = nil,
+    ended_in_water_trigger_effect = default_ended_in_water_trigger_effect(),
+    render_layer_when_on_ground = "lower-object-above-shadow"
+  },
+
+  make_particle
+  {
+    name = "hyarion-stone-particle-medium",
+    pictures = particle_animations.get_stone_particle_medium_pictures ({ tint = {1, 1, 1, 1}}),
+    shadows = particle_animations.get_stone_particle_medium_pictures({ tint = shadowtint(), shift = util.by_pixel (1,0)}),
+    regular_trigger_effect = small_smoke_trigger_effect(),
+    ended_in_water_trigger_effect = default_ended_in_water_trigger_effect(),
+    render_layer_when_on_ground = "lower-object-above-shadow"
+  },
+
+  make_particle
+  {
+    name = "hyarion-stone-particle-big",
+    pictures = particle_animations.get_stone_particle_big_pictures ({ tint = {1, 1, 1, 1}}),
+    shadows = particle_animations.get_stone_particle_big_pictures({ tint = shadowtint(), shift = util.by_pixel (1,0)}),
+    regular_trigger_effect = small_smoke_trigger_effect(),
+    ended_in_water_trigger_effect = default_ended_in_water_trigger_effect(),
+    render_layer_when_on_ground = "lower-object-above-shadow"
   },
 }
 

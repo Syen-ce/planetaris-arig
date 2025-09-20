@@ -2,7 +2,7 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local base_tile_sounds = require("__base__.prototypes.tile.tile-sounds")
 local space_age_tile_sounds = require ("__space-age__.prototypes.tile.tile-sounds")
 local decorative_trigger_effects = require("__base__.prototypes.decorative.decorative-trigger-effects")
-local simulations = require("__space-age__.prototypes.factoriopedia-simulations")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 local base_decorative_sprite_priority = "extra-high"
 local decal_tile_layer = 255
@@ -3039,7 +3039,7 @@ data:extend{
     has_lower_layer = true,
     sprite_size_multiplier = 2,
     flags = { "placeable-off-grid", "placeable-neutral" },
-    factoriopedia_simulation = simulations.factoriopedia_crater_cliff,
+    factoriopedia_simulation = simulations.factoriopedia_hyarion_crater_cliff,
 
     crater_radius = 7, --3.5,
     crater_edge_thickness = 5,

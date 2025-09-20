@@ -1,6 +1,6 @@
 local resource_autoplace = require("resource-autoplace")
 local base_tile_sounds = require("__base__.prototypes.tile.tile-sounds")
-local simulations = require("__space-age__.prototypes.factoriopedia-simulations")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 resource_autoplace.initialize_patch_set("petroleum-gas", false)
 
@@ -189,7 +189,7 @@ data:extend ({
       walking_sound = base_tile_sounds.walking.ore,
       mining_visualisation_tint = {r = 150/256, g = 150/256, b = 180/256, a = 1.000},
       category = "basic-solid",
-      factoriopedia_simulation = simulations.factoriopedia_tungsten_ore,
+      factoriopedia_simulation = {init = make_resource("planetaris-carbon-ore")},
     },
     {
       probability_expression = 0
@@ -211,7 +211,7 @@ data:extend ({
       walking_sound = base_tile_sounds.walking.ore,
       mining_visualisation_tint = {r = 76/256, g = 88/256, b = 179/256, a = 1.000},
       category = "basic-solid",
-      factoriopedia_simulation = simulations.factoriopedia_tungsten_ore,
+      factoriopedia_simulation = simulations.factoriopedia_quartz_ore,
     },
     {
       probability_expression = 0
@@ -233,7 +233,7 @@ data:extend ({
       walking_sound = base_tile_sounds.walking.ore,
       mining_visualisation_tint = {r = 250/256, g = 250/256, b = 250/256, a = 1.000},
       category = "basic-solid",
-      factoriopedia_simulation = simulations.factoriopedia_tungsten_ore,
+      factoriopedia_simulation = simulations.factoriopedia_metallic_ore,
     },
     {
       probability_expression = 0

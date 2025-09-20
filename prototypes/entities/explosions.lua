@@ -2,16 +2,16 @@ local explosion_animations = require("__base__.prototypes.entity.explosion-anima
 local smoke_animations = require("__base__.prototypes.entity.smoke-animations")
 local sounds = require("__base__.prototypes.entity.sounds")
 local space_age_sounds = require ("__space-age__.prototypes.entity.sounds")
-local simulations = require("__space-age__.prototypes.factoriopedia-simulations")
+local simulations = require("prototypes.factoriopedia-simulations")
 
 data:extend({
   {
     type = "lightning",
-    name = "refraction-ray",
+    name = "planetaris-refraction-ray",
     icon = "__planetaris-unbounded-assets__/graphics/icons/refraction-ray.png",
     subgroup = "obstacles",
-    factoriopedia_simulation = simulations.factoriopedia_lightning,
-    damage = 150,
+    factoriopedia_simulation = simulations.refraction_ray,
+    damage = 120,
     energy = "500MJ",
     time_to_damage = 10,
     effect_duration = 50,
@@ -58,7 +58,7 @@ data:extend({
           {
             type = "create-particle",
             repeat_count = 5,
-            particle_name = "fulgora-stone-particle-big",
+            particle_name = "hyarion-stone-particle-big",
             offset_deviation = {{-0.8984, -0.5}, {0.8984, 0.5}},
             initial_height = 0.3,
             initial_vertical_speed = 0.03,
@@ -70,7 +70,7 @@ data:extend({
           {
             type = "create-particle",
             repeat_count = 10,
-            particle_name = "fulgora-stone-particle-medium",
+            particle_name = "hyarion-stone-particle-medium",
             offset_deviation = {{-0.8984, -0.5}, {0.8984, 0.5}},
             initial_height = 0.5,
             initial_vertical_speed = 0.05,
@@ -82,7 +82,7 @@ data:extend({
           {
             type = "create-particle",
             repeat_count = 25,
-            particle_name = "fulgora-stone-particle-small",
+            particle_name = "hyarion-stone-particle-small",
             offset_deviation = {{-0.8984, -0.5}, {0.8984, 0.5}},
             initial_height = 0.5,
             initial_height_deviation = 0.5,
@@ -121,96 +121,96 @@ data:extend({
     },
     graphics_set =
     {
-      relative_cloud_fork_length = 0.30,
+      relative_cloud_fork_length = 0.15,
       cloud_fork_orientation_variance = 0.2,
       cloud_detail_level = 4,
       bolt_detail_level = 5,
-      bolt_half_width = 0.04,
+      bolt_half_width = 0.1,
       bolt_midpoint_variance = 0.05,
-      max_bolt_offset = 0.25,
+      max_bolt_offset = 0.01,
       max_fork_probability = 1,
-      fork_intensity_multiplier = 0.5,
+      fork_intensity_multiplier = 0.99,
       min_ground_streamer_distance = 2,
       max_ground_streamer_distance = 4,
       ground_streamer_variance = 4,
       shader_configuration =
       {
-        {color = {0.0, 0.6, 1, 0.8}, distortion =  0.20, thickness = 0.20, power = 0.25},
-        {color = {0.0, 0.6, 1, 1.0}, distortion =  0.40, thickness = 1.00, power = 0.25},
-        {color = {0.2, 0.6, 1, 1.0}, distortion =  0.55, thickness = 1.00, power = 0.25},
-        {color = {0.7, 0.6, 1, 0.6}, distortion =  0.70, thickness = 0.75, power = 0.25},
-        {color = {0.4, 0.2, 1, 0.3}, distortion =  1.00, thickness = 0.50, power = 0.10},
-        {color = {0.0, 0.2, 1, 0.0}, distortion = 20.00, thickness = 0.50, power = 0.01}
+        {color = {1, 1, 1, 0.8}, distortion =  0.20, thickness = 0.20, power = 0.55},
+        {color = {1, 1, 1, 1.0}, distortion =  0.40, thickness = 1.00, power = 0.55},
+        {color = {1, 1, 1, 1.0}, distortion =  0.55, thickness = 1.00, power = 0.55},
+        {color = {1, 1, 1, 0.6}, distortion =  0.70, thickness = 0.75, power = 0.55},
+        {color = {1, 1, 1, 0.3}, distortion =  1.00, thickness = 0.50, power = 0.40},
+        {color = {1, 1, 1, 0.0}, distortion = 20.00, thickness = 0.50, power = 0.21}
       },
-      cloud_background = util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-cloud",
+      cloud_background = util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-cloud",
                                           {
                                             draw_as_glow = true,
                                             scale = 1,
                                             frame_count = 4,
-                                            tint = {0.5, 0.5, 0.5, 0.5}
+                                            --tint = {0.5, 0.5, 0.5, 0.5}
                                           }),
       explosion =
       {
-        util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-explosion",{
+        util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-explosion",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
         }),
-        util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-explosion-2",{
-          draw_as_glow = true,
-          scale = 0.5,
-          frame_count = 36
-         })
+--        util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-explosion-2",{
+--          draw_as_glow = true,
+--          scale = 0.5,
+--          frame_count = 36
+--         })
       },
-      attractor_hit_animation = util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-attractor-hit-anim",{
+      attractor_hit_animation = util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-attractor-hit-anim",{
         draw_as_glow = true,
         scale = 1,
-        frame_count = 36
+        frame_count = 29
       }),
       ground_streamers =
       {
-        util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-1",{
+        util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-1",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
-         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-2",{
+         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-2",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
-         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-3",{
+         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-3",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
-         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-4",{
+         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-4",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
-         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-5",{
+         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-5",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
-         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-6",{
+         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-6",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
-         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-7",{
+         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-7",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
-         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/lightning-streamer-8",{
+         util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/refraction-ray/refraction-ray-streamer-8",{
           draw_as_glow = true,
           scale = 0.5,
           frame_count = 36
          }),
       },
-      light = {intensity = 20.0, size = 70, color = {1, 1, 1}}
+      light = {intensity = 1.0, size = 120, color = {1, 1, 1}}
     }
   },
   -----------------------------------------------------------------------------

@@ -600,7 +600,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-light-ray-collector"
+          recipe = "planetaris-refraction-ray-collector"
         },
       },
       prerequisites = {"planetaris-quartz-furnace"},
@@ -744,14 +744,14 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
     },
         {
       type = "technology",
-      name = "planetaris-big-light-ray-collector",
-      icon = "__planetaris-unbounded-assets__/graphics/technology/big-light-ray-collector.png",
+      name = "planetaris-big-refraction-ray-collector",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/big-refraction-ray-collector.png",
       icon_size = 256,
       essential = true,
       effects = {
         {
           type = "unlock-recipe",
-          recipe = "planetaris-big-light-ray-collector"
+          recipe = "planetaris-big-refraction-ray-collector"
         },
       },
       prerequisites = {"planetaris-polishing-science-pack"},

@@ -5,13 +5,13 @@ local function lightning_rod_picture(repeat_count)
   {
     layers =
     {
-      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/light-ray-collector/light-ray-collector",
+      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/big-refraction-ray-collector/big-refraction-ray-collector",
       {
         priority = "high",
         scale = 0.5,
         repeat_count = repeat_count
       }),
-      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/light-ray-collector/light-ray-collector-shadow",
+      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/big-refraction-ray-collector/big-refraction-ray-collector-shadow",
       {
         priority = "high",
         draw_as_shadow = true,
@@ -27,7 +27,7 @@ local function lightning_rod_charge()
   {
     layers =
     {
-      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/light-ray-collector/light-ray-collector-charge",
+      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/big-refraction-ray-collector/big-refraction-ray-collector-charge",
       {
         priority = "high",
         blend_mode = "additive",
@@ -44,7 +44,7 @@ local function lightning_rod_discharge()
   {
     layers =
     {
-      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/light-ray-collector/light-ray-collector-discharge",
+      util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/big-refraction-ray-collector/big-refraction-ray-collector-discharge",
       {
         priority = "high",
         blend_mode = "additive",

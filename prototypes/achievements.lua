@@ -14,7 +14,7 @@ data:extend{
     type = "change-surface-achievement",
     name = "visit-arig",
     order = "a[progress]-g[visit-planet]-j[arig]",
-    surface = "maraxsis",
+    surface = "arig",
     icon = "__planetaris-unbounded__/graphics/achievement/visit-arig.png",
     icon_size = 128,
     },

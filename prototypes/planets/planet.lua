@@ -186,7 +186,7 @@ PlanetsLib:extend({
     {
       lightnings_per_chunk_per_tick = 1 / (60 * 20), --cca once per chunk every 10 seconds (600 ticks)
       search_radius = 10.0,
-      lightning_types = {"refraction-ray"},
+      lightning_types = {"planetaris-refraction-ray"},
       lightning_multiplier_at_day = 1,
       lightning_multiplier_at_night = 0.5,
       priority_rules =

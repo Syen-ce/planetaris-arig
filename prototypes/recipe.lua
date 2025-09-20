@@ -635,7 +635,7 @@ data:extend(
     },
     {
       type = "recipe",
-      name = "planetaris-light-ray-collector",
+      name = "planetaris-refraction-ray-collector",
       energy_required = 2,
       enabled = false,
       surface_conditions =
@@ -652,12 +652,12 @@ data:extend(
         {type = "item", name = "iron-plate", amount = 5},
         {type = "item", name = "copper-cable", amount = 3},
       },
-      results = {{type="item", name="planetaris-light-ray-collector", amount=1}},
+      results = {{type="item", name="planetaris-refraction-ray-collector", amount=1}},
       allow_productivity = false,
     },
       {
       type = "recipe",
-      name = "planetaris-big-light-ray-collector",
+      name = "planetaris-big-refraction-ray-collector",
       category = "electromagnetics",
       energy_required = 4,
       enabled = false,
@@ -676,7 +676,7 @@ data:extend(
         {type = "item", name = "advanced-circuit", amount = 5},
         {type = "item", name = "planetaris-heavy-glass", amount = 2},
       },
-      results = {{type="item", name="planetaris-big-light-ray-collector", amount=1}},
+      results = {{type="item", name="planetaris-big-refraction-ray-collector", amount=1}},
       allow_productivity = false,
     },
     {

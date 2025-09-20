@@ -271,4 +271,33 @@ data:extend({
       scale = 0.5
     })
   },
+  {
+    type = "corpse",
+    name = "planetaris-beryllium-coating-remnants",
+    localised_name = {"remnant-name", {"entity-name.stone-wall"}},
+    icon = "__base__/graphics/icons/wall.png",
+    hidden_in_factoriopedia = true,
+    flags = {"placeable-neutral", "not-on-map"},
+    subgroup = "defensive-structure-remnants",
+    order = "a-a-a",
+    collision_box = {{-0.4, -0.4}, {0.4, 0.4}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    tile_width = 1,
+    tile_height = 1,
+    selectable_in_game = false,
+    time_before_removed = 60 * 60 * 15, -- 15 minutes
+    expires = false,
+    final_render_layer = "remnants",
+    remove_on_tile_placement = false,
+    animation = make_rotated_animation_variations_from_sheet(4,
+    {
+      filename = "__planetaris-unbounded-assets__/graphics/entity/beryllium-coating/remnants/wall-remnants.png",
+      width = 118,
+      height = 114,
+      line_length = 1,
+      direction_count = 2,
+      shift = util.by_pixel(3, 7.5), --was 3.5
+      scale = 0.5
+    })
+  },
 })

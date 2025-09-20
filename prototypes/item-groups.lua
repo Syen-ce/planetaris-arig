@@ -27,7 +27,14 @@ data:extend(
     group = "production",
     order = "e-g"
   },
+
   -------------------------------------------------------------------------- SPACE
+  {
+    type = "item-subgroup",
+    name = "space-facilities",
+    group = "space",
+    order = "g-a"
+  },
   -------------------------------------------------------------------------- FUEL
   {
     type = "fuel-category",

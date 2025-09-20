@@ -370,11 +370,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "planetaris-light-ray-collector",
-    icon = "__planetaris-unbounded-assets__/graphics/icons/light-ray-collector.png",
+    name = "planetaris-refraction-ray-collector",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/refraction-ray-collector.png",
     subgroup = "hyarion-production",
     order = "a-a-a",
-    place_result = "planetaris-light-ray-collector",
+    place_result = "planetaris-refraction-ray-collector",
     stack_size = 50,
     weight = 20*kg,
     default_import_location = "hyarion",
@@ -385,11 +385,11 @@ data:extend({
   },
   {
     type = "item",
-    name = "planetaris-big-light-ray-collector",
-    icon = "__planetaris-unbounded-assets__/graphics/icons/big-light-ray-collector.png",
+    name = "planetaris-big-refraction-ray-collector",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/big-refraction-ray-collector.png",
     subgroup = "hyarion-production",
     order = "a-a-b",
-    place_result = "planetaris-big-light-ray-collector",
+    place_result = "planetaris-big-refraction-ray-collector",
     stack_size = 50,
     weight = 20*kg,
     default_import_location = "hyarion",
@@ -882,4 +882,21 @@ data:extend({
     factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value",
   },
+
+    --- space facilities
+
+   {
+    type = "item",
+    name = "planetaris-beryllium-coating",
+    icon = "__base__/graphics/icons/wall.png",
+    subgroup = "space-facilities",
+    order = "a-a",
+    stack_size = 100,
+    weight = 20*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.concrete_inventory_move,
+    pick_sound = item_sounds.concrete_inventory_pickup,
+    drop_sound = item_sounds.concrete_inventory_move,
+  },   
 })
