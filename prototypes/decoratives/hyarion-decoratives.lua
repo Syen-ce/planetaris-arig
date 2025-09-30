@@ -22,8 +22,12 @@ local brown_carpet_tint = {1,.9,1}
 local red_pita_tint = {.8,.75,.75}
 local tintable_rock_tint = {0.2588, 0.2588, 0.2588}
 local tintable_crystal_rock_tint = {1, 1, 1}
-local sulfur_rock_tint = {0.788, 0.627, 0.167} --{0.968, 0.807, 0.247}
+local metallic_rock_tint = {0.624, 0.435, 0.651}
 local tungsten_rock_tint = {.7,.7,.7}
+
+local yellow_crystal_tint = {0.89, 0.843, 0.792}
+local orange_crystal_tint = {1, 0.933, 0.855}
+local red_crystal_tint = {1, 0.831, 0.831}
 
 green_hairy_tint = combine_tint(vulcanus_base_tint, green_hairy_tint)
 brown_hairy_tint = combine_tint(vulcanus_base_tint, brown_hairy_tint)
@@ -32,7 +36,7 @@ red_pita_tint =  combine_tint(vulcanus_base_tint, red_pita_tint)
 tintable_rock_tint = combine_tint(vulcanus_base_tint, tintable_rock_tint)
 tungsten_rock_tint = combine_tint(vulcanus_base_tint, tungsten_rock_tint)
 
-function chimney_sulfuric_stateless_visualisation(position)
+function chimney_metallic_stateless_visualisation(position)
   return
   {
     -- expanded 2 animation layers into 2 visualisations to demo multiple visualisations
@@ -43,7 +47,7 @@ function chimney_sulfuric_stateless_visualisation(position)
       offset_y = position[2],
       animation =
       {
-        filename = "__space-age__/graphics/entity/sulfuric-acid-geyser/sulfuric-acid-geyser-gas-outer.png",
+        filename = "__planetaris-unbounded-assets__/graphics/entity/metallic-geyser/metallic-geyser-gas-outer.png",
         frame_count = 47,
         line_length = 16,
         width = 90,
@@ -51,7 +55,7 @@ function chimney_sulfuric_stateless_visualisation(position)
         animation_speed = 0.3,
         shift = util.by_pixel(-6, -89),
         scale = 1,
-        tint = util.multiply_color({r=0.8, g=0.8, b=0.7}, 0.08)
+        tint = util.multiply_color({0.847, 0.549, 0.871}, 0.08)
       }
     },
     {
@@ -61,7 +65,7 @@ function chimney_sulfuric_stateless_visualisation(position)
       offset_y = position[2],
       animation =
       {
-         filename = "__space-age__/graphics/entity/sulfuric-acid-geyser/sulfuric-acid-geyser-gas-inner.png",
+         filename = "__planetaris-unbounded-assets__/graphics/entity/metallic-geyser/metallic-geyser-gas-inner.png",
          frame_count = 47,
          line_length = 16,
          width = 40,
@@ -69,13 +73,13 @@ function chimney_sulfuric_stateless_visualisation(position)
          animation_speed = 0.4,
          shift = util.by_pixel(-4, -30),
          scale = 1,
-         tint = util.multiply_color({r=0.8, g=0.8, b=0.8}, 0.05)
+         tint = util.multiply_color({0.976, 0.671, 1}, 0.05)
       }
     }
   }
 end
 
-function chimney_sulfuric_stateless_visualisation_tinted(position)
+function chimney_metallic_stateless_visualisation_tinted(position)
   return
   {
     -- expanded 2 animation layers into 2 visualisations to demo multiple visualisations
@@ -86,7 +90,7 @@ function chimney_sulfuric_stateless_visualisation_tinted(position)
       offset_y = position[2],
       animation =
       {
-        filename = "__space-age__/graphics/entity/sulfuric-acid-geyser/sulfuric-acid-geyser-gas-outer.png",
+        filename = "__planetaris-unbounded-assets__/graphics/entity/metallic-geyser/metallic-geyser-gas-outer.png",
         frame_count = 47,
         line_length = 16,
         width = 90,
@@ -94,7 +98,7 @@ function chimney_sulfuric_stateless_visualisation_tinted(position)
         animation_speed = 0.3,
         shift = util.by_pixel(-6, -89),
         scale = 1,
-        tint = util.multiply_color({r=0.72, g=0.79, b=0.43}, 0.15)
+        tint = util.multiply_color({0.925, 0.424, 0.961}, 0.15)
       }
     },
     {
@@ -104,7 +108,7 @@ function chimney_sulfuric_stateless_visualisation_tinted(position)
       offset_y = position[2],
       animation =
       {
-         filename = "__space-age__/graphics/entity/sulfuric-acid-geyser/sulfuric-acid-geyser-gas-inner.png",
+         filename = "__planetaris-unbounded-assets__/graphics/entity/metallic-geyser/metallic-geyser-gas-inner.png",
          frame_count = 47,
          line_length = 16,
          width = 40,
@@ -112,13 +116,13 @@ function chimney_sulfuric_stateless_visualisation_tinted(position)
          animation_speed = 0.4,
          shift = util.by_pixel(-4, -30),
          scale = 1,
-         tint = util.multiply_color({r=1, g=0.84, b=0.5}, 0.1)
+         tint = util.multiply_color({0.976, 0.671, 1}, 0.1)
       }
     }
   }
 end
 
-function chimney_sulfuric_stateless_visualisation_faded(position)
+function chimney_metallic_stateless_visualisation_faded(position)
   return
   {
     -- expanded 2 animation layers into 2 visualisations to demo multiple visualisations
@@ -129,7 +133,7 @@ function chimney_sulfuric_stateless_visualisation_faded(position)
       offset_y = position[2],
       animation =
       {
-        filename = "__space-age__/graphics/entity/sulfuric-acid-geyser/sulfuric-acid-geyser-gas-outer.png",
+        filename = "__planetaris-unbounded-assets__/graphics/entity/metallic-geyser/metallic-geyser-gas-outer.png",
         frame_count = 47,
         line_length = 16,
         width = 90,
@@ -137,7 +141,7 @@ function chimney_sulfuric_stateless_visualisation_faded(position)
         animation_speed = 0.3,
         shift = util.by_pixel(-6, -89),
         scale = 1,
-        tint = util.multiply_color({r=0.72, g=0.79, b=0.43}, 0.08)
+        tint = util.multiply_color({0.976, 0.671, 1}, 0.08)
       }
     },
     {
@@ -147,7 +151,7 @@ function chimney_sulfuric_stateless_visualisation_faded(position)
       offset_y = position[2],
       animation =
       {
-         filename = "__space-age__/graphics/entity/sulfuric-acid-geyser/sulfuric-acid-geyser-gas-inner.png",
+         filename = "__planetaris-unbounded-assets__/graphics/entity/metallic-geyser/metallic-geyser-gas-inner.png",
          frame_count = 47,
          line_length = 16,
          width = 40,
@@ -155,7 +159,7 @@ function chimney_sulfuric_stateless_visualisation_faded(position)
          animation_speed = 0.4,
          shift = util.by_pixel(-4, -30),
          scale = 1,
-         tint = util.multiply_color({r=1, g=0.84, b=0.5}, 0.1)
+         tint = util.multiply_color({0.976, 0.671, 1}, 0.1)
 
 
       }
@@ -173,26 +177,26 @@ data:extend{
   ---- VEGETATION
   {
     type = "noise-expression",
-    name = "vulcanus_hairy_grass_green",
+    name = "hyarion_red_small_crystal",
     expression = "uneven_select_range(hyarion_elev, 90, 30, 300, 200)\z
                   - 1.5 + 2 * moisture - aux"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_hairy_grass_brown",
+    name = "hyarion_yellow_small_crystal",
     expression = "uneven_select_range(hyarion_elev, 70, 30, 400, 300)\z
                   - 3 + 3 * moisture - 0.5 * aux + vulcanus_decorative_knockout"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_carpet_grass_brown",
+    name = "hyarion_blue_small_crystal",
     expression = "min(0.5, uneven_select_range(hyarion_elev, 90, 30, 300, 200)\z
                            - 1.5 + 2 * moisture - aux)"
   },
 
   {
     type = "noise-expression",
-    name = "vulcanus_pita",
+    name = "hyarion_small_crystal",
     expression = "uneven_select_range(hyarion_elev, 110, 20, 450, 300)\z
                   - 2.2 + 2 * moisture + aux"
   },
@@ -200,53 +204,53 @@ data:extend{
   ---- CHIMNEYS
   {
     type = "noise-expression",
-    name = "vulcanus_chimney_main",
+    name = "hyarion_chimney_main",
     expression = "2 * (hyarion_mountains_biome - 0.5) - 2.3 + 1.2 * min(aux, 1 - moisture) + vulcanus_rock_noise - 0.5 * vulcanus_decorative_knockout"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_chimney_sulfuric",
-    expression = "-random_penalty_between(0, 1, 1) + 10 * min(0.2, clamp(vulcanus_chimney_main, 0.017, 0.05)) * (hyarion_iron_region > 0)"
+    name = "hyarion_chimney_sulfuric",
+    expression = "-random_penalty_between(0, 1, 1) + 10 * min(0.2, clamp(hyarion_chimney_main, 0.017, 0.05)) * (hyarion_iron_region > 0)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_chimney_faded",
-    expression = "-random_penalty_between(0, 1, 1) + 7 * min(0.2, vulcanus_chimney_main * (hyarion_iron_region < 0.3))"
+    name = "hyarion_chimney_faded",
+    expression = "-random_penalty_between(0, 1, 1) + 7 * min(0.2, hyarion_chimney_main * (hyarion_iron_region < 0.3))"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_chimney_cold",
-    expression = "-random_penalty_between(0, 1, 1) + 7 * min(0.2, vulcanus_chimney_main * (hyarion_iron_region < 0.01))"
+    name = "hyarion_chimney_cold",
+    expression = "-random_penalty_between(0, 1, 1) + 7 * min(0.2, hyarion_chimney_main * (hyarion_iron_region < 0.01))"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_chimney_truncated",
+    name = "hyarion_chimney_truncated",
     expression = "max( min(0.05, 2 * (hyarion_mountains_biome - 0.5)\z
                            - 2.1 + 1.2 * min(aux, 1 - moisture) + vulcanus_rock_noise - 0.5 * vulcanus_decorative_knockout),\z
                        min(0.05, 2 * (hyarion_valley_biome - 0.5)\z
                            - 2.3 + 1.2 * min(aux, 1 - moisture) + vulcanus_rock_noise - 0.5 * vulcanus_decorative_knockout))"
   },
 
-  ---- SULFUR
+  ---- Metallic
   {
     type = "noise-expression",
-    name = "vulcanus_sulfuric_acid_puddle",
+    name = "vulcanus_metallic_puddle",
     expression = "min(0.2, min(0.5, 3 * (hyarion_iron_region + 0.1)) - 0.6 - 0.6 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_sulfuric_acid_puddle_small",
+    name = "vulcanus_metallic_puddle_small",
     expression = "min(0.25, min(0.5, 3 * (hyarion_iron_region + 0.15)) - 0.6 - 0.6 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_sulfuric_acid_stain",
+    name = "vulcanus_metallic_stain",
     expression = "min(0.2, min(0.5, 3 * (hyarion_iron_region + 0.1)) - 0.8 - 0.6 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_sulfuric_acid_stain_small",
-    expression = "max(min(0.1, vulcanus_chimney_main),\z
+    name = "vulcanus_metallic_stain_small",
+    expression = "max(min(0.1, hyarion_chimney_main),\z
                       min(0.2, min(0.5, 3 * (hyarion_iron_region + 0.2)) - 0.4 + 0.6 * vulcanus_decorative_knockout))"
   },
   {
@@ -268,12 +272,12 @@ data:extend{
   ---- CLACITE
   {
     type = "noise-expression",
-    name = "vulcanus_calcite_stain",
+    name = "hyarion_carbon_stain",
     expression = "min(0.2, min(0.5, 3 * (hyarion_carbon_region + 0.1)) - 0.8 - 0.6 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_calcite_stain_small",
+    name = "hyarion_carbon_stain_small",
     expression = "min(0.2, min(0.5, 3 * (hyarion_carbon_region + 0.2)) - 0.4 + 0.6 * vulcanus_decorative_knockout)"
   },
 
@@ -281,32 +285,32 @@ data:extend{
   -- reduce density in ashlands
   {
     type = "noise-expression",
-    name = "vulcanus_rock_huge",
+    name = "hyarion_rock_huge",
     expression = "min(0.2 * (1 - 0.75 * hyarion_valley_biome), - 1.2 + 1.2 * min(aux, -0.1 + 1.1 * moisture) + vulcanus_rock_noise + 0.5 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_rock_big",
+    name = "hyarion_rock_big",
     expression = "min(0.2 * (1 - 0.5 * hyarion_valley_biome), - 1.0 + 1.2 * min(aux, -0.1 + 1.1 * moisture) + vulcanus_rock_noise + 0.5 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_rock_medium",
+    name = "hyarion_rock_medium",
     expression = "min(0.5 * (1 - 0.5 * hyarion_valley_biome), - 0.8 + 1.2 * min(aux, -0.1 + 1.1 * moisture) + vulcanus_rock_noise + 0.5 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_rock_cluster",
+    name = "hyarion_rock_cluster",
     expression = "min(0.2 * (1 - 0.5 * hyarion_valley_biome), - 0.7 + 1.2 * min(aux, -0.1 + 1.1 * moisture) + vulcanus_rock_noise + 0.5 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_rock_small",
+    name = "hyarion_rock_small",
     expression = "min(0.6 * (1 - 0.5 * hyarion_valley_biome), - 0.6 + 1.2 * min(aux, -0.1 + 1.1 * moisture) + vulcanus_rock_noise + 0.5 * vulcanus_decorative_knockout)"
   },
   {
     type = "noise-expression",
-    name = "vulcanus_rock_tiny",
+    name = "hyarion_rock_tiny",
     expression = "min(0.75 * (1 - 0.5 * hyarion_valley_biome), - 0.5 + 1.2 * min(aux, -0.1 + 1.1 * moisture) + vulcanus_rock_noise + 0.5 * vulcanus_decorative_knockout)"
   },
 
@@ -333,7 +337,7 @@ data:extend{
   },
   {
     type = "noise-expression",
-    name = "vulcanus_rock_decal_large",
+    name = "hyarion_rock_decal_large",
     expression = "min(0.1, range_select_base(hyarion_elev, 20, 50, 1, -10, 1) - 0.6 + 0.25 * aux + 0.25 * (moisture - 0.6) + 0.5 * vulcanus_decorative_knockout)"
   },
   {
@@ -376,11 +380,11 @@ data:extend{
 
   --- nauvis plants
 
-  --- GREEN HAIRY GRASS
+  --- SMALL CRYSTALS
   {
-    name = "hyarion-green-hairy-grass",
+    name = "hyarion-red-crystal",
     type = "optimized-decorative",
-    order = "b[decorative]-a[grass]-b[hairy]-a[green]",
+    order = "b[decorative]-a[grass]-x[crystal]",
     collision_box = {{-1, -1}, {1, 1}},
     grows_through_rail_path = true,
     walking_sound = base_tile_sounds.walking.hairy_grass,
@@ -388,198 +392,142 @@ data:extend{
     autoplace =
     {
       order = "e[vegetation]-b[grass]-b[hairy]-a[green]",
-      probability_expression = "vulcanus_hairy_grass_green"
+      probability_expression = "hyarion_red_small_crystal"
     },
     pictures =
     {
-      --hairyGreen
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-13.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-1.png",
         priority = base_decorative_sprite_priority,
-        width = 79,
-        height = 52,
-        shift = util.by_pixel(4.25, -4),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(-1.25, -3.5),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-14.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-2.png",
         priority = base_decorative_sprite_priority,
-        width = 80,
-        height = 41,
-        shift = util.by_pixel(6.5, -3.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(6.25, -7),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-15.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-3.png",
         priority = base_decorative_sprite_priority,
-        width = 72,
-        height = 68,
-        shift = util.by_pixel(3.5, -4.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.5, 0.25),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-16.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-4.png",
         priority = base_decorative_sprite_priority,
-        width = 73,
-        height = 39,
-        shift = util.by_pixel(1.75, -3.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(10.25, -11.5),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-17.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-5.png",
         priority = base_decorative_sprite_priority,
-        width = 59,
-        height = 47,
-        shift = util.by_pixel(4.25, -3.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(4, 3.25),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-18.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-6.png",
         priority = base_decorative_sprite_priority,
-        width = 49,
-        height = 29,
-        shift = util.by_pixel(5.75, -3.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(4.25, -4.25),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-19.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-7.png",
         priority = base_decorative_sprite_priority,
-        width = 91,
-        height = 48,
-        shift = util.by_pixel(6.75, -2),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(2.25, 8.25),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-06.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-8.png",
         priority = base_decorative_sprite_priority,
-        width = 102,
-        height = 90,
-        shift = util.by_pixel(9, -3.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(0, -2.75),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-07.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-9.png",
         priority = base_decorative_sprite_priority,
-        width = 122,
-        height = 67,
-        shift = util.by_pixel(9, -3.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(1.5, -2.75),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-08.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-10.png",
         priority = base_decorative_sprite_priority,
-        width = 101,
-        height = 63,
-        shift = util.by_pixel(0.75, -4.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(5.25, -2.5),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-09.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-11.png",
         priority = base_decorative_sprite_priority,
-        width = 82,
-        height = 77,
-        shift = util.by_pixel(6.5, -6.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(0, -7.25),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-10.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-12.png",
         priority = base_decorative_sprite_priority,
-        width = 109,
-        height = 76,
-        shift = util.by_pixel(5.75, -4.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-11.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-13.png",
         priority = base_decorative_sprite_priority,
-        width = 84,
-        height = 52,
-        shift = util.by_pixel(4.5, -5.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-12.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-14.png",
         priority = base_decorative_sprite_priority,
-        width = 66,
-        height = 60,
-        shift = util.by_pixel(7, -6),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint  = green_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-00.png",
-        priority = base_decorative_sprite_priority,
-        width = 147,
-        height = 118,
-        shift = util.by_pixel(8.75, -4),
-        scale = 0.5,
-        tint  = green_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-01.png",
-        priority = base_decorative_sprite_priority,
-        width = 153,
-        height = 91,
-        shift = util.by_pixel(9.75, -3.75),
-        scale = 0.5,
-        tint  = green_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-02.png",
-        priority = base_decorative_sprite_priority,
-        width = 158,
-        height = 96,
-        shift = util.by_pixel(5, -1),
-        scale = 0.5,
-        tint  = green_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-03.png",
-        priority = base_decorative_sprite_priority,
-        width = 172,
-        height = 144,
-        shift = util.by_pixel(3, -2),
-        scale = 0.5,
-        tint  = green_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-04.png",
-        priority = base_decorative_sprite_priority,
-        width = 161,
-        height = 73,
-        shift = util.by_pixel(4.75, -3.25),
-        scale = 0.5,
-        tint  = green_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/green-hairy-grass/green-hairy-grass-05.png",
-        priority = base_decorative_sprite_priority,
-        width = 119,
-        height = 72,
-        shift = util.by_pixel(3.75, -4),
-        scale = 0.5,
-        tint  = green_hairy_tint
+        tint = red_crystal_tint,        
       },
     }
   },
-  --- BROWN GRASS
   {
-    name = "hyarion-brown-hairy-grass",
+    name = "hyarion-yellow-crystal",
     type = "optimized-decorative",
-    order = "b[decorative]-a[grass]-b[hairy]-b[brown]",
+    order = "b[decorative]-a[grass]-x[crystal]",
     collision_box = {{-1, -1}, {1, 1}},
     grows_through_rail_path = true,
     render_layer = "decorative",
@@ -587,470 +535,422 @@ data:extend{
     trigger_effect = decorative_trigger_effects.brown_hairy_grass(),
     autoplace = {
       order = "e[vegetation]-b[grass]-b[hairy]-b[brown]",
-      probability_expression = "vulcanus_hairy_grass_brown"
+      probability_expression = "hyarion_yellow_small_crystal"
     },
     pictures =
     {
-      --hairyBrown
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-00.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-1.png",
         priority = base_decorative_sprite_priority,
-        width = 151,
-        height = 129,
-        shift = util.by_pixel(3.25, -5.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(-1.25, -3.5),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-01.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-2.png",
         priority = base_decorative_sprite_priority,
-        width = 167,
-        height = 122,
-        shift = util.by_pixel(4.75, -2),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(6.25, -7),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-02.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-3.png",
         priority = base_decorative_sprite_priority,
-        width = 107,
-        height = 95,
-        shift = util.by_pixel(5.75, -0.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.5, 0.25),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-03.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-4.png",
         priority = base_decorative_sprite_priority,
-        width = 121,
-        height = 74,
-        shift = util.by_pixel(4.75, -1),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(10.25, -11.5),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-04.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-5.png",
         priority = base_decorative_sprite_priority,
-        width = 98,
-        height = 102,
-        shift = util.by_pixel(4, -3),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(4, 3.25),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-05.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-6.png",
         priority = base_decorative_sprite_priority,
-        width = 83,
-        height = 67,
-        shift = util.by_pixel(4.75, -2.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(4.25, -4.25),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-06.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-7.png",
         priority = base_decorative_sprite_priority,
-        width = 103,
-        height = 70,
-        shift = util.by_pixel(2.25, -4),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(2.25, 8.25),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-07.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-8.png",
         priority = base_decorative_sprite_priority,
-        width = 89,
-        height = 59,
-        shift = util.by_pixel(4.25, -1.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(0, -2.75),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-08.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-9.png",
         priority = base_decorative_sprite_priority,
-        width = 97,
-        height = 102,
-        shift = util.by_pixel(-2.25, 1.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(1.5, -2.75),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-09.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-10.png",
         priority = base_decorative_sprite_priority,
-        width = 128,
-        height = 77,
-        shift = util.by_pixel(14, -4.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(5.25, -2.5),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-10.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-11.png",
         priority = base_decorative_sprite_priority,
-        width = 141,
-        height = 74,
-        shift = util.by_pixel(-4.25, -7),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(0, -7.25),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-11.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-12.png",
         priority = base_decorative_sprite_priority,
-        width = 55,
-        height = 87,
-        shift = util.by_pixel(1.25, 3.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-12.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-13.png",
         priority = base_decorative_sprite_priority,
-        width = 107,
-        height = 53,
-        shift = util.by_pixel(0.75, -4.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-13.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-14.png",
         priority = base_decorative_sprite_priority,
-        width = 64,
-        height = 48,
-        shift = util.by_pixel(1, -3),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint = brown_hairy_tint
+        tint = yellow_crystal_tint,        
       },
-      {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-14.png",
-        priority = base_decorative_sprite_priority,
-        width = 71,
-        height = 47,
-        shift = util.by_pixel(5.25, -3.25),
-        scale = 0.5,
-        tint = brown_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-15.png",
-        priority = base_decorative_sprite_priority,
-        width = 66,
-        height = 50,
-        shift = util.by_pixel(1.5, -0.5),
-        scale = 0.5,
-        tint = brown_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-16.png",
-        priority = base_decorative_sprite_priority,
-        width = 61,
-        height = 48,
-        shift = util.by_pixel(3.75, -3.5),
-        scale = 0.5,
-        tint = brown_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-17.png",
-        priority = base_decorative_sprite_priority,
-        width = 28,
-        height = 37,
-        shift = util.by_pixel(-1.5, -3.25),
-        scale = 0.5,
-        tint = brown_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-18.png",
-        priority = base_decorative_sprite_priority,
-        width = 43,
-        height = 29,
-        shift = util.by_pixel(5.75, -3.25),
-        scale = 0.5,
-        tint = brown_hairy_tint
-      },
-      {
-        filename = "__base__/graphics/decorative/brown-hairy-grass/brown-hairy-grass-19.png",
-        priority = base_decorative_sprite_priority,
-        width = 43,
-        height = 34,
-        shift = util.by_pixel(1.75, 0),
-        scale = 0.5,
-        tint = brown_hairy_tint
-      }
     }
   },
-  --- BROWN CARPET GRASS
+  --- Blue crystal
   {
-    name = "hyarion-brown-carpet-grass",
+    name = "hyarion-orange-crystal",
     type = "optimized-decorative",
-    order = "b[decorative]-a[grass]-a[carpet]-b[brown]",
-    collision_box = {{-2, -2}, {2, 2}},
+    order = "b[decorative]-a[grass]-x[crystal]",
+    collision_box = {{-1, -1}, {1, 1}},
     grows_through_rail_path = true,
     walking_sound = base_tile_sounds.walking.carpet_grass,
     trigger_effect = decorative_trigger_effects.brown_carpet_grass(),
     autoplace = {
       order = "e[vegetation]-b[grass]-a[carpet]",
-      probability_expression = "vulcanus_carpet_grass_brown"
+      probability_expression = "hyarion_blue_small_crystal"
     },
     pictures =
     {
-      --brownCarpet
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-06.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-1.png",
         priority = base_decorative_sprite_priority,
-        width = 239,
-        height = 220,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(-1.25, -3.5),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-07.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-2.png",
         priority = base_decorative_sprite_priority,
-        width = 241,
-        height = 274,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(6.25, -7),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-08.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-3.png",
         priority = base_decorative_sprite_priority,
-        width = 266,
-        height = 261,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(3.5, 0.25),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-09.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-4.png",
         priority = base_decorative_sprite_priority,
-        width = 265,
-        height = 228,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(10.25, -11.5),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-10.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-5.png",
         priority = base_decorative_sprite_priority,
-        width = 288,
-        height = 293,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(4, 3.25),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-11.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-6.png",
         priority = base_decorative_sprite_priority,
-        width = 269,
-        height = 265,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(4.25, -4.25),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-00.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-7.png",
         priority = base_decorative_sprite_priority,
-        width = 211,
-        height = 195,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(2.25, 8.25),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-01.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-8.png",
         priority = base_decorative_sprite_priority,
-        width = 248,
-        height = 259,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(0, -2.75),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-02.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-9.png",
         priority = base_decorative_sprite_priority,
-        width = 258,
-        height = 263,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(1.5, -2.75),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-03.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-10.png",
         priority = base_decorative_sprite_priority,
-        width = 283,
-        height = 126,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(5.25, -2.5),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-04.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-11.png",
         priority = base_decorative_sprite_priority,
-        width = 152,
-        height = 265,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(0, -7.25),
         scale = 0.5,
-        tint = brown_carpet_tint
+        tint = orange_crystal_tint,        
       },
       {
-        filename = "__base__/graphics/decorative/brown-carpet-grass/brown-carpet-grass-05.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-12.png",
         priority = base_decorative_sprite_priority,
-        width = 247,
-        height = 216,
+        width = 256,
+        height = 256,
         shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint = brown_carpet_tint
-      }
+        tint = orange_crystal_tint,
+      },
+      {
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-13.png",
+        priority = base_decorative_sprite_priority,
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
+        scale = 0.5,
+        tint = orange_crystal_tint,        
+      },
+      {
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-14.png",
+        priority = base_decorative_sprite_priority,
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
+        scale = 0.5,
+        tint = orange_crystal_tint,        
+      },
     }
   },
-  --- RED PITA
+  --- Small crystal
   {
-    name = "hyarion-red-pita",
+    name = "hyarion-small-crystal",
     type = "optimized-decorative",
-    order = "b[decorative]-c[pita]-a[red]",
-    collision_box = {{-0.7, -0.7}, {0.7, 0.7}},
+    order = "b[decorative]-a[grass]-x[crystal]",
+    collision_box = {{-1, -1}, {1, 1}},
     render_layer = "object",
     walking_sound = base_tile_sounds.walking.big_bush,
     trigger_effect = decorative_trigger_effects.red_pita(),
     autoplace = {
       order = "e[vegetation]-a[shrub]-a[pita]",
-      probability_expression = "vulcanus_pita"
+      probability_expression = "hyarion_small_crystal"
     },
     pictures =
     {
-      --rpita
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-00.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-1.png",
         priority = base_decorative_sprite_priority,
-        width = 152,
-        height = 98,
-        shift = util.by_pixel(10.5, -7.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(-1.25, -3.5),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-01.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-2.png",
         priority = base_decorative_sprite_priority,
-        width = 146,
-        height = 109,
-        shift = util.by_pixel(13, -6.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(6.25, -7),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-02.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-3.png",
         priority = base_decorative_sprite_priority,
-        width = 119,
-        height = 82,
-        shift = util.by_pixel(10.75, -7.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.5, 0.25),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-03.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-4.png",
         priority = base_decorative_sprite_priority,
-        width = 118,
-        height = 84,
-        shift = util.by_pixel(9.5, -5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(10.25, -11.5),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-04.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-5.png",
         priority = base_decorative_sprite_priority,
-        width = 149,
-        height = 99,
-        shift = util.by_pixel(13.75, -7.75),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(4, 3.25),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-05.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-6.png",
         priority = base_decorative_sprite_priority,
-        width = 142,
-        height = 93,
-        shift = util.by_pixel(13, -8.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(4.25, -4.25),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-06.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-7.png",
         priority = base_decorative_sprite_priority,
-        width = 177,
-        height = 106,
-        shift = util.by_pixel(8.25, -5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(2.25, 8.25),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-07.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-8.png",
         priority = base_decorative_sprite_priority,
-        width = 167,
-        height = 120,
-        shift = util.by_pixel(10.25, -6.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(0, -2.75),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-08.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-9.png",
         priority = base_decorative_sprite_priority,
-        width = 168,
-        height = 128,
-        shift = util.by_pixel(10.5, -6),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(1.5, -2.75),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-09.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-10.png",
         priority = base_decorative_sprite_priority,
-        width = 119,
-        height = 85,
-        shift = util.by_pixel(4.25, -7.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(5.25, -2.5),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-10.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-11.png",
         priority = base_decorative_sprite_priority,
-        width = 109,
-        height = 69,
-        shift = util.by_pixel(7.25, -3.25),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(0, -7.25),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-11.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-12.png",
         priority = base_decorative_sprite_priority,
-        width = 93,
-        height = 70,
-        shift = util.by_pixel(5.75, -4.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-12.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-13.png",
         priority = base_decorative_sprite_priority,
-        width = 107,
-        height = 74,
-        shift = util.by_pixel(7.75, -5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
       {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-13.png",
+        filename = "__planetaris-unbounded-assets__/graphics/decorative/small-crystal/small-crystal-14.png",
         priority = base_decorative_sprite_priority,
-        width = 114,
-        height = 70,
-        shift = util.by_pixel(12, -4.5),
+        width = 256,
+        height = 256,
+        shift = util.by_pixel(3.25, -1),
         scale = 0.5,
-        tint = red_pita_tint
+        
       },
-      {
-        filename = "__base__/graphics/decorative/red-pita/red-pita-14.png",
-        priority = base_decorative_sprite_priority,
-        width = 89,
-        height = 71,
-        shift = util.by_pixel(3.75, -7.25),
-        scale = 0.5,
-        tint = red_pita_tint
-      }
     }
   },
   ---ROCKY DECALS
@@ -1064,7 +964,7 @@ data:extend{
     tile_layer =  decal_tile_layer -1,
     autoplace = {
       order = "d[ground-surface]-f[cracked-rock]-b[cold]",
-      probability_expression = "vulcanus_rock_decal_large"
+      probability_expression = "hyarion_rock_decal_large"
     },
     pictures = get_decal_pictures("__planetaris-unbounded-assets__/graphics/decorative/hyarion-rock-decal/hyarion-rock-decal-", "large-", 256, 5)
   },
@@ -1134,9 +1034,9 @@ data:extend{
     },
     pictures = get_decal_pictures("__space-age__/graphics/decorative/vulcanus-cracks/vulcanus-cracks-hot-", "large-", 128, 18)
   },
-  --- CALCITE STAINS
+  --- CARBON STAINS
   {
-    name = "hyarion-calcite-stain",
+    name = "hyarion-carbon-stain",
     type = "optimized-decorative",
     order = "a[vulcanus]-b[decorative]",
     collision_box = {{-3, -3}, {3, 3}},
@@ -1145,13 +1045,13 @@ data:extend{
     tile_layer =  decal_tile_layer -6,
     autoplace = {
       order = "d[ground-surface]-c[stain]-c[calcite-large]",
-      probability_expression = "vulcanus_calcite_stain"
+      probability_expression = "hyarion_carbon_stain"
     },
-    pictures = get_decal_pictures("__space-age__/graphics/decorative/calcite-stain/calcite-stain-", "", 512, 18)
+    pictures = get_decal_pictures("__planetaris-unbounded-assets__/graphics/decorative/carbon-stain/carbon-stain-", "", 512, 18)
   },
-  --- SPOTTY CALCITE STAINS
+  --- SPOTTY CARBON STAINS
   {
-    name = "hyarion-calcite-stain-small",
+    name = "hyarion-carbon-stain-small",
     type = "optimized-decorative",
     order = "a[vulcanus]-b[decorative]",
     collision_box = {{-3, -3}, {3, 3}},
@@ -1160,13 +1060,13 @@ data:extend{
     tile_layer =  decal_tile_layer -6,
     autoplace = {
       order = "d[ground-surface]-c[stain]-b[calcite]-b[small]",
-      probability_expression = "vulcanus_calcite_stain_small"
+      probability_expression = "hyarion_carbon_stain_small"
     },
-    pictures = get_decal_pictures("__space-age__/graphics/decorative/calcite-stain/calcite-stain-spotty-", "", 512, 18)
+    pictures = get_decal_pictures("__planetaris-unbounded-assets__/graphics/decorative/carbon-stain/carbon-stain-spotty-", "", 512, 18)
   },
   --- SULFUR STAINS
   {
-    name = "hyarion-sulfur-stain",
+    name = "hyarion-metallic-stain",
     type = "optimized-decorative",
     order = "a[vulcanus]-b[decorative]",
     collision_box = {{-3, -3}, {3, 3}},
@@ -1175,13 +1075,13 @@ data:extend{
     tile_layer =  decal_tile_layer -6,
     autoplace = {
       order = "d[ground-surface]-c[stain]-b[calcite]-a[large]",
-      probability_expression = "vulcanus_sulfuric_acid_stain"
+      probability_expression = "vulcanus_metallic_stain"
     },
-    pictures = get_decal_pictures("__space-age__/graphics/decorative/sulfur-stain/sulfur-stain-", "", 512,13)
+    pictures = get_decal_pictures("__planetaris-unbounded-assets__/graphics/decorative/metallic-stain/metallic-stain-", "", 512,13)
   },
   --- SPOTTY SULFUR STAINS
   {
-    name = "hyarion-sulfur-stain-small",
+    name = "hyarion-metallic-stain-small",
     type = "optimized-decorative",
     order = "a[vulcanus]-b[decorative]",
     collision_box = {{-3, -3}, {3, 3}},
@@ -1190,13 +1090,13 @@ data:extend{
     tile_layer =  decal_tile_layer -6,
     autoplace = {
       order = "d[ground-surface]-c[stain]-a[sulfur]-b[small]",
-      probability_expression = "vulcanus_sulfuric_acid_stain_small"
+      probability_expression = "vulcanus_metallic_stain_small"
     },
-    pictures = get_decal_pictures("__space-age__/graphics/decorative/sulfur-stain/sulfur-stain-spotty-", "", 512, 21)
+    pictures = get_decal_pictures("__planetaris-unbounded-assets__/graphics/decorative/metallic-stain/metallic-stain-spotty-", "", 512, 21)
   },
-  --- SULFURIC-ACID-PUDDLE
+  --- metallic-puddle
   {
-    name = "hyarion-sulfuric-acid-puddle",
+    name = "hyarion-metallic-puddle",
     type = "optimized-decorative",
     order = "a[vulcanus]-b[decorative]",
     collision_box = {{-2, -2}, {2, 2}},
@@ -1208,13 +1108,13 @@ data:extend{
     {
       order = "d[ground-surface]-a[puddle]-a[large]",
       placement_density = 2,
-      probability_expression = "vulcanus_sulfuric_acid_puddle"
+      probability_expression = "vulcanus_metallic_puddle"
     },
-    pictures = get_decal_pictures("__space-age__/graphics/decorative/sulfuric-acid-puddle/sulfuric-acid-puddle-", "", 384, 8)
+    pictures = get_decal_pictures("__planetaris-unbounded-assets__/graphics/decorative/metallic-puddle/metallic-puddle-", "", 384, 8)
   },
-  --- SULFURIC-ACID-PUDDLE-SMALL
+  --- metallic-puddle-SMALL
   {
-    name = "hyarion-sulfuric-acid-puddle-small",
+    name = "hyarion-metallic-puddle-small",
     type = "optimized-decorative",
     order = "a[vulcanus]-b[decorative]",
     collision_box = {{-1, -1}, {1, 1}},
@@ -1226,9 +1126,9 @@ data:extend{
     {
       order = "d[ground-surface]-a[puddle]-b[small]",
       placement_density = 2,
-      probability_expression = "vulcanus_sulfuric_acid_puddle_small"
+      probability_expression = "vulcanus_metallic_puddle_small"
     },
-    pictures = get_decal_pictures("__space-age__/graphics/decorative/sulfuric-acid-puddle/sulfuric-acid-puddle-small-", "", 192, 4)
+    pictures = get_decal_pictures("__planetaris-unbounded-assets__/graphics/decorative/metallic-puddle/metallic-puddle-small-", "", 192, 4)
   },
   --- SMALL CRATERS
   {
@@ -1384,9 +1284,9 @@ data:extend{
     name = "hyarion-chimney",
     type = "simple-entity",
     flags = {"placeable-neutral", "placeable-off-grid"},
-    icon = "__space-age__/graphics/icons/vulcanus-chimney.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/hyarion-chimney.png",
     subgroup = "grass",
-    order = "b[decorative]-l[rock]-a[vulcanus]-e[chimney]",
+    order = "b[decorative]-l[rock]-g[hyarion]-e[chimney]",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.3, -1.3}, {1.3, 1.3}},
     drawing_box_vertical_extension = 2,
@@ -1397,7 +1297,7 @@ data:extend{
     autoplace =
     {
       order = "a[landscape]-c[chimney]-a[full]-a",
-      probability_expression = "vulcanus_chimney_sulfuric"
+      probability_expression = "hyarion_chimney_sulfuric"
     },
     dying_trigger_effect = decorative_trigger_effects.big_rock(),
     minable =
@@ -1439,18 +1339,18 @@ data:extend{
     {
       layers =
         {
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-upper", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-shadow", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, draw_as_shadow=true,shift = {5, 0} }),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-upper", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-shadow", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, draw_as_shadow=true,shift = {5, 0} }),
         }
     },
     lower_render_layer = "floor",
-    lower_pictures = util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-lower", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
+    lower_pictures = util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-lower", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
 
     stateless_visualisation_variations =
     {
-      chimney_sulfuric_stateless_visualisation_tinted({0, -3}), --tinted
-      chimney_sulfuric_stateless_visualisation_tinted({-0.75, -2.75}), --tinted
-      chimney_sulfuric_stateless_visualisation_tinted({0.55, -3.1}), --tinted
+      chimney_metallic_stateless_visualisation_tinted({0, -3}), --tinted
+      chimney_metallic_stateless_visualisation_tinted({-0.75, -2.75}), --tinted
+      chimney_metallic_stateless_visualisation_tinted({0.55, -3.1}), --tinted
     },
   },
   --- CHIMNEY FADED
@@ -1458,9 +1358,9 @@ data:extend{
     name = "hyarion-chimney-faded",
     type = "simple-entity",
     flags = {"placeable-neutral", "placeable-off-grid"},
-    icon = "__space-age__/graphics/icons/vulcanus-chimney-faded.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/hyarion-chimney-faded.png",
     subgroup = "grass",
-    order = "b[decorative]-l[rock]-a[vulcanus]-g[chimney-faded]",
+    order = "b[decorative]-l[rock]-g[hyarion]-g[chimney-faded]",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.3, -1.3}, {1.3, 1.3}},
     drawing_box_vertical_extension = 2,
@@ -1471,7 +1371,7 @@ data:extend{
     autoplace =
     {
       order = "a[landscape]-c[chimney]-a[full]-b",
-      probability_expression = "vulcanus_chimney_faded"
+      probability_expression = "hyarion_chimney_faded"
     },
     dying_trigger_effect = decorative_trigger_effects.big_rock(),
     minable =
@@ -1500,20 +1400,20 @@ data:extend{
     {
       layers =
         {
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-faded-upper", { scale = 0.5, variation_count = 5, multiply_shift = 0.5, shift = {5, 0} }),
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-faded-shadow", { scale = 0.5, variation_count = 5, multiply_shift = 0.5, draw_as_shadow=true,shift = {5, 0} }),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-faded-upper", { scale = 0.5, variation_count = 5, multiply_shift = 0.5, shift = {5, 0} }),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-faded-shadow", { scale = 0.5, variation_count = 5, multiply_shift = 0.5, draw_as_shadow=true,shift = {5, 0} }),
         }
     },
     lower_render_layer = "floor",
-    lower_pictures = util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-faded-lower", { scale = 0.5, variation_count = 5, multiply_shift = 0.5, shift = {5, 0} }),
+    lower_pictures = util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-faded-lower", { scale = 0.5, variation_count = 5, multiply_shift = 0.5, shift = {5, 0} }),
 
     stateless_visualisation_variations =
     {
-      chimney_sulfuric_stateless_visualisation_faded({0.3, -3.5}), --faded
-      chimney_sulfuric_stateless_visualisation_faded({-0.3, -2.3}), --faded
-      chimney_sulfuric_stateless_visualisation_faded({-0.5, -1.4}), --faded
-      chimney_sulfuric_stateless_visualisation_faded({0.2, -3.8}), --faded
-      chimney_sulfuric_stateless_visualisation_faded({0.2, -2}), --faded
+      chimney_metallic_stateless_visualisation_faded({0.3, -3.5}), --faded
+      chimney_metallic_stateless_visualisation_faded({-0.3, -2.3}), --faded
+      chimney_metallic_stateless_visualisation_faded({-0.5, -1.4}), --faded
+      chimney_metallic_stateless_visualisation_faded({0.2, -3.8}), --faded
+      chimney_metallic_stateless_visualisation_faded({0.2, -2}), --faded
 
     },
   },
@@ -1522,9 +1422,9 @@ data:extend{
     name = "hyarion-chimney-cold",
     type = "simple-entity",
     flags = {"placeable-neutral", "placeable-off-grid"},
-    icon = "__space-age__/graphics/icons/vulcanus-chimney-cold.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/hyarion-chimney-cold.png",
     subgroup = "grass",
-    order = "b[decorative]-l[rock]-a[vulcanus]-f[chimney-cold]",
+    order = "b[decorative]-l[rock]-g[hyarion]-f[chimney-cold]",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.3, -1.3}, {1.3, 1.3}},
     drawing_box_vertical_extension = 2,
@@ -1535,7 +1435,7 @@ data:extend{
     autoplace =
     {
       order = "a[landscape]-c[chimney]-a[full]-c",
-      probability_expression = "vulcanus_chimney_cold"
+      probability_expression = "hyarion_chimney_cold"
     },
     dying_trigger_effect = decorative_trigger_effects.big_rock(),
     minable =
@@ -1564,18 +1464,18 @@ data:extend{
     {
       layers =
         {
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/cold-chimney-upper", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/cold-chimney-shadow", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, draw_as_shadow=true,shift = {5, 0} }),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/cold-chimney-upper", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/cold-chimney-shadow", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, draw_as_shadow=true,shift = {5, 0} }),
         }
     },
     lower_render_layer = "floor",
-    lower_pictures = util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/cold-chimney-lower", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
+    lower_pictures = util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/cold-chimney-lower", { scale = 0.5, variation_count = 3, multiply_shift = 0.5, shift = {5, 0} }),
 
     stateless_visualisation_variations =
     {
-      chimney_sulfuric_stateless_visualisation({-0.1, -3}), --cold
-      chimney_sulfuric_stateless_visualisation({-0.75, -2.4}), --cold
-      chimney_sulfuric_stateless_visualisation({0.6, -4.25}), --cold
+      chimney_metallic_stateless_visualisation({-0.1, -3}), --cold
+      chimney_metallic_stateless_visualisation({-0.75, -2.4}), --cold
+      chimney_metallic_stateless_visualisation({0.6, -4.25}), --cold
     },
   },
   --- SHORT CHIMNEY
@@ -1583,9 +1483,9 @@ data:extend{
     name = "hyarion-chimney-short",
     type = "simple-entity",
     flags = {"placeable-neutral", "placeable-off-grid"},
-    icon = "__space-age__/graphics/icons/vulcanus-chimney-short.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/hyarion-chimney-short.png",
     subgroup = "grass",
-    order = "b[decorative]-l[rock]-a[vulcanus]-c[chimney-short]",
+    order = "b[decorative]-l[rock]-g[hyarion]-c[chimney-short]",
     collision_box = {{-0.9, -0.7}, {0.9, 0.7}},
     selection_box = {{-1, -0.8}, {1, 0.8}},
     collision_mask = {layers={item=true, object=true, player=true, water_tile=true}},
@@ -1595,7 +1495,7 @@ data:extend{
     autoplace =
     {
       order = "a[landscape]-c[chimney]-b[truncated]-e",
-      probability_expression = "vulcanus_chimney_faded / 2"
+      probability_expression = "hyarion_chimney_faded / 2"
     },
     dying_trigger_effect = decorative_trigger_effects.big_rock(),
     minable =
@@ -1619,11 +1519,11 @@ data:extend{
     {
       layers =
         {
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-short-upper", { scale = 0.5, variation_count = 7,multiply_shift=0.5}),
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-short-shadow", { scale = 0.5, variation_count = 7,multiply_shift=0.5,draw_as_shadow=true}),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-short-upper", { scale = 0.5, variation_count = 7,multiply_shift=0.5}),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-short-shadow", { scale = 0.5, variation_count = 7,multiply_shift=0.5,draw_as_shadow=true}),
         }
     },
-    lower_pictures = util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-short-lower", { scale = 0.5, variation_count = 7,multiply_shift=0.5}),
+    lower_pictures = util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-short-lower", { scale = 0.5, variation_count = 7,multiply_shift=0.5}),
     lower_render_layer = "floor",
   },
   --- TRUNCATED CHIMNEY
@@ -1631,9 +1531,9 @@ data:extend{
     name = "hyarion-chimney-truncated",
     type = "simple-entity",
     flags = {"placeable-neutral", "placeable-off-grid"},
-    icon = "__space-age__/graphics/icons/vulcanus-chimney-truncated.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/hyarion-chimney-truncated.png",
     subgroup = "grass",
-    order = "b[decorative]-l[rock]-a[vulcanus]-d[chimney-truncated]",
+    order = "b[decorative]-l[rock]-g[hyarion]-d[chimney-truncated]",
     collision_box = {{-0.9, -0.7}, {0.9, 0.7}},
     selection_box = {{-1, -0.8}, {1, 0.8}},
     collision_mask = {layers={item=true, object=true, player=true, water_tile=true}},
@@ -1642,7 +1542,7 @@ data:extend{
     max_health = 300,
     autoplace = {
       order = "a[landscape]-b[chimney]-b[truncated]-d",
-      probability_expression = "vulcanus_chimney_truncated"
+      probability_expression = "hyarion_chimney_truncated"
     },
     dying_trigger_effect = decorative_trigger_effects.big_rock(),
     minable =
@@ -1666,11 +1566,11 @@ data:extend{
     {
       layers =
         {
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-truncated-upper", { scale = 0.5, variation_count = 6,multiply_shift=0.5}),
-          util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-truncated-shadow", { scale = 0.5, variation_count = 6,multiply_shift=0.5,draw_as_shadow=true}),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-truncated-upper", { scale = 0.5, variation_count = 6,multiply_shift=0.5}),
+          util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-truncated-shadow", { scale = 0.5, variation_count = 6,multiply_shift=0.5,draw_as_shadow=true}),
         }
     },
-    lower_pictures = util.sprite_load("__space-age__/graphics/decorative/vulcanus-chimney/sulfuric-chimney-truncated-lower", { scale = 0.5, variation_count = 6,multiply_shift=0.5}),
+    lower_pictures = util.sprite_load("__planetaris-unbounded-assets__/graphics/decorative/hyarion-chimney/metallic-chimney-truncated-lower", { scale = 0.5, variation_count = 6,multiply_shift=0.5}),
     lower_render_layer = "floor",
   },
   --- TINTABLE ROCKS
@@ -1681,7 +1581,7 @@ data:extend{
     flags = {"placeable-neutral", "placeable-off-grid"},
     icon = "__space-age__/graphics/icons/huge-volcanic-rock.png",
     subgroup = "grass",
-    order = "b[decorative]-l[rock]-a[vulcanus]-b[huge-volcanic-rock]",
+    order = "b[decorative]-l[rock]-g[hyarion]-b[huge-volcanic-rock]",
     collision_box = {{-1.5, -1.1}, {1.5, 1.1}},
     selection_box = {{-1.7, -1.3}, {1.7, 1.3}},
     damaged_trigger_effect = hit_effects.rock(),
@@ -1711,7 +1611,7 @@ data:extend{
     },
     autoplace = {
       order = "a[landscape]-c[rock]-a[huge]",
-      probability_expression = "vulcanus_rock_huge"
+      probability_expression = "hyarion_rock_huge"
     },
     pictures =
     {
@@ -1851,7 +1751,7 @@ data:extend{
     flags = {"placeable-neutral", "placeable-off-grid"},
     icon = "__space-age__/graphics/icons/big-volcanic-rock.png",
     subgroup = "grass",
-    order = "b[decorative]-l[rock]-a[vulcanus]-a[big-volcanic-rock]",
+    order = "b[decorative]-l[rock]-g[hyarion]-a[big-volcanic-rock]",
     collision_box = {{-0.75, -0.75}, {0.75, 0.75}},
     selection_box = {{-1.0, -1.0}, {1.0, 0.75}},
     damaged_trigger_effect = hit_effects.rock(),
@@ -1859,7 +1759,7 @@ data:extend{
     max_health = 500,
     autoplace = {
       order = "a[landscape]-c[rock]-b[big]",
-      probability_expression = "vulcanus_rock_big"
+      probability_expression = "hyarion_rock_big"
     },
     dying_trigger_effect = decorative_trigger_effects.big_rock(),
     minable =
@@ -1951,8 +1851,8 @@ data:extend{
       },
       {
         filename = "__planetaris-unbounded-assets__/graphics/decorative/big-crystal-rock/big-crystal-rock-09.png",
-        width =  187 ,
-        height =  120 ,
+        width =  186 ,
+        height =  160 ,
         shift = {0.0, 0.0},
         scale = 0.5,
         tint = tintable_crystal_rock_tint
@@ -2057,7 +1957,7 @@ data:extend{
     walking_sound = space_age_tile_sounds.walking.rocky_stone({modifiers = volume_multiplier("main-menu", 1.5)}),
     autoplace = {
       order = "d[ground-surface]-i[rock]-a[medium]",
-      probability_expression = "vulcanus_rock_medium"
+      probability_expression = "hyarion_rock_medium"
     },
     trigger_effect = decorative_trigger_effects.medium_rock(),
     pictures =
@@ -2195,7 +2095,7 @@ data:extend{
     autoplace =
     {
       order = "d[ground-surface]-i[rock]-b[small]",
-      probability_expression = "vulcanus_rock_small"
+      probability_expression = "hyarion_rock_small"
     },
     trigger_effect = decorative_trigger_effects.small_rock(),
     pictures =
@@ -2374,7 +2274,7 @@ data:extend{
     {
       order = "d[ground-surface]-i[rock]-d[tiny]",
       placement_density = 5,
-      probability_expression = "vulcanus_rock_tiny"
+      probability_expression = "hyarion_rock_tiny"
     },
     trigger_effect = decorative_trigger_effects.small_rock(),
     pictures =
@@ -2554,7 +2454,7 @@ data:extend{
     {
       order = "d[ground-surface]-i[rock]-c[cluster]",
       placement_density = 2,
-      probability_expression = "vulcanus_rock_cluster"
+      probability_expression = "hyarion_rock_cluster"
     },
     pictures = get_decal_pictures("__space-age__/graphics/decorative/tiny-volcanic-rock-cluster/tiny-volcanic-rock-cluster-", "", 128, 8,tintable_crystal_rock_tint,true)
   },
@@ -2582,7 +2482,7 @@ data:extend{
         width = 51,
         height = 37,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0546875, 0.117188}
       },
@@ -2592,7 +2492,7 @@ data:extend{
         width = 52,
         height = 35,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0390625, 0.078125}
       },
@@ -2602,7 +2502,7 @@ data:extend{
         width = 46,
         height = 42,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {-0.0078125, 0.148438}
       },
@@ -2612,7 +2512,7 @@ data:extend{
         width = 53,
         height = 33,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0234375, 0.15625}
       },
@@ -2622,7 +2522,7 @@ data:extend{
         width = 47,
         height = 46,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0390625, 0.140625}
       },
@@ -2632,7 +2532,7 @@ data:extend{
         width = 62,
         height = 41,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {-0.03125, 0.09375}
       },
@@ -2642,7 +2542,7 @@ data:extend{
         width = 64,
         height = 36,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {-0.015625, 0.0703125}
       },
@@ -2652,7 +2552,7 @@ data:extend{
         width = 65,
         height = 31,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {-0.71875, -0.164062}
       },
@@ -2662,7 +2562,7 @@ data:extend{
         width = 46,
         height = 34,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {-0.0859375, 0.101562}
       },
@@ -2672,7 +2572,7 @@ data:extend{
         width = 48,
         height = 34,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0078125, 0.125}
       },
@@ -2682,7 +2582,7 @@ data:extend{
         width = 51,
         height = 33,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {-0.0859375, 0.078125}
       },
@@ -2692,7 +2592,7 @@ data:extend{
         width = 47,
         height = 39,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.078125, 0.117188}
       },
@@ -2702,7 +2602,7 @@ data:extend{
         width = 43,
         height = 33,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0, 0.09375}
       },
@@ -2712,7 +2612,7 @@ data:extend{
         width = 43,
         height = 30,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.046875, 0.140625}
       },
@@ -2722,7 +2622,7 @@ data:extend{
         width = 41,
         height = 37,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0, 0.140625}
       },
@@ -2732,7 +2632,7 @@ data:extend{
         width = 46,
         height = 33,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0234375, 0.125}
       }
@@ -2761,7 +2661,7 @@ data:extend{
         width =  29,
         height =  21,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2771,7 +2671,7 @@ data:extend{
         width =  30,
         height =  19,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2781,7 +2681,7 @@ data:extend{
         width =  29,
         height =  24,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2791,7 +2691,7 @@ data:extend{
         width =  32,
         height =  20,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2801,7 +2701,7 @@ data:extend{
         width =  29,
         height =  25,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2811,7 +2711,7 @@ data:extend{
         width =  36,
         height =  24,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2821,7 +2721,7 @@ data:extend{
         width =  78,
         height =  34,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2831,7 +2731,7 @@ data:extend{
         width =  35,
         height =  19,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2841,7 +2741,7 @@ data:extend{
         width =  28,
         height =  20,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2851,7 +2751,7 @@ data:extend{
         width =  29,
         height =  20,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2861,7 +2761,7 @@ data:extend{
         width =  29,
         height =  20,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2871,7 +2771,7 @@ data:extend{
         width =  29,
         height =  22,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2881,7 +2781,7 @@ data:extend{
         width =  27,
         height =  19,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2891,7 +2791,7 @@ data:extend{
         width =  27,
         height =  19,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2901,7 +2801,7 @@ data:extend{
         width =  26,
         height =  22,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       },
@@ -2911,7 +2811,7 @@ data:extend{
         width =  27,
         height =  20,
         tint_as_overlay = true,
-        tint = sulfur_rock_tint,
+        tint = metallic_rock_tint,
         scale = 0.5,
         shift = {0.0, 0.0}
       }
@@ -2919,7 +2819,7 @@ data:extend{
   },
   --- ROCK CLUSTERS
   {
-    name = "hyarion-sulfur-rock-cluster",
+    name = "hyarion-metallic-rock-cluster",
     type = "optimized-decorative",
     order = "a[vulcanus]-b[decorative]-b[sand]",
     collision_box = {{-1, -1}, {1, 1}},
@@ -2932,7 +2832,7 @@ data:extend{
       placement_density = 2,
       probability_expression = "vulcanus_sulfur_rock_cluster"
     },
-    pictures = get_decal_pictures("__space-age__/graphics/decorative/tiny-volcanic-rock-cluster/tiny-volcanic-rock-cluster-", "", 128, 8,sulfur_rock_tint,true)
+    pictures = get_decal_pictures("__space-age__/graphics/decorative/tiny-volcanic-rock-cluster/tiny-volcanic-rock-cluster-", "", 128, 8,metallic_rock_tint,true)
   },
   {
     type = "optimized-decorative",

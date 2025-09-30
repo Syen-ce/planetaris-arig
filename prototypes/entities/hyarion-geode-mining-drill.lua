@@ -117,7 +117,7 @@ local function bmd_sprite_load(file_name, table)
 
   table.priority = "high"
   table.scale = 0.7
-  table.filename = "__planetaris-unbounded__/graphics/entity/hyarion-geode-mining-drill/" ..
+  table.filename = "__planetaris-unbounded-assets__/graphics/entity/hyarion-geode-mining-drill/" ..
   direction_long .. "big-mining-drill-" .. file_name
   return util.sprite_load(table.filename  ,table)
 end
@@ -557,7 +557,7 @@ data:extend(
   {
     type = "mining-drill",
     name = "hyarion-geode-mining-drill",
-    icon = "__space-age__/graphics/icons/big-mining-drill.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/geode-mining-drill.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.3, result = "hyarion-geode-mining-drill"},
     max_health = 300,
@@ -639,14 +639,14 @@ data:extend(
     },
     perceived_performance = {maximum = 30.0},
 
-    mining_speed = 2.5,
+    mining_speed = 2,
     energy_source =
     {
       type = "electric",
       emissions_per_minute = { pollution = 40 },
       usage_priority = "secondary-input"
     },
-    energy_usage = "300kW",
+    energy_usage = "250kW",
     resource_searching_radius = 0.49,
     vector_to_place_result = {0, -3.85},
     module_slots = 4,
@@ -657,7 +657,7 @@ data:extend(
       height = 10
     },
     monitor_visualization_tint = {r=78, g=173, b=255},
-    fast_replaceable_group = "big-mining-drill",
+    fast_replaceable_group = nil,
     circuit_connector = table.deepcopy(circuit_connector_definitions["big-mining-drill"]),
     circuit_wire_max_distance = default_circuit_wire_max_distance
   },

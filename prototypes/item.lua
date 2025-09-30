@@ -416,7 +416,7 @@ data:extend({
      {
     type = "item",
     name = "hyarion-geode-mining-drill",
-    icon = "__space-age__/graphics/icons/big-mining-drill.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/geode-mining-drill.png",
     subgroup = "extraction-machine",
     color_hint = { text = "1" },
     order = "a[items]-d[big-mining-drill]",
@@ -585,6 +585,13 @@ data:extend({
     stack_size = 50,
     weight = 100*kg,
     default_import_location = "hyarion",
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/charged-gem-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/charged-gem-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/charged-gem-3.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/charged-gem-4.png", scale = 0.5, mipmap_count = 4 },
+    },
 
     spoil_ticks = 5 * minute,
     spoil_result = "planetaris-polished-quartz",
@@ -627,6 +634,12 @@ data:extend({
           }
         }
       }
+    },
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/unstable-gem-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/unstable-gem-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/unstable-gem-3.png", scale = 0.5, mipmap_count = 4 },
     },
 
     spoil_ticks = 15 * minute,
@@ -768,6 +781,12 @@ data:extend({
         }
       }
     },
+    pictures =
+    {
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/unstable-shard-1.png",   scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/unstable-shard-2.png", scale = 0.5, mipmap_count = 4 },
+      { size = 64, filename = "__planetaris-unbounded-assets__/graphics/icons/unstable-shard-3.png", scale = 0.5, mipmap_count = 4 },
+    },
 
     inventory_move_sound = item_sounds.sulfur_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,
@@ -882,15 +901,102 @@ data:extend({
     factoriopedia_durability_description_key = "description.factoriopedia-science-pack-remaining-amount-key",
     durability_description_value = "description.science-pack-remaining-amount-value",
   },
+    {
+    type = "item",
+    name = "planetaris-particle-manipulator",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/particle-manipulator.png",
+    subgroup = "hyarion-production",
+    order = "a-c",
+    place_result = "planetaris-particle-manipulator",
+    stack_size = 50,
+    weight = 40*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  }, 
+  {
+    type = "item",
+    name = "planetaris-beryl",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/beryl.png",
+    subgroup = "hyarion-processes",
+    order = "d[beryl]-a",
+    stack_size = 100,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-beryllium-plate",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/beryllium-plate.png",
+    subgroup = "hyarion-processes",
+    order = "d[beryl]-b",
+    stack_size = 100,
+    weight = 5*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-beryllium-nitride",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/beryllium-nitride.png",
+    subgroup = "hyarion-processes",
+    order = "d[beryl]-c",
+    stack_size = 50,
+    weight = 10*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
+  {
+    type = "item",
+    name = "planetaris-refractory-ceramics",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/refractory-ceramics.png",
+    subgroup = "hyarion-processes",
+    order = "e[post-refraction]-a",
+    stack_size = 50,
+    weight = 20*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.wire_inventory_move,
+    pick_sound = item_sounds.wire_inventory_pickup,
+    drop_sound = item_sounds.wire_inventory_move,
+  },
 
     --- space facilities
 
-   {
+  {
     type = "item",
-    name = "planetaris-beryllium-coating",
-    icon = "__base__/graphics/icons/wall.png",
+    name = "planetaris-space-manufacturer",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/space-manufacturer.png",
     subgroup = "space-facilities",
     order = "a-a",
+    place_result = "planetaris-space-manufacturer",
+    stack_size = 5,
+    weight = 1000*kg,
+    default_import_location = "hyarion",
+
+    inventory_move_sound = item_sounds.steam_inventory_move,
+    pick_sound = item_sounds.steam_inventory_pickup,
+    drop_sound = item_sounds.steam_inventory_move,
+  },  
+  {
+    type = "item",
+    name = "planetaris-beryllium-coating",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/beryllium-coating.png",
+    subgroup = "space-facilities",
+    order = "a-b",
+    place_result = "planetaris-beryllium-coating",
     stack_size = 100,
     weight = 20*kg,
     default_import_location = "hyarion",

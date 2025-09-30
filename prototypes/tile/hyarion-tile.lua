@@ -110,7 +110,7 @@ data:extend({
   },
 
   -- Ashlands
-  -- Low hyarion_aux low hyarion_moisture is ash
+  -- Low hyarion_aux low hyarion_moisture is crystal
   -- Low hyarion_aux high hyarion_moisture is trees & grass.
   -- High hyarion_aux low hyarion_moisture is chimneys and rocks.
   -- High hyarion_aux high hyarion_moisture is rocks with pita
@@ -133,7 +133,7 @@ data:extend({
     expression = "min(1, 4 * (hyarion_valley_biome - 0.25))\z
                   + max(-1.5 * (hyarion_aux - 0.25),\z
                         0.01 - 1.5 * abs(hyarion_aux - 0.5) - 1.5 * (hyarion_moisture - 0.66))"
-    -- the last part is an axtra line blending ash cracks to light ash
+    -- the last part is an axtra line blending crystal cracks to light crystal
   },
   {
     type = "noise-expression",
@@ -345,10 +345,10 @@ data:extend({
     absorptions_per_second = tile_pollution.lava
 
   },
-  ----------- ASH SAND
+  ----------- crystal SAND
   {
     type = "tile",
-    name = "hyarion-ash-light",
+    name = "hyarion-crystal-light",
     subgroup = "hyarion-tiles",
     order = "a-o",
     collision_mask = tile_collision_masks.ground(),
@@ -359,7 +359,7 @@ data:extend({
     layer = hyarion_tile_offset + 14,
     sprite_usage_surface = "vulcanus",
     variants = tile_variations_template_with_transitions(
-      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-ash-light.png",
+      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-crystal-light.png",
       {
         max_size = 4,
         [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -382,7 +382,7 @@ data:extend({
   },
   {
     type = "tile",
-    name = "hyarion-ash-dark",
+    name = "hyarion-crystal-dark",
     subgroup = "hyarion-tiles",
     order = "a-p",
     collision_mask = tile_collision_masks.ground(),
@@ -393,7 +393,7 @@ data:extend({
     layer = hyarion_tile_offset + 13,
     sprite_usage_surface = "vulcanus",
     variants = tile_variations_template_with_transitions(
-      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-ash-dark.png",
+      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-crystal-dark.png",
       {
         max_size = 4,
         [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -414,10 +414,10 @@ data:extend({
 
     trigger_effect = tile_trigger_effects.dirt_2_trigger_effect()
   },
-  ----------- ASH SAND
+  ----------- crystal SAND
   {
     type = "tile",
-    name = "hyarion-ash-flats",
+    name = "hyarion-crystal-flats",
     subgroup = "hyarion-tiles",
     order = "a-o",
     collision_mask = tile_collision_masks.ground(),
@@ -428,7 +428,7 @@ data:extend({
     layer = hyarion_tile_offset + 12,
     sprite_usage_surface = "vulcanus",
     variants = tile_variations_template_with_transitions(
-      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-ash-flats.png",
+      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-crystal-flats.png",
       {
         max_size = 4,
         [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -551,7 +551,7 @@ data:extend({
   },
   {
     type = "tile",
-    name = "hyarion-ash-cracks",
+    name = "hyarion-crystal-cracks",
     subgroup = "hyarion-tiles",
     order = "a-r",
     collision_mask = tile_collision_masks.ground(),
@@ -562,7 +562,7 @@ data:extend({
     layer = hyarion_tile_offset + 6,
     sprite_usage_surface = "vulcanus",
     variants = tile_variations_template_with_transitions(
-      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-ash-cracks.png",
+      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-crystal-cracks.png",
       {
         max_size = 4,
         [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -709,7 +709,7 @@ data:extend({
   },
   {
     type = "tile",
-    name = "hyarion-ash-soil",
+    name = "hyarion-crystal-soil",
     subgroup = "hyarion-tiles",
     order = "a-q",
     collision_mask = tile_collision_masks.ground(),
@@ -720,7 +720,7 @@ data:extend({
     layer = hyarion_tile_offset + 11,
     sprite_usage_surface = "vulcanus",
     variants = tile_variations_template_with_transitions(
-      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-ash-soil.png",
+      "__planetaris-unbounded-assets__/graphics/terrain/hyarion/hyarion-crystal-soil.png",
       {
         max_size = 4,
         [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },

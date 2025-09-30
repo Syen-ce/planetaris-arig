@@ -1,11 +1,17 @@
 require ("util")
 require ("circuit-connector-sprites")
+require ("prototypes.circuit-connector-definitions")
+require ("__space-age__/prototypes/entity/circuit-network")
+require ("__base__/prototypes/entity/circuit-network")
 require ("__base__/prototypes/entity/pipecovers")
 
 local simulations = require("prototypes.factoriopedia-simulations")
 local sounds = require("__base__/prototypes/entity/sounds")
 
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
+
+local wall_shift = 20
+local wall_shift_adjust = wall_shift - 7
 
 data:extend({
     scaled_cliff(
@@ -1578,7 +1584,7 @@ data:extend({
     },
     collision_box = {{-0.85, -0.85}, {0.85, 0.85}},
     selection_box = {{-1, -1}, {1, 1}},
-    lightning_strike_offset = {0, -0.8},
+    lightning_strike_offset = {0, -1},
     damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2},{0.2, 0.2}}),
     open_sound = sounds.electric_network_open,
     close_sound = sounds.electric_network_close,
@@ -1618,7 +1624,7 @@ data:extend({
         priority = "extra-high",
         width = 11,
         height = 30,
-        shift = util.by_pixel(0, 50),
+        shift = util.by_pixel(0, 28),
         variation_count = 1,
         scale = 1
       },
@@ -1659,10 +1665,6 @@ data:extend({
     selection_box = {{-3, -3}, {3, 3}},
     drawing_box_vertical_extension = 1,
     damaged_trigger_effect = hit_effects.entity(),
-    graphics_set = {
-        animation = polisher_animation,
-        working_visualisations = working_visualisations
-    },
   
     impact_category = data.raw["assembling-machine"]["electromagnetic-plant"].impact_category,
     open_sound = table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].open_sound),
@@ -1710,7 +1712,7 @@ data:extend({
             frame_count = 60,
             line_length = 8,
             animation_speed = 1,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
             scale = 0.5
           },
           {
@@ -1719,7 +1721,7 @@ data:extend({
             height = 600,          
             repeat_count = 60,
             draw_as_shadow = true,
-            shift = util.by_pixel(0, 0),
+            shift = util.by_pixel(0, -10),
             scale = 0.5
           },
         }
@@ -1737,7 +1739,7 @@ data:extend({
       width = 400,
       height = 450,
       animation_speed = 0.5,
-      shift = util.by_pixel(0, 0),
+      shift = util.by_pixel(0, -10),
       scale = 0.5
       },
       {
@@ -1746,7 +1748,7 @@ data:extend({
         height = 600,          
         repeat_count = 60,
         draw_as_shadow = true,
-        shift = util.by_pixel(0, 0),
+        shift = util.by_pixel(0, -10),
         scale = 0.5
       },
     }}},
@@ -1759,9 +1761,9 @@ data:extend({
     type = "wall",
     name = "planetaris-beryllium-coating",
     icon = "__planetaris-unbounded-assets__/graphics/icons/beryllium-coating.png",
-    flags = {"placeable-neutral", "player-creation"},
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
     collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
-    selection_box = {{-0.5, -1}, {0.5, 1}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
     damaged_trigger_effect = hit_effects.wall(),
     minable = {mining_time = 0.4, result = "planetaris-beryllium-coating"},
     fast_replaceable_group = nil,
@@ -1813,6 +1815,14 @@ data:extend({
         percent = 70
       }
     },
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
     visual_merge_group = 1, -- different walls will visually connect to each other if their merge group is same (defaults to 0)
     pictures =
     {
@@ -1827,7 +1837,7 @@ data:extend({
             height = 86,
             variation_count = 2,
             line_length = 2,
-            shift = util.by_pixel(0, -5),
+            shift = util.by_pixel(0, -5 - wall_shift),
             scale = 1
           },
           {
@@ -1836,7 +1846,7 @@ data:extend({
             width = 98,
             height = 60,
             repeat_count = 2,
-            shift = util.by_pixel(10, 17),
+            shift = util.by_pixel(10, 17 - wall_shift),
             draw_as_shadow = true,
             scale = 1
           }
@@ -1853,7 +1863,7 @@ data:extend({
             height = 134,
             variation_count = 5,
             line_length = 5,
-            shift = util.by_pixel(0, 8),
+            shift = util.by_pixel(0, 8 - wall_shift),
             scale = 1
           },
           {
@@ -1862,7 +1872,7 @@ data:extend({
             width = 98,
             height = 110,
             repeat_count = 5,
-            shift = util.by_pixel(10, 29),
+            shift = util.by_pixel(10, 29 - wall_shift),
             draw_as_shadow = true,
             scale = 1
           }
@@ -1879,7 +1889,7 @@ data:extend({
             height = 92,
             variation_count = 6,
             line_length = 6,
-            shift = util.by_pixel(0, -2),
+            shift = util.by_pixel(0, -2 - wall_shift),
             scale = 1
           },
           {
@@ -1888,7 +1898,7 @@ data:extend({
             width = 124,
             height = 68,
             repeat_count = 6,
-            shift = util.by_pixel(14, 15),
+            shift = util.by_pixel(14, 15 - wall_shift),
             draw_as_shadow = true,
             scale = 1
           }
@@ -1905,7 +1915,7 @@ data:extend({
             height = 128,
             variation_count = 2,
             line_length = 2,
-            shift = util.by_pixel(0, 7),
+            shift = util.by_pixel(0, 7 - wall_shift_adjust),
             scale = 1
           },
           {
@@ -1914,7 +1924,7 @@ data:extend({
             width = 124,
             height = 120,
             repeat_count = 2,
-            shift = util.by_pixel(17, 28),
+            shift = util.by_pixel(17, 28 - wall_shift_adjust),
             draw_as_shadow = true,
             scale = 1
           }
@@ -1931,7 +1941,7 @@ data:extend({
             height = 134,
             variation_count = 2,
             line_length = 2,
-            shift = util.by_pixel(0, 7),
+            shift = util.by_pixel(0, 7 - wall_shift_adjust),
             scale = 1
           },
           {
@@ -1940,7 +1950,7 @@ data:extend({
             width = 102,
             height = 120,
             repeat_count = 2,
-            shift = util.by_pixel(9, 28),
+            shift = util.by_pixel(9, 28 - wall_shift_adjust),
             draw_as_shadow = true,
             scale = 1
           }
@@ -1957,7 +1967,7 @@ data:extend({
             height = 134,
             variation_count = 4,
             line_length = 4,
-            shift = util.by_pixel(0, 7),
+            shift = util.by_pixel(0, 7 - wall_shift_adjust),
             scale = 1
           },
           {
@@ -1966,7 +1976,7 @@ data:extend({
             width = 124,
             height = 120,
             repeat_count = 4,
-            shift = util.by_pixel(14, 28),
+            shift = util.by_pixel(14, 28 - wall_shift_adjust),
             draw_as_shadow = true,
             scale = 1
           }
@@ -1983,7 +1993,7 @@ data:extend({
             height = 92,
             variation_count = 2,
             line_length = 2,
-            shift = util.by_pixel(0, -3),
+            shift = util.by_pixel(0, -3 - wall_shift),
             scale = 1
           },
           {
@@ -1992,7 +2002,7 @@ data:extend({
             width = 124,
             height = 68,
             repeat_count = 2,
-            shift = util.by_pixel(17, 15),
+            shift = util.by_pixel(17, 15 - wall_shift),
             draw_as_shadow = true,
             scale = 1
           }
@@ -2009,7 +2019,7 @@ data:extend({
             height = 92,
             variation_count = 2,
             line_length = 2,
-            shift = util.by_pixel(0, -3),
+            shift = util.by_pixel(0, -3 - wall_shift),
             scale = 1
           },
           {
@@ -2018,7 +2028,7 @@ data:extend({
             width = 102,
             height = 68,
             repeat_count = 2,
-            shift = util.by_pixel(9, 15),
+            shift = util.by_pixel(9, 15 - wall_shift),
             draw_as_shadow = true,
             scale = 1
           }
@@ -2032,8 +2042,8 @@ data:extend({
         height = 56,
         variation_count = 8,
         line_length = 8,
-        shift = util.by_pixel(0, -1),
-        scale = 1
+        shift = util.by_pixel(0 + 0, -1 - wall_shift - 17),
+        scale = 0.5
       },
       water_connection_patch =
       {
@@ -2044,7 +2054,7 @@ data:extend({
             priority = "extra-high",
             width = 116,
             height = 128,
-            shift = util.by_pixel(0, -2),
+            shift = util.by_pixel(0, -2 - wall_shift),
             scale = 1
           },
           {
@@ -2052,7 +2062,7 @@ data:extend({
             priority = "extra-high",
             width = 144,
             height = 100,
-            shift = util.by_pixel(9, 15),
+            shift = util.by_pixel(9, 15 - wall_shift),
             draw_as_shadow = true,
             scale = 1
           }
@@ -2067,7 +2077,7 @@ data:extend({
             priority = "extra-high",
             width = 82,
             height = 108,
-            shift = util.by_pixel(0, -7),
+            shift = util.by_pixel(0, -7 - wall_shift),
             scale = 1
           },
           {
@@ -2075,7 +2085,7 @@ data:extend({
             priority = "extra-high",
             width = 130,
             height = 78,
-            shift = util.by_pixel(14, 18),
+            shift = util.by_pixel(14, 18 - wall_shift),
             draw_as_shadow = true,
             scale = 1
           }
@@ -2093,7 +2103,7 @@ data:extend({
         height = 44,
         draw_as_glow = true,
         --frames = 4,
-        shift = util.by_pixel(-1, -23),
+        shift = util.by_pixel(-1, -23 - wall_shift),
         scale = 1
       }
     },
@@ -2101,7 +2111,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {g=1},
-      shift = util.by_pixel(0, -30),
+      shift = util.by_pixel(0, -30 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2109,7 +2119,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {g=1},
-      shift = util.by_pixel(12, -23),
+      shift = util.by_pixel(12, -23 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2117,7 +2127,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {g=1},
-      shift = util.by_pixel(0, -17),
+      shift = util.by_pixel(0, -17 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2125,7 +2135,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {g=1},
-      shift = util.by_pixel(-12, -23),
+      shift = util.by_pixel(-12, -23 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2140,7 +2150,7 @@ data:extend({
         height = 44,
         draw_as_glow = true,
         --frames = 4,
-        shift = util.by_pixel(-1, -23),
+        shift = util.by_pixel(-1, -23 - wall_shift),
         scale = 1
       }
     },
@@ -2148,7 +2158,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {r=1},
-      shift = util.by_pixel(0, -30),
+      shift = util.by_pixel(0, -30 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2156,7 +2166,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {r=1},
-      shift = util.by_pixel(12, -23),
+      shift = util.by_pixel(12, -23 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2164,7 +2174,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {r=1},
-      shift = util.by_pixel(0, -17),
+      shift = util.by_pixel(0, -17 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2172,7 +2182,7 @@ data:extend({
     {
       minimum_darkness = 0.3,
       color = {r=1},
-      shift = util.by_pixel(-12, -23),
+      shift = util.by_pixel(-12, -23 - wall_shift),
       size = 1,
       intensity = 0.2
     },
@@ -2181,4 +2191,224 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     default_output_signal = {type = "virtual", name = "signal-G"}
   },
+{
+    type = "assembling-machine",
+    name = "planetaris-space-manufacturer",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/space-manufacturer.png",
+    icon_size = 64,
+    flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    subgroup = "space-facilities",
+    order = "a-a",
+    minable = {mining_time = 1, results = {{type = "item", name = "planetaris-space-manufacturer", amount = 1}}},
+    fast_replaceable_group = nil,
+    max_health = 1800,
+    corpse = data.raw["fusion-reactor"]["fusion-reactor"].corpse,
+    dying_explosion = "big-explosion",
+    resistances = {
+        {type = "physical", percent = 30},
+        {type = "fire",     percent = 20},
+        {type = "impact",   percent = 50},
+    },
+    heating_energy = "800kW",
+
+    collision_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
+    tile_buildability_rules =
+    {
+      {
+        area = {{-5.5, -5.5}, {5.5, 5.5}},
+        required_tiles = {layers = {ground_tile = true}},
+        colliding_tiles = {layers = {empty_space = true}},
+        remove_on_collision = true
+      }
+    },
+    drawing_box_vertical_extension = 0.5,
+    damaged_trigger_effect = hit_effects.entity(),
+  
+    impact_category = "metal",
+    open_sound = sounds.machine_open,
+    close_sound = sounds.machine_close,
+    working_sound = {
+      sound = sound_variations("__base__/sound/nuclear-reactor", 2, 0.55, volume_multiplier("main-menu", 0.8)),
+      max_sounds_per_prototype = 3,
+      fade_in_ticks = 4,
+      fade_out_ticks = 20
+    },
+    idle_sound = {filename = "__base__/sound/idle1.ogg"},
+
+    crafting_speed = 1,
+    crafting_categories = {"sifting"},
+    result_inventory_size = 2,
+    module_slots = 6,
+    allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
+    energy_usage = "250kW",
+    energy_source =
+    {
+      type = "electric",
+      usage_priority = "secondary-input",
+      emissions_per_minute = { pollution = 2 }
+    },
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+
+    graphics_set =
+    {
+      animation =
+      {
+      north = {
+        layers =
+        {
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-animation.png",
+            priority = "high",
+            animation_speed = 0.5,
+            scale = 0.5,
+            line_length= 10,
+            frame_count= 100,
+            draw_as_glow= false,
+            width= 320,
+            height= 350,
+            shift = util.by_pixel(0, 0),
+          },
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-shadow.png",
+            priority = "extra-high",
+            width = 320,
+            height = 350,
+            repeat_count = 100,
+            shift = util.by_pixel(10, 0),
+            draw_as_shadow = true,
+            scale = 0.5
+            }
+          }
+        },
+      },
+    idle_animation =
+    {
+      north = {
+        layers = {
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-color2.png",
+            priority = "extra-high",
+            width = 320,
+            height = 350,
+            repeat_count = 100,
+            scale = 0.5
+          },
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-color1.png",
+            priority = "extra-high",
+            width = 320,
+            height = 350,
+            repeat_count = 100,
+            scale = 0.5
+          },
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-idle.png",
+            priority = "extra-high",
+            width = 320,
+            height = 350,
+            repeat_count = 100,
+            scale = 0.5
+          },
+          {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-shadow.png",
+            priority = "extra-high",
+            width = 320,
+            height = 350,
+            shift = util.by_pixel(10, 0),
+            draw_as_shadow = true,
+            repeat_count = 100,
+            scale = 0.5
+          },
+    }}
+    },
+    working_visualisations = {
+      {
+        animation =
+            {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-emission3.png",
+            priority = "high",
+            scale= 0.5,
+            line_length= 10,
+            frame_count= 100,
+            width= 320,
+            height= 350,
+            shift = util.by_pixel(0, 0),
+            draw_as_glow= true,
+            blend_mode= "additive",
+          },
+      },
+      {
+        animation =
+            {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-emission2.png",
+            priority = "high",
+            scale= 0.5,
+            line_length= 10,
+            frame_count= 100,
+            width= 320,
+            height= 350,
+            shift = util.by_pixel(0, 0),
+            draw_as_glow= true,
+            blend_mode= "additive",
+          },
+      },
+      {
+        animation =
+            {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-emission1.png",
+            priority = "high",
+            scale= 0.5,
+            line_length= 10,
+            frame_count= 100,
+            width= 320,
+            height= 350,
+            shift = util.by_pixel(0, 0),
+            draw_as_glow= true,
+            blend_mode= "additive",
+          },
+      },
+      {
+        animation =
+            {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-color2.png",
+            priority = "high",
+            scale= 0.5,
+            line_length= 10,
+            frame_count= 100,
+            draw_as_glow= false,
+            width= 320,
+            height= 350,
+            shift = util.by_pixel(0, 0),
+          },
+      },
+      {
+        animation =
+            {
+            filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-color1.png",
+            priority = "high",
+            scale= 0.5,
+            line_length= 10,
+            frame_count= 100,
+            draw_as_glow= false,
+            width= 320,
+            height= 350,
+            shift = util.by_pixel(0, 0),
+          },
+      }
+    }
+},
+
+
+    icon_draw_specification = {scale = 1.75, shift = {0, -0.5}},
+    circuit_connector = circuit_connector_definitions["manufacturer"],
+    circuit_wire_max_distance = default_circuit_wire_max_distance,
+},
 })

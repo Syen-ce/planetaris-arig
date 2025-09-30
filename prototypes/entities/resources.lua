@@ -258,7 +258,7 @@ data:extend ({
         tree_removal_max_distance = 32 * 32,
         minable =
         {
-          mining_time = 10,
+          mining_time = 6,
           results =
           {
             {
@@ -354,7 +354,7 @@ data:extend ({
         tree_removal_max_distance = 32 * 32,
         minable =
         {
-          mining_time = 10,
+          mining_time = 6,
           results =
           {
             {
@@ -394,7 +394,7 @@ data:extend ({
             {
               priority = "extra-high",
               scale = 0.5,
-              frame_count = 40,
+              frame_count = 28,
               animation_speed = 0.2,
             })
           },
@@ -450,7 +450,7 @@ data:extend ({
         tree_removal_max_distance = 32 * 32,
         minable =
         {
-          mining_time = 10,
+          mining_time = 6,
           results =
           {
             {

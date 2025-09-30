@@ -36,7 +36,7 @@ simulations.factoriopedia_cliff_hyarion =
     game.simulation.camera_position = {0, 2.5}
     for x = -8, 8, 1 do
       for y = -3, 4 do
-        game.surfaces[1].set_tiles{{position = {x, y}, name = "hyarion-ash-soil"}}
+        game.surfaces[1].set_tiles{{position = {x, y}, name = "hyarion-crystal-soil"}}
       end
     end
     for x = -8, 8, 4 do
@@ -55,7 +55,7 @@ simulations.factoriopedia_hyarion_crater_cliff =
     game.simulation.camera_position = {-0.5, 1.5}
     for x = -28, 24, 1 do
       for y = -10, 14 do
-        game.surfaces[1].set_tiles{{position = {x, y}, name = "hyarion-ash-soil"}}
+        game.surfaces[1].set_tiles{{position = {x, y}, name = "hyarion-crystal-soil"}}
       end
     end
 
@@ -66,6 +66,30 @@ simulations.factoriopedia_hyarion_crater_cliff =
     game.surfaces[1].create_entity{name = "hyarion-crater-cliff", position = {6.5, 1.625}, cliff_orientation = "north-to-south"}
     game.surfaces[1].create_entity{name = "hyarion-crater-cliff", position = {-5.44922, 5.121}, cliff_orientation = "east-to-north"}
     game.surfaces[1].create_entity{name = "hyarion-crater-cliff", position = {4.4492, 5.121}, cliff_orientation = "north-to-west"}
+  ]]
+}
+
+-----------////////////////////////////////////////////////////////////// PLANTS
+
+simulations.factoriopedia_hyarion_pointy_crystal =
+{
+  planet = "hyarion",
+  hide_factoriopedia_gradient = true,
+  init =
+  [[
+    game.simulation.camera_zoom = 1.4
+    game.simulation.camera_position = {-0.5, 0}
+    for x = -10, 9, 1 do
+      for y = -4, 4 do
+        game.surfaces[1].set_tiles{{position = {x, y}, name = "hyarion-crystal-flats"}}
+      end
+    end
+
+    game.surfaces[1].create_entity{name = "hyarion-pointy-crystal", position = {x=-2.54, y=-0.76}}
+    game.surfaces[1].create_entity{name = "hyarion-pointy-crystal", position = {x=2.87, y=-0.37}}
+    game.surfaces[1].create_entity{name = "hyarion-pointy-crystal", position = {x=-3.68, y=1.83}}
+    game.surfaces[1].create_entity{name = "hyarion-pointy-crystal", position = {x=-0.10, y=0.67}}
+    game.surfaces[1].create_entity{name = "hyarion-pointy-crystal", position = {x=4.80, y=1.69}}
   ]]
 }
 

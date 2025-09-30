@@ -454,7 +454,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-water-harvester",
       subgroup = "arig-processes",
-      energy_required = 30,
+      energy_required = 20,
       enabled = false,
       ingredients =
       {
@@ -1104,7 +1104,6 @@ data:extend(
         property = "planetaris-crystalization-resistance",
         min = 50,
         max = 100,
-        
       }
     },
     ingredients =
@@ -1112,10 +1111,194 @@ data:extend(
         {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
         {type = "item", name = "planetaris-fiber-optics-cable", amount = 5},
         {type = "item", name = "planetaris-nanoscale-lens", amount = 5},
-        {type = "item", name = "planetaris-polished-sapphire", amount = 5},
+        {type = "item", name = "planetaris-ruby-laser", amount = 5},
     },
     energy_required = 10,
     results = {{type="item", name="planetaris-refraction-science-pack", amount=1}},
+    allow_productivity = true,
+  },
+
+-- Particle Manipulation
+
+    {
+    type = "recipe",
+    name = "planetaris-particle-manipulator",
+    category = "electromagnetics",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "planetaris-crystalization-resistance",
+        min = 50,
+        max = 100,
+      }
+    },
+    ingredients =
+    {
+        {type = "item", name = "planetaris-heavy-glass", amount = 50},
+        {type = "item", name = "holmium-plate", amount = 25},
+        {type = "item", name = "planetaris-nanoscale-lens", amount = 25},
+        {type = "item", name = "planetaris-simulating-unit", amount = 10},
+        {type = "item", name = "planetaris-crystalization-motor", amount = 15},
+    },
+    energy_required = 10,
+    results = {{type="item", name="planetaris-particle-manipulator", amount=1}},
+    allow_productivity = true,
+  },
+  {
+    type = "recipe",
+    name = "planetaris-beryl",
+    category = "particle-manipulation",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+      {type = "item", name = "planetaris-polished-emerald", amount = 3},
+      {type = "item", name = "planetaris-unstable-gem", amount = 1},
+    },
+    results = {
+      {type="item", name="planetaris-beryl", amount=1},
+      {type="fluid", name="planetaris-aluminium", amount=10}
+    },
+    main_product = "planetaris-beryl",
+    allow_productivity = true,
+
+    crafting_machine_tint = {primary = {0.4, 1, 0.4, 0.6}, secondary = {0, 1, 0, 0.8}},
+  },
+  {
+    type = "recipe",
+    name = "planetaris-beryllium-plate",
+    category = "particle-manipulation",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "fluid", name = "planetaris-polishing-compound", amount = 10},
+      {type = "item", name = "planetaris-beryl", amount = 3},
+      {type = "item", name = "copper-ore", amount = 5},
+    },
+    results = {{type="item", name="planetaris-beryllium-plate", amount=1}},
+    allow_productivity = true,
+
+    crafting_machine_tint = {primary = {0.4, 0.8, 0.4, 0.6}, secondary = {0, 0.8, 0, 0.8}},
+  },
+  {
+    type = "recipe",
+    name = "planetaris-beryllium-nitride",
+    category = "particle-manipulation",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 6,
+    ingredients =
+    {
+      {type = "fluid", name = "lava", amount = 30},
+      {type = "item", name = "planetaris-beryl", amount = 2},
+      {type = "item", name = "sulfur", amount = 6},
+    },
+    results = {{type="item", name="planetaris-beryllium-nitride", amount=1}},
+    allow_productivity = true,
+
+    crafting_machine_tint = {primary = {0.4, 0.8, 0.4, 0.6}, secondary = {0, 0.8, 0, 0.8}},
+  },
+  {
+    type = "recipe",
+    name = "carbon-particle-manipulation",
+    category = "particle-manipulation",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "carbon", amount = 3},
+    },
+    results = {{type="item", name="coal", amount=2}},
+    allow_productivity = true,
+
+    crafting_machine_tint = {primary = {0,0,0,0.5}, secondary = {1,1,1,1}},
+  },
+  {
+    type = "recipe",
+    name = "coal-particle-manipulation",
+    category = "particle-manipulation",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "item", name = "coal", amount = 3},
+    },
+    results = {{type="item", name="carbon", amount=2}},
+    allow_productivity = true,
+
+    crafting_machine_tint = {primary = {0,0,0,0.5}, secondary = {1,1,1,1}},
+  },
+---
+  {
+    type = "recipe",
+    name = "planetaris-refractory-ceramics",
+    category = "compressing",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 3,
+    ingredients =
+    {
+      {type = "fluid", name = "planetaris-aluminium", amount = 10},
+      {type = "item", name = "planetaris-beryllium-nitride", amount = 3},
+      {type = "item", name = "planetaris-silica", amount = 25},
+    },
+    results = {{type="item", name="planetaris-refractory-ceramics", amount=1}},
+    allow_productivity = true,
+  },
+
+  --- Space Facilites
+    {
+    type = "recipe",
+    name = "planetaris-space-manufacturer",
+    category = "advanced-crafting",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+        {type = "item", name = "tungsten-plate", amount = 50},
+        {type = "item", name = "planetaris-fiber-optics-cable", amount = 30},
+        {type = "item", name = "planetaris-beryllium-plate", amount = 60},
+        {type = "item", name = "planetaris-simulating-unit", amount = 15},
+    },
+    energy_required = 10,
+    results = {{type="item", name="planetaris-space-manufacturer", amount=1}},
+    allow_productivity = true,
+  },
+    {
+    type = "recipe",
+    name = "planetaris-beryllium-coating",
+    category = "space-manufacturing",
+    enabled = false,
+    surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0,
+        max = 0
+      }
+    },
+    ingredients =
+    {
+        {type = "item", name = "planetaris-beryllium-plate", amount = 5},
+        {type = "item", name = "planetaris-sandstone-brick", amount = 20},
+        {type = "item", name = "planetaris-refractory-ceramics", amount = 2},
+    },
+    energy_required = 5,
+    results = {{type="item", name="planetaris-beryllium-coating", amount=1}},
     allow_productivity = true,
   },
 })

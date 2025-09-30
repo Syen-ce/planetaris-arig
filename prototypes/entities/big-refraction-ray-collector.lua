@@ -9,6 +9,7 @@ local function lightning_rod_picture(repeat_count)
       {
         priority = "high",
         scale = 0.5,
+        shift = util.by_pixel(0, -22),
         repeat_count = repeat_count
       }),
       util.sprite_load("__planetaris-unbounded-assets__/graphics/entity/big-refraction-ray-collector/big-refraction-ray-collector-shadow",
@@ -16,6 +17,7 @@ local function lightning_rod_picture(repeat_count)
         priority = "high",
         draw_as_shadow = true,
         scale = 0.5,
+        shift = util.by_pixel(0, -22),
         repeat_count = repeat_count
       })
     }
@@ -34,6 +36,7 @@ local function lightning_rod_charge()
         scale = 0.5,
         frame_count = 30,
         draw_as_glow = true,
+        shift = util.by_pixel(0, -22),
       })
     }
   }
@@ -51,6 +54,7 @@ local function lightning_rod_discharge()
         scale = 0.5,
         frame_count = 30,
         draw_as_glow = true,
+        shift = util.by_pixel(0, -22),
       })
     }
   }

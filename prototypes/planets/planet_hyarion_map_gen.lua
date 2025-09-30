@@ -131,9 +131,9 @@ data:extend{
                             0.3 - 0.6 * hyarion_flood_paths), 0, 1)"
   },
   ---- MOISTURE (0-1): On hyarion used for vegetation clustering.
-  ---- 0 is no vegetation, such as ash bowels in the valley.
+  ---- 0 is no vegetation, such as crystal bowels in the valley.
   ---- 1 is vegetation pathches (mainly in valley).
-  ---- As this drives the ash bowls, it also has an impact on small rock & pebble placement.
+  ---- As this drives the crystal bowls, it also has an impact on small rock & pebble placement.
   {
     type = "noise-expression",
     name = "hyarion_moisture",

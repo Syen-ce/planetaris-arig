@@ -131,11 +131,11 @@ planet_map_gen.arig = function()
           --nauvis tiles
           ["hyarion-soil-dark"] = {},
           ["hyarion-soil-light"] = {},
-          ["hyarion-ash-soil"] = {},
+          ["hyarion-crystal-soil"] = {},
           --end of nauvis tiles
-          ["hyarion-ash-flats"] = {},
-          ["hyarion-ash-light"] = {},
-          ["hyarion-ash-dark"] = {},
+          ["hyarion-crystal-flats"] = {},
+          ["hyarion-crystal-light"] = {},
+          ["hyarion-crystal-dark"] = {},
           ["hyarion-cracks"] = {},
           ["hyarion-cracks-warm"] = {},
           ["hyarion-folds"] = {},
@@ -148,31 +148,29 @@ planet_map_gen.arig = function()
           ["hyarion-jagged-ground"] = {},
           ["hyarion-smooth-stone"] = {},
           ["hyarion-smooth-stone-warm"] = {},
-          ["hyarion-ash-cracks"] = {},
+          ["hyarion-crystal-cracks"] = {},
         }
         },
         ["decorative"] =
         {
           settings =
         {
-          -- nauvis decoratives
-          ["hyarion-brown-carpet-grass"] = {},
-          ["hyarion-green-hairy-grass"] = {},
-          ["hyarion-brown-hairy-grass"] = {},
-          ["hyarion-red-pita"] = {},
-          -- end of nauvis
+          ["hyarion-red-crystal"] = {},
+          ["hyarion-yellow-crystal"] = {},
+          ["hyarion-orange-crystal"] = {},
+          ["hyarion-small-crystal"] = {},
           ["hyarion-rock-decal-large"] = {},
           ["hyarion-crack-decal-large"] = {},
           ["hyarion-crack-decal-huge-warm"] = {},
           ["hyarion-dune-decal"] = {},
           ["hyarion-sand-decal"] = {},
           ["hyarion-lava-fire"] = {},
-          ["hyarion-calcite-stain"] = {},
-          ["hyarion-calcite-stain-small"] = {},
-          ["hyarion-sulfur-stain"] = {},
-          ["hyarion-sulfur-stain-small"] = {},
-          ["hyarion-sulfuric-acid-puddle"] = {},
-          ["hyarion-sulfuric-acid-puddle-small"] = {},
+          ["hyarion-carbon-stain"] = {},
+          ["hyarion-carbon-stain-small"] = {},
+          ["hyarion-metallic-stain"] = {},
+          ["hyarion-metallic-stain-small"] = {},
+          ["hyarion-metallic-puddle"] = {},
+          ["hyarion-metallic-puddle-small"] = {},
           ["hyarion-crater-small"] = {},
           ["hyarion-crater-large"] = {},
           ["hyarion-pumice-relief-decal"] = {},
@@ -182,7 +180,7 @@ planet_map_gen.arig = function()
           ["hyarion-tiny-rock-cluster"] = {},
           ["hyarion-small-sulfur-rock"] = {},
           ["hyarion-tiny-sulfur-rock"] = {},
-          ["hyarion-sulfur-rock-cluster"] = {},
+          ["hyarion-metallic-rock-cluster"] = {},
           ["hyarion-waves-decal"] = {},
         }
         },
@@ -204,8 +202,7 @@ planet_map_gen.arig = function()
           ["hyarion-chimney-cold"] = {},
           ["hyarion-chimney-short"] = {},
           ["hyarion-chimney-truncated"] = {},
-          ["ashland-lichen-tree"] = {},
-          ["ashland-lichen-tree-flaming"] = {},
+          ["hyarion-pointy-crystal"] = {},
         }
         }
       }
