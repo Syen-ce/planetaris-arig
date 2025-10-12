@@ -1,3 +1,5 @@
+local planetaris_tile_collision_masks = require("prototypes.tile.tile-collision-masks")
+
 -- Set the next_upgrade property to point to assembling-machine-4
 
 local assemblingMachine3 = data.raw["assembling-machine"]["assembling-machine-3"]
@@ -9,6 +11,9 @@ data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "planetaris-hy
 data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "planetaris-hyper-underground-belt"
 data.raw["splitter"]["turbo-splitter"].next_upgrade = "planetaris-hyper-splitter"
 
+-- Set Upgrade for solar panels
+
+data.raw["solar-panel"]["solar-panel"].next_upgrade = "planetaris-advanced-solar-panel"
 
 -- Add new sea tiles to Foundation
 table.insert(data.raw.item["foundation"].place_as_tile.tile_condition, "arig-sand")
@@ -38,6 +43,7 @@ end
 
 -- Surface conditions
 
+-- No buildable on Arig
 table.insert(data.raw["rail-ramp"]["rail-ramp"].surface_conditions, {
         property = "planetaris-dust-concentration",
         max = 50
@@ -67,7 +73,28 @@ table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
         max = 50
       })
 
+-- No buildable on Hyarion      
+data.raw["lightning-attractor"]["lightning-collector"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 49
+      }}
+data.raw["lightning-attractor"]["lightning-rod"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 49
+      }}
+data.raw["fusion-generator"]["fusion-generator"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 49
+      }}
+data.raw["reactor"]["nuclear-reactor"].surface_conditions = {{
+        property = "planetaris-crystalization-resistance",
+        max = 49
+      }}
+      
+-- Adding science packs
 table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
+table.insert(data.raw.lab["lab"].inputs, "planetaris-polishing-science-pack")
+table.insert(data.raw.lab["lab"].inputs, "planetaris-refraction-science-pack")
 
 
 table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
@@ -75,3 +102,10 @@ table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
         recipe = "planetaris-compression-rocket-fuel",
         change = 0.1}
       )
+
+-- add deep sea collision masks to tiles
+
+--data.raw.tile["ammoniacal-ocean-2"].collision_mask = planetaris_tile_collision_masks.deep_ammoniacal_ocean()
+--data.raw.tile["deepwater"].collision_mask = planetaris_tile_collision_masks.deep_water()
+--data.raw.tile["deepwater-green"].collision_mask = planetaris_tile_collision_masks.deep_water()
+data.raw.tile["oil-ocean-deep"].collision_mask = planetaris_tile_collision_masks.oil_ocean_deep()

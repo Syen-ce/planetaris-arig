@@ -35,7 +35,7 @@ data:extend({
     icon = "__planetaris-unbounded__/graphics/icons/hyper-transport-belt.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-hyper-transport-belt"},
-    max_health = 160,
+    max_health = 180,
     corpse = "planetaris-hyper-transport-belt-remnants",
     dying_explosion = "planetaris-hyper-transport-belt-explosion",
     resistances =
@@ -71,7 +71,7 @@ data:extend({
     icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-hyper-underground-belt"},
-    max_health = 170,
+    max_health = 180,
     corpse = "planetaris-hyper-underground-belt-remnants",
     dying_explosion = "planetaris-hyper-underground-belt-explosion",
     max_distance = 11,

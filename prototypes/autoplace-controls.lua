@@ -1,4 +1,6 @@
 data:extend({
+
+    -- ARIG
     {
         type = "autoplace-control",
         name = "arig_cliff",
@@ -34,4 +36,61 @@ data:extend({
         order = "b-e",
         category = "resource"
       },
+
+    -- HYARION
+    {
+        type = "autoplace-control",
+        name = "hyarion_volcanism",
+        order = "e-z-a",
+        category = "terrain",
+        can_be_disabled = false
+    },
+    {
+        type = "autoplace-control",
+        name = "hyarion_iron",
+        order = "e-z-a",
+        category = "resource",
+        richness = true,
+        can_be_disabled = false,
+    },
+    {
+        type = "autoplace-control",
+        name = "hyarion_carbon",
+        order = "e-z-a",
+        category = "resource",
+        richness = true,
+        can_be_disabled = false,
+    },
+    {
+        type = "autoplace-control",
+        name = "hyarion_quartz",
+        order = "e-z-b",
+        category = "resource",
+        richness = true,
+        can_be_disabled = false,
+    },
+    {
+        type = "autoplace-control",
+        name = "hyarion_emerald",
+        order = "e-z-b",
+        category = "resource",
+        richness = true,
+        can_be_disabled = false,
+    },
+    {
+        type = "autoplace-control",
+        name = "hyarion_ruby",
+        order = "e-z-b",
+        category = "resource",
+        richness = true,
+        can_be_disabled = false,
+    },
+    {
+        type = "autoplace-control",
+        name = "hyarion_sapphire",
+        order = "e-z-b",
+        category = "resource",
+        richness = true,
+        can_be_disabled = false,
+    },
 })

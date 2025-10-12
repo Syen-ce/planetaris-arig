@@ -1,5 +1,6 @@
 if (mods["any-planet-start"]) then
   APS.add_choice("arig")
+  APS.add_choice("hyarion")
 end
 
 if (mods["celestial-weather"]) then

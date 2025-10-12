@@ -1,12 +1,46 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7
+Date: 2025-10-11
+  Features:
+    - Added new planet, Hyarion
+    - Added 2 new science packs
+    - Added +10 tecnologies
+    - Added +20 items.
+    - Added 5 new machines
+    - Added dust resistant roboport
+    - Added 5 new achievements
+    - Added pure sand sifting recipe
+  Changes:
+    - Made cactus entities
+    - Allowed productivity for raw quartz and compression science pack
+    - Reduced robot energy usage on arig x6 -> x5
+    - Increased health for Hyper belt 160 -> 180 and underground 170 -> 180
+  Balancing:
+    - Reduced sand of sifting recipes 600 -> 200
+    - Balanced basic sifting (Pure sand 10 -> 25, Steam 60 -> 20 ) and advanced sifting (Pure sand 10 -> 20, Steam 70 -> 10)
+    - Reduced petroleum gas used sulfur compression recipe 30 -> 20
+    - Balanced raw quartz recipe (Steam 20 -> 10, sandstone brick 2 -> 1)
+    - Balanced compression science pack recipe (glass panel 5 -> 2, raw quartz 5 -> 1, sandstone brick 20 -> 5)
+    - Reduced steel needed in the supported solar panel recipe 20 -> 5
+  Compatibility:
+    - Fixed crash with Wood industry
+    - Added compatibility with Pelagos
+    - Added compatibility with Aquilo trenches
+  Bugfixes:
+    - Fixed glass recipe giving more barrels when used with productivity modules 
+    - Fixed compression rocket fuel replacing default recipe
+    - Fixed solar panels not being able to upgrade to advance solar panels
+    - Fixed assembling machine mk4 missing some recipes
+    - Fixed supported electric poles and solar panel able to be placed on lava
+---------------------------------------------------------------------------------------------------
 Version: 1.6.1
-Date: 2025-28-11
+Date: 2025-08-29
   Bugfixes:
     - Fixed start error using Igrys and Metals & Stars at the same time.
     - Fixed supported solar panel shadow position
 ---------------------------------------------------------------------------------------------------
 Version: 1.6.0
-Date: 2025-28-11
+Date: 2025-08-28
   Features:
     - Added Supported Solar panel
     - Added High support electric pole
