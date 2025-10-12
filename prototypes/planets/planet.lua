@@ -13,7 +13,7 @@ PlanetsLib:extend({
                 name = "star",
             },
             distance = 12.5,
-            orientation = 0.35,
+            orientation = 0.4,
         },
         subgroup = "planets",
         label_orientation = 0.55,
@@ -40,8 +40,8 @@ PlanetsLib:extend({
             ["day-night-cycle"] = 1.5 * minute,
             ["magnetic-field"] = 120,
             ["solar-power"] = 250,
-            pressure = 500,
-            gravity = 30,
+            pressure = 600,
+            gravity = 30, --robot energy = (gravity / pressure) * 100
         },
         persistent_ambient_sounds =
     {
@@ -152,7 +152,7 @@ PlanetsLib:extend({
                 name = "star",
             },
             distance = 22.5,
-            orientation = 0.5,
+            orientation = 0.48,
         },
         subgroup = "planets",
         label_orientation = 0.55,
@@ -179,7 +179,7 @@ PlanetsLib:extend({
             ["day-night-cycle"] = 5 * minute,
             ["magnetic-field"] = 80,
             ["solar-power"] = 10,
-            pressure = 7000,
+            pressure = 8000,
             gravity = 60,
         },
         lightning_properties =
@@ -472,6 +472,16 @@ data:extend({
         from = "nauvis",
         to = "arig", 
         length = 10000,
+        icon_size = 64,
+        asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
+    },
+    {
+        type = "space-connection",
+        name = "fulgora-arig",
+        subgroup = "planet-connections",
+        from = "fulgora",
+        to = "arig", 
+        length = 15000,
         icon_size = 64,
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
     },

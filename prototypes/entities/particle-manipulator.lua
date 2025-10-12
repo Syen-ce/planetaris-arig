@@ -271,7 +271,7 @@ data.extend({
   {
     type = "assembling-machine",
     name = "planetaris-particle-manipulator",
-    icon = "__planetaris-unbounded-assets__/graphics/icons/polisher.png",
+    icon = "__planetaris-unbounded-assets__/graphics/icons/particle-manipulator.png",
     icon_size = 64,
     open_sound = sounds.electric_large_open,
     close_sound = sounds.electric_large_close,
@@ -298,7 +298,7 @@ data.extend({
     water_reflection = require("__space-age__.prototypes.entity.electromagnetic-plant-pictures").water_reflection,
     collision_box = {{-2.5, -2.5}, {2.5, 2.5}},
     selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
-    drawing_box_vertical_extension = 0,
+    drawing_box_vertical_extension = 0.5,
     damaged_trigger_effect = hit_effects.entity(),
     fluid_boxes = {
         {
@@ -348,7 +348,7 @@ data.extend({
         }
     },
     icon_draw_specification = {scale = 1.75, shift = {0, -0.3}},
-    energy_usage = "800kW",
+    energy_usage = "1.5MW",
     collision_mask = {layers = {item = true, object = true, player = true, water_tile = true}},
 }
 })

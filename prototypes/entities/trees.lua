@@ -98,13 +98,13 @@ data:extend(
       mining_time = 0.5,
       results =
       {
-        {type = "item", name = "planetaris-raw-quartz", amount = 20}
+        {type = "item", name = "planetaris-raw-quartz", amount_min = 15, amount_max = 25},
       }
     },
     mining_sound = sound_variations("__space-age__/sound/mining/axe-mining-ashland-lichen-tree", 5, 0.4),
     mined_sound = sound_variations("__space-age__/sound/mining/mined-ashland-lichen-tree", 5, 0.4),
-    corpse = "hyarion-pointy-crystal-mined",
-    remains_when_mined = "hyarion-pointy-crystal-mined",
+    --corpse = "hyarion-pointy-crystal-mined",
+    --remains_when_mined = "hyarion-pointy-crystal-mined",
     max_health = 50,
     collision_box = {{-1, -1}, {1, 1}},
     selection_box = {{-1, -1}, {1, 1}},
@@ -112,6 +112,7 @@ data:extend(
     order = "a[tree]-h[hyarion]-a",
     impact_category = "tree",
     factoriopedia_simulation = simulations.factoriopedia_hyarion_pointy_crystal,
+    map_color = {r = 256/256, g = 256/256, b = 256/256, a = 1.000},
     autoplace =
     {
       order = "b[tree]-b[normal]",

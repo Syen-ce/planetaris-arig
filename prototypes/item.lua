@@ -304,7 +304,7 @@ data:extend({
         name = "planetaris-water-harvester",
         icon = "__planetaris-unbounded__/graphics/icons/water-harvester.png",
         subgroup = "arig-production",
-        order = "a-c",
+        order = "a-b",
         inventory_move_sound = item_sounds.electric_large_inventory_move,
         pick_sound = item_sounds.electric_large_inventory_pickup,
         drop_sound = item_sounds.electric_large_inventory_move,
@@ -327,7 +327,7 @@ data:extend({
     subgroup = "hyarion-processes",
     order = "b-a[raw]",
     stack_size = 100,
-    weight = 5*kg,
+    weight = 2*kg,
     default_import_location = "arig",
 
     inventory_move_sound = item_sounds.sulfur_inventory_move,
@@ -482,7 +482,7 @@ data:extend({
     subgroup = "hyarion-processes",
     order = "b-a[raw]",
     stack_size = 100,
-    weight = 5*kg,
+    weight = 2*kg,
     default_import_location = "hyarion",
 
     inventory_move_sound = item_sounds.sulfur_inventory_move,
@@ -517,7 +517,7 @@ data:extend({
     subgroup = "hyarion-processes",
     order = "b-a[raw]",
     stack_size = 100,
-    weight = 5*kg,
+    weight = 2*kg,
     default_import_location = "hyarion",
 
     inventory_move_sound = item_sounds.sulfur_inventory_move,
@@ -552,7 +552,7 @@ data:extend({
     subgroup = "hyarion-processes",
     order = "b-a[raw]",
     stack_size = 100,
-    weight = 5*kg,
+    weight = 2*kg,
     default_import_location = "hyarion",
 
     inventory_move_sound = item_sounds.sulfur_inventory_move,
@@ -581,8 +581,8 @@ data:extend({
     order = "c[refraction]-d[charged]-b",
     fuel_category = "refraction",
     burnt_result = "planetaris-unstable-shard",
-    fuel_value = "1GJ",
-    stack_size = 50,
+    fuel_value = "0.15GJ",
+    stack_size = 20,
     weight = 100*kg,
     default_import_location = "hyarion",
     pictures =
@@ -691,7 +691,7 @@ data:extend({
             {
               {
                 type = "damage",
-                damage = {amount = 150, type = "explosion"}
+                damage = {amount = 170, type = "explosion"}
               },
               {
                 type = "create-entity",
@@ -718,7 +718,7 @@ data:extend({
     subgroup = "hyarion-processes",
     order = "c[refraction]-d[charged]-c",
     stack_size = 50,
-    weight = 5*kg,
+    weight = 2*kg,
     default_import_location = "hyarion",
 
     spoil_ticks = 2.5 * minute,
@@ -834,7 +834,7 @@ data:extend({
     subgroup = "hyarion-processes",
     order = "c[refraction]-a",
     stack_size = 200,
-    weight = 5*kg,
+    weight = 2*kg,
     default_import_location = "hyarion",
 
     inventory_move_sound = item_sounds.wire_inventory_move,

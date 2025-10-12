@@ -612,7 +612,7 @@ data:extend{
     name = "hyarion_starting_emerald",
     expression = "max(starting_spot_at_angle{ angle = hyarion_mountains_angle + 10 * hyarion_starting_direction,\z
                                               distance = 590 * hyarion_starting_area_radius,\z
-                                              radius = 30,\z
+                                              radius = 15,\z
                                               x_distortion = 0.75 * hyarion_resource_wobble_x,\z
                                               y_distortion = 0.75 * hyarion_resource_wobble_y},\z
                       starting_spot_at_angle{ angle = hyarion_mountains_angle + 30 * hyarion_starting_direction,\z

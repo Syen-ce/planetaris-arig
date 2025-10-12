@@ -45,6 +45,7 @@ require("compat.igrys")
 require("compat.wood-industry")
 require("compat.planet-muluna")
 
+
 if mods["any-planet-start"] then
     APS.add_planet{name = "arig", filename = "__planetaris-unbounded__/compat/any-planet-start-arig.lua", technology = "planet-discovery-arig"}
     APS.add_planet{name = "hyarion", filename = "__planetaris-unbounded__/compat/any-planet-start-hyarion.lua", technology = "planet-discovery-hyarion"}

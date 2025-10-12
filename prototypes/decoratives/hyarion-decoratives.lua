@@ -2940,6 +2940,7 @@ data:extend{
     sprite_size_multiplier = 2,
     flags = { "placeable-off-grid", "placeable-neutral" },
     factoriopedia_simulation = simulations.factoriopedia_hyarion_crater_cliff,
+    cliff_explosive = "planetaris-unstable-gem",
 
     crater_radius = 7, --3.5,
     crater_edge_thickness = 5,

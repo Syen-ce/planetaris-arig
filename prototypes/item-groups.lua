@@ -31,9 +31,15 @@ data:extend(
   -------------------------------------------------------------------------- SPACE
   {
     type = "item-subgroup",
-    name = "space-facilities",
+    name = "hyarion-rocket-building",
     group = "space",
     order = "g-a"
+  },
+  {
+    type = "item-subgroup",
+    name = "space-facilities",
+    group = "space",
+    order = "g-b"
   },
   -------------------------------------------------------------------------- FUEL
   {

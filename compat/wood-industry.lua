@@ -27,10 +27,11 @@ if settings.startup["alloy-smelting-coke"].value then
     allow_productivity = true
     }
     })
-end
 
-table.insert(data.raw["technology"]["advanced-oil-processing"].effects,
+    table.insert(data.raw["technology"]["advanced-oil-processing"].effects,
         {
           type = "unlock-recipe",
           recipe = "heavy-oil-to-charcoal"
         })
+end
+

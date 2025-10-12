@@ -187,11 +187,12 @@ data:extend ({
       result = "carbon",
     },
       walking_sound = base_tile_sounds.walking.ore,
-      mining_visualisation_tint = {r = 150/256, g = 150/256, b = 180/256, a = 1.000},
+      mining_visualisation_tint = {r = 15/256, g = 15/256, b = 15/256, a = 1.000},
       category = "basic-solid",
       factoriopedia_simulation = {init = make_resource("planetaris-carbon-ore")},
     },
     {
+      control = "hyarion_carbon",
       probability_expression = 0
     }
   ),
@@ -209,11 +210,12 @@ data:extend ({
       result = "planetaris-raw-quartz",
     },
       walking_sound = base_tile_sounds.walking.ore,
-      mining_visualisation_tint = {r = 76/256, g = 88/256, b = 179/256, a = 1.000},
+      mining_visualisation_tint = {0.929, 0.922, 0.878, 1},
       category = "basic-solid",
       factoriopedia_simulation = simulations.factoriopedia_quartz_ore,
     },
     {
+      control = "hyarion_quartz",
       probability_expression = 0
     }
   ),
@@ -223,7 +225,7 @@ data:extend ({
       name = "planetaris-metallic-ore",
       subgroup = "hyarion-processes",
       order = "a-a-a",
-      map_color = {r = 0/256, g = 256/256, b = 256/256, a = 1.000},
+      map_color = {165, 140, 247},
       minable =
     {
       mining_particle = "planetaris-metallic-ore-particle",
@@ -231,11 +233,12 @@ data:extend ({
       result = "planetaris-metallic-ore"
     },
       walking_sound = base_tile_sounds.walking.ore,
-      mining_visualisation_tint = {r = 250/256, g = 250/256, b = 250/256, a = 1.000},
+      mining_visualisation_tint = {0.57, 0.55, 0.969, 1},
       category = "basic-solid",
       factoriopedia_simulation = simulations.factoriopedia_metallic_ore,
     },
     {
+      control = "hyarion_iron",
       probability_expression = 0
     }
   ),
@@ -258,7 +261,7 @@ data:extend ({
         tree_removal_max_distance = 32 * 32,
         minable =
         {
-          mining_time = 6,
+          mining_time = 10,
           results =
           {
             {
@@ -275,6 +278,7 @@ data:extend ({
         collision_box = {{ -3.35, -3.35}, {3.35, 3.35}},
         selection_box = {{ -3.5, -3.5}, {3.5, 3.5}},
         autoplace = {
+          control = "hyarion_emerald",
           order="c",
           probability_expression = 0
         },
@@ -354,7 +358,7 @@ data:extend ({
         tree_removal_max_distance = 32 * 32,
         minable =
         {
-          mining_time = 6,
+          mining_time = 10,
           results =
           {
             {
@@ -372,6 +376,7 @@ data:extend ({
         selection_box = {{ -3.5, -3.5}, {3.5, 3.5}},
         autoplace = {
           order="c",
+          control = "hyarion_ruby",
           probability_expression = 0
         },
         stage_counts = {0},
@@ -450,7 +455,7 @@ data:extend ({
         tree_removal_max_distance = 32 * 32,
         minable =
         {
-          mining_time = 6,
+          mining_time = 10,
           results =
           {
             {
@@ -468,6 +473,7 @@ data:extend ({
         selection_box = {{ -3.5, -3.5}, {3.5, 3.5}},
         autoplace = {
           order="c",
+          control = "hyarion_sapphire",
           probability_expression = 0
         },
         stage_counts = {0},

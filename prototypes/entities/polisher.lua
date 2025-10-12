@@ -71,7 +71,7 @@ data.extend({
     working_sound = table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].working_sound),
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.5, results = {{type = "item", name = "planetaris-polisher", amount = 1}}},
-    max_health = 400,
+    max_health = 800,
     fast_replaceable_group = nil,
     corpse = data.raw["assembling-machine"]["electromagnetic-plant"].corpse,
     dying_explosion = "big-explosion",

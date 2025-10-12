@@ -176,6 +176,26 @@ data:extend({
       },
       order = "ea[arig]",
     },
+      {
+      type = "technology",
+      name = "planetaris-raw-diamond-production",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/raw-diamond.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-raw-diamond"
+        },
+      },
+      prerequisites = {"planetaris-compression"},
+      research_trigger =     {
+        type = "craft-item",
+        item = "planetaris-raw-quartz",
+        count = 50
+      },
+      order = "ea[arig]",
+    },
     {
       type = "technology",
       name = "planetaris-compression-science",
@@ -188,11 +208,11 @@ data:extend({
           recipe = "planetaris-compression-science-pack"
         },
       },
-      prerequisites = {"planetaris-compression"},
+      prerequisites = {"planetaris-compression","planetaris-raw-diamond-production","planetaris-glass"},
       research_trigger =     {
         type = "craft-item",
-        item = "planetaris-raw-quartz",
-        count = 100
+        item = "planetaris-raw-diamond",
+        count = 50
       },
       order = "ea[arig]",
     },
@@ -235,6 +255,10 @@ data:extend({
         {
           type = "unlock-recipe",
           recipe = "planetaris-advanced-sand-sifting"
+        },
+       {
+          type = "unlock-recipe",
+          recipe = "planetaris-advanced-pure-sand-sifting"
         },
       },
       prerequisites = {"planetaris-compression-science"},
@@ -596,7 +620,11 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-metallic-sifting"
+          recipe = "planetaris-iron-metallic-sifting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-copper-metallic-sifting"
         },
         {
           type = "unlock-recipe",
@@ -631,11 +659,15 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-polished-emerald"
+          recipe = "planetaris-polishing-carbon-fiber"
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-polishing-carbon-fiber"
+          recipe = "planetaris-hyarion-rocket-fuel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-hyarion-cargo-landing-pad"
         },
       },
       prerequisites = {"planetaris-quartz-furnace", "planetaris-metallic-ore-processing"},
@@ -679,6 +711,10 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           type = "unlock-recipe",
           recipe = "planetaris-polished-sapphire"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-polished-emerald"
+        },
       },
       prerequisites = {"planetaris-geode-mining-drill"},
       research_trigger = {
@@ -698,26 +734,30 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           type = "unlock-recipe",
           recipe = "planetaris-polishing-science-pack"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-hyarion-rocket-silo"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-hyarion-rocket-part"
+        },
       },
       prerequisites = {"planetaris-geode-processing", "planetaris-polishing"},
       research_trigger = {
         type = "craft-item",
-        item = "planetaris-polished-quartz",
+        item = "planetaris-polished-emerald",
         count = 100
       },
       order = "e-b[hyarion]",
     },
       {
       type = "technology",
-      name = "planetaris-diamond-production",
+      name = "planetaris-diamond-polishing",
       icon = "__planetaris-unbounded-assets__/graphics/technology/diamond-tech.png",
       icon_size = 256,
       essential = true,
       effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-raw-diamond"
-        },
         {
           type = "unlock-recipe",
           recipe = "planetaris-polished-diamond"
@@ -727,7 +767,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           recipe = "planetaris-fiber-optics-cable"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack"},
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-raw-diamond-production"},
       unit =
       {
         count = 1500,
@@ -789,7 +829,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           recipe = "planetaris-advanced-raw-quartz"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-production"},
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-polishing"},
       unit =
       {
         count = 500,
@@ -820,7 +860,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           recipe = "planetaris-nanoscale-lens"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-production","planetslib-hyarion-cargo-drops"},
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-polishing","planetslib-hyarion-cargo-drops"},
       unit =
       {
         count = 1500,
@@ -882,7 +922,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           recipe = "planetaris-simulating-unit"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetslib-hyarion-cargo-drops","planetaris-diamond-production"},
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetslib-hyarion-cargo-drops","planetaris-diamond-polishing"},
       unit =
       {
         count = 800,
@@ -945,7 +985,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
           recipe = "planetaris-refraction-science-pack"
         },
       },
-      prerequisites = {"planetaris-diamond-production","planetaris-nanoscale-lens","planetaris-simulating-unit"},
+      prerequisites = {"planetaris-diamond-polishing","planetaris-nanoscale-lens","planetaris-simulating-unit"},
       unit =
       {
         count = 2000,
@@ -968,6 +1008,80 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
     },
         {
       type = "technology",
+      name = "planetaris-crystalization-motor",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/crystalization-motor.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-crystalization-motor"
+        },
+      },
+      prerequisites = {"planetaris-refraction-science-pack"},
+      unit =
+      {
+        count = 500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          { "electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
+      },
+      order = "e-b[hyarion]",
+    },
+        {
+      type = "technology",
+      name = "planetaris-refraction-plant",
+      icon = "__planetaris-unbounded-assets__/graphics/technology/refraction-plant.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-refraction-plant"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-charged-gem"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-unstable-gem"
+        },
+      },
+      prerequisites = {"planetaris-crystalization-motor"},
+      unit =
+      {
+        count = 1000,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          { "metallurgic-science-pack", 1 },
+          { "electromagnetic-science-pack", 1 },
+          {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
+        },
+        time = 30
+      },
+      order = "e-b[hyarion]",
+    },
+        {
+      type = "technology",
       name = "planetaris-particle-manipulation",
       icon = "__planetaris-unbounded-assets__/graphics/technology/particle-manipulator.png",
       icon_size = 256,
@@ -979,14 +1093,22 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
         },
         {
           type = "unlock-recipe",
-          recipe = "carbon-particle-manipulation"
+          recipe = "planetaris-carbon-particle-manipulation"
         },
         {
           type = "unlock-recipe",
-          recipe = "coal-particle-manipulation"
+          recipe = "planetaris-coal-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-calcite-particle-manipulation"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-raw-quartz-particle-manipulation"
         },
       },
-      prerequisites = {"planetaris-refraction-science-pack","planetaris-nanoscale-lens","planetaris-simulating-unit"},
+      prerequisites = {"planetaris-crystalization-motor","planetaris-nanoscale-lens","planetaris-simulating-unit"},
       unit =
       {
         count = 2000,
@@ -1073,7 +1195,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
       prerequisites = {"planetaris-beryllium-processing"},
       unit =
       {
-        count = 5000,
+        count = 3000,
         ingredients =
         {
           {"automation-science-pack", 1},
@@ -1114,3 +1236,5 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
       prerequisites = { "planetaris-polishing-science-pack" },
     })
   })
+
+PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("hyarion", "construction-robot")

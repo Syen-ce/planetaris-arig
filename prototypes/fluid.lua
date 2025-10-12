@@ -48,7 +48,7 @@ data:extend(
       default_temperature = 5,
       max_temperature = 50,
       heat_capacity = "50J",
-      base_color = {145, 139, 232},
-      flow_color = {145, 139, 232},
+      base_color = {182, 197, 240},
+      flow_color = {182, 197, 240},
     },
 })

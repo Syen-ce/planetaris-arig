@@ -4,6 +4,7 @@ require ("prototypes.circuit-connector-definitions")
 require ("__space-age__/prototypes/entity/circuit-network")
 require ("__base__/prototypes/entity/circuit-network")
 require ("__base__/prototypes/entity/pipecovers")
+require ("prototypes.tile.tile-collision-masks")
 
 local simulations = require("prototypes.factoriopedia-simulations")
 local sounds = require("__base__/prototypes/entity/sounds")
@@ -37,7 +38,8 @@ data:extend({
       has_lower_layer = true,
       sprite_size_multiplier = 2,
       icon = "__planetaris-unbounded-assets__/graphics/icons/cliff-hyarion.png",
-      factoriopedia_simulation = simulations.factoriopedia_cliff_hyarion
+      factoriopedia_simulation = simulations.factoriopedia_cliff_hyarion,
+      cliff_explosive = "planetaris-unstable-gem",
     }
   ),
 })
@@ -613,7 +615,7 @@ graphics_set =
     max_health = 400,
     corpse = "solar-panel-remnants",
     dying_explosion = "solar-panel-explosion",
-    collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
     energy_source =
@@ -689,7 +691,7 @@ graphics_set =
     recharge_minimum = "40MJ",
     energy_usage = "50kW",
     -- per one charge slot
-    charging_energy = "400kW",
+    charging_energy = "550kW",
     logistics_radius = 20,
     construction_radius = 50,
     charge_approach_distance = 5,
@@ -828,7 +830,7 @@ graphics_set =
     corpse = "solar-panel-remnants",
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-    collision_mask = {layers = {ground_tile = true},{rail_support = true}},
+    collision_mask = {layers = {ground_tile = true, rail_support = true, lava_tile=true, ["deepsea"] = true}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box_vertical_extension = 1.2,
@@ -893,7 +895,7 @@ graphics_set =
     corpse = "small-electric-pole-remnants",
     dying_explosion = "small-electric-pole-explosion",
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    collision_mask = {layers = {ground_tile = true},{rail_support = true}},
+    collision_mask = {layers = {ground_tile = true, rail_support = true, lava_tile=true, ["deepsea"] = true}},
     selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
     damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2}, {0.2, 0.2}}),
     drawing_box_vertical_extension = 2.2,
@@ -903,6 +905,11 @@ graphics_set =
     open_sound = sounds.electric_network_open,
     close_sound = sounds.electric_network_close,
     fast_replaceable_group = "electric-pole",
+--    tile_buildability_rules = {
+--      area = {{-0.5, -0.5}, {0.5, 0.5}},
+--      colliding_tiles = {layers = {["deepsea"] = true}},
+--      remove_on_collision = true,
+--    },
     pictures =
     {
       layers =
@@ -1120,7 +1127,7 @@ data:extend({
     next_upgrade = "steel-furnace",
     circuit_wire_max_distance = furnace_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["stone-furnace"],
-    max_health = 50,
+    max_health = 200,
     corpse = "planetaris-quartz-furnace-remnants",
     dying_explosion = "stone-furnace-explosion",
     repair_sound = sounds.manual_repair,
@@ -1471,8 +1478,8 @@ data:extend({
       type = "electric",
       buffer_capacity = "500MJ",
       usage_priority = "primary-output",
-      output_flow_limit = "500MJ",
-      drain = "2.5MJ"
+      output_flow_limit = "0.5MW",
+      drain = "0.166MJ"
     },
     icon = "__planetaris-unbounded-assets__/graphics/icons/refraction-ray-collector.png",
     flags = {"placeable-neutral", "player-creation"},
@@ -1559,10 +1566,10 @@ data:extend({
     energy_source =
     {
       type = "electric",
-      buffer_capacity = "1000MJ",
+      buffer_capacity = "500MJ",
       usage_priority = "primary-output",
-      output_flow_limit = "1000MJ",
-      drain = "3.5MJ"
+      output_flow_limit = "0.7MW",
+      drain = "0.166MJ"
     },
     icon = "__planetaris-unbounded-assets__/graphics/icons/big-refraction-ray-collector.png",
     flags = {"placeable-neutral", "player-creation"},
@@ -2042,8 +2049,8 @@ data:extend({
         height = 56,
         variation_count = 8,
         line_length = 8,
-        shift = util.by_pixel(0 + 0, -1 - wall_shift - 17),
-        scale = 0.5
+        shift = util.by_pixel(0 + 0, -1 - wall_shift - 7),
+        scale = 0.45
       },
       water_connection_patch =
       {
@@ -2237,7 +2244,7 @@ data:extend({
     idle_sound = {filename = "__base__/sound/idle1.ogg"},
 
     crafting_speed = 1,
-    crafting_categories = {"sifting"},
+    crafting_categories = {"space-manufacturing"},
     result_inventory_size = 2,
     module_slots = 6,
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
