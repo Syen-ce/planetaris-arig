@@ -2342,6 +2342,7 @@ data:extend({
             {
             filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-emission3.png",
             priority = "high",
+            animation_speed = 0.5,
             scale= 0.5,
             line_length= 10,
             frame_count= 100,
@@ -2357,6 +2358,7 @@ data:extend({
             {
             filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-emission2.png",
             priority = "high",
+            animation_speed = 0.5,
             scale= 0.5,
             line_length= 10,
             frame_count= 100,
@@ -2372,6 +2374,7 @@ data:extend({
             {
             filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-emission1.png",
             priority = "high",
+            animation_speed = 0.5,
             scale= 0.5,
             line_length= 10,
             frame_count= 100,
@@ -2387,6 +2390,7 @@ data:extend({
             {
             filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-color2.png",
             priority = "high",
+            animation_speed = 0.5,
             scale= 0.5,
             line_length= 10,
             frame_count= 100,
@@ -2401,6 +2405,7 @@ data:extend({
             {
             filename = "__planetaris-unbounded-assets__/graphics/entity/space-manufacturer/space-manufacturer-color1.png",
             priority = "high",
+            animation_speed = 0.5,
             scale= 0.5,
             line_length= 10,
             frame_count= 100,
