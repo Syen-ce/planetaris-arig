@@ -794,6 +794,7 @@ data:extend(
       order = "a-a-b",
       energy_required = 10,
       enabled = false,
+      auto_recycle = false,
       ingredients =
       {
         {type = "item", name = "planetaris-metallic-ore", amount = 5},
@@ -814,6 +815,7 @@ data:extend(
       order = "a-a-c",
       energy_required = 10,
       enabled = false,
+      auto_recycle = false,
       ingredients =
       {
         {type = "item", name = "planetaris-metallic-ore", amount = 5},
