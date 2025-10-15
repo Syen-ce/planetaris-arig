@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.1
+Date: 2025-10-15
+  Features:
+    - Added Cactus and Cactus wood
+  Changes:
+    - C
+  Balancing:
+    - R
+  Compatibility:
+    - Added hyper loader for the AAI loaders mod
+  Bugfixes:
+    - Fixed iron and copper recycling into metallic ore
+---------------------------------------------------------------------------------------------------
 Version: 1.7.0
 Date: 2025-10-11
   Features:

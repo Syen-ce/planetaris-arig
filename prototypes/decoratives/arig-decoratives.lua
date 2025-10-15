@@ -1001,9 +1001,9 @@ data:extend({
       },
         minable =
         {
-          mining_particle = "stone-particle",
-          mining_time = 1,
-          results = nil,
+          mining_particle = "wooden-particle",
+          mining_time = 0.5,
+          results = {{type = "item", name = "planetaris-cactus", amount_min = 1, amount_max = 5}},
         },
       pictures =
       {

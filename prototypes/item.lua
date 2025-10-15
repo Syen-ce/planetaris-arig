@@ -1,5 +1,8 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
+local space_age_item_sounds = require("__space-age__.prototypes.item_sounds")
 local item_tints = require("__base__.prototypes.item-tints")
+local item_effects = require("__space-age__.prototypes.item-effects")
+-- local planetaris_item_effects = require("prototypes.item-effects")
 
 data:extend({
 {
@@ -93,6 +96,28 @@ data:extend({
         inventory_move_sound = item_sounds.landfill_inventory_move,
         pick_sound = item_sounds.landfill_inventory_pickup,
         drop_sound = item_sounds.landfill_inventory_move,
+    },
+    {
+        type = "capsule",
+        name = "planetaris-cactus",
+        icon = "__planetaris-unbounded__/graphics/icons/cactus.png",
+        subgroup = "arig-processes",
+        order = "a[basic]-a-a",
+        stack_size = 100,
+        weight = 1*kg,
+        default_import_location = "arig",
+
+        fuel_category = "chemical",
+        fuel_value = "2MJ",
+        capsule_action = item_effects.jellynut_speed,
+        plant_result = "planetaris-cactus-plant",
+        place_result = "planetaris-cactus-plant",
+        spoil_ticks = 60 * minute,
+        spoil_result = "spoilage",
+
+        inventory_move_sound = space_age_item_sounds.agriculture_inventory_move,
+        pick_sound = space_age_item_sounds.agriculture_inventory_pickup,
+        drop_sound = space_age_item_sounds.agriculture_inventory_move,
     },
     {
         type = "item",

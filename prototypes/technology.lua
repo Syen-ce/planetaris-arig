@@ -32,6 +32,27 @@ data:extend({
       },
       order = "ea[arig]",
     },
+
+    --Wood
+        {
+      type = "technology",
+      name = "planetaris-cactus-wood",
+      icon = "__planetaris-unbounded__/graphics/technology/cactus.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-cactus-wood"
+        },
+      },
+      prerequisites = {"planet-discovery-arig"},
+      research_trigger = {
+        type = "mine-entity",
+        entity = "arig-small-cactus-plant"
+      },
+      order = "ea[arig]",
+    },
   
     -- Sand Sifting Technology
     {

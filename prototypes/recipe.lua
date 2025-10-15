@@ -130,6 +130,24 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "planetaris-cactus-wood",
+      icons = {
+        {icon = "__planetaris-unbounded__/graphics/icons/cactus-wood.png"}
+      },
+      category = "organic-or-assembling",
+      subgroup = "arig-processes",
+      order = "a-a-b",
+      enabled = false,
+      auto_recycle = false,
+      energy_required = 1,
+      ingredients =
+      {
+        { type = "item", name = "planetaris-cactus", amount = 3 },
+      },
+      results = { { type = "item", name = "wood", amount = 2 } }
+  },
+    {
+      type = "recipe",
       name = "planetaris-sandstone-foundation",
       icons = {
         {icon = "__planetaris-unbounded__/graphics/icons/sandstone-foundation.png"}
@@ -263,6 +281,7 @@ data:extend(
     name = "planetaris-advanced-heavy-oil-cracking",
     category = "chemistry",
     subgroup = "arig-processes",
+    order = "a[sand-processing]-c",
     enabled = false,
     energy_required = 2,
     icon = "__planetaris-unbounded__/graphics/icons/advanced-heavy-oil-cracking.png",
