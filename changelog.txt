@@ -5,8 +5,7 @@ Date: 2025-10-15
     - Added Cactus and Cactus wood
   Changes:
     - Change hyper underground belt distance 11 -> 15
-  Balancing:
-    - R
+    - Rearranged hyarion recipes
   Compatibility:
     - Added hyper loader for the AAI loaders mod
     - Added compatibility with lignumis, cactus wood is more efficient and wood can be obtained from sifting carbon in Hyarion
