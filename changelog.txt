@@ -4,11 +4,13 @@ Date: 2025-10-15
   Features:
     - Added Cactus and Cactus wood
   Changes:
-    - C
+    - Change hyper underground belt distance 11 -> 15
   Balancing:
     - R
   Compatibility:
     - Added hyper loader for the AAI loaders mod
+    - Added compatibility with lignumis, cactus wood is more efficient and wood can be obtained from sifting carbon in Hyarion
+    - Made resource spawner overhaul ignore Hyarion ores and geodes
   Bugfixes:
     - Fixed iron and copper recycling into metallic ore
 ---------------------------------------------------------------------------------------------------

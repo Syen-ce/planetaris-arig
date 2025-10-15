@@ -45,6 +45,7 @@ require("compat.bztin")
 require("compat.crushing-industry")
 require("compat.cloud-city")
 require("compat.igrys")
+require("compat.lignumis")
 require("compat.wood-industry")
 require("compat.planet-muluna")
 
