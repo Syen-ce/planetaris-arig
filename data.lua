@@ -36,6 +36,7 @@ require("prototypes.tips-and-tricks")
 
 --------------------- Compat
 
+require("compat.stone-sifting")
 require("compat.krastorio2-so")
 require("compat.resource-spawner-overhaul")
 require("compat.aai-industry")
