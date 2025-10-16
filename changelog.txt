@@ -1,5 +1,23 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.7
+Version: 1.7.1
+Date: 2025-10-16
+  Features:
+    - Added Cactus and Cactus wood
+  Changes:
+    - Change hyper underground belt distance 11 -> 15
+    - Made quartz furnace 50% faster than stone furnace
+    - Rearranged hyarion recipes
+  Compatibility:
+    - Added Hyarion compatibility for the celestial weather mod
+    - Added hyper loader for the AAI loaders mod
+    - Added Metallic ore stone sifting for crushing industry mod
+    - Added compatibility with lignumis, cactus wood is more efficient and wood can be obtained from sifting carbon in Hyarion
+    - Added compatibility with wood industry; wood, coke and resin can be produced in Hyarion 
+    - Made resource spawner overhaul ignore Hyarion ores and geodes
+  Bugfixes:
+    - Fixed iron and copper recycling into metallic ore
+---------------------------------------------------------------------------------------------------
+Version: 1.7.0
 Date: 2025-10-11
   Features:
     - Added new planet, Hyarion

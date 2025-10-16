@@ -8,9 +8,21 @@ data:extend(
   },
   {
     type = "item-subgroup",
-    name = "hyarion-processes",
+    name = "hyarion-basic-processes",
     group = "intermediate-products",
     order = "k-c"
+  },
+  {
+    type = "item-subgroup",
+    name = "hyarion-gems",
+    group = "intermediate-products",
+    order = "k-d"
+  },
+  {
+    type = "item-subgroup",
+    name = "hyarion-advanced-processes",
+    group = "intermediate-products",
+    order = "k-e"
   },
   -------------------------------------------------------------------------- LOGISTICS
 

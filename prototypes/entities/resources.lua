@@ -177,7 +177,7 @@ data:extend ({
     resource(
     {
       name = "planetaris-carbon-ore",
-      subgroup = "hyarion-processes",
+      subgroup = "hyarion-basic-processes",
       order = "a-a-a",
       map_color = {r = 1/256, g = 1/256, b = 1/256, a = 1.000},
       minable =
@@ -200,7 +200,7 @@ data:extend ({
   resource(
     {
       name = "planetaris-quartz-ore",
-      subgroup = "hyarion-processes",
+      subgroup = "hyarion-basic-processes",
       order = "a-a-a",
       map_color = {r = 256/256, g = 256/256, b = 256/256, a = 1.000},
       minable =
@@ -223,7 +223,7 @@ data:extend ({
   resource(
     {
       name = "planetaris-metallic-ore",
-      subgroup = "hyarion-processes",
+      subgroup = "hyarion-basic-processes",
       order = "a-a-a",
       map_color = {165, 140, 247},
       minable =

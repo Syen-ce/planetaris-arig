@@ -74,7 +74,7 @@ data:extend({
     max_health = 180,
     corpse = "planetaris-hyper-underground-belt-remnants",
     dying_explosion = "planetaris-hyper-underground-belt-explosion",
-    max_distance = 11,
+    max_distance = 15,
     heating_energy = "250kW",
     underground_sprite =
     {
