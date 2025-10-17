@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.3
+Date: 2025-10-18
+  Changes:
+    - Hyper belts now uses polished quartz instead of lubricant and its unlocked after polishing technology
+  Compatibility:
+    - Fixed crash with Krastorio 2
+---------------------------------------------------------------------------------------------------
 Version: 1.7.2
 Date: 2025-10-16
   Bugfixes:

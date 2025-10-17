@@ -406,10 +406,10 @@ data:extend({
           recipe = "planetaris-hyper-splitter"
         },
       },
-      prerequisites = {"planetaris-simulating-unit", "turbo-transport-belt"},
+      prerequisites = {"planetaris-polishing-science-pack", "turbo-transport-belt"},
       unit =
       {
-        count = 5000,
+        count = 3000,
         ingredients =
         {
           {"automation-science-pack", 1},
@@ -419,6 +419,8 @@ data:extend({
           {"space-science-pack", 1},
           {"metallurgic-science-pack", 1},
           {"planetaris-compression-science-pack", 1},
+          {"planetaris-polishing-science-pack", 1},
+          {"planetaris-refraction-science-pack", 1},
         },
         time = 60
       }
