@@ -359,7 +359,7 @@ data:extend(
       surface_conditions =
     {
       {
-        property = "planetaris-dust-concentration",
+        property = "planetaris-crystalization-resistance",
         min = 50,
         max = 100,
       }
@@ -370,7 +370,7 @@ data:extend(
       {
         {type = "item", name = "turbo-transport-belt", amount = 1},
         {type = "item", name = "planetaris-silica", amount = 2},
-        {type = "fluid", name = "lubricant", amount = 20},
+        {type = "item", name = "planetaris-polished-quartz", amount = 2},
 
       },
       results = {{type="item", name="planetaris-hyper-transport-belt", amount=1}},
@@ -383,7 +383,7 @@ data:extend(
       surface_conditions =
     {
       {
-        property = "planetaris-dust-concentration",
+        property = "planetaris-crystalization-resistance",
         min = 50,
         max = 100,
       }
@@ -394,7 +394,8 @@ data:extend(
       {
         {type = "item", name = "turbo-splitter", amount = 1},
         {type = "item", name = "processing-unit", amount = 2},
-        {type = "item", name = "planetaris-silica", amount = 2},
+        {type = "item", name = "planetaris-silica", amount = 1},
+        {type = "item", name = "planetaris-polished-quartz", amount = 1},
       },
       results = {{type="item", name="planetaris-hyper-splitter", amount=1}},
       allow_productivity = false,
@@ -406,7 +407,7 @@ data:extend(
       surface_conditions =
     {
       {
-        property = "planetaris-dust-concentration",
+        property = "planetaris-crystalization-resistance",
         min = 50,
         max = 100,
       }
@@ -417,7 +418,7 @@ data:extend(
       {
         {type = "item", name = "turbo-underground-belt", amount = 1},
         {type = "item", name = "planetaris-silica", amount = 3},
-        {type = "fluid", name = "lubricant", amount = 30},
+        {type = "item", name = "planetaris-polished-quartz", amount = 2},
       },
       results = {{type="item", name="planetaris-hyper-underground-belt", amount=2}},
       allow_productivity = false,

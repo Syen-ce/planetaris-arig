@@ -1170,7 +1170,7 @@ data:extend({
     damaged_trigger_effect = hit_effects.rock(),
     crafting_categories = {"smelting"},
     result_inventory_size = 2,
-    energy_usage = "90kW",
+    energy_usage = "45kW",
     crafting_speed = 1,
     source_inventory_size = 1,
     energy_source =
