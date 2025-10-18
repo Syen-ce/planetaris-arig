@@ -46,11 +46,8 @@ data:extend(
     {
         type = "recipe",
         name = "planetaris-sand-sifting",
-        icons = {
-          {
-            icon = "__planetaris-unbounded__/graphics/icons/fluid/sand.png"
-          }
-        },
+        icon = "__planetaris-unbounded__/graphics/icons/fluid/sand.png",
+        icon_size = 64,
         category = "sifting",
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]",
@@ -73,11 +70,8 @@ data:extend(
       {
         type = "recipe",
         name = "planetaris-advanced-sand-sifting",
-        icons = {
-          {
-            icon = "__planetaris-unbounded__/graphics/icons/advanced-sand-sifting.png"
-          }
-        },
+        icon = "__planetaris-unbounded__/graphics/icons/advanced-sand-sifting.png",
+        icon_size = 64,
         category = "sifting",
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-b",
@@ -98,11 +92,8 @@ data:extend(
       {
         type = "recipe",
         name = "planetaris-advanced-pure-sand-sifting",
-        icons = {
-          {
-            icon = "__planetaris-unbounded__/graphics/icons/advanced-pure-sand-sifting.png"
-          }
-        },
+        icon = "__planetaris-unbounded__/graphics/icons/advanced-pure-sand-sifting.png",
+        icon_size = 64,
         category = "sifting",
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-c",
@@ -121,7 +112,6 @@ data:extend(
         name = "planetaris-sandstone-brick",
         category = "compressing",
         order = "a[sand-processing]-b[sand-processing]",
-        icon = "__planetaris-unbounded__/graphics/icons/sandstone-brick.png",
         enabled = false,
         auto_recycle = false,
         energy_required = 2,
@@ -131,9 +121,8 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-cactus-wood",
-      icons = {
-        {icon = "__planetaris-unbounded__/graphics/icons/cactus-wood.png"}
-      },
+      icon = "__planetaris-unbounded__/graphics/icons/cactus-wood.png",
+      icon_size = 64,
       category = "organic-or-assembling",
       subgroup = "arig-processes",
       order = "a-a-a[natural]",
@@ -149,9 +138,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-sandstone-foundation",
-      icons = {
-        {icon = "__planetaris-unbounded__/graphics/icons/sandstone-foundation.png"}
-      },
+      icon = "__planetaris-unbounded__/graphics/icons/sandstone-foundation.png",
       category = "compressing",
       order = "a[sand-processing]-b[sand-processing]-b",
       enabled = false,
@@ -190,7 +177,6 @@ data:extend(
     category = "advanced-crafting",
     auto_recycle = false,
     enabled = false,
-    icon = "__planetaris-unbounded__/graphics/icons/heavy-glass.png",
     energy_required = 5,
     surface_conditions =
     {
@@ -214,7 +200,6 @@ data:extend(
     enabled = false,
     auto_recycle = false,
     energy_required = 2,
-    icon = "__planetaris-unbounded__/graphics/icons/quartz.png",
     ingredients =
     {
       {type = "fluid", name = "steam", amount = 10},
@@ -231,7 +216,6 @@ data:extend(
     enabled = false,
     auto_recycle = false,
     energy_required = 2,
-    icon = "__planetaris-unbounded__/graphics/icons/quartz.png",
     ingredients =
     {
       {type = "fluid", name = "steam", amount = 10},
@@ -248,7 +232,6 @@ data:extend(
     category = "compressing",
     enabled = false,
     energy_required = 2,
-    icon = "__planetaris-unbounded__/graphics/icons/silica.png",
     ingredients =
     {
       {type = "fluid", name = "sulfuric-acid", amount = 20},
@@ -793,6 +776,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-metallic-smelting",
       icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-smelting.png",
+      icon_size = 64,
       category = "smelting",
       subgroup = "hyarion-basic-processes",
       order = "a-a-a",
@@ -812,6 +796,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-iron-metallic-sifting",
       icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-iron-sifting.png",
+      icon_size = 64,
       category = "sifting",
       subgroup = "hyarion-basic-processes",
       order = "a-a-b",
@@ -833,6 +818,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-copper-metallic-sifting",
       icon = "__planetaris-unbounded-assets__/graphics/icons/metallic-copper-sifting.png",
+      icon_size = 64,
       category = "sifting",
       subgroup = "hyarion-basic-processes",
       order = "a-a-c",
