@@ -436,6 +436,26 @@ data:extend({
           type = "unlock-recipe",
           recipe = "planetaris-big-chest"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-active-provider-big-chest"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-passive-provider-big-chest"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-storage-big-chest"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-buffer-big-chest"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-requester-big-chest"
+        },
       },
       prerequisites = {"planetaris-silica-processing", "planetaris-heavy-glass"},
       unit =

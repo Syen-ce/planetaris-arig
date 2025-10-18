@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.4
+Date: 2025-10-19
+  Features:
+    - Added logistics containers
+  Changes:
+    - Change graphics of the container
+  Optimizations:
+    - Optimized graphics
+  Compatibility:
+    - Added compatibility with aai loaders sane mod
+    - Fixed error using resin in the wood industry mod
+---------------------------------------------------------------------------------------------------
 Version: 1.7.3
 Date: 2025-10-18
   Changes:

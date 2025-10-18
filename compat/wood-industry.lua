@@ -64,6 +64,8 @@ end
 
 --- Resin
 
+if settings.startup["wood-industry-resin"].value then
+
     data.extend({
         {
         type = "recipe",
@@ -136,3 +138,4 @@ end
           recipe = "planetaris-wood-resin"
         }
     )
+  end
