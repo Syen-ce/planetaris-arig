@@ -11,6 +11,8 @@ local sounds = require("__base__/prototypes/entity/sounds")
 
 local hit_effects = require("__base__/prototypes/entity/hit-effects")
 
+local logistic_chest_opened_duration = 7
+
 local wall_shift = 20
 local wall_shift_adjust = wall_shift - 7
 
@@ -543,6 +545,7 @@ graphics_set =
   module_slots = 5,
   allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"}
 },
+-- Containers
 {
   type = "container",
   name = "planetaris-big-chest",
@@ -578,20 +581,19 @@ graphics_set =
       {
         filename = "__planetaris-unbounded__/graphics/entity/container/container.png",
         priority = "high",
-        width = 152,
-        height = 192,
-        shift = util.by_pixel(0, -11),
-        tint = tint,
-        scale = 0.5
+        width = 264,
+        height = 264,
+        shift = util.by_pixel(0, -2),
+        scale = 0.3
       },
       {
         filename = "__planetaris-unbounded__/graphics/entity/container/container-shadow.png",
         priority = "high",
-        width = 234,
-        height = 106,
-        shift = util.by_pixel(29, 6),
+        width = 384,
+        height = 384,
+        shift = util.by_pixel(12, -6),
         draw_as_shadow = true,
-        scale = 0.5
+        scale = 0.3
       }
     }
   },
@@ -605,6 +607,342 @@ graphics_set =
   circuit_connector = circuit_connector_definitions["accumulator"],
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
+{
+  type = "logistic-container",
+  name = "planetaris-active-provider-big-chest",
+  icon = "__planetaris-unbounded__/graphics/icons/active-provider-container.png",
+  flags = {"placeable-neutral", "player-creation"},
+  minable = {mining_time = 0.2, result = "planetaris-active-provider-big-chest"},
+  max_health = 450,
+  corpse = "planetaris-big-chest-remnants",
+  dying_explosion = "accumulator-explosion",
+  resistances =
+  {
+    {
+      type = "fire",
+      percent = 90
+    },
+    {
+      type = "impact",
+      percent = 90
+    }
+  },
+  logistic_mode = "active-provider",
+  collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+  selection_box = {{-1, -1}, {1, 1}},
+  damaged_trigger_effect = hit_effects.entity(),
+  inventory_size = 180,
+  impact_category = "metal",
+  icon_draw_specification = {scale = 0.7},
+  open_sound = sounds.metallic_chest_open,
+  close_sound = sounds.metallic_chest_close,
+  animation_sound = sounds.logistics_chest_open,
+  opened_duration = logistic_chest_opened_duration,
+  animation =
+  {
+    layers =
+    {
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/active-provider-container.png",
+        priority = "high",
+        width = 264,
+        height = 264,
+        frame_count = 7,
+        shift = util.by_pixel(0, -2),
+        scale = 0.3
+      },
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/container-shadow.png",
+        priority = "high",
+        width = 384,
+        height = 384,
+        repeat_count = 7,
+        shift = util.by_pixel(12, -6),
+        draw_as_shadow = true,
+        scale = 0.3
+      }
+    }
+  },
+  surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0.1,
+      }
+    },
+  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_wire_max_distance = default_circuit_wire_max_distance
+},
+{
+  type = "logistic-container",
+  name = "planetaris-passive-provider-big-chest",
+  icon = "__planetaris-unbounded__/graphics/icons/passive-provider-container.png",
+  flags = {"placeable-neutral", "player-creation"},
+  minable = {mining_time = 0.2, result = "planetaris-passive-provider-big-chest"},
+  max_health = 450,
+  corpse = "planetaris-big-chest-remnants",
+  dying_explosion = "accumulator-explosion",
+  resistances =
+  {
+    {
+      type = "fire",
+      percent = 90
+    },
+    {
+      type = "impact",
+      percent = 90
+    }
+  },
+  logistic_mode = "active-provider",
+  collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+  selection_box = {{-1, -1}, {1, 1}},
+  damaged_trigger_effect = hit_effects.entity(),
+  inventory_size = 180,
+  impact_category = "metal",
+  icon_draw_specification = {scale = 0.7},
+  open_sound = sounds.metallic_chest_open,
+  close_sound = sounds.metallic_chest_close,
+  animation_sound = sounds.logistics_chest_open,
+  opened_duration = logistic_chest_opened_duration,
+  animation =
+  {
+    layers =
+    {
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/passive-provider-container.png",
+        priority = "high",
+        width = 264,
+        height = 264,
+        frame_count = 7,
+        shift = util.by_pixel(0, -2),
+        scale = 0.3
+      },
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/container-shadow.png",
+        priority = "high",
+        width = 384,
+        height = 384,
+        repeat_count = 7,
+        shift = util.by_pixel(12, -6),
+        draw_as_shadow = true,
+        scale = 0.3
+      }
+    }
+  },
+  surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0.1,
+      }
+    },
+  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_wire_max_distance = default_circuit_wire_max_distance
+},
+{
+  type = "logistic-container",
+  name = "planetaris-storage-big-chest",
+  icon = "__planetaris-unbounded__/graphics/icons/storage-container.png",
+  flags = {"placeable-neutral", "player-creation"},
+  minable = {mining_time = 0.2, result = "planetaris-storage-big-chest"},
+  max_health = 450,
+  corpse = "planetaris-big-chest-remnants",
+  dying_explosion = "accumulator-explosion",
+  resistances =
+  {
+    {
+      type = "fire",
+      percent = 90
+    },
+    {
+      type = "impact",
+      percent = 90
+    }
+  },
+  logistic_mode = "storage",
+  max_logistic_slots = 1,
+  collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+  selection_box = {{-1, -1}, {1, 1}},
+  damaged_trigger_effect = hit_effects.entity(),
+  inventory_size = 180,
+  impact_category = "metal",
+  icon_draw_specification = {scale = 0.7},
+  open_sound = sounds.metallic_chest_open,
+  close_sound = sounds.metallic_chest_close,
+  animation_sound = sounds.logistics_chest_open,
+  opened_duration = logistic_chest_opened_duration,
+  animation =
+  {
+    layers =
+    {
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/storage-container.png",
+        priority = "high",
+        width = 264,
+        height = 264,
+        frame_count = 7,
+        shift = util.by_pixel(0, -2),
+        scale = 0.3
+      },
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/container-shadow.png",
+        priority = "high",
+        width = 384,
+        height = 384,
+        repeat_count = 7,
+        shift = util.by_pixel(12, -6),
+        draw_as_shadow = true,
+        scale = 0.3
+      }
+    }
+  },
+  surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0.1,
+      }
+    },
+  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_wire_max_distance = default_circuit_wire_max_distance
+},
+{
+  type = "logistic-container",
+  name = "planetaris-buffer-big-chest",
+  icon = "__planetaris-unbounded__/graphics/icons/buffer-container.png",
+  flags = {"placeable-neutral", "player-creation"},
+  minable = {mining_time = 0.2, result = "planetaris-buffer-big-chest"},
+  max_health = 450,
+  corpse = "planetaris-big-chest-remnants",
+  dying_explosion = "accumulator-explosion",
+  resistances =
+  {
+    {
+      type = "fire",
+      percent = 90
+    },
+    {
+      type = "impact",
+      percent = 90
+    }
+  },
+  logistic_mode = "buffer",
+  trash_inventory_size = 30,
+  collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+  selection_box = {{-1, -1}, {1, 1}},
+  damaged_trigger_effect = hit_effects.entity(),
+  inventory_size = 180,
+  impact_category = "metal",
+  icon_draw_specification = {scale = 0.7},
+  open_sound = sounds.metallic_chest_open,
+  close_sound = sounds.metallic_chest_close,
+  animation_sound = sounds.logistics_chest_open,
+  opened_duration = logistic_chest_opened_duration,
+  animation =
+  {
+    layers =
+    {
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/buffer-container.png",
+        priority = "high",
+        width = 264,
+        height = 264,
+        frame_count = 7,
+        shift = util.by_pixel(0, -2),
+        scale = 0.3
+      },
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/container-shadow.png",
+        priority = "high",
+        width = 384,
+        height = 384,
+        repeat_count = 7,
+        shift = util.by_pixel(12, -6),
+        draw_as_shadow = true,
+        scale = 0.3
+      }
+    }
+  },
+  surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0.1,
+      }
+    },
+  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_wire_max_distance = default_circuit_wire_max_distance
+},
+{
+  type = "logistic-container",
+  name = "planetaris-requester-big-chest",
+  icon = "__planetaris-unbounded__/graphics/icons/requester-container.png",
+  flags = {"placeable-neutral", "player-creation"},
+  minable = {mining_time = 0.2, result = "planetaris-requester-big-chest"},
+  max_health = 450,
+  corpse = "planetaris-big-chest-remnants",
+  dying_explosion = "accumulator-explosion",
+  resistances =
+  {
+    {
+      type = "fire",
+      percent = 90
+    },
+    {
+      type = "impact",
+      percent = 90
+    }
+  },
+  logistic_mode = "requester",
+  trash_inventory_size = 30,
+  collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
+  selection_box = {{-1, -1}, {1, 1}},
+  damaged_trigger_effect = hit_effects.entity(),
+  inventory_size = 180,
+  impact_category = "metal",
+  icon_draw_specification = {scale = 0.7},
+  open_sound = sounds.metallic_chest_open,
+  close_sound = sounds.metallic_chest_close,
+  animation_sound = sounds.logistics_chest_open,
+  opened_duration = logistic_chest_opened_duration,
+  animation =
+  {
+    layers =
+    {
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/requester-container.png",
+        priority = "high",
+        width = 264,
+        height = 264,
+        frame_count = 7,
+        shift = util.by_pixel(0, -2),
+        scale = 0.3
+      },
+      {
+        filename = "__planetaris-unbounded__/graphics/entity/container/container-shadow.png",
+        priority = "high",
+        width = 384,
+        height = 384,
+        repeat_count = 7,
+        shift = util.by_pixel(12, -6),
+        draw_as_shadow = true,
+        scale = 0.3
+      }
+    }
+  },
+  surface_conditions =
+    {
+      {
+        property = "gravity",
+        min = 0.1,
+      }
+    },
+  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_wire_max_distance = default_circuit_wire_max_distance
+},
+
+---
+
   {
     type = "solar-panel",
     name = "planetaris-advanced-solar-panel",
@@ -632,6 +970,7 @@ graphics_set =
           priority = "high",
           width = 384,
           height = 384,
+          
           shift = util.by_pixel(0, 5),
           scale = 0.38
         },

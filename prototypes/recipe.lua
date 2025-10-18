@@ -423,6 +423,86 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "planetaris-active-provider-big-chest",
+      localised_name = {"entity-name.planetaris-active-provider-big-chest"},
+      category = "advanced-crafting",
+      energy_required = 20,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-big-chest", amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "advanced-circuit", amount = 1},
+      },
+      results = {{type="item", name="planetaris-active-provider-big-chest", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-passive-provider-big-chest",
+      localised_name = {"entity-name.planetaris-passive-provider-big-chest"},
+      category = "advanced-crafting",
+      energy_required = 20,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-big-chest", amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "advanced-circuit", amount = 1},
+      },
+      results = {{type="item", name="planetaris-passive-provider-big-chest", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-storage-big-chest",
+      localised_name = {"entity-name.planetaris-storage-big-chest"},
+      category = "advanced-crafting",
+      energy_required = 20,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-big-chest", amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "advanced-circuit", amount = 1},
+      },
+      results = {{type="item", name="planetaris-storage-big-chest", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-buffer-big-chest",
+      localised_name = {"entity-name.planetaris-buffer-big-chest"},
+      category = "advanced-crafting",
+      energy_required = 20,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-big-chest", amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "advanced-circuit", amount = 1},
+      },
+      results = {{type="item", name="planetaris-buffer-big-chest", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
+      name = "planetaris-requester-big-chest",
+      localised_name = {"entity-name.planetaris-requester-big-chest"},
+      category = "advanced-crafting",
+      energy_required = 20,
+      enabled = false,
+      ingredients =
+      {
+        {type = "item", name = "planetaris-big-chest", amount = 1},
+        {type = "item", name = "electronic-circuit", amount = 5},
+        {type = "item", name = "advanced-circuit", amount = 1},
+      },
+      results = {{type="item", name="planetaris-requester-big-chest", amount=1}},
+      allow_productivity = false,
+    },
+    {
+      type = "recipe",
       name = "planetaris-arig-roboport",
       enabled = false,
       energy_required = 5,
