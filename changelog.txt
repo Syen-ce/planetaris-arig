@@ -1,10 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.5
+Date: 2025-10-22
+  Changes:
+    - Changed Quartz's graphics
+  Compatibility:
+    - Fixed error with Maraxis mod
+    - Fixed hyper loader being too heavy for a rocket in aai loaders mod
+    - Set lunar legacy as incompatible at the moment
+  Bugfixes:
+    - Fixed autoplace controls not having icons
+---------------------------------------------------------------------------------------------------
 Version: 1.7.4
 Date: 2025-10-19
   Features:
     - Added logistics containers
   Changes:
-    - Change graphics of the container
+    - Changed graphics of the container
   Optimizations:
     - Optimized graphics
   Compatibility:
