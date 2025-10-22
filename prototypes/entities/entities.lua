@@ -2763,3 +2763,7 @@ data:extend({
     circuit_wire_max_distance = default_circuit_wire_max_distance,
 },
 })
+
+if not mods["Krastorio2-spaced-out"] then
+    data.raw["furnace"]["planetaris-quartz-furnace"].energy_usage = "45kW"
+end
