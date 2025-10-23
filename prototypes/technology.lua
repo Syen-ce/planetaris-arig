@@ -907,7 +907,7 @@ end
           recipe = "planetaris-nanoscale-lens"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-polishing","planetslib-hyarion-cargo-drops"},
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-polishing"},
       unit =
       {
         count = 1500,
@@ -938,7 +938,7 @@ end
           recipe = "planetaris-ruby-laser"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetslib-hyarion-cargo-drops"},
+      prerequisites = {"planetaris-polishing-science-pack"},
       unit =
       {
         count = 800,
@@ -969,7 +969,7 @@ end
           recipe = "planetaris-simulating-unit"
         },
       },
-      prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetslib-hyarion-cargo-drops","planetaris-diamond-polishing"},
+      prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetaris-diamond-polishing"},
       unit =
       {
         count = 800,
@@ -1262,35 +1262,3 @@ end
       order = "e-b[hyarion]",
     },
   })
-
- if settings.startup["enable-hyarion-cargo-drops"].value == false then 
-    local hyarion_cargo_drops_base =
-	PlanetsLib.cargo_drops_technology_base("hyarion", "__planetaris-unbounded-assets__/graphics/technology/hyarion-discovery.png", 256)
-
-  data:extend({
-    merge(hyarion_cargo_drops_base, {
-      unit = {
-        count =  500,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-          { "utility-science-pack", 1 },
-          {"space-science-pack", 1},
-          { "planetaris-compression-science-pack", 1 },
-          { "planetaris-polishing-science-pack", 1 },
-        },
-        time = 60,
-      },
-      prerequisites = { "planetaris-polishing-science-pack" },
-    })
-  })
-
-  PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("hyarion", "construction-robot")
-
-  else
-
-    data.raw["technology"]["planetaris-nanoscale-lens"].prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-polishing"}
-    data.raw["technology"]["planetaris-ruby-laser"].prerequisites = {"planetaris-polishing-science-pack"}
-    data.raw["technology"]["planetaris-simulating-unit"].prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetaris-diamond-polishing"}
-
-end
