@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.6
+Date: 2025-10-23
+  Features:
+    - Added option to enable arig and hyarion cargo drop, default is disable.
+  Changes:
+    - Arig crashes now can have construction robots
+---------------------------------------------------------------------------------------------------
 Version: 1.7.5
 Date: 2025-10-22
   Changes:

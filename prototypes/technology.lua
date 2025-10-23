@@ -570,6 +570,8 @@ data:extend({
   },
   })
   
+ if settings.startup["enable-arig-cargo-drops"].value == false then 
+
   local arig_cargo_drops_base =
 	PlanetsLib.cargo_drops_technology_base("arig", "__planetaris-unbounded__/graphics/technology/arig-cargo-drops.png", 256)
 
@@ -590,6 +592,8 @@ data:extend({
   })
 
 PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
+
+end
 
 -----------------------------------------------------------------
 --------------------------- Hyarion
@@ -1259,6 +1263,7 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
     },
   })
 
+ if settings.startup["enable-hyarion-cargo-drops"].value == false then 
     local hyarion_cargo_drops_base =
 	PlanetsLib.cargo_drops_technology_base("hyarion", "__planetaris-unbounded-assets__/graphics/technology/hyarion-discovery.png", 256)
 
@@ -1280,4 +1285,12 @@ PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction
     })
   })
 
-PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("hyarion", "construction-robot")
+  PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("hyarion", "construction-robot")
+
+  else
+
+    data.raw["technology"]["planetaris-nanoscale-lens"].prerequisites = {"planetaris-polishing-science-pack","planetaris-diamond-polishing"}
+    data.raw["technology"]["planetaris-ruby-laser"].prerequisites = {"planetaris-polishing-science-pack"}
+    data.raw["technology"]["planetaris-simulating-unit"].prerequisites = {"planetaris-polishing-science-pack","planetaris-silica-processing","planetaris-diamond-polishing"}
+
+end
