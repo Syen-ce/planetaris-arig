@@ -43,7 +43,7 @@ data:extend({
         shift = {0, 0},
         priority = "high",
         animation_speed = 0.25,
-        filename = "__planetaris-unbounded__/graphics/entity/sand-smoke/smoke.png",
+        filename = "__planetaris-arig__/graphics/entity/sand-smoke/smoke.png",
         flags = { "smoke" },
         scale = 0.5
       }
@@ -124,7 +124,7 @@ local sandstone_transitions_between_transitions =
     background_layer_group = "zero",
     offset_background_layer_by_tile_layer = true,
 
-    spritesheet = "__planetaris-unbounded__/graphics/terrain/out-of-map-transition/sandstone-out-of-map-transition.png",
+    spritesheet = "__planetaris-arig__/graphics/terrain/out-of-map-transition/sandstone-out-of-map-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0,
     overlay_enabled = false
   },
@@ -137,7 +137,7 @@ local sandstone_transitions_between_transitions =
     masked_background_layer_offset = 1,
     offset_background_layer_by_tile_layer = false,
 
-    spritesheet = "__planetaris-unbounded__/graphics/terrain/out-of-map-transition/sandstone-shore-out-of-map-transition.png",
+    spritesheet = "__planetaris-arig__/graphics/terrain/out-of-map-transition/sandstone-shore-out-of-map-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0,
     effect_map_layout =
     {
@@ -191,7 +191,7 @@ local sandstone_foundation_transitions =
     to_tiles = water_tile_type_names,
     transition_group = water_transition_group_id,
 
-    spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-foundation/sandstone.png",
+    spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-foundation/sandstone.png",
     layout = tile_spritesheet_layout.transition_8_8_8_2_4,
     background_enabled = false,
     effect_map_layout =
@@ -208,7 +208,7 @@ local sandstone_foundation_transitions_between_transitions =
   {
     transition_group1 = default_transition_group_id,
     transition_group2 = water_transition_group_id,
-    spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-foundation/sandstone-transition.png",
+    spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-foundation/sandstone-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0,
     background_enabled = false,
     effect_map_layout = {
@@ -225,7 +225,7 @@ local sandstone_foundation_transitions_between_transitions =
     background_layer_group = "zero",
     offset_background_layer_by_tile_layer = true,
 
-    spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-foundation/sandstone-shore-out-of-map-transition.png",
+    spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-foundation/sandstone-shore-out-of-map-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0,
     effect_map_layout =
     {
@@ -290,20 +290,20 @@ data:extend({
     main =
         {
           {
-            picture = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-1.png",
+            picture = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-1.png",
             count = 16,
             size = 1,
             scale = 0.5
           },
           {
-            picture = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-2.png",
+            picture = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-2.png",
             count = 16,
             size = 2,
             probability = 0.39,
             scale = 0.5
           },
           {
-            picture = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-4.png",
+            picture = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-4.png",
             count = 16,
             size = 4,
             probability = 1,
@@ -316,35 +316,35 @@ data:extend({
           {
             inner_corner =
             {
-              spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-inner-corner.png",
+              spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-inner-corner.png",
               count = 16,
               tile_height = 2,
               scale = 0.5
             },
             outer_corner =
             {
-              spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-outer-corner.png",
+              spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-outer-corner.png",
               count = 8,
               tile_height = 2,
               scale = 0.5
             },
             side =
             {
-              spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-side.png",
+              spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-side.png",
               count = 16,
               tile_height = 2,
               scale = 0.5
             },
             u_transition =
             {
-              spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-u.png",
+              spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-u.png",
               count = 8,
               tile_height = 2,
               scale = 0.5
             },
             o_transition =
             {
-              spritesheet = "__planetaris-unbounded__/graphics/terrain/sandstone-path/stone-path-o.png",
+              spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-path/stone-path-o.png",
               count = 4,
               scale = 0.5
             }
@@ -377,7 +377,7 @@ data:extend({
 
       material_background =
       {
-        picture = "__planetaris-unbounded__/graphics/terrain/sandstone-foundation/sandstone-foundation.png",
+        picture = "__planetaris-arig__/graphics/terrain/sandstone-foundation/sandstone-foundation.png",
         count = 8,
         scale = 0.5
       }
@@ -429,7 +429,7 @@ data:extend({
       transition = transition_masks(),
       material_background =
       {
-        picture = "__planetaris-unbounded__/graphics/terrain/arig-dune-sand.png",
+        picture = "__planetaris-arig__/graphics/terrain/arig-dune-sand.png",
         line_length = 4,
         count = 16,
         scale = 0.5
@@ -458,7 +458,7 @@ data:extend({
   layer = 8,
 
   variants = tile_variations_template(
-    "__planetaris-unbounded__/graphics/terrain/sandstone-1.png", "__base__/graphics/terrain/masks/transition-4.png",
+    "__planetaris-arig__/graphics/terrain/sandstone-1.png", "__base__/graphics/terrain/masks/transition-4.png",
     {
       max_size = 8,
       [2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020} },
@@ -492,7 +492,7 @@ data:extend({
   layer = 8,
 
   variants = tile_variations_template(
-      "__planetaris-unbounded__/graphics/terrain/sandstone-2.png", "__base__/graphics/terrain/masks/transition-4.png",
+      "__planetaris-arig__/graphics/terrain/sandstone-2.png", "__base__/graphics/terrain/masks/transition-4.png",
       {
         max_size = 8,
         [2] = { probability = 0.39, weights = {0.025, 0.010, 0.013, 0.025, 0.025, 0.100, 0.100, 0.005, 0.010, 0.010, 0.005, 0.005, 0.001, 0.015, 0.020, 0.020} },
@@ -527,7 +527,7 @@ data:extend({
   layer = 8,
 
   variants = tile_variations_template(
-      "__planetaris-unbounded__/graphics/terrain/sandstone-3.png", "__base__/graphics/terrain/masks/transition-4.png",
+      "__planetaris-arig__/graphics/terrain/sandstone-3.png", "__base__/graphics/terrain/masks/transition-4.png",
       {
         max_size = 4,
         [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
@@ -569,7 +569,7 @@ data:extend({
       transition = transition_masks(),
       material_background =
       {
-        picture = "__planetaris-unbounded__/graphics/terrain/arig-rock.png",
+        picture = "__planetaris-arig__/graphics/terrain/arig-rock.png",
         line_length = 8,
         count = 16,
         scale = 0.5

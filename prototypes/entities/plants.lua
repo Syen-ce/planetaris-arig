@@ -51,7 +51,7 @@ cactus_plant.pictures =
       {
         --cactus
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
           priority = "extra-high",
           width = 92,
           height = 61,
@@ -59,7 +59,7 @@ cactus_plant.pictures =
           scale = 0.5 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
           priority = "extra-high",
           width = 92,
           height = 61,
@@ -67,7 +67,7 @@ cactus_plant.pictures =
           scale = 0.5 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -75,7 +75,7 @@ cactus_plant.pictures =
           scale = 0.5 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -83,7 +83,7 @@ cactus_plant.pictures =
           scale = 0.5 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -91,7 +91,7 @@ cactus_plant.pictures =
           scale = 1 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -99,7 +99,7 @@ cactus_plant.pictures =
           scale = 1 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -107,7 +107,7 @@ cactus_plant.pictures =
           scale = 1 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -115,7 +115,7 @@ cactus_plant.pictures =
           scale = 1 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -123,7 +123,7 @@ cactus_plant.pictures =
           scale = 0.8 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
           priority = "extra-high",
           width = 92,
           height = 90,
@@ -131,7 +131,7 @@ cactus_plant.pictures =
           scale = 1 * cactus_rescale
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
           priority = "extra-high",
           width = 92,
           height = 90,

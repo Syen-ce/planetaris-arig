@@ -15,7 +15,7 @@ data:extend({
         name = "arig-crash",
         type = "simple-entity",
         flags = {"placeable-neutral", "placeable-off-grid"},
-        icon = "__planetaris-unbounded__/graphics/icons/arig-crash.png",
+        icon = "__planetaris-arig__/graphics/icons/arig-crash.png",
         subgroup = "grass",
         order = "b[decorative]-z-a",
         deconstruction_alternative = "big-rock",
@@ -67,21 +67,21 @@ data:extend({
         pictures =
         {
           {
-            filename = "__planetaris-unbounded__/graphics/decorative/arig-crash/arig-crash-1.png",
+            filename = "__planetaris-arig__/graphics/decorative/arig-crash/arig-crash-1.png",
             width = 229,
             height = 235,
             scale = 0.5,
             shift = {0.25, 0.0625}
           },
           {
-            filename = "__planetaris-unbounded__/graphics/decorative/arig-crash/arig-crash-2.png",
+            filename = "__planetaris-arig__/graphics/decorative/arig-crash/arig-crash-2.png",
             width = 215,
             height = 235,
             scale = 0.5,
             shift = {0.429688, 0.046875}
           },
           {
-            filename = "__planetaris-unbounded__/graphics/decorative/arig-crash/arig-crash-3.png",
+            filename = "__planetaris-arig__/graphics/decorative/arig-crash/arig-crash-3.png",
             width = 297,
             height = 235,
             scale = 0.5,
@@ -614,56 +614,56 @@ data:extend({
       {
         --redDecal
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-01.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-01.png",
           width = 553,
           height = 753,
           dice_y = 2,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-02.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-02.png",
           width = 567,
           height = 471,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-03.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-03.png",
           width = 567,
           height = 425,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-04.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-04.png",
           width = 557,
           height = 565,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-05.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-05.png",
           width = 555,
           height = 563,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-06.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-06.png",
           width = 567,
           height = 565,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-07.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-07.png",
           width = 567,
           height = 565,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-09.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-09.png",
           width = 567,
           height = 565,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-red-desert-decal/red-desert-decal-11.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-red-desert-decal/red-desert-decal-11.png",
           width = 371,
           height = 409,
           scale = 0.5
@@ -689,171 +689,171 @@ data:extend({
       pictures =
       {
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-01.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-01.png",
           width = 975,
           height = 664,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-02.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-02.png",
           width = 628,
           height = 477,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-03.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-03.png",
           width = 519,
           height = 331,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-04.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-04.png",
           width = 870,
           height = 781,
           dice_y = 2,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-05.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-05.png",
           width = 230,
           height = 161,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-06.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-06.png",
           width = 140,
           height = 110,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-07.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-07.png",
           width = 285,
           height = 243,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-08.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-08.png",
           width = 156,
           height = 85,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-09.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-09.png",
           width = 212,
           height = 152,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-10.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-10.png",
           width = 233,
           height = 197,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-11.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-11.png",
           width = 324,
           height = 413,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-12.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-12.png",
           width = 504,
           height = 488,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-13.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-13.png",
           width = 329,
           height = 305,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-15.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-15.png",
           width = 266,
           height = 262,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-16.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-16.png",
           width = 921,
           height = 712,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-17.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-17.png",
           width = 722,
           height = 395,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-18.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-18.png",
           width = 187,
           height = 289,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-19.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-19.png",
           width = 999,
           height = 374,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-20.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-20.png",
           width = 783,
           height = 399,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-21.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-21.png",
           width = 668,
           height = 406,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-22.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-22.png",
           width = 437,
           height = 318,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-23.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-23.png",
           width = 394,
           height = 246,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-25.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-25.png",
           width = 1290,
           height = 1281,
           dice_y = 4,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-26.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-26.png",
           width = 314,
           height = 174,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-27.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-27.png",
           width = 348,
           height = 264,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-28.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-28.png",
           width = 488,
           height = 357,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-29.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-29.png",
           width = 594,
           height = 634,
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-sand-decal/sand-decal-30.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-sand-decal/sand-decal-30.png",
           width = 195,
           height = 215,
           scale = 0.5
@@ -885,7 +885,7 @@ data:extend({
       {
         --cactus
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 61,
@@ -893,7 +893,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 61,
@@ -901,7 +901,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -909,7 +909,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -917,7 +917,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -925,7 +925,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -933,7 +933,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -941,7 +941,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -949,7 +949,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -957,7 +957,7 @@ data:extend({
           scale = 0.8
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -965,7 +965,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -978,7 +978,7 @@ data:extend({
       name = "arig-small-cactus-plant",
       type = "simple-entity",
       flags = {"placeable-neutral", "placeable-off-grid"},
-      icon = "__planetaris-unbounded__/graphics/icons/small-cactus.png",
+      icon = "__planetaris-arig__/graphics/icons/small-cactus.png",
       subgroup = "grass",
       order = "b[decorative]-z-b",
       collision_box = {{-0.3, -0.3}, {0.3, 0.3}},
@@ -1010,7 +1010,7 @@ data:extend({
       {
         --cactus
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-1.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 61,
@@ -1018,7 +1018,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-2.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 61,
@@ -1026,7 +1026,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-3.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1034,7 +1034,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-4.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1042,7 +1042,7 @@ data:extend({
           scale = 0.5
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-5.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1050,7 +1050,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-6.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1058,7 +1058,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-7.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1066,7 +1066,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-8.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1074,7 +1074,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-9.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1082,7 +1082,7 @@ data:extend({
           scale = 0.8
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-10.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1090,7 +1090,7 @@ data:extend({
           scale = 1
         },
         {
-          filename = "__planetaris-unbounded__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
+          filename = "__planetaris-arig__/graphics/decorative/arig-small-cactus/arig-cactus-11.png",
           priority = base_decorative_sprite_priority,
           width = 92,
           height = 90,
@@ -1122,7 +1122,7 @@ data:extend({
                                 range_select{input = temperature, from = 10, to = 14, slope = 0.5, min = -10, max = 1}))"
         }
       },
-      pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-cracks/arig-cracks-", "large-", 128, 20)
+      pictures = get_decal_pictures("__planetaris-arig__/graphics/decorative/arig-cracks/arig-cracks-", "large-", 128, 20)
     },
       {
     name = "arig-crack-decal-large",
@@ -1147,7 +1147,7 @@ data:extend({
                                 range_select{input = temperature, from = 10, to = 14, slope = 0.5, min = -10, max = 1}))"
         }
       },
-    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-cracks/arig-cracks-", "huge-", 256, 20)
+    pictures = get_decal_pictures("__planetaris-arig__/graphics/decorative/arig-cracks/arig-cracks-", "huge-", 256, 20)
   },
     --- ROCK CLUSTERS
   {
@@ -1180,7 +1180,7 @@ data:extend({
       order = "d[ground-surface]-h[dune]-a[relief]",
       probability_expression = "vulcanus_dune_decal"
     },
-    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-dune-decal/arig-dune-decal-", "", 512, 20)
+    pictures = get_decal_pictures("__planetaris-arig__/graphics/decorative/arig-dune-decal/arig-dune-decal-", "", 512, 20)
   },
   {
     name = "arig-pumice-relief-decal",
@@ -1195,7 +1195,7 @@ data:extend({
       order = "d[ground-surface]-d[relief]-b[rocky]",
       probability_expression = "pumice_relief_decal"
     },
-    pictures = get_decal_pictures("__planetaris-unbounded__/graphics/decorative/arig-relief-decal/arig-pumice-relief-", "", 1024, 19)
+    pictures = get_decal_pictures("__planetaris-arig__/graphics/decorative/arig-relief-decal/arig-pumice-relief-", "", 1024, 19)
   },
     {
       name = "arig-brown-fluff",

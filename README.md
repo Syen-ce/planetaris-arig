@@ -1,12 +1,12 @@
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/Mu7zkD7THf)
 
-# Welcome to Planetaris Unbounded
+# Welcome to Arig
 
-Discover new places of the universe, starting from Arig a desert planet with limited resources.
+Arig a desert planet with limited resources.
 
 <img width="256" height="256" alt="Image" src="https://github.com/user-attachments/assets/d17e6a66-b7c2-419e-a453-d737b5b025cf" />
 
-Arig is a hot planet with vast deserts where valuable resources can only be found underground or in the sand. Constant sandstorms make the use of robots unviable, and most of the surface is unsuitable for building without a proper foundation.
+A hot planet with vast deserts where valuable resources can only be found underground or in the sand. Constant sandstorms make the use of robots unviable, and most of the surface is unsuitable for building without a proper foundation.
 
 <img width="2400" height="1336" alt="Planet gen" src="https://github.com/user-attachments/assets/aa64e3e3-08b6-4eb8-ac4a-f1f6c4bac4b0" />
 
@@ -30,14 +30,8 @@ https://github.com/user-attachments/assets/9b1d35a1-92cb-45ab-bf1c-070acbfbe8de
 
 https://github.com/user-attachments/assets/b13720c2-2318-4edd-89f6-2bc74bc58f83
 
-# Future
+# Planetaris unbounded
 
-My plans at the moment is to create a new set of planets with unique production lines that expand the space age game, as more planets and content is added i will change base game recipies and technologies to merge both experiences.
-
-### Design process
-
-The progression of the planets is not meant to be easy. Each planet introduces different restrictions to create a unique experience. For example, Arig makes it completely impossible to use any type of robot and limits building space until the right foundation is researched.
-
-The next planet is already planned, and I’ll start working on it after fixing a few issues on Arig.
+Planetaris unbounded is a bigger mod that merges all planetaris planets, Arig works on its own but is recommended to play with the rest of planets.
 
 I'm completely open to suggestions and ideas. :)

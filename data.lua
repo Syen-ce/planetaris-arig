@@ -2,41 +2,28 @@ require("lib")
 require("prototypes.achievements")
 require("prototypes.autoplace-controls")
 require("prototypes.categories.recipe-category")
-require("prototypes.categories.resource-category")
 require("prototypes.decoratives.arig-decoratives")
-require("prototypes.decoratives.hyarion-decoratives")
 require("prototypes.entities.entities")
 require("prototypes.entities.remnants")
 require("prototypes.entities.explosions")
 require("prototypes.entities.plants")
-require("prototypes.entities.projectiles")
 require("prototypes.entities.resources")
 require("prototypes.entities.transport-belts")
-require("prototypes.entities.hyarion-geode-mining-drill")
-require("prototypes.entities.polisher")
-require("prototypes.entities.particle-manipulator")
-require("prototypes.entities.trees")
 require("prototypes.fluid")
---require("prototypes.factoriopedia-simulations")
 require("prototypes.item")
---require("prototypes.item-effects")
 require("prototypes.item-groups")
-require("prototypes.particles")
 require("prototypes.planets.planet")
 require("prototypes.planets.planet_arig_map_gen")
-require("prototypes.planets.planet_hyarion_map_gen")
 require("prototypes.planets.planet_map_gen")
 require("prototypes.planets.surface-conditions")
 require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.tile.arig-tile")
-require("prototypes.tile.hyarion-tile")
 require("prototypes.tile.tile-collision-masks")
 require("prototypes.tips-and-tricks")
 
 --------------------- Compat
 
-require("compat.stone-sifting")
 require("compat.krastorio2-so")
 require("compat.resource-spawner-overhaul")
 require("compat.aai-industry")
@@ -53,6 +40,5 @@ require("compat.planet-muluna")
 
 
 if mods["any-planet-start"] then
-    APS.add_planet{name = "arig", filename = "__planetaris-unbounded__/compat/any-planet-start-arig.lua", technology = "planet-discovery-arig"}
-    --APS.add_planet{name = "hyarion", filename = "__planetaris-unbounded__/compat/any-planet-start-hyarion.lua", technology = "planet-discovery-hyarion"}
+    APS.add_planet{name = "arig", filename = "__planetaris-arig__/compat/any-planet-start-arig.lua", technology = "planet-discovery-arig"}
 end

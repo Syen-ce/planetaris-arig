@@ -24,7 +24,7 @@ if not mods["Igrys"] then return end
         category = "crafting-with-fluid",
         enabled = false,
         energy_required = 2,
-        icon = "__planetaris-unbounded__/graphics/icons/glass-panel.png",
+        icon = "__planetaris-arig__/graphics/icons/glass-panel.png",
         localised_name = {"", {"item-name.planetaris-glass-panel"}, " (", {"space-location-name.igrys"}, ")"},
         ingredients =
         {

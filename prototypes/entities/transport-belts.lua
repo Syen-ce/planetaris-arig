@@ -9,7 +9,7 @@ local hyper_belt_animation_set =
   alternate = true,
   animation_set =
   {
-    filename = "__planetaris-unbounded__/graphics/entity/hyper-transport-belt/hyper-transport-belt.png",
+    filename = "__planetaris-arig__/graphics/entity/hyper-transport-belt/hyper-transport-belt.png",
     priority = "extra-high",
     size = 128,
     scale = 0.5,
@@ -32,7 +32,7 @@ data:extend({
 {
     type = "transport-belt",
     name = "planetaris-hyper-transport-belt",
-    icon = "__planetaris-unbounded__/graphics/icons/hyper-transport-belt.png",
+    icon = "__planetaris-arig__/graphics/icons/hyper-transport-belt.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-hyper-transport-belt"},
     max_health = 180,
@@ -68,7 +68,7 @@ data:extend({
   {
     type = "underground-belt",
     name = "planetaris-hyper-underground-belt",
-    icon = "__planetaris-unbounded__/graphics/icons/hyper-underground-belt.png",
+    icon = "__planetaris-arig__/graphics/icons/hyper-underground-belt.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-hyper-underground-belt"},
     max_health = 180,
@@ -128,7 +128,7 @@ data:extend({
       {
         sheet =
         {
-          filename = "__planetaris-unbounded__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
+          filename = "__planetaris-arig__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -140,7 +140,7 @@ data:extend({
       {
         sheet =
         {
-          filename = "__planetaris-unbounded__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
+          filename = "__planetaris-arig__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height =192,
@@ -151,7 +151,7 @@ data:extend({
       {
         sheet =
         {
-          filename = "__planetaris-unbounded__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
+          filename = "__planetaris-arig__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -163,7 +163,7 @@ data:extend({
       {
         sheet =
         {
-          filename = "__planetaris-unbounded__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
+          filename = "__planetaris-arig__/graphics/entity/hyper-underground-belt/hyper-underground-belt-structure.png",
           priority = "extra-high",
           width = 192,
           height = 192,
@@ -221,7 +221,7 @@ data:extend({
   {
     type = "splitter",
     name = "planetaris-hyper-splitter",
-    icon = "__planetaris-unbounded__/graphics/icons/hyper-splitter.png",
+    icon = "__planetaris-arig__/graphics/icons/hyper-splitter.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-hyper-splitter"},
     max_health = 190,
@@ -252,7 +252,7 @@ data:extend({
     structure =
     {
       north =
-      util.sprite_load("__planetaris-unbounded__/graphics/entity/hyper-splitter/hyper-splitter-north",
+      util.sprite_load("__planetaris-arig__/graphics/entity/hyper-splitter/hyper-splitter-north",
         {
           frame_count = 32,
           priority = "extra-high",
@@ -260,7 +260,7 @@ data:extend({
         }
       ),
       east =
-      util.sprite_load("__planetaris-unbounded__/graphics/entity/hyper-splitter/hyper-splitter-east",
+      util.sprite_load("__planetaris-arig__/graphics/entity/hyper-splitter/hyper-splitter-east",
         {
           frame_count = 32,
           priority = "extra-high",
@@ -268,7 +268,7 @@ data:extend({
         }
       ),
       south =
-      util.sprite_load("__planetaris-unbounded__/graphics/entity/hyper-splitter/hyper-splitter-south",
+      util.sprite_load("__planetaris-arig__/graphics/entity/hyper-splitter/hyper-splitter-south",
         {
           frame_count = 32,
           priority = "extra-high",
@@ -276,7 +276,7 @@ data:extend({
         }
       ),
       west =
-      util.sprite_load("__planetaris-unbounded__/graphics/entity/hyper-splitter/hyper-splitter-west",
+      util.sprite_load("__planetaris-arig__/graphics/entity/hyper-splitter/hyper-splitter-west",
         {
           frame_count = 32,
           priority = "extra-high",
@@ -288,7 +288,7 @@ data:extend({
     {
       north = util.empty_sprite(),
       east =
-      util.sprite_load("__planetaris-unbounded__/graphics/entity/hyper-splitter/hyper-splitter-east-top_patch",
+      util.sprite_load("__planetaris-arig__/graphics/entity/hyper-splitter/hyper-splitter-east-top_patch",
         {
           frame_count = 32,
           priority = "extra-high",
@@ -297,7 +297,7 @@ data:extend({
       ),
       south = util.empty_sprite(),
       west =
-      util.sprite_load("__planetaris-unbounded__/graphics/entity/hyper-splitter/hyper-splitter-west-top_patch",
+      util.sprite_load("__planetaris-arig__/graphics/entity/hyper-splitter/hyper-splitter-west-top_patch",
         {
           frame_count = 32,
           priority = "extra-high",
