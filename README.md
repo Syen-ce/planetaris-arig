@@ -2,13 +2,9 @@
 
 # Welcome to Arig
 
-Arig a desert planet with limited resources.
+Arig a desert planet with limited resources, a hot place with vast deserts where valuable resources can only be found underground or in the sand. Constant sandstorms make the use of robots unviable, and most of the surface is unsuitable for building without a proper foundation.
 
 <img width="2560" height="1351" alt="Planet gen_2" src="https://github.com/user-attachments/assets/afe09639-34c6-4469-963d-ba0718c40929" />
-
-A hot planet with vast deserts where valuable resources can only be found underground or in the sand. Constant sandstorms make the use of robots unviable, and most of the surface is unsuitable for building without a proper foundation.
-
-<img width="2400" height="1336" alt="Planet gen" src="https://github.com/user-attachments/assets/aa64e3e3-08b6-4eb8-ac4a-f1f6c4bac4b0" />
 
 # Inside Arig
 
