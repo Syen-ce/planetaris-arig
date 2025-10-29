@@ -6,3 +6,4 @@ Date: 2025-10-23
   Changes:
     - MAJOR CHANGES, separated Arig in hyarion in separate mods to have better order, this makes Arig playable without hyarion. Planetaris unbounded mod will work as a modpack and will enable all planetaris mods. To see earlier changlelog look in Planetaris unbounded
     - Arig crashes now can have construction robots
+    - When Hyarion is installed hyper belts will move to the hyarion progression.

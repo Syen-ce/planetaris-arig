@@ -15,7 +15,6 @@ planet_map_gen.arig = function()
       cliff_settings =
       {
         name = "arig-cliff",
-        control = "arig_cliff",
         cliff_smoothing = 0,
       },
       autoplace_controls =
