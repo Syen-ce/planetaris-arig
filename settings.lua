@@ -5,6 +5,13 @@ data:extend({
 		setting_type = "startup",
 		default_value = false,
 		order = "a-a-a",
+	},
+	{
+		type = "bool-setting",
+		name = "debug-cactus-recipe",
+		setting_type = "startup",
+		default_value = false,
+		order = "a-b-a",
 	}
 })
 
