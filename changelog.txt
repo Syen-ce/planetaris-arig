@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+Date: 2025-10-31
+  Features:
+    - Added custom procession graphics
+  Bugfixes:
+    - Any planet start, Fixed setting option not having the arig icon.
+  Compatibility:
+    - Igrys, Fixed error with Unique igrys glass
+---------------------------------------------------------------------------------------------------
 Version: 1.0.1
 Date: 2025-10-31
   Features:

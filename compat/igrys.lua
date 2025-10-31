@@ -49,8 +49,3 @@ if not mods["Igrys"] then return end
           recipe = "igrys-glass-to-planetaris-glass-panel"
         }
       )
-
-if settings.startup["igrys-unique-glass"].value then
-    data.raw["recipe"]["planetaris-glass-panel-to-igrys-glass"].localised_name = {"", {"item-name.igrys-unique-glass"}, " (", {"space-location-name.arig"}, ")"}
-    data.raw["recipe"]["planetaris-glass-panel-to-igrys-glass"].icon = "__Igrys__/Assets/Items/unique-glass.png"
-end
