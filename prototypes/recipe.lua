@@ -708,3 +708,26 @@ data:extend(
       allow_productivity = true
     }
 })
+
+ if settings.startup["debug-cactus-recipe"].value == true then
+  data:extend({
+     {
+      type = "recipe",
+      name = "planetaris-debug-cactus-recipe",
+      icon = "__planetaris-arig__/graphics/icons/cactus.png",
+      icon_size = 64,
+      category = "sifting",
+      subgroup = "arig-processes",
+      order = "a-a-b[natural]",
+      enabled = true,
+      auto_recycle = false,
+      energy_required = 1,
+      ingredients =
+      {
+        { type = "fluid", name = "water", amount = 1000 },
+        { type = "fluid", name = "planetaris-sand", amount = 300 },
+      },
+      results = { { type = "item", name = "planetaris-cactus", amount = 2 } }
+  },
+  })
+  end

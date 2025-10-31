@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.
+Date: 2025-10-31
+  Features:
+    - Minable cactus will appear in new chunks of the planet generation in old saves
+    - Added debug recipe for cactus, now old saves can obtain it through recipe
+  Compatibility:
+    - Any planet start, barrels are unlocked with steel processing
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2025-10-23
   Features:

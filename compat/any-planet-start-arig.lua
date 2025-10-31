@@ -9,9 +9,13 @@ data.raw.technology["steel-processing"].research_trigger = {
       }
 data.raw.technology["steel-processing"].unit = nil
 data.raw.technology["steel-processing"].prerequisites = nil
-table.insert(data.raw.technology["steel-processing"].effects, {
+table.insert(data.raw.technology["steel-processing"].effects,{
           type = "unlock-recipe",
           recipe = "planetaris-small-electric-pole"
+    })
+table.insert(data.raw.technology["steel-processing"].effects,{
+          type = "unlock-recipe",
+          recipe = "barrel"
     })
 
 data.raw.technology["solar-energy"].prerequisites = {"steel-processing", "electronics"}
