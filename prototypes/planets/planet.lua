@@ -1,6 +1,6 @@
 local effects = require("__core__.lualib.surface-render-parameter-effects")
 local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
-local planet_catalogue_fulgora = require("__space-age__.prototypes.planet.procession-catalogue-fulgora")
+local planet_catalogue_arig = require("__planetaris-arig__/prototypes/planets/procession-catalogue-arig")
 local planet_map_gen = require("__planetaris-arig__/prototypes/planets/planet_map_gen")
 
 PlanetsLib:extend({
@@ -28,6 +28,7 @@ PlanetsLib:extend({
         order = "f[arig]",
         solar_power_in_space = 600,
         pollutant_type = nil,
+        procession_graphic_catalogue = planet_catalogue_arig,
         platform_procession_set = {
             arrival = {"planet-to-platform-b"},
             departure = {"platform-to-planet-a"}
