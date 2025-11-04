@@ -474,7 +474,7 @@ data:extend({
   driving_sound = base_tile_sounds.driving.sand,
   map_color={160, 128, 93},
   scorch_mark_color = {160, 128, 93},
-  absorptions_per_second = tile_pollution.sand,
+  absorptions_per_second = nil,
   vehicle_friction_modifier = sand_vehicle_speed_modifier,
 
   trigger_effect = tile_trigger_effects.sand_trigger_effect(),
@@ -508,7 +508,7 @@ data:extend({
   driving_sound = base_tile_sounds.driving.sand,
   map_color={151, 120, 86},
   scorch_mark_color = {151, 120, 86},
-  absorptions_per_second = tile_pollution.sand,
+  absorptions_per_second = nil,
   vehicle_friction_modifier = sand_vehicle_speed_modifier,
 
   trigger_effect = tile_trigger_effects.sand_trigger_effect(),
@@ -544,7 +544,7 @@ data:extend({
   driving_sound = base_tile_sounds.driving.sand,
   map_color={140, 110, 79},
   scorch_mark_color = {140, 110, 79},
-  absorptions_per_second = tile_pollution.sand,
+  absorptions_per_second = nil,
   vehicle_friction_modifier = sand_vehicle_speed_modifier,
 
   trigger_effect = tile_trigger_effects.sand_trigger_effect(),
