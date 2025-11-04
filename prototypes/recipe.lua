@@ -166,10 +166,10 @@ data:extend(
     },
     results = {
       {type="item", name="planetaris-glass-panel", amount=5},
-      {type="item", name="barrel", amount=2}
+      {type="item", name="barrel", amount=2, ignored_by_stats = 2, ignored_by_productivity = 2}
   },
     main_product = "planetaris-glass-panel",
-    allow_productivity = false
+    allow_productivity = true
   },
   {
     type = "recipe",
@@ -207,23 +207,6 @@ data:extend(
       {type = "item", name = "planetaris-sandstone-brick", amount = 1},
     },
     results = {{type="item", name="planetaris-raw-quartz", amount=1}},
-    allow_productivity = true
-  },
-  {
-    type = "recipe",
-    name = "planetaris-advanced-raw-quartz",
-    category = "compressing",
-    enabled = false,
-    auto_recycle = false,
-    energy_required = 2,
-    ingredients =
-    {
-      {type = "fluid", name = "steam", amount = 10},
-      {type = "fluid", name = "light-oil", amount = 10},
-      {type = "item", name = "planetaris-sandstone-brick", amount = 1},
-      {type = "item", name = "coal", amount = 1},
-    },
-    results = {{type="item", name="planetaris-raw-quartz", amount=2}},
     allow_productivity = true
   },
   {
