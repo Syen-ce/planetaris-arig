@@ -66,6 +66,7 @@ data:extend(
           {type = "item", name = "sulfur",                  amount = 1,  probability = 0.01, show_details_in_recipe_tooltip = false},
         },
         allow_productivity = false,
+        crafting_machine_tint = {primary = {0.871, 0.788, 0.627, 1}, secondary = {0.871, 0.788, 0.627, 1},tertiary = {0.871, 0.788, 0.627, 1}, quaternary = {0.871, 0.788, 0.627, 1}},
       },
       {
         type = "recipe",
@@ -88,6 +89,7 @@ data:extend(
           {type = "item", name = "coal",                  amount = 1,  probability = 0.15, show_details_in_recipe_tooltip = false},
         },
         allow_productivity = false,
+        crafting_machine_tint = {primary = {0.871, 0.788, 0.627, 1}, secondary = {0.871, 0.788, 0.627, 1},tertiary = {0.871, 0.788, 0.627, 1}, quaternary = {0.871, 0.788, 0.627, 1}},
       },
       {
         type = "recipe",
@@ -105,6 +107,25 @@ data:extend(
         {
           {type = "fluid", name = "planetaris-pure-sand", amount = 20, show_details_in_recipe_tooltip = false},
         },
+        allow_productivity = false,
+        crafting_machine_tint = {primary = {0.871, 0.788, 0.627, 1}, secondary = {0.871, 0.788, 0.627, 1},tertiary = {0.871, 0.788, 0.627, 1}, quaternary = {0.871, 0.788, 0.627, 1}},
+      },
+      {
+        type = "recipe",
+        name = "planetaris-steam-venting",
+        icons = {
+          {icon="__base__/graphics/icons/fluid/steam.png", shift={-12, -12}, scale=0.4},
+          {icon="__planetaris-arig__/graphics/icons/sifter.png", draw_background=true}
+        },
+        icon_size = 64,
+        category = "sifting",
+        subgroup = "arig-processes",
+        order = "a[sand-processing]-a[sifting]-d",
+        enabled = false,
+        auto_recycle = false,
+        energy_required = 2,
+        ingredients = {{type = "fluid", name = "steam", amount = 50}},
+        results = nil,
         allow_productivity = false,
       },
       {

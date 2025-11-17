@@ -35,6 +35,7 @@ require("compat.crushing-industry")
 require("compat.cloud-city")
 require("compat.igrys")
 require("compat.lignumis")
+require("compat.omnia")
 require("compat.wood-industry")
 require("compat.planet-muluna")
 

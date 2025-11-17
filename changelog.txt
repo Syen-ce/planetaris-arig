@@ -1,8 +1,14 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2025-10-31
+  Features:
+    - Added steam venting recipe
+    - Added heavy glass productivity technology
+  Bugfixes:
+    - Fixed sand sifting recipes not having machine tint
   Compatibility:
     - Moved omnia's Orientation so it does not collide with Arig
+    - Any planet start, moved unlock of automation 2 technology sooner in the progression
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2025-10-31
