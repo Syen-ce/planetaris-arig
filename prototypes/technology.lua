@@ -69,7 +69,11 @@ data:extend({
         {
             type = "unlock-recipe",
             recipe = "planetaris-sand-sifting"
-          },
+        },
+        {
+            type = "unlock-recipe",
+            recipe = "planetaris-steam-venting"
+        },
       },
       prerequisites = {"planet-discovery-arig"},
       research_trigger = {
@@ -534,6 +538,8 @@ data:extend({
         time = 60
       }
     },
+
+--- Prod techs
       {
     type = "technology",
     name = "planetaris-raw-quartz-productivity",
@@ -564,6 +570,39 @@ data:extend({
       time = 60
     },
     max_level = "infinite",
+    upgrade = true
+  },
+  {
+    type = "technology",
+    name = "planetaris-heavy-glass-productivity",
+    icons = util.technology_icon_constant_recipe_productivity("__planetaris-arig__/graphics/technology/heavy-glass.png"),
+    icon_size = 256,
+    essential = true,
+    effects =
+    {
+      {
+        type = "change-recipe-productivity",
+        recipe = "planetaris-heavy-glass",
+        change = 0.1
+      },
+    },
+    prerequisites = {"planetaris-heavy-glass"},
+    unit =
+    {
+      count_formula = "1.5^L*1000",
+      ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+        },
+      time = 60
+    },
+    max_level = 20,
     upgrade = true
   },
   })

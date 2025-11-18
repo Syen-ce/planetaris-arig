@@ -35,8 +35,10 @@ require("compat.crushing-industry")
 require("compat.cloud-city")
 require("compat.igrys")
 require("compat.lignumis")
-require("compat.wood-industry")
+require("compat.omnia")
 require("compat.planet-muluna")
+require("compat.visible-planets")
+require("compat.wood-industry")
 
 
 if mods["any-planet-start"] then
