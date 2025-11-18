@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
-Date: 2025-10-31
+Date: 2025-11-18
   Features:
     - Added steam venting recipe
     - Added heavy glass productivity technology
@@ -9,6 +9,7 @@ Date: 2025-10-31
   Compatibility:
     - Moved omnia's Orientation so it does not collide with Arig
     - Any planet start, moved unlock of automation 2 technology sooner in the progression
+    - Added custom 4k graphic for the visible planet mod
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2025-10-31
