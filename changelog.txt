@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+Date: 2025-11-19
+  Compatibility:
+    - Fixed compatbility error with visible planets mod
+---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2025-11-18
   Features:
@@ -16,7 +21,7 @@ Date: 2025-10-31
   Bugfixes:
     - Fixed hyper splitter unable to connect to circuit
     - Removed pollution absortion from Arig tiles
-    - Fixed glass recipe productivity making excess barrels
+    - Fixed glass recipe productivity making excess barrel5
     - Removed advanced quartz recipe and moved to hyarion
   Compatibility:
     - Crushing industry, Fixed error when crushing coal setting was disable

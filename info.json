@@ -1,6 +1,6 @@
 {
   "name": "planetaris-arig",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "title": "○🌐Planetaris: Arig",
   "author": "Syen",
   "factorio_version": "2.0",
@@ -11,7 +11,8 @@
     "PlanetsLib >= 1.1.38",
     "?celestial-weather",
     "?any-planet-start",
-    "?aai-loaders"
+    "?aai-loaders",
+    "?visible-planets >= 1.2.11"
   ],
   "description": "Arig, a hot planet with vast deserts where only valuable resources can be found underground or in the sand.",
   "quality_required": true,
