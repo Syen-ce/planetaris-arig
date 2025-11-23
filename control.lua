@@ -25,7 +25,7 @@ local function on_removed_tower(event)
 	end
 end
 
--- Every 1 second - ensure tank exists
+-- every 1 second check tank exists
 
 script.on_nth_tick(60, function()
 	if not storage.arig_condensing_agricultural_tower then
@@ -62,10 +62,10 @@ script.on_nth_tick(60, function()
 	end
 end)
 
--- When tower harvests a plant, generate water
+-- when tower harvests a plant, insert fluid in tank
 
 script.on_event(defines.events.on_tower_mined_plant, function(event)
-	local tower = event.entity or event.tower or event.agricultural_tower
+	local tower = event.tower
 	
 	if not tower or not tower.valid then
 		return
@@ -82,8 +82,23 @@ script.on_event(defines.events.on_tower_mined_plant, function(event)
 	
 	local tank = data.tank
 	
-	-- 1500 water per harvest - ((1500 * 23 avaliable tiles)/5 mins of growing) / 60 seconds = 115 water/second
-	tank.insert_fluid({name = "water", amount = 1500})
+	-- Check which plant was harvested, maybe some compats with other planets?
+	local water_amount = 1000 -- default
+	local fluid_result = "water" -- default
+	
+	if event.plant and event.plant.valid then
+		local plant_name = event.plant.name
+		
+		if plant_name == "planetaris-cactus-plant" then
+			water_amount = 1500 -- per cactus - ((1500 * 23 avaliable tiles)/5 mins of growing) / 60 seconds = 115 water/second
+			fluid_result = "water"
+		elseif plant_name == "tree-plant" then
+			water_amount = 2000 -- per tree
+			fluid_result = "water"
+		end
+	end
+	
+	tank.insert_fluid({name = fluid_result, amount = water_amount})
 end)
 
 --------------------------------------------------------------

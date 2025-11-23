@@ -27,6 +27,14 @@ data.extend({
     type = "recipe",
     name = "planetaris-condensing-agricultural-tower",
     energy_required = 5,
+    surface_conditions =
+    {
+      {
+        property = "pressure",
+        min = 0,
+        max = 2000
+      }
+    },
     ingredients =
     {
       {type = "item", name = "steel-plate", amount = 15},
@@ -133,14 +141,6 @@ data.extend({
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 0.5}},
     collision_mask = {layers={item=true, object=true, player=true, water_tile=true, elevated_rail=true, is_object=true, is_lower_object=true}},
-    surface_conditions =
-    {
-      {
-        property = "pressure",
-        min = 0,
-        max = 2000
-      }
-    },
     damaged_trigger_effect = hit_effects.entity(),
     energy_source =
     {
@@ -271,7 +271,6 @@ data.extend({
     fluid_box = {
         --pipe_covers = pipecoverspictures(),
         volume = 30000,
-        filter = "water",
         pipe_connections = {
             { direction = defines.direction.west, position = { -1, 0 }},
             { direction = defines.direction.east, position = { 1, 0 }},
