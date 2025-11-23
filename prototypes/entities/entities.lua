@@ -337,7 +337,7 @@ data:extend({
   damaged_trigger_effect = hit_effects.entity(),
   drawing_box_vertical_extension = 0.5,
   impact_category = "metal",
-  icon_draw_specification = {scale = 1},
+  icon_draw_specification = {scale = 1, shift = {0, -0.5}},
 graphics_set =
     {
       animation = make_4way_animation_from_spritesheet({ layers =

@@ -45,11 +45,37 @@ data:extend({
           type = "unlock-recipe",
           recipe = "planetaris-cactus-wood"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-condensing-agricultural-tower"
+        },
       },
       prerequisites = {"planet-discovery-arig"},
       research_trigger = {
         type = "mine-entity",
         entity = "arig-small-cactus-plant"
+      },
+      order = "ea[arig]",
+    },
+    {
+      type = "technology",
+      name = "planetaris-condensing-agricultural-tower",
+      localised_name = {"entity-name.planetaris-condensing-agricultural-tower"},
+      localised_description = {"entity-description.planetaris-condensing-agricultural-tower"},
+      icon = "__planetaris-arig__/graphics/technology/condensing-agriculture.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-condensing-agricultural-tower"
+        },
+      },
+      prerequisites = {"planetaris-cactus-wood", "planetaris-glass"},
+      research_trigger =     {
+        type = "craft-item",
+        item = "planetaris-glass-panel",
+        count = 25
       },
       order = "ea[arig]",
     },
@@ -123,30 +149,6 @@ data:extend({
     },
     {
       type = "technology",
-      name = "planetaris-water-harvesting",
-      icon = "__planetaris-arig__/graphics/technology/water-harvesting.png",
-      icon_size = 256,
-      essential = true,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-water-harvester"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-water-harvesting"
-        },
-      },
-      prerequisites = {"planetaris-glass"},
-      research_trigger =     {
-        type = "craft-item",
-        item = "planetaris-glass-panel",
-        count = 25
-      },
-      order = "ea[arig]",
-    },
-    {
-      type = "technology",
       name = "planetaris-compression",
       icon = "__planetaris-arig__/graphics/technology/compression.png",
       icon_size = 256,
@@ -167,6 +169,14 @@ data:extend({
         {
           type = "unlock-recipe",
           recipe = "planetaris-compression-rocket-fuel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-compression-cactus-wood"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-compression-wood-coal"
         },
         {
           type = "unlock-recipe",
@@ -389,6 +399,40 @@ data:extend({
         },
         time = 120
       }
+    },
+      {
+      type = "technology",
+      name = "planetaris-water-harvesting",
+      icon = "__planetaris-arig__/graphics/technology/water-harvesting.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-water-harvester"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-water-harvesting"
+        },
+      },
+      prerequisites = {"planetaris-heavy-glass", "planetaris-condensing-agricultural-tower"},
+      unit =
+      {
+        count = 500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "ea[arig]",
     },
     {
       type = "technology",

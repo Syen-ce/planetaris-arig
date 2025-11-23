@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2025-11-18
+  Features:
+    - Added condensing agricultural tower
+    - Added cactus seeds
+    - Added compressing cactus wood recipe
+  Changes:
+    - Change cactus result amount when mined (Min 1 / Max 5 -> 5) and grow time (8 min -> 5 min)
+    - Water harvesting is now unlocked after compression science
+    - Changed water harvester recipe ( 1 glass panel -> 1 heavy glass) and energy required (20 -> 10)
+  Balancing:
+    - Balanced cactus wood recipe to match new amounts of cactuses
+  Graphics:
+    - Added compressing icons to recipes
+---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 2025-11-19
   Compatibility:
