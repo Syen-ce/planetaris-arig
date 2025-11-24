@@ -84,3 +84,15 @@ table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
 --data.raw.tile["deepwater"].collision_mask = planetaris_tile_collision_masks.deep_water()
 --data.raw.tile["deepwater-green"].collision_mask = planetaris_tile_collision_masks.deep_water()
 data.raw.tile["oil-ocean-deep"].collision_mask = planetaris_tile_collision_masks.oil_ocean_deep()
+
+-- Block other planet recipes from arig
+
+local less_50_dust_concentration = {
+          property = "planetaris-dust-concentration",
+          min = 0,
+          max = 50,
+        }
+
+table.insert(data.raw["recipe"]["electromagnetic-plant"].surface_conditions, less_50_dust_concentration)
+table.insert(data.raw["recipe"]["cryogenic-plant"].surface_conditions, less_50_dust_concentration)
+table.insert(data.raw["recipe"]["recycler"].surface_conditions, less_50_dust_concentration)

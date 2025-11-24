@@ -261,14 +261,6 @@ data.extend({
     selection_box = {{-1.5, -1.5}, {1.5, -0.5}},
     show_fluid_icon = false,
     collision_mask = {layers={item=true, object=true, player=true, water_tile=true}},
-    surface_conditions =
-    {
-      {
-        property = "planetaris-dust-concentration",
-        min = 50,
-        max = 100,
-      }
-    },
     fluid_box = {
         --pipe_covers = pipecoverspictures(),
         volume = 30000,

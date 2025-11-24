@@ -1317,9 +1317,8 @@ graphics_set =
   surface_conditions =
     {
       {
-        property = "planetaris-dust-concentration",
-        min = 50,
-        max = 100,
+        property = "gravity",
+        min = 1,
       }
     },
   crafting_categories = {"water-production"},

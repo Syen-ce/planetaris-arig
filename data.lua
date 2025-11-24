@@ -39,6 +39,7 @@ require("compat.lignumis")
 require("compat.omnia")
 require("compat.planet-muluna")
 require("compat.visible-planets")
+require("compat.water-harvesting-recipes")
 require("compat.wood-industry")
 
 

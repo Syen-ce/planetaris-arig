@@ -202,6 +202,10 @@ data:extend({
           type = "unlock-recipe",
           recipe = "planetaris-carbon"
         },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-landfill-compression"
+        },
       },
       prerequisites = {"planetaris-sand-sifting"},
       research_trigger =     {
@@ -414,6 +418,26 @@ data:extend({
         {
           type = "unlock-recipe",
           recipe = "planetaris-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-nauvis-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-vulcanus-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-fulgora-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-gleba-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-aquilo-water-harvesting"
         },
       },
       prerequisites = {"planetaris-heavy-glass", "planetaris-condensing-agricultural-tower"},
