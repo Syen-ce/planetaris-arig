@@ -93,8 +93,11 @@ script.on_event(defines.events.on_tower_mined_plant, function(event)
 			water_amount = 1500 -- per cactus - ((1500 * 23 avaliable tiles)/5 mins of growing) / 60 seconds = 115 water/second
 			fluid_result = "water"
 		elseif plant_name == "tree-plant" then
-			water_amount = 2000 -- per tree
-			fluid_result = "water"
+			water_amount = 2000 -- per tree 153.3/second
+			fluid_result = "planetaris-polishing-compound"
+		elseif plant_name == "coconut-palm" then
+			water_amount = 660 -- per palm 50.3/second
+			fluid_result = "coconut-oil"
 		end
 	end
 	

@@ -51,6 +51,7 @@ data.extend({
     name = "planetaris-condensing-agricultural-tower",
     icon = "__planetaris-arig__/graphics/icons/condensing-agricultural-tower.png",
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
+    factoriopedia_description = {{"factoriopedia-description.planetaris-condensing-agricultural-tower"},},
     minable = {mining_time = 0.2, result = "planetaris-condensing-agricultural-tower"},
     fast_replaceable_group = nil,
     max_health = 300,
@@ -323,3 +324,23 @@ data.extend({
     flow_length_in_ticks = 1,
   }
 })
+
+
+-- Change factoriopedia description depending of mods compatible
+local desc_parts = {
+    "",
+    {"factoriopedia-description.planetaris-condensing-agricultural-tower"}
+}
+
+-- -------------------------------------test
+--if mods["planetaris-hyarion"] then
+--    table.insert(desc_parts, "\n")
+--    table.insert(desc_parts, {"factoriopedia-description.planetaris-hyarion"})
+--end
+
+--if mods["pelagos"] then
+--    table.insert(desc_parts, "\n")
+--    table.insert(desc_parts, {"factoriopedia-description.coconut-condensation"})
+--end
+
+data.raw["agricultural-tower"]["planetaris-condensing-agricultural-tower"].factoriopedia_description = desc_parts
