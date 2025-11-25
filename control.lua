@@ -83,7 +83,7 @@ script.on_event(defines.events.on_tower_mined_plant, function(event)
 	local tank = data.tank
 	
 	-- Check which plant was harvested, maybe some compats with other planets?
-	local water_amount = 1000 -- default
+	local water_amount = 500 -- default
 	local fluid_result = "water" -- default
 	
 	if event.plant and event.plant.valid then
@@ -95,9 +95,6 @@ script.on_event(defines.events.on_tower_mined_plant, function(event)
 		elseif plant_name == "tree-plant" then
 			water_amount = 2000 -- per tree 153.3/second
 			fluid_result = "planetaris-polishing-compound"
-		elseif plant_name == "coconut-palm" then
-			water_amount = 660 -- per palm 50.3/second
-			fluid_result = "coconut-oil"
 		end
 	end
 	
@@ -131,12 +128,6 @@ end)
 script.on_event(defines.events.on_robot_built_entity, function(event)
 	local e = event.created_entity or event.entity
 	if not e then return end
-	on_built_tower(event)
-end)
-
-script.on_event(defines.events.on_space_platform_built_entity, function(event)
-	local e = event.entity
-	if not (e and e.valid) then return end
 	on_built_tower(event)
 end)
 
