@@ -30,10 +30,18 @@ data:extend({
     },
     {
         type = "autoplace-control",
+        name = "arig_stone",
+        localised_name = {"", "[entity=stone] ", {"entity-name.stone"}},
+        richness = true,
+        order = "b-e-a",
+        category = "resource"
+    },
+    {
+        type = "autoplace-control",
         name = "heavy-oil-geyser",
         localised_name = {"", "[entity=heavy-oil-geyser] ", {"entity-name.heavy-oil-geyser"}},
         richness = true,
-        order = "b-e",
+        order = "b-e-b",
         category = "resource"
       }
 })

@@ -45,37 +45,11 @@ data:extend({
           type = "unlock-recipe",
           recipe = "planetaris-cactus-wood"
         },
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-condensing-agricultural-tower"
-        },
       },
       prerequisites = {"planet-discovery-arig"},
       research_trigger = {
         type = "mine-entity",
         entity = "arig-small-cactus-plant"
-      },
-      order = "ea[arig]",
-    },
-    {
-      type = "technology",
-      name = "planetaris-condensing-agricultural-tower",
-      localised_name = {"entity-name.planetaris-condensing-agricultural-tower"},
-      localised_description = {"entity-description.planetaris-condensing-agricultural-tower"},
-      icon = "__planetaris-arig__/graphics/technology/condensing-agriculture.png",
-      icon_size = 256,
-      essential = true,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-condensing-agricultural-tower"
-        },
-      },
-      prerequisites = {"planetaris-cactus-wood", "planetaris-glass"},
-      research_trigger =     {
-        type = "craft-item",
-        item = "planetaris-glass-panel",
-        count = 25
       },
       order = "ea[arig]",
     },
@@ -440,7 +414,7 @@ data:extend({
           recipe = "planetaris-aquilo-water-harvesting"
         },
       },
-      prerequisites = {"planetaris-heavy-glass", "planetaris-condensing-agricultural-tower"},
+      prerequisites = {"planetaris-heavy-glass", "condensing-agricultural-tower"},
       unit =
       {
         count = 500,

@@ -12,6 +12,7 @@ data.raw["solar-panel"]["solar-panel"].next_upgrade = "planetaris-advanced-solar
 
 -- Add new sea tiles to Foundation
 table.insert(data.raw.item["foundation"].place_as_tile.tile_condition, "arig-sand")
+table.insert(data.raw.item["foundation"].place_as_tile.tile_condition, "arig-deep-sand")
 
 -- Expanded furnace result slots for glass panel recipe
 
@@ -39,34 +40,13 @@ end
 -- Surface conditions
 
 -- No buildable on Arig
-table.insert(data.raw["rail-ramp"]["rail-ramp"].surface_conditions, {
-        property = "planetaris-dust-concentration",
-        max = 50
-      })
-table.insert(data.raw["elevated-straight-rail"]["elevated-straight-rail"].surface_conditions, {
-        property = "planetaris-dust-concentration",
-        max = 50
-      })
-table.insert(data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"].surface_conditions, {
-        property = "planetaris-dust-concentration",
-        max = 50
-      })
-table.insert(data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].surface_conditions, {
-        property = "planetaris-dust-concentration",
-        max = 50
-      })
-table.insert(data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].surface_conditions, {
-        property = "planetaris-dust-concentration",
-        max = 50
-      })
-table.insert(data.raw["rail-support"]["rail-support"].surface_conditions, {
-        property = "planetaris-dust-concentration",
-        max = 50
-      })
 table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
         property = "planetaris-dust-concentration",
         max = 50
       })
+
+-- Addon description to rail support on deep sand
+data.raw.technology["rail-support-foundations"].localized_description = {"", {"technology-description.rail-support-foundations"}, "",{"technology-description.rail-support-foundations-addon"}}
 
 -- Adding science packs
 table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
@@ -96,3 +76,35 @@ local less_50_dust_concentration = {
 table.insert(data.raw["recipe"]["electromagnetic-plant"].surface_conditions, less_50_dust_concentration)
 table.insert(data.raw["recipe"]["cryogenic-plant"].surface_conditions, less_50_dust_concentration)
 table.insert(data.raw["recipe"]["recycler"].surface_conditions, less_50_dust_concentration)
+
+-- Update Agri tower 
+data.raw.technology["condensing-agricultural-tower"].effects = {
+    {
+      type = "unlock-recipe",
+      recipe = "condensing-agricultural-tower"
+    },
+  }
+data.raw.technology["condensing-agricultural-tower"].prerequisites = {"planetaris-cactus-wood", "planetaris-glass"}
+data.raw.technology["condensing-agricultural-tower"].unit = nil
+data.raw.technology["condensing-agricultural-tower"].research_trigger = {
+    type = "craft-item",
+    item = "planetaris-glass-panel",
+    count = 25
+  }
+
+data.raw["recipe"]["condensing-agricultural-tower"].ingredients ={
+      {type = "item", name = "storage-tank", amount = 1},
+      {type = "item", name = "electronic-circuit", amount = 5},
+      {type = "item", name = "wood", amount = 20},
+      {type = "item", name = "planetaris-glass-panel", amount = 10},
+      {type = "item", name = "landfill", amount = 1}
+    }
+    
+if data.raw["agricultural-tower"] and data.raw["agricultural-tower"]["condensing-agricultural-tower"] then
+  local tower = data.raw["agricultural-tower"]["condensing-agricultural-tower"]
+  local desc = tower.factoriopedia_description
+  
+  if desc then
+    table.insert(desc, {"factoriopedia-description.condensing-cactus"})
+  end
+end
