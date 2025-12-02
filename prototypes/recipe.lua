@@ -203,11 +203,10 @@ data:extend(
       energy_required = 1,
       ingredients =
       {
-        { type = "item", name = "planetaris-cactus", amount = 1 },
+        { type = "item", name = "wood", amount = 3 },
       },
       results = { 
-        { type = "item", name = "wood", amount = 1 },
-        { type = "item", name = "planetaris-cactus-seeds", amount = 1,  probability = 0.20}
+        { type = "item", name = "coal", amount = 1 },
       },
       allow_productivity = true
     },
@@ -659,7 +658,7 @@ data:extend(
       {type = "fluid", name = "water", amount = 20}, -- Better than chemistry
       {type = "fluid", name = "petroleum-gas", amount = 20} -- Better than chemistry
     },
-    results = {{type="item", name="sulfur", amount=1}},
+    results = {{type="item", name="sulfur", amount=2}},
     allow_productivity = true
   },
     {

@@ -648,28 +648,28 @@ data:extend({
     upgrade = true
   },
   })
-  
- if settings.startup["enable-arig-cargo-drops"].value == false then 
 
-  local arig_cargo_drops_base =
-	PlanetsLib.cargo_drops_technology_base("arig", "__planetaris-arig__/graphics/technology/arig-cargo-drops.png", 256)
+local arig_cargo_drops_base =
+      PlanetsLib.cargo_drops_technology_base("arig", "__planetaris-arig__/graphics/technology/arig-cargo-drops.png", 256)
 
-  data:extend({
-    merge(arig_cargo_drops_base, {
-      unit = {
-        count =  500,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-          { "utility-science-pack", 1 },
-          { "planetaris-compression-science-pack", 1 },
-        },
-        time = 60,
-      },
-      prerequisites = { "planetaris-compression-science" },
-    })
-  })
+      data:extend({
+        merge(arig_cargo_drops_base, {
+          unit = {
+            count =  500,
+            ingredients = {
+              { "automation-science-pack", 1 },
+              { "logistic-science-pack", 1 },
+              { "utility-science-pack", 1 },
+              { "planetaris-compression-science-pack", 1 },
+            },
+            time = 60,
+          },
+          prerequisites = { "planetaris-compression-science" },
+        })
+      })
+      
+      PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
 
-PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
-
+if settings.startup["enable-arig-cargo-drops"].value == true then
+  data.raw.technology["planetslib-arig-cargo-drops"].enabled = true
 end

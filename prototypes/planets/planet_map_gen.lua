@@ -24,7 +24,10 @@ planet_map_gen.arig = function()
       },
       autoplace_controls =
       {
-        ["arig_sand"] = {},
+        ["arig_sand"] = {
+          size = 1,
+          frequency = 1,
+          },
         ["arig_stone"] = {},
         ["arig_cliff"] = {},
         ["arig_rocks"] = {},

@@ -320,6 +320,7 @@ data:extend({
   dying_explosion = "accumulator-explosion",
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
+  effect_receiver = { base_effect = { productivity = 0.5 }},
   heating_energy = "100kW",
   resistances =
   {

@@ -36,7 +36,8 @@ cactus_plant.minable =
 {
   mining_particle = "wooden-particle",
   mining_time = 0.5,
-  results = {{type = "item", name = "planetaris-cactus", amount = 5}},
+  results = {{type = "item", name = "planetaris-cactus", amount = 5},
+             {type = "fluid", name = "water", amount = 1500}},
 }
 cactus_plant.variation_weights = { 1, 1, 1, 1, 1, 1, 1, 1, 0.3, 0.3, 1}
 cactus_plant.growth_ticks = 5 * minutes
