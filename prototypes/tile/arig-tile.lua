@@ -504,7 +504,7 @@ data:extend({
   autoplace = {probability_expression = [[
       plateau_level * 
       (range_select{
-        input = terraced_elevation_raw,
+        input = arig_island_elevation_raw,
         from = 0.50,
         to = 1,
         slope = 0.1,
@@ -546,7 +546,7 @@ data:extend({
   autoplace = {probability_expression = [[
       plateau_level * 
       (range_select{
-        input = terraced_elevation_raw,
+        input = arig_island_elevation_raw,
         from = 0.50,
         to = 1,
         slope = 0.1,
@@ -588,7 +588,7 @@ data:extend({
   autoplace = {probability_expression = [[
       plateau_level * 
       (range_select{
-        input = terraced_elevation_raw,
+        input = arig_island_elevation_raw,
         from = 0.50,
         to = 1,
         slope = 0.1,

@@ -772,7 +772,6 @@ data:extend(
     localised_name = {"", {"item-name.landfill"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.landfill"},
     category = "compressing",
-    subgroup = "arig-processes",
     auto_recycle = false,
     enabled = false,
     energy_required = 0.5,

@@ -7,7 +7,7 @@ planet_map_gen.arig = function()
       moisture_climate_control = false,
       property_expression_names =
       {
-        elevation = "terraced_elevation",
+        elevation = "arig_island_elevation",
         moisture = "moisture_basic",
         aux = "vulcanus_aux",
         cliffiness = "terraced_cliffiness",

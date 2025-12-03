@@ -13,6 +13,8 @@ data:extend({
         order = "c-z-b-b",
         category = "terrain",
         can_be_disabled = false,
+
+        hidden = true
     },
     {
         type = "autoplace-control",

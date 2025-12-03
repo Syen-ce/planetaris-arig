@@ -57,7 +57,7 @@ data:extend({
         seed1 = 12345,
         octaves = %d,
         persistence = %f,
-        input_scale = %f * control:arig_sand:frequency,
+        input_scale = %f,
         output_scale = 1
       }
     ]], 
@@ -111,7 +111,7 @@ data:extend({
   -- Raw elevation value (before terracing)
   {
     type = "noise-expression",
-    name = "terraced_elevation_raw",
+    name = "arig_island_elevation_raw",
     expression = string.format([[
       terraced_island_with_edges - %f
       + (distance < %d) * terraced_starting_island * 2
@@ -121,12 +121,12 @@ data:extend({
   -- Apply terrace levels
   {
     type = "noise-expression",
-    name = "terraced_elevation",
+    name = "arig_island_elevation",
     expression = string.format([[
-      (terraced_elevation_raw < 0) * %d
-      + (terraced_elevation_raw >= 0) * (terraced_elevation_raw < %f) * %d
-      + (terraced_elevation_raw >= %f) * (terraced_elevation_raw < %f) * %d
-      + (terraced_elevation_raw >= %f) * %d
+      (arig_island_elevation_raw < 0) * %d
+      + (arig_island_elevation_raw >= 0) * (arig_island_elevation_raw < %f) * %d
+      + (arig_island_elevation_raw >= %f) * (arig_island_elevation_raw < %f) * %d
+      + (arig_island_elevation_raw >= %f) * %d
     ]],
     deep_sand_level,
     shallow_threshold,
@@ -158,28 +158,28 @@ data:extend({
     type = "noise-expression",
     name = "deep_sand_level",
     expression = [[
-      (terraced_elevation_raw < 0)
+      (arig_island_elevation_raw < 0)
     ]]
   },
   {
     type = "noise-expression",
     name = "shallow_sand_level",
     expression = string.format([[
-      (terraced_elevation_raw >= 0) * (terraced_elevation_raw < %f)
+      (arig_island_elevation_raw >= 0) * (arig_island_elevation_raw < %f)
     ]], shallow_threshold)
   },
   {
     type = "noise-expression",
     name = "beach_level",
     expression = string.format([[
-      (terraced_elevation_raw >= %f) * (terraced_elevation_raw < %f)
+      (arig_island_elevation_raw >= %f) * (arig_island_elevation_raw < %f)
     ]], shallow_threshold, beach_threshold)
   },
   {
     type = "noise-expression",
     name = "plateau_level",
     expression = string.format([[
-      (terraced_elevation_raw >= %f)
+      (arig_island_elevation_raw >= %f)
     ]], beach_threshold)
   },
 

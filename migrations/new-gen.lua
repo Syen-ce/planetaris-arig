@@ -7,7 +7,7 @@ for _, surface in pairs(game.surfaces) do
     settings.autoplace_controls["arig_sand"].size = settings.autoplace_controls["arig_sand"].size or 1
     settings.autoplace_controls["arig_sand"].frequency = settings.autoplace_controls["arig_sand"].frequency or 1
 
-    settings.elevation = settings.elevation or"terraced_elevation"
+    settings.elevation = settings.elevation or"arig_island_elevation"
     settings.cliffiness = settings.cliffiness or "terraced_cliffiness"
     settings.cliff_elevation = settings.cliff_elevation or "cliff_elevation_from_elevation"
     
