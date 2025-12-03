@@ -114,8 +114,8 @@ data:extend(
         type = "recipe",
         name = "planetaris-steam-venting",
         icons = {
-          {icon="__base__/graphics/icons/fluid/steam.png", shift={-12, -12}, scale=0.4},
-          {icon="__planetaris-arig__/graphics/icons/sifter.png", draw_background=true}
+          {icon="__base__/graphics/icons/fluid/steam.png", draw_background=true },
+          {icon="__planetaris-arig__/graphics/icons/sifter.png", shift={12, 12}, scale=0.4},
         },
         icon_size = 64,
         category = "sifting",
@@ -142,20 +142,74 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-cactus-wood",
-      icon = "__planetaris-arig__/graphics/icons/cactus-wood.png",
+      icons = {
+        {icon="__planetaris-arig__/graphics/icons/cactus.png", draw_background=true},
+        {icon="__base__/graphics/icons/wood.png", shift={12, 12}, scale=0.4},
+      },
       icon_size = 64,
       category = "organic-or-assembling",
       subgroup = "arig-processes",
-      order = "a-a-a[natural]",
+      order = "a[basic]-a-a-c",
       enabled = false,
       auto_recycle = false,
       energy_required = 1,
       ingredients =
       {
-        { type = "item", name = "planetaris-cactus", amount = 3 },
+        { type = "item", name = "planetaris-cactus", amount = 5 },
       },
-      results = { { type = "item", name = "wood", amount = 2 } }
-  },
+      results = { 
+        { type = "item", name = "wood", amount = 3 },
+        { type = "item", name = "planetaris-cactus-seeds", amount = 1,  probability = 0.20}
+    },
+    },
+    {
+      type = "recipe",
+      name = "planetaris-compression-cactus-wood",
+      icons = {
+        {icon="__planetaris-arig__/graphics/icons/cactus.png", draw_background=true},
+        {icon="__base__/graphics/icons/wood.png", shift={12, 2}, scale=0.3},
+        {icon="__planetaris-arig__/graphics/icons/cactus-seeds.png", shift={6, 12}, scale=0.3},
+      },
+      icon_size = 64,
+      category = "compressing",
+      subgroup = "arig-processes",
+      order = "a[basic]-a-a-d",
+      enabled = false,
+      auto_recycle = false,
+      energy_required = 1,
+      ingredients =
+      {
+        { type = "item", name = "planetaris-cactus", amount = 1 },
+      },
+      results = { 
+        { type = "item", name = "wood", amount = 1 },
+        { type = "item", name = "planetaris-cactus-seeds", amount = 1,  probability = 0.20}
+      },
+      allow_productivity = true
+    },
+    {
+      type = "recipe",
+      name = "planetaris-compression-wood-coal",
+      icons = {
+        {icon="__base__/graphics/icons/wood.png", draw_background=true },
+        {icon="__base__/graphics/icons/coal.png", shift={12, 12}, scale=0.4},
+      },
+      icon_size = 64,
+      category = "compressing",
+      subgroup = "arig-processes",
+      order = "a[basic]-a-a-d",
+      enabled = false,
+      auto_recycle = false,
+      energy_required = 1,
+      ingredients =
+      {
+        { type = "item", name = "wood", amount = 3 },
+      },
+      results = { 
+        { type = "item", name = "coal", amount = 1 },
+      },
+      allow_productivity = true
+    },
     {
       type = "recipe",
       name = "planetaris-sandstone-foundation",
@@ -547,13 +601,13 @@ data:extend(
       type = "recipe",
       name = "planetaris-water-harvester",
       subgroup = "arig-production",
-      energy_required = 20,
+      energy_required = 10,
       enabled = false,
       ingredients =
       {
         {type = "item", name = "solar-panel", amount = 1},
         {type = "item", name = "steel-plate", amount = 20},
-        {type = "item", name = "planetaris-glass-panel", amount = 1}
+        {type = "item", name = "planetaris-heavy-glass", amount = 1}
       },
       surface_conditions =
     {
@@ -588,6 +642,10 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-sulfur",
+    icons = {
+      {icon="__planetaris-arig__/graphics/icons/press.png", scale=0.5, draw_background=true },
+      {icon="__base__/graphics/icons/sulfur.png", shift={12, 12}, scale=0.6},
+    },
     localised_name = {"", {"item-name.sulfur"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.sulfur"},
     category = "compressing",
@@ -600,12 +658,16 @@ data:extend(
       {type = "fluid", name = "water", amount = 20}, -- Better than chemistry
       {type = "fluid", name = "petroleum-gas", amount = 20} -- Better than chemistry
     },
-    results = {{type="item", name="sulfur", amount=1}},
+    results = {{type="item", name="sulfur", amount=2}},
     allow_productivity = true
   },
     {
     type = "recipe",
     name = "planetaris-plastic-bar",
+    icons = {
+      {icon="__planetaris-arig__/graphics/icons/press.png", scale=0.5, draw_background=true },
+      {icon="__base__/graphics/icons/plastic-bar.png", shift={12, 12}, scale=0.6},
+    },
     localised_name = {"", {"item-name.plastic-bar"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.plastic-bar"},
     category = "compressing",
@@ -678,9 +740,13 @@ data:extend(
     results = {{type="item", name="solid-fuel", amount=1}},
     allow_productivity = true
   },
-      {
+  {
     type = "recipe",
     name = "planetaris-carbon",
+      icons = {
+      {icon="__planetaris-arig__/graphics/icons/press.png", scale=0.5, draw_background=true },
+      {icon="__space-age__/graphics/icons/carbon.png", shift={12, 12}, scale=0.6},
+    },
     localised_name = {"", {"item-name.carbon"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.carbon"},
     category = "compressing",
@@ -696,21 +762,203 @@ data:extend(
     results = {{type="item", name="carbon", amount=1}},
     allow_productivity = true
   },
+  {
+    type = "recipe",
+    name = "planetaris-landfill-compression",
+      icons = {
+      {icon="__planetaris-arig__/graphics/icons/press.png", scale=0.5, draw_background=true },
+      {icon="__base__/graphics/icons/landfill.png", shift={12, 12}, scale=0.55},
+    },
+    localised_name = {"", {"item-name.landfill"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    localised_description = {"item-description.landfill"},
+    category = "compressing",
+    auto_recycle = false,
+    enabled = false,
+    energy_required = 0.5,
+    ingredients =
+    {
+      {type = "item", name = "stone", amount = 40}, -- Better than original
+    },
+    results = {{type="item", name="landfill", amount=2,}},
+    allow_productivity = true
+  },
 
     -- Water harvesting
 
     {
       type = "recipe",
       name = "planetaris-water-harvesting",
+      localised_name = {"", {"space-location-name.arig"}, " ", {"recipe-name.planetaris-water-harvesting"}},
       category = "water-production",
-      subgroup = "arig-processes",
-      icon = "__base__/graphics/icons/fluid/water.png",
+      subgroup = "water-harvesting",
+      order = "a-a",
+      icons = {
+        {icon="__planetaris-arig__/graphics/icons/arig.png", draw_background=true},
+        {icon="__base__/graphics/icons/fluid/water.png", shift={8, 12}, scale=0.5},
+      },
+      surface_conditions =
+      {
+        {
+          property = "planetaris-dust-concentration",
+          min = 50,
+          max = 100,
+        }
+      },
       energy_required = 10,
       enabled = false,
       ingredients = nil,
       results = {{type="fluid", name="water", amount=100}},
       allow_productivity = true
-    }
+    },
+    {
+      type = "recipe",
+      name = "planetaris-nauvis-water-harvesting",
+      localised_name = {"", {"space-location-name.nauvis"}, " ", {"recipe-name.planetaris-water-harvesting"}},
+      category = "water-production",
+      subgroup = "water-harvesting",
+      order = "a-b",
+      icons = {
+        {icon="__base__/graphics/icons/nauvis.png", draw_background=true},
+        {icon="__base__/graphics/icons/fluid/water.png", shift={8, 12}, scale=0.5},
+      },
+      surface_conditions =
+      {
+        {
+          property = "pressure",
+          min = 1000,
+          max = 1000,
+        },
+        {
+          property = "gravity",
+          min = 10,
+          max = 10,
+        }
+      },
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="water", amount=300}},
+      allow_productivity = true
+    },
+    {
+      type = "recipe",
+      name = "planetaris-vulcanus-water-harvesting",
+      localised_name = {"", {"space-location-name.vulcanus"}, " ", {"recipe-name.planetaris-water-harvesting"}},
+      category = "water-production",
+      subgroup = "water-harvesting",
+      order = "a-c",
+      icons = {
+        {icon="__space-age__/graphics/icons/vulcanus.png", draw_background=true},
+        {icon="__base__/graphics/icons/fluid/water.png", shift={8, 12}, scale=0.5},
+      },
+      surface_conditions =
+      {
+        {
+          property = "pressure",
+          min = 4000,
+          max = 4000,
+        },
+        {
+          property = "gravity",
+          min = 40,
+          max = 40,
+        }
+      },
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="water", amount=50}},
+      allow_productivity = true
+    },
+    {
+      type = "recipe",
+      name = "planetaris-fulgora-water-harvesting",
+      localised_name = {"", {"space-location-name.fulgora"}, " ", {"recipe-name.planetaris-water-harvesting"}},
+      category = "water-production",
+      subgroup = "water-harvesting",
+      order = "a-d",
+      icons = {
+        {icon="__space-age__/graphics/icons/fulgora.png", draw_background=true},
+        {icon="__base__/graphics/icons/fluid/water.png", shift={8, 12}, scale=0.5},
+      },
+      surface_conditions =
+      {
+        {
+          property = "magnetic-field",
+          min = 90,
+        },
+        {
+          property = "pressure",
+          min = 800,
+          max = 800,
+        },
+      },
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="water", amount=150}},
+      allow_productivity = true
+    },
+    {
+      type = "recipe",
+      name = "planetaris-gleba-water-harvesting",
+      localised_name = {"", {"space-location-name.gleba"}, " ", {"recipe-name.planetaris-water-harvesting"}},
+      category = "water-production",
+      subgroup = "water-harvesting",
+      order = "a-e",
+      icons = {
+        {icon="__space-age__/graphics/icons/gleba.png", draw_background=true},
+        {icon="__base__/graphics/icons/fluid/water.png", shift={8, 12}, scale=0.5},
+      },
+      surface_conditions =
+      {
+        {
+          property = "pressure",
+          min = 2000,
+          max = 2000,
+        },
+        {
+          property = "gravity",
+          min = 20,
+          max = 20,
+        }
+      },
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="water", amount=500}},
+      allow_productivity = true
+    },
+    {
+      type = "recipe",
+      name = "planetaris-aquilo-water-harvesting",
+      localised_name = {"", {"space-location-name.aquilo"}, " ", {"recipe-name.planetaris-water-harvesting"}},
+      category = "water-production",
+      subgroup = "water-harvesting",
+      order = "a-e",
+      icons = {
+        {icon="__space-age__/graphics/icons/aquilo.png", draw_background=true},
+        {icon="__base__/graphics/icons/fluid/water.png", shift={8, 12}, scale=0.5},
+      },
+      surface_conditions =
+      {
+        {
+          property = "pressure",
+          min = 5,
+          max = 600,
+        },
+        {
+          property = "gravity",
+          min = 15,
+          max = 15,
+        }
+      },
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="water", amount=100}},
+      allow_productivity = true
+    },
 })
 
  if settings.startup["debug-cactus-recipe"].value == true then

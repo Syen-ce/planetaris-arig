@@ -605,7 +605,7 @@ data:extend({
       tile_layer = 255,
       autoplace =
       {
-        probability_expression = "clamp(-1.5 + noise_layer_noise('red-desert-decal')\z
+        probability_expression = "plateau_level * clamp(-1.5 + noise_layer_noise('red-desert-decal')\z
                                         + min(range_select(moisture, 0.3, 0.7, 0.05, -1, 1),\z
                                               range_select(aux, 0.7, 1, 0.05, -1, 1)),\z
                                         0, 0.01)"
@@ -681,7 +681,7 @@ data:extend({
       tile_layer = 255, -- despite the name, this is not a sand exclusive decal
       autoplace =
       {
-        probability_expression = "clamp(-1.5 + noise_layer_noise('sand-decal')\z
+        probability_expression = "plateau_level * clamp(-1.5 + noise_layer_noise('sand-decal')\z
                                         + min(range_select(moisture, 0.1, 1, 0.05, -1, 1),\z
                                               range_select(aux, 0.4, 0.9, 0.05, -1, 1)),\z
                                         0, 0.01)"
@@ -874,7 +874,7 @@ data:extend({
       autoplace =
       {
         order = "a[doodad]-i[fluff]-a",
-        probability_expression = "-2.6 + rpi(1.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box * (arig_sand_solid * 0.02)",
+        probability_expression = "plateau_level * (-2.6 + rpi(1.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box)",
         local_expressions =
         {
           region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
@@ -993,11 +993,11 @@ data:extend({
       autoplace =
       {
         order = "a[doodad]-i[fluff]-a",
-        probability_expression = "-2.6 + rpi(1.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box * (arig_sand_solid * 0.02)",
+        probability_expression = "plateau_level * (-2.6 + rpi(0.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box)",
         local_expressions =
         {
-          region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
-                            range_select{input = temperature, from = 5, to = 50, slope = 0.5, min = -10, max = 1})"
+          region_box = "min(range_select{input = moisture, from = 0.2, to = 1, slope = 0.05, min = -10, max = 1},\z
+                            range_select{input = temperature, from = 3, to = 50, slope = 0.5, min = -10, max = 1})"
         }
       },
         minable =
@@ -1111,7 +1111,7 @@ data:extend({
       autoplace =
       {
         order = "c[doodad]-z",
-        probability_expression = "-1.9 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
+        probability_expression = "plateau_level * (-1.9 + asterisk_noise + max(0, decorative_knockout) + rpi(0.4) + region_box)",
         local_expressions =
         {
           region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z
@@ -1136,7 +1136,7 @@ data:extend({
       autoplace =
       {
         order = "c[doodad]-z",
-        probability_expression = "-1.5 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
+        probability_expression = "plateau_level * (-1.5 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box)",
         local_expressions =
         {
           region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z
@@ -1208,7 +1208,7 @@ data:extend({
       autoplace =
       {
         order = "a[doodad]-i[fluff]-a",
-        probability_expression = "-1.4 + rpi(0.7) + (garballo_noise - min(0, decorative_knockout)) + region_box * (arig_sand_solid * 0.5)",
+        probability_expression = "plateau_level * (-1.4 + rpi(0.7) + (garballo_noise - min(0, decorative_knockout)) + region_box)",
         local_expressions =
         {
           region_box = "min(range_select{input = moisture, from = 0.4, to = 1, slope = 0.05, min = -10, max = 1},\z
@@ -1391,7 +1391,7 @@ data:extend({
       autoplace =
       {
         order = "a[doodad]-i[fluff]-b",
-        probability_expression = "-1.5 + rpi(0.5) + (croton_noise - min(0, decorative_knockout)) + region_box * (arig_sand_solid * 0.5)",
+        probability_expression = "plateau_level * (-1.5 + rpi(0.5) + (croton_noise - min(0, decorative_knockout)) + region_box)",
         local_expressions =
         {
           region_box = "min(range_select{input = moisture, from = 0.1, to = 0.4, slope = 0.05, min = -10, max = 1},\z
@@ -1574,7 +1574,7 @@ data:extend({
       autoplace =
       {
         order = "a[doodad]-g[asterisk]-b",
-        probability_expression = "-1.9 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box * (arig_sand_solid * 0.5)",
+        probability_expression = "plateau_level * (-1.9 + asterisk_noise + max(0, decorative_knockout) + rpi(0.8) + region_box)",
         local_expressions =
         {
           region_box = "max(min(range_select{input = moisture, from = 0, to = 0.2, slope = 0.05, min = -10, max = 1},\z

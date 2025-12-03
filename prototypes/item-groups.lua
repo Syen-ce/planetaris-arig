@@ -6,6 +6,12 @@ data:extend(
     group = "intermediate-products",
     order = "k-b"
   },
+  {
+    type = "item-subgroup",
+    name = "water-harvesting",
+    group = "intermediate-products",
+    order = "k-b-b"
+  },
   -------------------------------------------------------------------------- LOGISTICS
 
   -------------------------------------------------------------------------- PRODUCTION

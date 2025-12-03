@@ -8,25 +8,27 @@ planet_map_gen.arig = function()
       property_expression_names =
       {
         elevation = "arig_island_elevation",
-        temperature = "arig_island_temperature",
         moisture = "moisture_basic",
         aux = "vulcanus_aux",
+        cliffiness = "terraced_cliffiness",
+        cliff_elevation = "cliff_elevation_from_elevation",
+        ["entity:stone:richness"] = "arig_stone_richness",
+        ["entity:stone:probability"] = "arig_stone_probability",
       },
       cliff_settings =
       {
         name = "arig-cliff",
-        cliff_smoothing = 0,
+        cliff_elevation_0 = 10,           -- First cliff threshold at 10 elevation
+        cliff_elevation_interval = 100,   -- Next cliff at 110 (won't reach this)
+        richness = 1
       },
       autoplace_controls =
       {
         ["arig_sand"] = {
-          frequency = 10,
-          Size = 10,
-        },
-        ["stone"] = {
-          frequency = 2,
-          Size = 2,
-        },
+          size = 1,
+          frequency = 1,
+          },
+        ["arig_stone"] = {},
         ["arig_cliff"] = {},
         ["arig_rocks"] = {},
         ["arig_crash"] = {},
@@ -43,6 +45,8 @@ planet_map_gen.arig = function()
           settings =
           {
             ["arig-sand"] = {},
+            ["arig-deep-sand"] = {},
+            ["arig-stable-sand"] = {},
             ["planetaris-sandstone-1"] = {},
             ["planetaris-sandstone-2"] = {},
             ["planetaris-sandstone-3"] = {},

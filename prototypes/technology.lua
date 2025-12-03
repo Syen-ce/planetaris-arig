@@ -123,30 +123,6 @@ data:extend({
     },
     {
       type = "technology",
-      name = "planetaris-water-harvesting",
-      icon = "__planetaris-arig__/graphics/technology/water-harvesting.png",
-      icon_size = 256,
-      essential = true,
-      effects = {
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-water-harvester"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-water-harvesting"
-        },
-      },
-      prerequisites = {"planetaris-glass"},
-      research_trigger =     {
-        type = "craft-item",
-        item = "planetaris-glass-panel",
-        count = 25
-      },
-      order = "ea[arig]",
-    },
-    {
-      type = "technology",
       name = "planetaris-compression",
       icon = "__planetaris-arig__/graphics/technology/compression.png",
       icon_size = 256,
@@ -167,6 +143,14 @@ data:extend({
         {
           type = "unlock-recipe",
           recipe = "planetaris-compression-rocket-fuel"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-compression-cactus-wood"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-compression-wood-coal"
         },
         {
           type = "unlock-recipe",
@@ -191,6 +175,10 @@ data:extend({
         {
           type = "unlock-recipe",
           recipe = "planetaris-carbon"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-landfill-compression"
         },
       },
       prerequisites = {"planetaris-sand-sifting"},
@@ -389,6 +377,60 @@ data:extend({
         },
         time = 120
       }
+    },
+      {
+      type = "technology",
+      name = "planetaris-water-harvesting",
+      icon = "__planetaris-arig__/graphics/technology/water-harvesting.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-water-harvester"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-nauvis-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-vulcanus-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-fulgora-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-gleba-water-harvesting"
+        },
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-aquilo-water-harvesting"
+        },
+      },
+      prerequisites = {"planetaris-heavy-glass", "condensing-agricultural-tower"},
+      unit =
+      {
+        count = 500,
+        ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+        },
+        time = 60
+      },
+      order = "ea[arig]",
     },
     {
       type = "technology",
@@ -606,28 +648,28 @@ data:extend({
     upgrade = true
   },
   })
-  
- if settings.startup["enable-arig-cargo-drops"].value == false then 
 
-  local arig_cargo_drops_base =
-	PlanetsLib.cargo_drops_technology_base("arig", "__planetaris-arig__/graphics/technology/arig-cargo-drops.png", 256)
+local arig_cargo_drops_base =
+      PlanetsLib.cargo_drops_technology_base("arig", "__planetaris-arig__/graphics/technology/arig-cargo-drops.png", 256)
 
-  data:extend({
-    merge(arig_cargo_drops_base, {
-      unit = {
-        count =  500,
-        ingredients = {
-          { "automation-science-pack", 1 },
-          { "logistic-science-pack", 1 },
-          { "utility-science-pack", 1 },
-          { "planetaris-compression-science-pack", 1 },
-        },
-        time = 60,
-      },
-      prerequisites = { "planetaris-compression-science" },
-    })
-  })
+      data:extend({
+        merge(arig_cargo_drops_base, {
+          unit = {
+            count =  500,
+            ingredients = {
+              { "automation-science-pack", 1 },
+              { "logistic-science-pack", 1 },
+              { "utility-science-pack", 1 },
+              { "planetaris-compression-science-pack", 1 },
+            },
+            time = 60,
+          },
+          prerequisites = { "planetaris-compression-science" },
+        })
+      })
+      
+      PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
 
-PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
-
+if settings.startup["enable-arig-cargo-drops"].value == true then
+  data.raw.technology["planetslib-arig-cargo-drops"].enabled = true
 end
