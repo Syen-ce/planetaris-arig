@@ -23,6 +23,8 @@ Date: 2025-11-18
   Compatibility:
     - Added compatibility water harvesting recipes for hyarion and pelagos
     - Any planet start, Fixed crash with enable cargo drops setting
+  Locale:
+    - Added russian locale (by Efremiros)
   Bugfixes:
     - Fixed compression sulfur giving 1 instead of 2 as result
 ---------------------------------------------------------------------------------------------------
@@ -77,4 +79,5 @@ Date: 2025-10-23
   Changes:
     - MAJOR CHANGES, separated Arig in hyarion in separate mods to have better order, this makes Arig playable without hyarion. Planetaris unbounded mod will work as a modpack and will enable all planetaris mods. To see earlier changlelog look in Planetaris unbounded
     - Arig crashes now can have construction robots
+
     - When Hyarion is installed hyper belts will move to the hyarion progression.
