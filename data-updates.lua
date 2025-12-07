@@ -73,9 +73,15 @@ local less_50_dust_concentration = {
           max = 50,
         }
 
-table.insert(data.raw["recipe"]["electromagnetic-plant"].surface_conditions, less_50_dust_concentration)
-table.insert(data.raw["recipe"]["cryogenic-plant"].surface_conditions, less_50_dust_concentration)
-table.insert(data.raw["recipe"]["recycler"].surface_conditions, less_50_dust_concentration)
+if mods["SpaceAgeOverhaul"] then
+  data.raw["recipe"]["electromagnetic-plant"].surface_conditions = {less_50_dust_concentration}
+  data.raw["recipe"]["cryogenic-plant"].surface_conditions = {less_50_dust_concentration}
+  data.raw["recipe"]["recycler"].surface_conditions = {less_50_dust_concentration}
+else
+  table.insert(data.raw["recipe"]["electromagnetic-plant"].surface_conditions, less_50_dust_concentration)
+  table.insert(data.raw["recipe"]["cryogenic-plant"].surface_conditions, less_50_dust_concentration)
+  table.insert(data.raw["recipe"]["recycler"].surface_conditions, less_50_dust_concentration)
+end
 
 -- Update Agri tower 
 data.raw.technology["condensing-agricultural-tower"].effects = {
