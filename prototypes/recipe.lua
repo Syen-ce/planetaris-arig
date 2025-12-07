@@ -8,7 +8,6 @@ data:extend(
         name = "planetaris-sifter",     
         energy_required = 5,
         enabled = false,
-        auto_recycle = false,
         subgroup = "arig-production",
         ingredients =
         {
@@ -24,7 +23,6 @@ data:extend(
         name = "planetaris-press",     
         energy_required = 5,
         enabled = false,
-        auto_recycle = false,
         subgroup = "arig-production",
         surface_conditions =
     {
