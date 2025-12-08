@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.0
-Date: 2025-12-07
+Version: 1.1.2
+Date: 2025-12-08
   Bugfixes:
-    - Fixed auto reycling enablefor the sifter and press
+    - Fixed parser error
+---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2025-12-05
+  Bugfixes:
+    - Fixed auto reycling enable for the sifter and press
     - Fixed crash with space age overhaul mod
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0
