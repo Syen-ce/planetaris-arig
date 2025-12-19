@@ -841,8 +841,8 @@ graphics_set =
     max_health = 400,
     corpse = "solar-panel-remnants",
     dying_explosion = "solar-panel-explosion",
-    collision_box = {{-1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+    collision_box = data.raw["solar-panel"]["solar-panel"].collision_box,
+    selection_box = data.raw["solar-panel"]["solar-panel"].selection_box,
     damaged_trigger_effect = hit_effects.entity(),
     energy_source =
     {

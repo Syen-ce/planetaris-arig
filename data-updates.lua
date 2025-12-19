@@ -73,14 +73,39 @@ local less_50_dust_concentration = {
           max = 50,
         }
 
-if mods["SpaceAgeOverhaul"] then
-  data.raw["recipe"]["electromagnetic-plant"].surface_conditions = {less_50_dust_concentration}
-  data.raw["recipe"]["cryogenic-plant"].surface_conditions = {less_50_dust_concentration}
-  data.raw["recipe"]["recycler"].surface_conditions = {less_50_dust_concentration}
-else
-  table.insert(data.raw["recipe"]["electromagnetic-plant"].surface_conditions, less_50_dust_concentration)
-  table.insert(data.raw["recipe"]["cryogenic-plant"].surface_conditions, less_50_dust_concentration)
-  table.insert(data.raw["recipe"]["recycler"].surface_conditions, less_50_dust_concentration)
+if data.raw["recipe"]["electromagnetic-plant"] then
+  if data.raw["recipe"]["electromagnetic-plant"].surface_conditions == nil then
+    data.raw["recipe"]["electromagnetic-plant"].surface_conditions = {less_50_dust_concentration}
+  else
+    table.insert(data.raw["recipe"]["electromagnetic-plant"].surface_conditions, less_50_dust_concentration)
+  end
+end
+
+if data.raw["recipe"]["cryogenic-plant"] then
+  if data.raw["recipe"]["cryogenic-plant"].surface_conditions == nil then
+    data.raw["recipe"]["cryogenic-plant"].surface_conditions = {less_50_dust_concentration}
+  else
+    table.insert(data.raw["recipe"]["cryogenic-plant"].surface_conditions, less_50_dust_concentration)
+  end
+end
+
+if data.raw["recipe"]["recycler"] then
+  if data.raw["recipe"]["recycler"].surface_conditions == nil then
+    data.raw["recipe"]["recycler"].surface_conditions = {less_50_dust_concentration}
+  else
+    table.insert(data.raw["recipe"]["recycler"].surface_conditions, less_50_dust_concentration)
+  end
+end
+
+-- Add hyarion advanced quartz recipes to the prod tech
+if mods["planetaris-hyarion"] then
+  if data.raw.technology["planetaris-raw-quartz-productivity"] then
+    table.insert(data.raw.technology["planetaris-raw-quartz-productivity"].effects,       {
+          type = "change-recipe-productivity",
+          recipe = "planetaris-advanced-raw-quartz",
+          change = 0.1
+        })
+  end
 end
 
 -- Update Agri tower 
