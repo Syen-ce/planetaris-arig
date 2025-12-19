@@ -13,7 +13,8 @@
     "?celestial-weather",
     "?any-planet-start",
     "?aai-loaders",
-    "?visible-planets >= 1.2.11"
+    "?visible-planets >= 1.2.11",
+    "?canal-excavator >= 1.12"
   ],
   "description": "Arig, a hot planet with vast deserts where only valuable resources can be found underground or in the sand.",
   "quality_required": true,
