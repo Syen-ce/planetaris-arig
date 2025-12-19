@@ -76,7 +76,7 @@ data:extend({
       width = 130,
       height = 189,
       direction_count = 1,
-      shift = util.by_pixel(2.5, 0),
+      shift = util.by_pixel(0, -12),
       scale = 0.5
     })
   },

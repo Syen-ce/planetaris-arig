@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.3
+Date: 2025-12-19
+  Changes:
+    - Added solar panels, supported electric pole and water harvester to electromagnetics and advanced crafing categories
+  Compatibility:
+    - Fixed error with Quality Unlocks Recycling mod
+    - Fixed error with advanced solar pannels collision box being different than solar panels
+    - Fixed quartz productivity technology not affecting hyarion advanced quartz recipe
+  Bugfixes:
+    - Fixed big container corpse graphic being shifted
+    - Fixed enable cargo drop setting not working
+---------------------------------------------------------------------------------------------------
 Version: 1.1.2
 Date: 2025-12-08
   Bugfixes:

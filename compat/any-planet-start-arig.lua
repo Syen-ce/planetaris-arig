@@ -1,6 +1,9 @@
 local utils = require("__any-planet-start__.utils")
 
-data.raw.technology["planetslib-arig-cargo-drops"].enabled = true
+if data.raw.technology["planetslib-arig-cargo-drops"] then
+  data.raw.technology["planetslib-arig-cargo-drops"].enabled = true
+  data.raw.technology["planetslib-arig-cargo-drops"].hidden = true
+end
 
 data.raw.technology["electronics"].prerequisites = {"planetaris-sand-sifting"}
 data.raw.technology["steam-power"].prerequisites = {"planetaris-sand-sifting"}

@@ -10,3 +10,15 @@ end
 if mods["aai-loaders-sane"] then
     data.raw["technology"]["aai-hyper-loader"] = nil
 end
+
+if settings.startup["enable-arig-cargo-drops"].value == true then
+    if data.raw.technology["planetslib-arig-cargo-drops"] then
+        data.raw.technology["planetslib-arig-cargo-drops"].enabled = true
+        data.raw.technology["planetslib-arig-cargo-drops"].hidden = true
+    end
+else
+    if data.raw.technology["planetslib-arig-cargo-drops"] then
+        data.raw.technology["planetslib-arig-cargo-drops"].enabled = false
+        data.raw.technology["planetslib-arig-cargo-drops"].hidden = false
+    end
+end

@@ -560,6 +560,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-advanced-solar-panel",
       energy_required = 20,
+      category = "electronics",
       enabled = false,
       ingredients =
       {
@@ -572,6 +573,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-supported-solar-panel",
+      category = "electronics",
       energy_required = 30,
       enabled = false,
       ingredients =
@@ -585,6 +587,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-high-support-electric-pole",
+      category = "electronics",
       energy_required = 10,
       enabled = false,
       ingredients =
@@ -598,6 +601,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-water-harvester",
+      category = "electronics",
       subgroup = "arig-production",
       energy_required = 10,
       enabled = false,
