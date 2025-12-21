@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.4
+Date: 2025-12-19
+  Compatibility:
+    - Added recipe for the msppr mod
+    - Added space connections with maraxsis
+    - Added space connections with tiber
+---------------------------------------------------------------------------------------------------
 Version: 1.1.3
 Date: 2025-12-19
   Changes:

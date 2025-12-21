@@ -180,4 +180,52 @@ data:extend({
     }
 })
 
+if data.raw["planet"]["maraxsis"] then
+  data:extend({
+      {
+          type = "space-connection",
+          name = "maraxsis-arig",
+          subgroup = "planet-connections",
+          from = "maraxsis",
+          to = "arig", 
+          length = 10000,
+          icon_size = 64,
+          order = "d-b",
+          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
+      }
+  })
+end
+
+if data.raw["planet"]["maraxsis"] and data.raw["planet"]["hyarion"] then
+  data:extend({
+      {
+          type = "space-connection",
+          name = "maraxsis-hyarion",
+          subgroup = "planet-connections",
+          from = "maraxsis",
+          to = "hyarion", 
+          length = 10000,
+          icon_size = 64,
+          order = "d-b",
+          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
+      }
+  })
+end
+
+if data.raw["planet"]["tiber"] then
+  data:extend({
+    {
+          type = "space-connection",
+          name = "tiber-arig",
+          subgroup = "planet-connections",
+          from = "tiber",
+          to = "arig", 
+          length = 5000,
+          icon_size = 64,
+          order = "d-b",
+          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
+    }
+  })
+end
+
 PlanetsLib.borrow_music(data.raw["planet"]["vulcanus"], data.raw["planet"]["arig"])
