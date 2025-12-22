@@ -23,12 +23,13 @@ data:extend({
         name = "msppr-arig",
         subgroup = "science-pack",
         category = "compressing",
-        surface_conditions = {
-            {
-            property = "planetaris-crystalization-resistance",
+        surface_conditions =
+        {
+          {
+            property = "planetaris-dust-concentration",
             min = 50,
             max = 100,
-            }
+          }
         },
         enabled = false,
         ingredients = {
