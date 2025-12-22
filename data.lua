@@ -43,8 +43,6 @@ require("compat.water-harvesting-recipes")
 require("compat.wood-industry")
 require("compat.canal-excavator")
 
---require("compat.tiber")
-
 
 if mods["any-planet-start"] then
     APS.add_planet{name = "arig", filename = "__planetaris-arig__/compat/any-planet-start-arig.lua", technology = "planet-discovery-arig"}

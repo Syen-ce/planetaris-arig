@@ -649,7 +649,8 @@ data:extend({
   },
   })
 
-local arig_cargo_drops_base =
+if settings.startup["enable-arig-cargo-drops"].value == false then
+  local arig_cargo_drops_base =
       PlanetsLib.cargo_drops_technology_base("arig", "__planetaris-arig__/graphics/technology/arig-cargo-drops.png", 256)
 
       data:extend({
@@ -668,5 +669,5 @@ local arig_cargo_drops_base =
         })
       })
       
-      PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
-
+  PlanetsLib.add_entity_type_to_planet_cargo_drops_whitelist("arig", "construction-robot")
+end

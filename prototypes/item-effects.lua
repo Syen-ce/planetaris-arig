@@ -1,20 +1,23 @@
 local sounds = require("__base__.prototypes.entity.sounds")
 local math3d = require "math3d"
 
-local cactus_duration = 20 * second
-local cactus_cooldown = 16 * second
-local cactus_speed_modifier = 1.8
+
+local jelly_duration = 20 * second
+local cacti_cooldown = 8 * second
+local jelly_speed_modifier = 2.5
+
 
 local make_sticker_data = function()
   return
+  {
     {
       type = "sticker",
       name = "cactus-speed-sticker",
       flags = {"not-on-map"},
       hidden = true,
       single_particle = true,
-      duration_in_ticks = cactus_duration,
-      target_movement_modifier = cactus_speed_modifier,
+      duration_in_ticks = jelly_duration,
+      target_movement_modifier = jelly_speed_modifier,
       animation =
         util.sprite_load("__space-age__/graphics/sticker/jellynut-speed/whirl_front",
           {
@@ -32,7 +35,7 @@ local make_sticker_data = function()
       flags = {"not-on-map"},
       hidden = true,
       single_particle = true,
-      duration_in_ticks = cactus_duration,
+      duration_in_ticks = jelly_duration,
       render_layer = "object-under",
       animation =
         util.sprite_load("__space-age__/graphics/sticker/jellynut-speed/whirl_back",
@@ -44,8 +47,11 @@ local make_sticker_data = function()
             shift = util.by_pixel(0,16)
           }
         )
-    }
+    },
+  }
 end
+
+
 
 local make_speed_capsule_effect = function()
   return
@@ -56,7 +62,7 @@ local make_speed_capsule_effect = function()
       type = "projectile",
       activation_type = "consume",
       ammo_category = "capsule",
-      cooldown = cactus_cooldown,
+      cooldown = cacti_cooldown,
       range = 0,
       ammo_type =
       {
@@ -90,7 +96,9 @@ local make_speed_capsule_effect = function()
   }
 end
 
-local planetaris_item_effects =
+
+
+planetaris_item_effects =
 {
   data = make_sticker_data(),
   cactus_speed = make_speed_capsule_effect(),

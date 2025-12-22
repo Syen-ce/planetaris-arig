@@ -40,7 +40,7 @@ PlanetsLib:extend({
         surface_properties = {
             ["day-night-cycle"] = 1.5 * minute,
             ["magnetic-field"] = 120,
-            ["solar-power"] = 250,
+            ["solar-power"] = 300,
             pressure = 600,
             gravity = 30, --robot energy = (gravity / pressure) * 100
         },
@@ -188,23 +188,7 @@ if data.raw["planet"]["maraxsis"] then
           subgroup = "planet-connections",
           from = "maraxsis",
           to = "arig", 
-          length = 10000,
-          icon_size = 64,
-          order = "d-b",
-          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
-      }
-  })
-end
-
-if data.raw["planet"]["maraxsis"] and data.raw["planet"]["hyarion"] then
-  data:extend({
-      {
-          type = "space-connection",
-          name = "maraxsis-hyarion",
-          subgroup = "planet-connections",
-          from = "maraxsis",
-          to = "hyarion", 
-          length = 10000,
+          length = 15000,
           icon_size = 64,
           order = "d-b",
           asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
