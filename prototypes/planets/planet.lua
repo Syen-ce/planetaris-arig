@@ -40,7 +40,7 @@ PlanetsLib:extend({
         surface_properties = {
             ["day-night-cycle"] = 1.5 * minute,
             ["magnetic-field"] = 120,
-            ["solar-power"] = 250,
+            ["solar-power"] = 300,
             pressure = 600,
             gravity = 30, --robot energy = (gravity / pressure) * 100
         },
@@ -179,5 +179,37 @@ data:extend({
         asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
     }
 })
+
+if data.raw["planet"]["maraxsis"] then
+  data:extend({
+      {
+          type = "space-connection",
+          name = "maraxsis-arig",
+          subgroup = "planet-connections",
+          from = "maraxsis",
+          to = "arig", 
+          length = 15000,
+          icon_size = 64,
+          order = "d-b",
+          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_aquilo)
+      }
+  })
+end
+
+if data.raw["planet"]["tiber"] then
+  data:extend({
+    {
+          type = "space-connection",
+          name = "tiber-arig",
+          subgroup = "planet-connections",
+          from = "tiber",
+          to = "arig", 
+          length = 5000,
+          icon_size = 64,
+          order = "d-b",
+          asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.vulcanus_gleba)
+    }
+  })
+end
 
 PlanetsLib.borrow_music(data.raw["planet"]["vulcanus"], data.raw["planet"]["arig"])
