@@ -12,7 +12,7 @@ data:extend({
 		setting_type = "startup",
 		default_value = false,
 		order = "a-b-a",
-	}
+	},
 })
 
 if (mods["any-planet-start"]) then
@@ -33,6 +33,18 @@ data:extend({
 		setting_type = "startup",
 		default_value = 1.5,
 		order = "b-a-b",
+	}
+})
+end
+
+if (mods["TechnologyPriceMultiplier"]) then
+data:extend({
+	{
+		type = "bool-setting",
+		name = "ignore-arig-tech-price-exponent",
+		setting_type = "startup",
+		default_value = true,
+		order = "c-b",
 	}
 })
 end

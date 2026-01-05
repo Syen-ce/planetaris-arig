@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.5
+Date: 2025-01-05
+  Graphics:
+    - Change color of dust resistant roboport
+  Compatibility:
+    - Added compatibility with Technology price multipier mod and added setting to enable exponential price
+---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2025-12-22
   Balancing:
