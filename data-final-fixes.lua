@@ -12,3 +12,9 @@ end
 if mods["aai-loaders-sane"] then
     data.raw["technology"]["aai-hyper-loader"] = nil
 end
+
+if not mods["any-planet-start"] then
+    if data.raw.technology["planetslib-arig-cargo-drops"] then
+        data.raw.technology["planetslib-arig-cargo-drops"].hidden = false
+    end
+end

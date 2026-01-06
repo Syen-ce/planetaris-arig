@@ -5,6 +5,9 @@ Date: 2025-01-05
     - Change color of dust resistant roboport
   Compatibility:
     - Added compatibility with Technology price multiplier mod and added setting to enable exponential price
+  Bugfixes:
+    - Fixed some not having items weight
+    - Fixed Cargo drop tech being hidden
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.4
 Date: 2025-12-22
