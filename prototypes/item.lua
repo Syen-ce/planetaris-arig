@@ -18,6 +18,7 @@ data:extend({
     place_result = "planetaris-press",
     stack_size = 50,
     default_import_location = "arig",
+    weight = 100*kg
   },
 {
     type = "item",
@@ -40,7 +41,7 @@ data:extend({
     order = "d[sandstone_brick]",
     icon_size = 64,
     stack_size = 100,
-    weight = 10 * kg,
+    weight = 2 * kg,
     default_import_location = "arig",
     place_as_tile = {
         result = "planetaris-sandstone-path",
@@ -142,7 +143,7 @@ data:extend({
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-d",
         stack_size = 100,
-        weight = 5*kg,
+        weight = 1*kg,
         default_import_location = "arig",
 
         inventory_move_sound = item_sounds.low_density_inventory_move,
@@ -156,7 +157,7 @@ data:extend({
         subgroup = "arig-processes",
         order = "c[advance]-a",
         stack_size = 50,
-        weight = 10*kg,
+        weight = 2*kg,
         default_import_location = "arig",
 
         inventory_move_sound = item_sounds.metal_small_inventory_move,
@@ -171,7 +172,7 @@ data:extend({
         subgroup = "arig-processes",
         order = "a[basic]-b-b",
         stack_size = 100,
-        weight = 5*kg,
+        weight = 1*kg,
         default_import_location = "arig",
 
         inventory_move_sound = item_sounds.sulfur_inventory_move,
@@ -190,7 +191,7 @@ data:extend({
         inventory_move_sound = item_sounds.sulfur_inventory_move,
         pick_sound = item_sounds.resource_inventory_pickup,
         drop_sound = item_sounds.sulfur_inventory_move,
-        weight = 10*kg,
+        weight = 2*kg,
     },
     {
         type = "tool",
@@ -267,6 +268,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-big-chest",
         stack_size = 50,
+        weight = 40*kg,
       },
       {
         type = "item",
@@ -280,6 +282,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-active-provider-big-chest",
         stack_size = 50,
+        weight = 40*kg,
       },
       {
         type = "item",
@@ -293,6 +296,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-passive-provider-big-chest",
         stack_size = 50,
+        weight = 40*kg,
       },
       {
         type = "item",
@@ -306,6 +310,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-storage-big-chest",
         stack_size = 50,
+        weight = 40*kg,
       },
       {
         type = "item",
@@ -319,6 +324,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-buffer-big-chest",
         stack_size = 50,
+        weight = 40*kg,
       },
       {
         type = "item",
@@ -332,6 +338,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-requester-big-chest",
         stack_size = 50,
+        weight = 40*kg,
       },
         {
         type = "item",
@@ -345,7 +352,7 @@ data:extend({
         drop_sound = item_sounds.roboport_inventory_move,
         place_result = "planetaris-arig-roboport",
         stack_size = 10,
-        weight = 100*kg,
+        weight = 10*kg,
         default_import_location = "arig",
      },
         {
