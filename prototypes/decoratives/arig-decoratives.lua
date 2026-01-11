@@ -993,12 +993,12 @@ data:extend({
       autoplace =
       {
         order = "a[doodad]-i[fluff]-a",
-        probability_expression = "plateau_level * (-2.6 + rpi(0.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + region_box)",
-        local_expressions =
-        {
-          region_box = "min(range_select{input = moisture, from = 0.2, to = 1, slope = 0.05, min = -10, max = 1},\z
-                            range_select{input = temperature, from = 3, to = 50, slope = 0.5, min = -10, max = 1})"
-        }
+        probability_expression = "plateau_level * (-2.6 + rpi(0.2) + (garballo_noise + 1 - min(0, decorative_knockout)) + 0.5)",
+        -- local_expressions =
+        -- {
+        --   region_box = "min(range_select{input = moisture, from = 0.2, to = 1, slope = 0.05, min = -10, max = 1},\z
+        --                     range_select{input = temperature, from = 3, to = 50, slope = 0.5, min = -10, max = 1})"
+        -- }
       },
         minable =
         {
