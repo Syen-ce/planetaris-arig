@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.7
+Date: 2025-01-12
+  Compatibility:
+    - Krastorio, added rare metals to sifting sand
+  Bugfixes:
+    - Fixed arig rearranging tips and tricks of maraxis
+---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 2025-01-11
   Bugfixes:

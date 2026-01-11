@@ -40,10 +40,12 @@ end
 -- Surface conditions
 
 -- No buildable on Arig
+if data.raw["roboport"]["roboport"] then
 table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
         property = "planetaris-dust-concentration",
         max = 50
       })
+end
 
 -- Addon description to rail support on deep sand
 data.raw.technology["rail-support-foundations"].localized_description = {"", {"technology-description.rail-support-foundations"}, "",{"technology-description.rail-support-foundations-addon"}}
