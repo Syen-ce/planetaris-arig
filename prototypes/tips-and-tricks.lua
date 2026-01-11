@@ -9,7 +9,7 @@ data:extend ({
     category = "space-age",
     tag = "[planet=arig]",
     indent = 0,
-    order = "e-arig-a",
+    order = "p-arig-a",
     trigger = {
         type = "research",
         technology = "planet-discovery-arig"
@@ -105,7 +105,7 @@ data:extend ({
     category = "space-age",
     tag = "[item=rail-support]",
     indent = 1,
-    order = "e-arig-b",
+    order = "p-arig-b",
     trigger = {
         type = "research",
         technology = "planetaris-sand-sifting"
@@ -201,7 +201,7 @@ data:extend ({
     category = "space-age",
     tag = "[item=planetaris-cactus]",
     indent = 1,
-    order = "e-arig-b",
+    order = "p-arig-c",
     trigger = {
         type = "research",
         technology = "planetaris-cactus-wood"

@@ -17,3 +17,13 @@ table.insert(planetaris_sifter,
 local planetaris_press = data.raw["recipe"]["planetaris-press"].ingredients
 table.insert(planetaris_press,
     {type = "item", name = "kr-automation-core", amount = 2})
+
+    ---------------------Add rare metal to progression on Arig
+
+local arig_crash = data.raw["simple-entity"]["arig-big-sand-rock"].minable.results
+table.insert(arig_crash,
+    {type = "item", name = "kr-rare-metal-ore", amount_min = 15, amount_max = 21})
+
+local planetaris_sand_sifting = data.raw["recipe"]["planetaris-sand-sifting"].results
+table.insert(planetaris_sand_sifting,
+    {type = "item", name = "kr-rare-metal-ore", amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false})
