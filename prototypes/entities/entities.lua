@@ -581,7 +581,7 @@ graphics_set =
       percent = 90
     }
   },
-  logistic_mode = "active-provider",
+  logistic_mode = "passive-provider",
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
   damaged_trigger_effect = hit_effects.entity(),
