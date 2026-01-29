@@ -1,5 +1,3 @@
-require("__base__/prototypes/tile/tiles")
-
 local base_sounds = require("__base__/prototypes/entity/sounds")
 local base_tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local space_age_tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
@@ -14,13 +12,13 @@ local tile_spritesheet_layout = tile_graphics.tile_spritesheet_layout
 
 local patch_for_inner_corner_of_transition_between_transition = tile_graphics.patch_for_inner_corner_of_transition_between_transition
 
-base_tiles_util = base_tiles_util or {}
-water_tile_type_names = water_tile_type_names or {}
-out_of_map_tile_type_names = out_of_map_tile_type_names or {}
+local base_tiles_util = base_tiles_util or {}
+local base_water_tile_type_names = water_tile_type_names or {}
+local out_of_map_tile_type_names = out_of_map_tile_type_names or {}
 
-default_transition_group_id = default_transition_group_id or 0
-water_transition_group_id = water_transition_group_id or 1
-out_of_map_transition_group_id = out_of_map_transition_group_id or 2
+local base_default_transition_group_id = default_transition_group_id or 0
+local base_water_transition_group_id = water_transition_group_id or 1
+local base_out_of_map_transition_group_id = out_of_map_transition_group_id or 2
 
 
 data:extend({
@@ -73,8 +71,8 @@ local destroyed_item_trigger =
 local sandstone_transitions =
 {
   {
-    to_tiles = water_tile_type_names,
-    transition_group = water_transition_group_id,
+    to_tiles = base_water_tile_type_names,
+    transition_group = base_water_transition_group_id,
 
     background_layer_group = "water",
     background_layer_offset = -5,
@@ -102,8 +100,8 @@ local sandstone_transitions =
 local sandstone_transitions_between_transitions =
 {
   {
-    transition_group1 = default_transition_group_id,
-    transition_group2 = water_transition_group_id,
+    transition_group1 = base_default_transition_group_id,
+    transition_group2 = base_water_transition_group_id,
 
     spritesheet = "__planetaris-arig__/graphics/terrain/sand-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0_only_u_tall,
@@ -119,8 +117,8 @@ local sandstone_transitions_between_transitions =
     water_patch = patch_for_inner_corner_of_transition_between_transition,
   },
   {
-    transition_group1 = default_transition_group_id,
-    transition_group2 = out_of_map_transition_group_id,
+    transition_group1 = base_default_transition_group_id,
+    transition_group2 = base_out_of_map_transition_group_id,
 
     background_layer_offset = 1,
     background_layer_group = "zero",
@@ -131,8 +129,8 @@ local sandstone_transitions_between_transitions =
     overlay_enabled = false
   },
   {
-    transition_group1 = water_transition_group_id,
-    transition_group2 = out_of_map_transition_group_id,
+    transition_group1 = base_water_transition_group_id,
+    transition_group2 = base_out_of_map_transition_group_id,
 
     background_layer_group = "water",
     background_layer_offset = -5,
@@ -159,8 +157,8 @@ local sandstone_transitions_between_transitions =
 local sandstone_foundation_transitions =
 {
   {
-    to_tiles = water_tile_type_names,
-    transition_group = water_transition_group_id,
+    to_tiles = base_water_tile_type_names,
+    transition_group = base_water_transition_group_id,
 
     spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-foundation/sandstone.png",
     layout = tile_spritesheet_layout.transition_8_8_8_2_4,
@@ -177,8 +175,8 @@ local sandstone_foundation_transitions =
 local sandstone_foundation_transitions_between_transitions =
 {
   {
-    transition_group1 = default_transition_group_id,
-    transition_group2 = water_transition_group_id,
+    transition_group1 = base_default_transition_group_id,
+    transition_group2 = base_water_transition_group_id,
     spritesheet = "__planetaris-arig__/graphics/terrain/sandstone-foundation/sandstone-transition.png",
     layout = tile_spritesheet_layout.transition_3_3_3_1_0,
     background_enabled = false,
@@ -189,8 +187,8 @@ local sandstone_foundation_transitions_between_transitions =
     water_patch = patch_for_inner_corner_of_transition_between_transition
   },
   {
-    transition_group1 = water_transition_group_id,
-    transition_group2 = out_of_map_transition_group_id,
+    transition_group1 = base_water_transition_group_id,
+    transition_group2 = base_out_of_map_transition_group_id,
 
     background_layer_offset = 1,
     background_layer_group = "zero",
@@ -253,7 +251,7 @@ data:extend({
   minable = {mining_time = 0.2, result = "planetaris-sandstone-brick"},
   order = "a[artificial]-b[tier-2]-a[sandstone-path]",
   mined_sound = base_sounds.deconstruct_bricks(0.8),
-  layer = 12,
+  layer = 42,
   layer_group = "ground-artificial",
   transition_overlay_layer_offset = 2,
   decorative_removal_probability = 0.25,
@@ -338,7 +336,7 @@ data:extend({
     is_foundation = true,
     can_be_part_of_blueprint = true,
     collision_mask = tile_collision_masks.ground(),
-    layer = 11,
+    layer = 41,
 
     transitions = sandstone_foundation_transitions,
     transitions_between_transitions = sandstone_foundation_transitions_between_transitions,
@@ -386,7 +384,7 @@ data:extend({
       floor=true,
     }},
     autoplace = {probability_expression = "shallow_sand_level"}, -- target coast at cliff elevation
-    layer = 4,
+    layer = 39,
     layer_group = "ground-natural",
     map_color = {189, 158, 124},
     vehicle_friction_modifier = 4,
@@ -413,9 +411,10 @@ data:extend({
     transitions_between_transitions = table.deepcopy(data.raw.tile["water-shallow"].transitions_between_transitions),
     walking_sound = sound_variations("__base__/sound/walking/sand", 9, 0.8, volume_multiplier("main-menu", 2.9)),
     landing_steps_sound = space_age_tile_sounds.landing.sand,
-    driving_sound = sand_driving_sound,
+    driving_sound = base_tile_sounds.driving.sand,
     ambient_sounds = sand_ambient_sound,
-    trigger_effect = tile_trigger_effects.sand_trigger_effect()
+    trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+    can_be_part_of_blueprint = false,
   },
 {
 
@@ -427,12 +426,12 @@ data:extend({
     subgroup = "arig-tiles",
     collision_mask = planetaris_tile_collision_masks.oil_ocean_deep(),
     autoplace = {probability_expression = "deep_sand_level"}, -- target coast at cliff elevation
-    layer = 5,
+    layer = 40,
     layer_group = "ground-natural",
     map_color = {199, 168, 134},
     vehicle_friction_modifier = 5,
     walking_speed_modifier = 0.7,
-    default_cover_tile = "planetaris-sandstone-path",
+    default_cover_tile = "planetaris-sandstone-foundation",
     fluid = "planetaris-sand",
     absorptions_per_second = nil,
     destroys_dropped_items = true,
@@ -455,9 +454,10 @@ data:extend({
     transitions_between_transitions = table.deepcopy(data.raw.tile["water-shallow"].transitions_between_transitions),
     walking_sound = sound_variations("__base__/sound/walking/sand", 9, 0.8, volume_multiplier("main-menu", 2.9)),
     landing_steps_sound = space_age_tile_sounds.landing.sand,
-    driving_sound = sand_driving_sound,
+    driving_sound = base_tile_sounds.driving.sand,
     ambient_sounds = sand_ambient_sound,
-    trigger_effect = tile_trigger_effects.sand_trigger_effect()
+    trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+    can_be_part_of_blueprint = false,
   },
     ------------------------------------------------------------------ arig stable sand
   {
@@ -468,10 +468,11 @@ data:extend({
     subgroup = "arig-tiles",
     collision_mask = tile_collision_masks.ground(),
     autoplace = {probability_expression = "beach_level"},
-    layer = 6,
+    layer = 41,
     map_color={160, 128, 93},
     vehicle_friction_modifier = sand_vehicle_speed_modifier,
     walking_speed_modifier = 0.9,
+    default_cover_tile = "planetaris-sandstone-foundation",
     absorptions_per_second = nil,
     variants =
     {
@@ -493,7 +494,8 @@ data:extend({
     driving_sound = base_tile_sounds.driving.sand,
     ambient_sounds = sand_ambient_sound,
     scorch_mark_color = {r = 0.3, g = 0.3, b = 0.3, a = 1.000},
-    trigger_effect = tile_trigger_effects.sand_trigger_effect()
+    trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+    can_be_part_of_blueprint = false,
   },
   ------------------------------------------------------------------ arig sandstone
 {
@@ -513,7 +515,7 @@ data:extend({
         max = 1
       } + noise_layer_noise(41) * 0.3)
     ]]},
-  layer = 7,
+  layer = 47,
 
   variants = tile_variations_template(
     "__planetaris-arig__/graphics/terrain/sandstone-1.png", "__base__/graphics/terrain/masks/transition-4.png",
@@ -534,8 +536,8 @@ data:extend({
   scorch_mark_color = {170, 138, 103},
   absorptions_per_second = nil,
   vehicle_friction_modifier = sand_vehicle_speed_modifier,
-
   trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+    can_be_part_of_blueprint = false,
 
 },
 {
@@ -555,7 +557,7 @@ data:extend({
         max = 1
       } + noise_layer_noise(41) * 0.3)
     ]]},
-  layer = 8,
+  layer = 48,
 
   variants = tile_variations_template(
       "__planetaris-arig__/graphics/terrain/sandstone-2.png", "__base__/graphics/terrain/masks/transition-4.png",
@@ -578,6 +580,7 @@ data:extend({
   vehicle_friction_modifier = sand_vehicle_speed_modifier,
 
   trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+  can_be_part_of_blueprint = false,
 
 },
 {
@@ -597,7 +600,7 @@ data:extend({
         max = 1
       } + noise_layer_noise(40) * 0.3)
     ]]},
-  layer = 8,
+  layer = 48,
 
   variants = tile_variations_template(
       "__planetaris-arig__/graphics/terrain/sandstone-3.png", "__base__/graphics/terrain/masks/transition-4.png",
@@ -621,6 +624,7 @@ data:extend({
   vehicle_friction_modifier = sand_vehicle_speed_modifier,
 
   trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+  can_be_part_of_blueprint = false,
 
 },
   {
@@ -630,7 +634,7 @@ data:extend({
     subgroup = "arig-tiles",
     collision_mask = tile_collision_masks.ground(),
   autoplace = {probability_expression = "plateau_level"},
-    layer = 9,
+    layer = 49,
     map_color={135, 105, 75},
     vehicle_friction_modifier = 4,
     absorptions_per_second = nil,
@@ -653,7 +657,8 @@ data:extend({
     landing_steps_sound = space_age_tile_sounds.landing.rock,
     driving_sound = base_tile_sounds.driving.stone,
     scorch_mark_color = {155, 125, 90},
-    trigger_effect = tile_trigger_effects.sand_trigger_effect()
+    trigger_effect = tile_trigger_effects.sand_trigger_effect(),
+    can_be_part_of_blueprint = false,
   },
 })
 

@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.9
+Date: 2025-01-29
+  Bugfixes:
+    - Fixed concrete and stone brick nor freezing in Aquilo
+    - Fixed sandstone foundation not buing the defaultn cover tile for sand
+---------------------------------------------------------------------------------------------------
 Version: 1.1.8
 Date: 2025-01-20
   Bugfixes:
