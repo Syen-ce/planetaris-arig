@@ -1,3 +1,7 @@
+require("compat.tiber")
+
+--------------------------------
+
 local planetaris_tile_collision_masks = require("prototypes.tile.tile-collision-masks")
 
 -- Set Upgrade for level 5 belts
@@ -40,7 +44,7 @@ end
 -- Surface conditions
 
 -- No buildable on Arig
-if data.raw["roboport"]["roboport"] then
+if data.raw["roboport"]["roboport"] and data.raw["roboport"]["roboport"].surface_conditions then
 table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
         property = "planetaris-dust-concentration",
         max = 50
