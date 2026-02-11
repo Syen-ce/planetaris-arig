@@ -268,6 +268,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-big-chest",
         stack_size = 50,
+        default_import_location = "arig",
         weight = 40*kg,
       },
       {
@@ -282,6 +283,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-active-provider-big-chest",
         stack_size = 50,
+        default_import_location = "arig",
         weight = 40*kg,
       },
       {
@@ -296,6 +298,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-passive-provider-big-chest",
         stack_size = 50,
+        default_import_location = "arig",
         weight = 40*kg,
       },
       {
@@ -310,6 +313,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-storage-big-chest",
         stack_size = 50,
+        default_import_location = "arig",
         weight = 40*kg,
       },
       {
@@ -324,6 +328,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-buffer-big-chest",
         stack_size = 50,
+        default_import_location = "arig",
         weight = 40*kg,
       },
       {
@@ -338,6 +343,7 @@ data:extend({
         drop_sound = item_sounds.metal_chest_inventory_move,
         place_result = "planetaris-requester-big-chest",
         stack_size = 50,
+        default_import_location = "arig",
         weight = 40*kg,
       },
         {

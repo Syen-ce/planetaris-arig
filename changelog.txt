@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.11
+Date: 2025-02-11
+  Features:
+    - Added compression science pack to Aquilo discovery and Promethium science pack, this can be disable by 2 new settings.
+  Changes:
+    - Increased inventory slots of containers (180 -> 190)
+  Graphics:
+    - Fixed error with edges of the visible in space sprite of Arig
+  Bugfixes:
+    - Fixed containers and logistic containers not having Arig as a default import location
+    - Fixed some technologies marked as essential
+---------------------------------------------------------------------------------------------------
 Version: 1.1.10
 Date: 2025-02-05
   Bugfixes:

@@ -39,7 +39,7 @@ data:extend({
       name = "planetaris-cactus-wood",
       icon = "__planetaris-arig__/graphics/technology/cactus.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -60,7 +60,7 @@ data:extend({
       name = "planetaris-sand-sifting",
       icon = "__planetaris-arig__/graphics/technology/sifting.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -107,7 +107,7 @@ data:extend({
       name = "planetaris-glass",
       icon = "__planetaris-arig__/graphics/technology/glass-panel.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -126,7 +126,7 @@ data:extend({
       name = "planetaris-compression",
       icon = "__planetaris-arig__/graphics/technology/compression.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -194,7 +194,7 @@ data:extend({
       name = "planetaris-raw-diamond-production",
       icon = "__planetaris-arig__/graphics/technology/raw-diamond.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -234,7 +234,7 @@ data:extend({
       name = "planetaris-sandstone-foundation",
       icon = "__planetaris-arig__/graphics/technology/sandstone-foundation.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -263,7 +263,7 @@ data:extend({
       name = "planetaris-advanced-sand-sifting",
       icon = "__planetaris-arig__/graphics/technology/advanced-sand-sifting.png",
       icon_size = 64,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -296,7 +296,7 @@ data:extend({
       name = "planetaris-heavy-glass",
       icon = "__planetaris-arig__/graphics/technology/heavy-glass.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -325,7 +325,7 @@ data:extend({
       name = "planetaris-silica-processing",
       icon = "__planetaris-arig__/graphics/technology/silica.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -383,7 +383,7 @@ data:extend({
       name = "planetaris-water-harvesting",
       icon = "__planetaris-arig__/graphics/technology/water-harvesting.png",
       icon_size = 256,
-      essential = true,
+      essential = false,
       effects = {
         {
           type = "unlock-recipe",
@@ -619,7 +619,7 @@ data:extend({
     name = "planetaris-heavy-glass-productivity",
     icons = util.technology_icon_constant_recipe_productivity("__planetaris-arig__/graphics/technology/heavy-glass.png"),
     icon_size = 256,
-    essential = true,
+    essential = false,
     effects =
     {
       {

@@ -8,10 +8,24 @@ data:extend({
 	},
 	{
 		type = "bool-setting",
+		name = "compression-for-aquilo",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-b-a",
+	},
+	{
+		type = "bool-setting",
+		name = "compression-for-promethium",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-b-a",
+	},
+	{
+		type = "bool-setting",
 		name = "debug-cactus-recipe",
 		setting_type = "startup",
 		default_value = false,
-		order = "a-b-a",
+		order = "a-c-a",
 	},
 })
 
