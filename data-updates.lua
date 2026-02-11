@@ -57,6 +57,17 @@ data.raw.technology["rail-support-foundations"].localized_description = {"", {"t
 -- Adding science packs
 table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
 
+-- Update Base techs with compression
+if settings.startup["compression-for-aquilo"].value == true then
+  table.insert(data.raw.technology["planet-discovery-aquilo"].unit.ingredients, {"planetaris-compression-science-pack", 1})
+  table.insert(data.raw.technology["planet-discovery-aquilo"].prerequisites, "planetaris-compression-science")
+end
+
+if settings.startup["compression-for-promethium"].value == true then
+  table.insert(data.raw.technology["promethium-science-pack"].unit.ingredients, {"planetaris-compression-science-pack", 1})
+  table.insert(data.raw.technology["promethium-science-pack"].prerequisites, "planetaris-compression-science")
+end
+
 
 table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
         type = "change-recipe-productivity",
