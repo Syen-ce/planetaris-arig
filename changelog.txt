@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.12
+Date: 2025-02-17
+  Sounds:
+    - Added new wind sound
+    - Added new sand and desert sounds
+    - Changed sounds to the water harvester
+  Compatibility:
+    - Added water harvesting recipes for Lignumis and Muria
+  Bugfixes:
+    - Fixed error with atomic arig adding two times compression science pack to technologies
+    - Fixed press not playing sounds
+---------------------------------------------------------------------------------------------------
 Version: 1.1.11
 Date: 2025-02-11
   Features:
