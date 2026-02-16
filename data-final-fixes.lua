@@ -28,5 +28,7 @@ if not mods["atomic-arig"] then -- for some reason this crashes with atomic arig
     if settings.startup["compression-for-promethium"].value == true then
     add_ingredient_if_missing("promethium-science-pack", "planetaris-compression-science-pack")
     add_prerequisite_if_missing("promethium-science-pack", "planetaris-compression-science")
+    add_ingredient_if_missing("research-productivity", "planetaris-compression-science-pack")
+    add_prerequisite_if_missing("research-productivity", "planetaris-compression-science")
     end
 end
