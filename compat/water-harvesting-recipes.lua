@@ -80,7 +80,7 @@ if mods["lignumis"] then
     {
       type = "recipe",
       name = "planetaris-lignumis-water-harvesting",
-      localised_name = {"", {"space-location-name.eneas"}, " ", {"recipe-name.planetaris-water-harvesting"}},
+      localised_name = {"", {"space-location-name.lignumis"}, " ", {"recipe-name.planetaris-water-harvesting"}},
       category = "water-production",
       subgroup = "water-harvesting",
       order = "a-e[gleba]-b",
