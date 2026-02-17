@@ -321,6 +321,7 @@ data:extend({
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
   effect_receiver = { base_effect = { productivity = 0.5 }},
+  perceived_performance = {minimum = 0.25, maximum = 20},
   heating_energy = "100kW",
   resistances =
   {
@@ -339,7 +340,7 @@ data:extend({
   drawing_box_vertical_extension = 0.5,
   impact_category = "metal",
   icon_draw_specification = {scale = 1, shift = {0, -0.5}},
-graphics_set =
+  graphics_set =
     {
       animation = make_4way_animation_from_spritesheet({ layers =
       {
@@ -431,7 +432,18 @@ graphics_set =
   module_slots = 2,
   allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
   circuit_connector = circuit_connector_definitions["assembling-machine"],
-  circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance
+  circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
+  working_sound =
+  {
+    sound = {filename = "__base__/sound/assembling-machine-t3-1.ogg", volume = 0.45, audible_distance_modifier = 0.5},
+    fade_in_ticks = 4,
+    fade_out_ticks = 20,
+    --sound_accents =
+    --{
+    --  {sound = {variations = sound_variations("__planetaris-arig__/sound/press", 4, 0.8), audible_distance_modifier = 0.4}, frame = 8},
+    --},
+    max_sounds_per_prototype = 2,
+  },
 },
 -- Containers
 {
@@ -1254,8 +1266,8 @@ graphics_set =
   max_health = 200,
   corpse = "planetaris-press-remnants",
   dying_explosion = "accumulator-explosion",
-  open_sound = sounds.metallic_chest_open,
-  close_sound = sounds.metallic_chest_close,
+  open_sound = sounds.steam_open,
+  close_sound = sounds.steam_close,
   heating_energy = "100kW",
   resistances =
   {
@@ -1321,6 +1333,12 @@ graphics_set =
         property = "gravity",
         min = 1,
       }
+    },
+  working_sound =
+    {
+      sound = sound_variations("__base__/sound/chemical-plant", 3, 0.5),
+      fade_in_ticks = 4,
+      fade_out_ticks = 20
     },
   crafting_categories = {"water-production"},
   crafting_speed = 1,

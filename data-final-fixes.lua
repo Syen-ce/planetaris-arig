@@ -17,3 +17,18 @@ if not mods["any-planet-start"] then
         data.raw.technology["planetslib-arig-cargo-drops"].hidden = false
     end
 end
+
+-- Update Base techs with compression
+if not mods["atomic-arig"] then -- for some reason this crashes with atomic arig
+    if settings.startup["compression-for-aquilo"].value == true then
+    add_ingredient_if_missing("planet-discovery-aquilo", "planetaris-compression-science-pack")
+    add_prerequisite_if_missing("planet-discovery-aquilo", "planetaris-compression-science")
+    end
+
+    if settings.startup["compression-for-promethium"].value == true then
+    add_ingredient_if_missing("promethium-science-pack", "planetaris-compression-science-pack")
+    add_prerequisite_if_missing("promethium-science-pack", "planetaris-compression-science")
+    add_ingredient_if_missing("research-productivity", "planetaris-compression-science-pack")
+    add_prerequisite_if_missing("research-productivity", "planetaris-compression-science")
+    end
+end

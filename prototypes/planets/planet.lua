@@ -47,7 +47,7 @@ PlanetsLib:extend({
         persistent_ambient_sounds =
     {
       base_ambience = {filename = "__space-age__/sound/wind/base-wind-aquilo.ogg", volume = 0.5},
-      wind = {filename = "__space-age__/sound/wind/wind-aquilo.ogg", volume = 0.8},
+      wind = {filename = "__planetaris-arig__/sound/arig-wind.ogg", volume = 0.1},
       crossfade =
       {
         order = {"wind", "base_ambience"},
@@ -58,7 +58,12 @@ PlanetsLib:extend({
       semi_persistent =
       {
         {
-          sound = {variations = sound_variations("__space-age__/sound/world/semi-persistent/cold-wind-gust", 5, 0.3)},
+          sound = {variations = sound_variations("__planetaris-arig__/sound/sand", 3, 0.8)},
+          delay_mean_seconds = 10,
+          delay_variance_seconds = 8
+        },
+        {
+          sound = {variations = sound_variations("__planetaris-arig__/sound/desert", 3, 0.8)},
           delay_mean_seconds = 15,
           delay_variance_seconds = 9
         }
