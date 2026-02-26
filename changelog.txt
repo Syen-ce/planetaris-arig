@@ -1,11 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.14
+Date: 2026-02-26
+  Bugfixes:
+    - Deleted old small cactus decorative
+---------------------------------------------------------------------------------------------------
 Version: 1.1.13
-Date: 2025-02-17
+Date: 2026-02-17
   Bugfixes:
     - Fixed crash with lignumis
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.12
-Date: 2025-02-17
+Date: 2026-02-17
   Sounds:
     - Added new wind sound
     - Added new sand and desert sounds
@@ -17,7 +22,7 @@ Date: 2025-02-17
     - Fixed press not playing sounds
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.11
-Date: 2025-02-11
+Date: 2026-02-11
   Features:
     - Added compression science pack to Aquilo discovery and Promethium science pack, this can be disable by 2 new settings.
   Changes:
@@ -29,35 +34,35 @@ Date: 2025-02-11
     - Fixed some technologies marked as essential
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.10
-Date: 2025-02-05
+Date: 2026-02-05
   Bugfixes:
     - Fixed error with Sky's Simplified Space Age
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.9
-Date: 2025-01-29
+Date: 2026-01-29
   Bugfixes:
     - Fixed concrete and stone brick not freezing in Aquilo
     - Fixed sandstone foundation not being the default cover tile for sand
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.8
-Date: 2025-01-20
+Date: 2026-01-20
   Bugfixes:
     - Fixed passive provider container working as a active provider
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
-Date: 2025-01-12
+Date: 2026-01-12
   Compatibility:
     - Krastorio, added rare metals to sifting sand
   Bugfixes:
     - Fixed arig rearranging tips and tricks of maraxis
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: 2025-01-11
+Date: 2026-01-11
   Bugfixes:
     - Fixed cactus not spawning in some seeds
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 2025-01-05
+Date: 2026-01-05
   Graphics:
     - Change color of dust resistant roboport
   Compatibility:
