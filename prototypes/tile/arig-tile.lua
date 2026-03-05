@@ -431,7 +431,7 @@ data:extend({
     map_color = {199, 168, 134},
     vehicle_friction_modifier = 5,
     walking_speed_modifier = 0.7,
-    default_cover_tile = "planetaris-sandstone-foundation",
+    default_cover_tile = "foundation",
     fluid = "planetaris-sand",
     absorptions_per_second = nil,
     destroys_dropped_items = true,
