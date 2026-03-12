@@ -36,6 +36,7 @@ data:extend({
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.1, result = "planetaris-hyper-transport-belt"},
     max_health = 180,
+    heating_energy = "150kW",
     corpse = "planetaris-hyper-transport-belt-remnants",
     dying_explosion = "planetaris-hyper-transport-belt-explosion",
     resistances =
@@ -75,7 +76,7 @@ data:extend({
     corpse = "planetaris-hyper-underground-belt-remnants",
     dying_explosion = "planetaris-hyper-underground-belt-explosion",
     max_distance = 15,
-    heating_energy = "250kW",
+    heating_energy = "150kW",
     underground_sprite =
     {
       filename = "__core__/graphics/arrows/underground-lines.png",
