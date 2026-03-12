@@ -33,6 +33,124 @@ data:extend({
 -- Machines
 
 data:extend({
+{
+    type = "container",
+    name = "planetaris-logo-beige",
+    icon = "__base__/graphics/icons/factorio-logo-16tiles.png",
+    flags = {"placeable-neutral", "player-creation"},
+    hidden = true,
+    minable = {mining_time = 0.1},
+    max_health = 666,
+    collision_box = {{-4.5+0.15, -1+0.15}, {4.5-0.15, 1-0.15}},
+    selection_box = {{-4.5, -1}, {4.5, 1}},
+    inventory_size = 1,
+    picture =
+    {
+      filename = "__planetaris-arig__/graphics/entity/planetaris-logo/planetaris-logo-white.png",
+      priority = "very-low",
+      width = 2164,
+      height = 295,
+      shift = util.by_pixel(5, -8),
+      scale = 0.20
+    },
+    resistances =
+    {
+      {
+        type = "fire",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "physical",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "impact",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "explosion",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "acid",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "laser",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "electric",
+        decrease = 0,
+        percent = 100
+      },
+    },
+  },
+  {
+    type = "container",
+    name = "planetaris-factorio-logo-small",
+    icon = "__base__/graphics/icons/factorio-logo-16tiles.png",
+    flags = {"placeable-neutral", "player-creation"},
+    hidden = true,
+    minable = {mining_time = 0.1},
+    max_health = 666,
+    collision_box = {{-4.5+0.15, -1+0.15}, {4.5-0.15, 1-0.15}},
+    selection_box = {{-4.5, -1}, {4.5, 1}},
+    inventory_size = 1,
+    picture =
+    {
+      filename = "__base__/graphics/entity/factorio-logo/factorio-logo-16tiles.png",
+      priority = "very-low",
+      width = 1536,
+      height = 512,
+      shift = util.by_pixel(1, 18),
+      scale = 0.33
+    },
+    resistances =
+    {
+      {
+        type = "fire",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "physical",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "impact",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "explosion",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "acid",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "laser",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "electric",
+        decrease = 0,
+        percent = 100
+      },
+    },
+  },
     {
     type = "assembling-machine",
     name = "planetaris-sifter",

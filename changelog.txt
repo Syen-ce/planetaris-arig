@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.16
+Date: 2026-03-12
+  Compatibility:
+    - Added tech card icons to Krastorio 2 space out
+    - Fixed error with exotic space industries remembrance
+---------------------------------------------------------------------------------------------------
 Version: 1.1.15
 Date: 2026-03-05
   Bugfixes:
