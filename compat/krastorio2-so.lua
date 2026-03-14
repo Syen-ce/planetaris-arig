@@ -33,8 +33,6 @@ data.extend({
 		order = "a05[agricultural-research-data]-p-a",
 		stack_size = 200,
 		weight = 1 * kg,
-		spoil_result = "spoilage",
-		spoil_ticks = 54000,
 		default_import_location = "arig",
 	},
 	{
