@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.18
+Date: 2026-03-14
+  Graphics:
+    - Changed sifter graphics
+  Compatibility:
+    - Added hyper loader to Krastorio 2 space out, superior loader recipe now needs hyper loaders
+  Bugfixes:
+    - Fixed hard trasition between stable sand and sandstone foundation
+---------------------------------------------------------------------------------------------------
 Version: 1.1.17
 Date: 2026-03-14
   Bugfixes:

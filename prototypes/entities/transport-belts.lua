@@ -352,3 +352,5 @@ data:extend({
     default_output_right_condition = { first = {type="virtual", name="signal-O"}, comparator=">", second=0},
   },
 })
+
+return hyper_belt_animation_set

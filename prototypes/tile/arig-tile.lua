@@ -468,7 +468,7 @@ data:extend({
     subgroup = "arig-tiles",
     collision_mask = tile_collision_masks.ground(),
     autoplace = {probability_expression = "beach_level"},
-    layer = 41,
+    layer = 40,
     map_color={160, 128, 93},
     vehicle_friction_modifier = sand_vehicle_speed_modifier,
     walking_speed_modifier = 0.9,
