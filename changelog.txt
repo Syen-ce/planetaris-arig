@@ -6,7 +6,7 @@ Date: 2026-03-14
   Compatibility:
     - Added hyper loader to Krastorio 2 space out, superior loader recipe now needs hyper loaders
   Bugfixes:
-    - Fixed hard trasition between stable sand and sandstone foundation
+    - Fixed hard transition between stable sand and sandstone foundation
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.17
 Date: 2026-03-14
