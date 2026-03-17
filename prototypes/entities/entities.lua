@@ -4,6 +4,7 @@ require ("__space-age__/prototypes/entity/circuit-network")
 require ("__base__/prototypes/entity/circuit-network")
 require ("__base__/prototypes/entity/pipecovers")
 require ("prototypes.tile.tile-collision-masks")
+require ("__planetaris-arig__/prototypes/entities/planetaris-cover-pictures")
 
 local simulations = require("prototypes.factoriopedia-simulations")
 local sounds = require("__base__/prototypes/entity/sounds")
@@ -69,157 +70,115 @@ data:extend({
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
     graphics_set =
     {
-      animation = make_4way_animation_from_spritesheet({ layers =
-      {
+      animation = {
+        layers =
         {
-          filename = "__planetaris-arig__/graphics/entity/sifter/sifter.png",
-          width = 220,
-          height = 292,
-          frame_count = 24,
-          line_length = 12,
-          shift = util.by_pixel(0.5, -9),
-          scale = 0.5
-        },
-        {
-          filename = "__planetaris-arig__/graphics/entity/sifter/sifter-shadow.png",
-          width = 312,
-          height = 222,
-          repeat_count = 24,
-          shift = util.by_pixel(27, 6),
-          draw_as_shadow = true,
-          scale = 0.5
+          {
+            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-base.png",
+            width = 380,
+            height = 380,
+            shift = util.by_pixel(0.5, -9),
+            scale = 0.3
+          },
+          {
+            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-shadow.png",
+            width = 312,
+            height = 222,
+            shift = util.by_pixel(27, 0),
+            draw_as_shadow = true,
+            scale = 0.5
+          }
         }
-      }}),
+      },
       working_visualisations =
       {
         {
+          animation = 
+            {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-spin.png",
+              frame_count = 64,
+              line_length = 8,
+              width = 380,
+              height = 380,
+              shift = util.by_pixel(0.5, -9),
+              scale = 0.3
+            },
+        },
+        {
           apply_recipe_tint = "primary",
-          north_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-liquid-north.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 66,
-            height = 44,
-            shift = util.by_pixel(23, 15),
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-liquid-east.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 70,
-            height = 36,
-            shift = util.by_pixel(0, 22),
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-liquid-south.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 66,
-            height = 42,
-            shift = util.by_pixel(0, 17),
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-liquid-west.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 74,
-            height = 36,
-            shift = util.by_pixel(-10, 13),
-            scale = 0.5
-          }
+          animation =
+            {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-fluid.png",
+              frame_count = 64,
+              line_length = 8,
+              width = 380,
+              height = 380,
+              shift = util.by_pixel(0.5, -9),
+              scale = 0.3
+            },
         },
         {
           apply_recipe_tint = "secondary",
-          north_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-foam-north.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 62,
-            height = 42,
-            shift = util.by_pixel(24, 15),
-            scale = 0.5
-          },
-          east_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-foam-east.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 68,
-            height = 36,
-            shift = util.by_pixel(0, 22),
-            scale = 0.5
-          },
-          south_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-foam-south.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 60,
-            height = 40,
-            shift = util.by_pixel(1, 17),
-            scale = 0.5
-          },
-          west_animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-foam-west.png",
-            frame_count = 24,
-            line_length = 6,
-            width = 68,
-            height = 28,
-            shift = util.by_pixel(-9, 15),
-            scale = 0.5
-          }
+          animation =
+            {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-foam.png",
+              frame_count = 64,
+              line_length = 8,
+              width = 380,
+              height = 380,
+              shift = util.by_pixel(0.5, -9),
+              scale = 0.3
+            },
         },
         {
-          apply_recipe_tint = "tertiary",
-          fadeout = true,
-          constant_speed = true,
-          north_position = util.by_pixel_hr(-30, -161),
-          east_position = util.by_pixel_hr(29, -150),
-          south_position = util.by_pixel_hr(12, -134),
-          west_position = util.by_pixel_hr(-32, -130),
-          render_layer = "wires",
+          apply_recipe_tint = "secondary",
           animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-smoke-outer.png",
-            frame_count = 47,
-            line_length = 16,
-            width = 90,
-            height = 188,
-            animation_speed = 0.5,
-            shift = util.by_pixel(-2, -40),
-            scale = 0.5
-          }
+            {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-tank-foam.png",
+              frame_count = 24,
+              line_length = 6,
+              width = 380,
+              height = 380,
+              shift = util.by_pixel(0.5, -9),
+              scale = 0.3
+            },
         },
         {
-          apply_recipe_tint = "quaternary",
-          fadeout = true,
-          constant_speed = true,
-          north_position = util.by_pixel_hr(-30, -161),
-          east_position = util.by_pixel_hr(29, -150),
-          south_position = util.by_pixel_hr(12, -134),
-          west_position = util.by_pixel_hr(-32, -130),
-          render_layer = "wires",
+          apply_recipe_tint = "primary",
           animation =
-          {
-            filename = "__planetaris-arig__/graphics/entity/sifter/sifter-smoke-inner.png",
-            frame_count = 47,
-            line_length = 16,
-            width = 40,
-            height = 84,
-            animation_speed = 0.5,
-            shift = util.by_pixel(0, -14),
-            scale = 0.5
-          }
-        }
+            {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-small-tank.png",
+              frame_count = 96,
+              line_length = 16,
+              width = 20,
+              height = 78,
+              shift = util.by_pixel(40.5, -4),
+              scale = 0.35
+            },
+        },
+        {
+          animation =
+            {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-pressure.png",
+              frame_count = 48,
+              line_length = 8,
+              width = 72,
+              height = 77,
+              shift = util.by_pixel(18, 2.2),
+              scale = 0.35
+            },
+        },
+        {
+          animation =
+            {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-glass.png",
+              repeat_count = 64,
+              width = 380,
+              height = 380,
+              shift = util.by_pixel(0.5, -9),
+              scale = 0.3
+            },
+        },
       }
     },
     impact_category = "metal-large",
@@ -241,6 +200,7 @@ data:extend({
     {
       {
         production_type = "input",
+        pipe_picture = planetaris_sifter_cover_pictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections =
