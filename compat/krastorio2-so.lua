@@ -188,7 +188,7 @@ data:extend({
     resistances = { { type = "fire", percent = 90 } },
     open_sound = sounds.machine_open,
     close_sound = sounds.machine_close,
-    belt_animation_set = hyper_belt_animation_set,
+    belt_animation_set = data.raw["transport-belt"]["planetaris-hyper-transport-belt"].belt_animation_set,
     animation_speed_coefficient = 32,
     icon_draw_specification = {scale = 0.7},
     structure = graphics.structure({ 240, 240, 240 }),
