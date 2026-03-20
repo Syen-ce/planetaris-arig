@@ -201,6 +201,7 @@ data:extend({
       {
         production_type = "input",
         pipe_picture = planetaris_sifter_cover_pictures(),
+        mirrored_pipe_picture = planetaris_mirrored_sifter_cover_pictures(),
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections =
@@ -415,6 +416,7 @@ data:extend({
   max_health = 450,
   corpse = "planetaris-big-chest-remnants",
   dying_explosion = "accumulator-explosion",
+  fast_replaceable_group = "big-chest",
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
   resistances =
@@ -476,6 +478,7 @@ data:extend({
   max_health = 450,
   corpse = "planetaris-big-chest-remnants",
   dying_explosion = "accumulator-explosion",
+  fast_replaceable_group = "big-chest",
   resistances =
   {
     {
@@ -542,6 +545,7 @@ data:extend({
   max_health = 450,
   corpse = "planetaris-big-chest-remnants",
   dying_explosion = "accumulator-explosion",
+  fast_replaceable_group = "big-chest",
   resistances =
   {
     {
@@ -608,6 +612,7 @@ data:extend({
   max_health = 450,
   corpse = "planetaris-big-chest-remnants",
   dying_explosion = "accumulator-explosion",
+  fast_replaceable_group = "big-chest",
   resistances =
   {
     {
@@ -675,6 +680,7 @@ data:extend({
   max_health = 450,
   corpse = "planetaris-big-chest-remnants",
   dying_explosion = "accumulator-explosion",
+  fast_replaceable_group = "big-chest",
   resistances =
   {
     {
@@ -742,6 +748,7 @@ data:extend({
   max_health = 450,
   corpse = "planetaris-big-chest-remnants",
   dying_explosion = "accumulator-explosion",
+  fast_replaceable_group = "big-chest",
   resistances =
   {
     {

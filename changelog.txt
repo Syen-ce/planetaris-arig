@@ -1,6 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.19
+Date: 2026-03-20
+  Compatibility:
+    - Fixed hyper loaders not having a unlockable tech in k2so
+    - Fixed hyper loaders not matching the original belt recipe in k2so
+  Bugfixes:
+    - Fixed displacement bug with mirrored sifter pipes
+    - Fixed containers not having a fast replacement group
+---------------------------------------------------------------------------------------------------
 Version: 1.1.18
-Date: 2026-03-14
+Date: 2026-03-17
   Graphics:
     - Changed sifter graphics
   Compatibility:
