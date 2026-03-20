@@ -144,7 +144,7 @@ data:extend({
       { type = "item", name = "planetaris-hyper-transport-belt", amount = 1 },
       { type = "item", name = "kr-advanced-loader", amount = 2 },
       { type = "item", name = "planetaris-silica", amount = 20 },
-      { type = "fluid", name = "lubricant", amount = 40 },
+      { type = "item", name = "planetaris-raw-diamond", amount = 20 },
     },
     results = { { type = "item", name = "kr-hyper-loader", amount = 1 } },
     surface_conditions = {{property = "planetaris-dust-concentration", min = 50, max = 100, }},
@@ -198,10 +198,13 @@ data:extend({
 })
 
 PlanetarisLib.add_or_replace_recipe_ingredient("kr-superior-loader", "kr-advanced-loader", {type = "item", name = "kr-hyper-loader", amount = 2})
+PlanetarisLib.add_tech_unlock("planetaris-hyper-transport-belt", "kr-hyper-loader")
+
 
   if mods["planetaris-hyarion"] then
     data.raw.item["kr-hyper-loader"].default_import_location = "hyarion"
     data.raw.recipe["kr-hyper-loader"].surface_conditions = {{property = "planetaris-crystalization-resistance", min = 50, max = 100, }}
+    PlanetarisLib.add_or_replace_recipe_ingredient("kr-hyper-loader", "planetaris-raw-diamond", { type = "item", name = "planetaris-polished-quartz", amount = 20 })
   end
 
 end
