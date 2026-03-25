@@ -144,3 +144,42 @@ if data.raw["agricultural-tower"] and data.raw["agricultural-tower"]["condensing
     table.insert(desc, {"factoriopedia-description.condensing-cactus"})
   end
 end
+
+-- Add lithium recipes
+
+PlanetarisLib.add_tech_unlock("lithium-processing", "planetaris-lithium-brine-sifting")
+PlanetarisLib.add_tech_unlock("lithium-processing", "planetaris-lithium-plate")
+
+
+-- Show water harvesting recipes in factorpedia
+
+if settings.startup["hide-water-harvesting-recipes"].value == true then
+  for _, recipe in pairs(data.raw.recipe) do
+    if recipe.subgroup == "water-harvesting" then
+      recipe.hidden_in_factoriopedia = true
+    end
+  end
+end
+
+-- Optional makes press steam powered
+
+if settings.startup["press-is-steam-powered"].value == true then
+  data.raw["assembling-machine"]["planetaris-press"].energy_source = {
+			type = "fluid",
+			scale_fluid_usage = true,
+			light_flicker = {
+				color = { 1, 1, 1, 1 },
+			},
+      emissions_per_minute = { pollution = 8},
+			fluid_box = {
+				pipe_covers = pipecoverspictures(),
+				always_draw_covers = false,
+				volume = 200,
+				pipe_connections = {
+					{ direction = defines.direction.west, position = { -1, 0 }},
+					{ direction = defines.direction.east, position = { 1, 0 }},
+				},
+				production_type = "input-output",
+			},
+    }
+end

@@ -22,6 +22,20 @@ data:extend({
 	},
 	{
 		type = "bool-setting",
+		name = "hide-water-harvesting-recipes",
+		setting_type = "startup",
+		default_value = true,
+		order = "a-c-a",
+	},
+	{
+		type = "bool-setting",
+		name = "press-is-steam-powered",
+		setting_type = "startup",
+		default_value = false,
+		order = "a-c-b",
+	},
+	{
+		type = "bool-setting",
 		name = "debug-cactus-recipe",
 		setting_type = "startup",
 		default_value = false,

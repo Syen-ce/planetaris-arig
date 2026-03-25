@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.21
+Date: 2026-03-25
+  Features:
+    - Added lithium plates to the press
+    - Added lithium brine sifting
+    - Added optional setting for the press to use steam instead of electricity
+    - Added 5 new menu simulations
+  Changes:
+    - Water harvesting icons are now hidden in factoriopedia, they can be shown with a new setting
+  Graphics:
+    - Changed press graphics
+    - Changed sifter remnants graphics
+    - Added frozen graphics to the sifter
+---------------------------------------------------------------------------------------------------
 Version: 1.1.20
 Date: 2026-03-20
   Compatibility:

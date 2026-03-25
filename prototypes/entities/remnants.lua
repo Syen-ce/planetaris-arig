@@ -19,8 +19,8 @@ data:extend({
     {
       filename = "__planetaris-arig__/graphics/entity/sifter/remnants/sifter-remnants.png",
       line_length = 1,
-      width = 446,
-      height = 342,
+      width = 324,
+      height = 280,
       direction_count = 1,
       shift = util.by_pixel(16, -5.5),
       scale = 0.5
