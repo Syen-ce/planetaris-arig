@@ -129,7 +129,6 @@ data:extend(
       {
         type = "recipe",
         name = "planetaris-lithium-brine-sifting",
-        localised_name = {"", {"item-name.calcite"}, " (", {"technology-name.planetaris-sifting"}, ")"},
         icons = {
           {icon="__space-age__/graphics/icons/fluid/lithium-brine.png", draw_background=true },
           {icon="__space-age__/graphics/icons/calcite.png", shift={12, 12}, scale=0.5},
