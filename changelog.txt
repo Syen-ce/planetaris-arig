@@ -1,6 +1,71 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.21
+Date: 2026-03-25
+  Features:
+    - Added lithium plates to the press
+    - Added lithium brine sifting
+    - Added optional setting for the press to use steam instead of electricity
+    - Added 5 new menu simulations
+  Changes:
+    - Water harvesting icons are now hidden in factoriopedia, they can be shown with a new setting
+  Graphics:
+    - Changed press graphics
+    - Changed sifter remnants graphics
+    - Added frozen graphics to the sifter
+---------------------------------------------------------------------------------------------------
+Version: 1.1.20
+Date: 2026-03-20
+  Compatibility:
+    - Fixed hyper loader not having a belt in k2so
+---------------------------------------------------------------------------------------------------
+Version: 1.1.19
+Date: 2026-03-20
+  Compatibility:
+    - Fixed hyper loaders not having a unlockable tech in k2so
+    - Fixed hyper loaders not matching the original belt recipe in k2so
+  Bugfixes:
+    - Fixed displacement bug with mirrored sifter pipes
+    - Fixed containers not having a fast replacement group
+---------------------------------------------------------------------------------------------------
+Version: 1.1.18
+Date: 2026-03-17
+  Graphics:
+    - Changed sifter graphics
+  Compatibility:
+    - Added hyper loader to Krastorio 2 space out, superior loader recipe now needs hyper loaders
+  Bugfixes:
+    - Fixed hard transition between stable sand and sandstone foundation
+---------------------------------------------------------------------------------------------------
+Version: 1.1.17
+Date: 2026-03-14
+  Bugfixes:
+    - Fixed crash with k2so made by compression rearch data being able to spoil
+---------------------------------------------------------------------------------------------------
+Version: 1.1.16
+Date: 2026-03-12
+  Compatibility:
+    - Added tech card icons to Krastorio 2 space out
+    - Fixed error with exotic space industries remembrance
+  Bugfixes:
+    - Fixed hyper conveyor belt missing heating energy field
+---------------------------------------------------------------------------------------------------
+Version: 1.1.15
+Date: 2026-03-05
+  Bugfixes:
+    - Fixed foundation not being placed on deep sand with blueprints
+---------------------------------------------------------------------------------------------------
+Version: 1.1.14
+Date: 2026-02-26
+  Bugfixes:
+    - Deleted old small cactus decorative
+---------------------------------------------------------------------------------------------------
+Version: 1.1.13
+Date: 2026-02-17
+  Bugfixes:
+    - Fixed crash with lignumis
+---------------------------------------------------------------------------------------------------
 Version: 1.1.12
-Date: 2025-02-17
+Date: 2026-02-17
   Sounds:
     - Added new wind sound
     - Added new sand and desert sounds
@@ -12,7 +77,7 @@ Date: 2025-02-17
     - Fixed press not playing sounds
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.11
-Date: 2025-02-11
+Date: 2026-02-11
   Features:
     - Added compression science pack to Aquilo discovery and Promethium science pack, this can be disable by 2 new settings.
   Changes:
@@ -24,35 +89,35 @@ Date: 2025-02-11
     - Fixed some technologies marked as essential
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.10
-Date: 2025-02-05
+Date: 2026-02-05
   Bugfixes:
     - Fixed error with Sky's Simplified Space Age
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.9
-Date: 2025-01-29
+Date: 2026-01-29
   Bugfixes:
     - Fixed concrete and stone brick not freezing in Aquilo
     - Fixed sandstone foundation not being the default cover tile for sand
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.8
-Date: 2025-01-20
+Date: 2026-01-20
   Bugfixes:
     - Fixed passive provider container working as a active provider
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.7
-Date: 2025-01-12
+Date: 2026-01-12
   Compatibility:
     - Krastorio, added rare metals to sifting sand
   Bugfixes:
     - Fixed arig rearranging tips and tricks of maraxis
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
-Date: 2025-01-11
+Date: 2026-01-11
   Bugfixes:
     - Fixed cactus not spawning in some seeds
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.5
-Date: 2025-01-05
+Date: 2026-01-05
   Graphics:
     - Change color of dust resistant roboport
   Compatibility:

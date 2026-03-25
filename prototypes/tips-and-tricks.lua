@@ -73,9 +73,6 @@ data:extend ({
             end
 
             local create_list = {}
-                for k, position in pairs ({{-5, -2},{-7, -3},{-10, -1}}) do
-                table.insert(create_list, { name = "arig-small-cactus", position = position, amount = 1})
-                end
                 for k, position in pairs ({{-10, 5}}) do
                 table.insert(create_list, { name = "arig-crack-decal", position = position, amount = 1})
                 end
@@ -93,6 +90,9 @@ data:extend ({
                 end
             game.surfaces[1].create_decoratives{decoratives = create_list}
 
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-5, -2}}
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-7, -3}}
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-10, -1}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-9, 4}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-7, 5}}
             game.surfaces[1].create_entity{name = "arig-crash", position = {7, -2}}
@@ -169,9 +169,6 @@ data:extend ({
             end
 
             local create_list = {}
-                for k, position in pairs ({{-5, -2},{-7, -3},{-10, -1}}) do
-                table.insert(create_list, { name = "arig-small-cactus", position = position, amount = 1})
-                end
                 for k, position in pairs ({{-10, 5}}) do
                 table.insert(create_list, { name = "arig-crack-decal", position = position, amount = 1})
                 end
@@ -189,6 +186,9 @@ data:extend ({
                 end
             game.surfaces[1].create_decoratives{decoratives = create_list}
 
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-5, -2}}
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-7, -3}}
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-10, -1}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-9, 4}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-7, 5}}
             game.surfaces[1].create_entity{name = "arig-crash", position = {7, -2}}
@@ -265,9 +265,6 @@ data:extend ({
             end
 
             local create_list = {}
-                for k, position in pairs ({{-5, -2},{-7, -3},{-10, -1}}) do
-                table.insert(create_list, { name = "arig-small-cactus", position = position, amount = 1})
-                end
                 for k, position in pairs ({{-10, 5}}) do
                 table.insert(create_list, { name = "arig-crack-decal", position = position, amount = 1})
                 end
@@ -285,6 +282,9 @@ data:extend ({
                 end
             game.surfaces[1].create_decoratives{decoratives = create_list}
 
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-5, -2}}
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-7, -3}}
+            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-10, -1}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-9, 4}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-7, 5}}
             game.surfaces[1].create_entity{name = "arig-crash", position = {7, -2}}

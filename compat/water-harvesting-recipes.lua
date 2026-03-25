@@ -85,7 +85,7 @@ if mods["lignumis"] then
       subgroup = "water-harvesting",
       order = "a-e[gleba]-b",
       icons = {
-        {icon=data.raw["planet"]["lignumis"].icon, draw_background=true},
+        {icon="__lignumis-assets__/graphics/icons/lignumis.png", draw_background=true},
         {icon="__base__/graphics/icons/fluid/water.png", shift={8, 12}, scale=0.5},
       },
       surface_conditions =

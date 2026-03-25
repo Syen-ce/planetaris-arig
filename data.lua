@@ -48,3 +48,15 @@ require("compat.canal-excavator")
 if mods["any-planet-start"] then
     APS.add_planet{name = "arig", filename = "__planetaris-arig__/compat/any-planet-start-arig.lua", technology = "planet-discovery-arig"}
 end
+
+local replace_base_game_simulations = false
+local planetaris_menu_simulations = require("__planetaris-arig__/menu-simulations/menu-simulations")
+if not data.raw["utility-constants"]["default"].main_menu_simulations or replace_base_game_simulations then
+  data.raw["utility-constants"]["default"].main_menu_simulations = {}
+end
+local main_menu_simulations = data.raw["utility-constants"]["default"].main_menu_simulations
+main_menu_simulations.arig_sifting = planetaris_menu_simulations.arig_sifting
+main_menu_simulations.arig_pressing = planetaris_menu_simulations.arig_pressing
+main_menu_simulations.arig_crashes = planetaris_menu_simulations.arig_crashes
+main_menu_simulations.arig_cactus_harvesting = planetaris_menu_simulations.arig_cactus_harvesting
+main_menu_simulations.arig_alone = planetaris_menu_simulations.arig_alone
