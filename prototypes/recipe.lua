@@ -128,6 +128,30 @@ data:extend(
       },
       {
         type = "recipe",
+        name = "planetaris-lithium-brine-sifting",
+        localised_name = {"", {"item-name.calcite"}, " (", {"technology-name.planetaris-sifting"}, ")"},
+        icons = {
+          {icon="__space-age__/graphics/icons/fluid/lithium-brine.png", draw_background=true },
+          {icon="__space-age__/graphics/icons/calcite.png", shift={12, 12}, scale=0.5},
+        },
+        icon_size = 64,
+        category = "sifting",
+        subgroup = "arig-processes",
+        order = "a[sand-processing]-a[sifting]-d",
+        enabled = false,
+        auto_recycle = false,
+        energy_required = 4,
+        ingredients = {{type = "fluid", name = "lithium-brine", amount = 25}},
+        results =
+        {
+          {type = "item", name = "calcite", amount = 1,  probability = 0.50, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "ice", amount = 2, show_details_in_recipe_tooltip = false},
+        },
+        allow_productivity = false,
+        crafting_machine_tint = {primary = {0.941, 0.949, 0.871, 1}, secondary = {0.824, 0.839, 0.722, 1},tertiary = {0.941, 0.949, 0.871, 1}, quaternary = {0.941, 0.949, 0.871, 1}},
+      },
+      {
+        type = "recipe",
         name = "planetaris-sandstone-brick",
         category = "compressing",
         order = "a[sand-processing]-b[sand-processing]",
@@ -684,6 +708,20 @@ data:extend(
     },
     results = {{type="item", name="plastic-bar", amount=3}}, -- Better than chemistry
     allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "planetaris-lithium-plate",
+    localised_name = {"", {"item-name.lithium-plate"}, " (", {"technology-name.planetaris-compression"}, ")"},
+    category = "compressing",
+    subgroup = "arig-processes",
+    order = "d[lithium]-a[lithium-plate]",
+    auto_recycle = false,
+    energy_required = 4,
+    ingredients = {{type = "item", name = "lithium", amount = 1}},
+    results = {{type="item", name="lithium-plate", amount=1}},
+    allow_productivity = true,
+    enabled = false
   },
   {
     type = "recipe",

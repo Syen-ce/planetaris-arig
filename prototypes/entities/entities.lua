@@ -34,6 +34,65 @@ data:extend({
 -- Machines
 
 data:extend({
+  {
+    type = "container",
+    name = "planetaris-logo-beige",
+    icon = "__base__/graphics/icons/factorio-logo-16tiles.png",
+    flags = {"placeable-neutral", "player-creation"},
+    hidden = true,
+    minable = {mining_time = 0.1},
+    max_health = 666,
+    collision_box = {{-4.5+0.15, -1+0.15}, {4.5-0.15, 1-0.15}},
+    selection_box = {{-4.5, -1}, {4.5, 1}},
+    inventory_size = 1,
+    picture =
+    {
+      filename = "__planetaris-arig__/graphics/entity/planetaris-logo/planetaris-arig-logo-16tiles-ng.png",
+      priority = "very-low",
+      width = 2164,
+      height = 295,
+      shift = util.by_pixel(5, -8),
+      scale = 0.20
+    },
+    resistances =
+    {
+      {
+        type = "fire",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "physical",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "impact",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "explosion",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "acid",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "laser",
+        decrease = 0,
+        percent = 100
+      },
+      {
+        type = "electric",
+        decrease = 0,
+        percent = 100
+      },
+    },
+  },
     {
     type = "assembling-machine",
     name = "planetaris-sifter",
@@ -90,6 +149,14 @@ data:extend({
           }
         }
       },
+      frozen_patch =
+          {
+              filename = "__planetaris-arig__/graphics/entity/sifter/sifter-frozen.png",
+              width = 380,
+              height = 380,
+              shift = util.by_pixel(0.5, -9),
+              scale = 0.3
+          },
       working_visualisations =
       {
         {
@@ -303,30 +370,105 @@ data:extend({
   icon_draw_specification = {scale = 1, shift = {0, -0.5}},
   graphics_set =
     {
-      animation = make_4way_animation_from_spritesheet({ layers =
-      {
-        {
-          filename = "__planetaris-arig__/graphics/entity/press/press.png",
-          width = 384,
-          height = 384,
-          frame_count = 24,
-          line_length = 12,
-          animation_speed = 0.5,
-          shift = util.by_pixel(0, 0),
-          scale = 0.5
+      animation = { 
+        layers = {
+          {
+            filename = "__planetaris-arig__/graphics/entity/press/press_new.png",
+            width = 380,
+            height = 380,
+            frame_count = 64,
+            line_length = 8,
+            shift = util.by_pixel(0, -6),
+            scale = 0.3
+          },
+          {
+            filename = "__planetaris-arig__/graphics/entity/press/press-shadow.png",
+            width = 380,
+            height = 380,
+            repeat_count = 64,
+            shift = util.by_pixel(15, -6),
+            draw_as_shadow = true,
+            scale = 0.3
+          },
+        }},
+      frozen_patch =
+          {
+              filename = "__planetaris-arig__/graphics/entity/press/press-frozen.png",
+              width = 380,
+              height = 380,
+              shift = util.by_pixel(0, -6),
+              scale = 0.3
+          },
+      reset_animation_when_frozen = true,
+      working_visualisations = {
+                {
+            apply_recipe_tint = "tertiary",
+            fadeout = true,
+            constant_speed = true,
+            render_layer = "wires",
+            animation =
+            {
+              filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-outer.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 90,
+              height = 188,
+              animation_speed = 0.4,
+              shift = util.by_pixel(29, -95),
+              scale = 0.5
+            }
+          },
+          {
+            apply_recipe_tint = "quaternary",
+            fadeout = true,
+            constant_speed = true,
+            render_layer = "wires",
+            animation =
+            {
+              filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-inner.png",
+              frame_count = 47,
+              line_length = 16,
+              width = 40,
+              height = 84,
+              animation_speed = 0.4,
+              shift = util.by_pixel(31, -95),
+              scale = 0.5
+            }
+          },
+          {
+            always_draw = true,
+            north_animation = util.sprite_load("__planetaris-arig__/graphics/entity/press/press-vertical-connections",
+              {
+                animation_speed = 1,
+                frame_count = 64,
+                scale = 0.3,
+                shift = util.by_pixel(3, -4),
+              }),
+            west_animation = util.sprite_load("__planetaris-arig__/graphics/entity/press/press-horizontal-connections",
+              {
+                animation_speed = 1,
+                frame_count = 64,
+                scale = 0.3,
+                shift = util.by_pixel(0, -6),
+              }),
+            south_animation = util.sprite_load("__planetaris-arig__/graphics/entity/press/press-vertical-connections",
+              {
+                animation_speed = 1,
+                frame_count = 64,
+                scale = 0.3,
+                shift = util.by_pixel(3, -4),
+              }),
+            east_animation = util.sprite_load("__planetaris-arig__/graphics/entity/press/press-horizontal-connections",
+              {
+                animation_speed = 1,
+                frame_count = 64,
+                scale = 0.3,
+                shift = util.by_pixel(0, -6),
+              }),
+          },
         },
-        {
-          filename = "__planetaris-arig__/graphics/entity/press/press-shadow.png",
-          width = 384,
-          height = 384,
-          repeat_count = 24,
-          shift = util.by_pixel(0, 0),
-          draw_as_shadow = true,
-          scale = 0.5
-        },
-      }})
     },
-      fluid_boxes =
+    fluid_boxes =
     {
       {
         production_type = "input",

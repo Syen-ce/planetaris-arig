@@ -270,7 +270,7 @@ function PlanetarisLib.remove_recipe_result(recipe_name, result_name)
 end
 
 --- Adds a crafting category
---- @param target_name data.EntityID
+--- @param recipe_name string
 --- @param category string
 function PlanetarisLib.set_recipe_category(recipe_name, category)
     local recipe = data.raw.recipe[recipe_name]
@@ -279,6 +279,16 @@ function PlanetarisLib.set_recipe_category(recipe_name, category)
         return
     end
     recipe.crafting_categories = category
+end
+
+--- Hide recipe in factoriopedia
+--- @param recipe_name string
+function PlanetarisLib.hide_recipe_factoriopedia(recipe_name)
+	local recipe = data.raw.recipe[recipe_name]
+	if not recipe then
+        return
+    end
+    recipe.hidden_in_factoriopedia = true
 end
 
 ---------------------------------------------------------------------------
