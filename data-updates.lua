@@ -170,6 +170,7 @@ end
 -- Optional makes press steam powered
 
 if settings.startup["press-is-steam-powered"].value == true then
+
   data.raw["assembling-machine"]["planetaris-press"].energy_source = {
 			type = "fluid",
 			scale_fluid_usage = true,
@@ -188,4 +189,7 @@ if settings.startup["press-is-steam-powered"].value == true then
 				production_type = "input-output",
 			},
     }
+
+    data.raw["assembling-machine"]["planetaris-press"].energy_usage = "700kW"
+
 end

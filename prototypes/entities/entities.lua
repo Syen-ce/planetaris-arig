@@ -282,6 +282,7 @@ data:extend({
       },
       {
         production_type = "input",
+        always_draw_covers = false,
         pipe_covers = pipecoverspictures(),
         volume = 1000,
         pipe_connections =
@@ -295,6 +296,7 @@ data:extend({
       },
       {
         production_type = "output",
+        always_draw_covers = false,
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections =
@@ -308,6 +310,7 @@ data:extend({
       },
       {
         production_type = "output",
+        always_draw_covers = false,
         pipe_covers = pipecoverspictures(),
         volume = 100,
         pipe_connections =
