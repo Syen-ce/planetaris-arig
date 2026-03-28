@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.24
+Date: 2026-03-28
+  Balancing:
+    - Increased energy usage of the press in steam mode
+  Bugfixes:
+    - Fixed sifter pipe covers always showing
+---------------------------------------------------------------------------------------------------
 Version: 1.1.23
 Date: 2026-03-25
   Bugfixes:
