@@ -17,7 +17,7 @@ Is completely safe to play in an existing save.
 
 ### Cactus processing
 
-Plant and harvest the natural cactuses on Arig's surface using the new condensing agricultural tower to obtain fruit and water.
+Plant and harvest the natural cactuses on Arig's surface using the new condensing agricultural tower to obtain cactus fruits and water.
 
 ![Alt text](https://raw.githubusercontent.com/Syen-ce/planetaris-factorio-images/refs/heads/main/arig-agriculture.png)
 
