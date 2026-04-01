@@ -161,3 +161,49 @@ if mods["Muria"] then
           recipe = "planetaris-muria-water-harvesting"
         })
 end
+
+if mods["planetaris-tellus"] then
+    data.extend{(
+    {
+      type = "recipe",
+      name = "planetaris-tellus-water-harvesting",
+      localised_name = {"", {"space-location-name.tellus"}, " ", {"recipe-name.planetaris-water-harvesting"}},
+      category = "water-production",
+      subgroup = "water-harvesting",
+      order = "a-e[gleba]-a-a",
+      icons = {
+        {icon="__planetaris-tellus__/graphics/icons/tellus.png", draw_background=true},
+        {icon="__planetaris-tellus__/graphics/icons/fluids/infected-water.png", shift={8, 12}, scale=0.5},
+      },
+      surface_conditions =
+      {
+        {
+          property = "pressure",
+          min = 2000,
+          max = 2000,
+        },
+        {
+          property = "gravity",
+          min = 20,
+          max = 20,
+        },
+        {
+          property = "magnetic-field",
+          min = 35,
+          max = 35,
+        }
+      },
+      energy_required = 10,
+      enabled = false,
+      ingredients = nil,
+      results = {{type="fluid", name="planetaris-infected-water", amount=500}},
+      allow_productivity = true
+    }
+    )}
+
+    table.insert(data.raw["technology"]["planetaris-water-harvesting"].effects,
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-tellus-water-harvesting"
+        })
+end

@@ -960,6 +960,11 @@ data:extend(
           property = "gravity",
           min = 20,
           max = 20,
+        },
+        {
+          property = "magnetic-field",
+          min = 25,
+          max = 25,
         }
       },
       energy_required = 10,
