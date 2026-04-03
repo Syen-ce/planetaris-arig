@@ -4,6 +4,7 @@ require("compat.pelagos")
 require("compat.aquilo-trenches")
 require("compat.maraxsis")
 require("compat.exotic-space-industries")
+require("compat.science-group")
 
 if mods["aai-loaders"] and settings.startup["aai-loaders-mode"].value ~= "graphics-only" then
     data.raw["item"]["aai-hyper-loader"].weight = 200*kg
