@@ -113,6 +113,8 @@ table.insert(planetaris_sand_sifting,
 
     ---------------------Hyper belts
 
+if data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then
+
     -- belt
 data.raw["item"]["planetaris-hyper-transport-belt"].order = "a[transport-belt]-e-a[hyper-transport-belt]" -- before superior
 PlanetarisLib.add_or_replace_recipe_ingredient("kr-superior-transport-belt", "turbo-transport-belt", {type = "item", name = "planetaris-hyper-transport-belt", amount = 1})
@@ -125,6 +127,7 @@ PlanetarisLib.add_or_replace_recipe_ingredient("kr-superior-underground-belt", "
 data.raw["item"]["planetaris-hyper-splitter"].order = "c[splitter]-e-a[hyper-splitter]" -- before superior
 PlanetarisLib.add_or_replace_recipe_ingredient("kr-superior-splitter", "turbo-splitter", {type = "item", name = "planetaris-hyper-splitter", amount = 1})
 
+end
 
    ---------------------Add kr hyper loader
 

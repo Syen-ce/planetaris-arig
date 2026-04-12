@@ -1,4 +1,5 @@
 require("compat.tiber")
+require("compat.water-harvesting-recipes")
 require("PlanetarisLib")
 
 --------------------------------
@@ -7,9 +8,17 @@ local planetaris_tile_collision_masks = require("prototypes.tile.tile-collision-
 
 -- Set Upgrade for level 5 belts
 
-data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "planetaris-hyper-transport-belt"
-data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "planetaris-hyper-underground-belt"
-data.raw["splitter"]["turbo-splitter"].next_upgrade = "planetaris-hyper-splitter"
+if data.raw["transport-belt"]["planetaris-hyper-transport-belt"] and data.raw["transport-belt"]["planetaris-hyper-transport-belt"].hidden == true then
+  data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "planetaris-hyper-transport-belt"
+end
+
+if data.raw["transport-belt"]["planetaris-hyper-underground-belt"] and data.raw["transport-belt"]["planetaris-hyper-underground-belt"].hidden == true then
+  data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "planetaris-hyper-underground-belt"
+end
+
+if data.raw["transport-belt"]["planetaris-hyper-splitter"] and data.raw["transport-belt"]["planetaris-hyper-splitter"].hidden == true then
+  data.raw["splitter"]["turbo-splitter"].next_upgrade = "planetaris-hyper-splitter"
+end
 
 -- Set Upgrade for solar panels
 

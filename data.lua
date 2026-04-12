@@ -40,7 +40,6 @@ require("compat.omnia")
 require("compat.planet-muluna")
 require("compat.visible-planets")
 require("compat.technology-price-multiplier")
-require("compat.water-harvesting-recipes")
 require("compat.wood-industry")
 require("compat.canal-excavator")
 

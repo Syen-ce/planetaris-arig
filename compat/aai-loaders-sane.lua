@@ -1,5 +1,7 @@
 if not mods["aai-loaders-sane"] then return end
 
+if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return end
+
     local hyper_recipe = data.raw["recipe"]["aai-hyper-loader"]
 
     hyper_recipe.ingredients = {
