@@ -1,5 +1,9 @@
 if mods["aai-loaders"] then
 
+require("PlanetarisLib")
+
+if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return end
+
   local hyper_specs = {
     name = "hyper",
     transport_belt = "planetaris-hyper-transport-belt",
@@ -53,5 +57,12 @@ if mods["aai-loaders"] then
   end
 
   AAILoaders.make_tier(hyper_specs)
+
+  if mods["planetaris-hyarion"] then
+    PlanetarisLib.add_recipe_surface_condition("aai-hyper-loader", "planetaris-crystalization-resistance", 100, 50)
+  else
+    PlanetarisLib.add_recipe_surface_condition("aai-hyper-loader", "planetaris-dust-concentration", 100, 50)
+  end
+
  return
 end

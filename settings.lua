@@ -76,3 +76,15 @@ data:extend({
 	}
 })
 end
+
+if mods["LithiumBattery"] then
+data:extend({
+	{
+		type = "bool-setting",
+		name = "disable-hyper-belts",
+		setting_type = "startup",
+		default_value = false,
+		order = "d-a",
+	}
+})
+end

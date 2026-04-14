@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.28
+Date: 2026-04-13
+  Compatibility:
+    - Lithium batery, added setting to hide hyper belts
+    - AAI Loaders, added surface condition to hyper loader recipe
+---------------------------------------------------------------------------------------------------
 Version: 1.1.27
 Date: 2026-04-03
   Compatibility:
