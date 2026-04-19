@@ -90,9 +90,9 @@ data:extend ({
                 end
             game.surfaces[1].create_decoratives{decoratives = create_list}
 
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-5, -2}}
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-7, -3}}
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-10, -1}}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-5, -2}, tick_grown = 1}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-7, -3}, tick_grown = 1}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-10, -1}, tick_grown = 1}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-9, 4}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-7, 5}}
             game.surfaces[1].create_entity{name = "arig-crash", position = {7, -2}}
@@ -186,9 +186,9 @@ data:extend ({
                 end
             game.surfaces[1].create_decoratives{decoratives = create_list}
 
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-5, -2}}
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-7, -3}}
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-10, -1}}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-5, -2}, tick_grown = 1}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-7, -3}, tick_grown = 1}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-10, -1}, tick_grown = 1}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-9, 4}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-7, 5}}
             game.surfaces[1].create_entity{name = "arig-crash", position = {7, -2}}
@@ -282,9 +282,9 @@ data:extend ({
                 end
             game.surfaces[1].create_decoratives{decoratives = create_list}
 
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-5, -2}}
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-7, -3}}
-            game.surfaces[1].create_entity{name = "arig-small-cactus-plant", position = {-10, -1}}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-5, -2}, tick_grown = 1}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-7, -3}, tick_grown = 1}
+            game.surfaces[1].create_entity{name = "planetaris-cactus-plant", position = {-10, -1}, tick_grown = 1}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-9, 4}}
             game.surfaces[1].create_entity{name = "arig-big-sand-rock", position = {-7, 5}}
             game.surfaces[1].create_entity{name = "arig-crash", position = {7, -2}}

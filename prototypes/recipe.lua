@@ -724,63 +724,6 @@ data:extend(
   },
   {
     type = "recipe",
-    name = "planetaris-solid-fuel-from-heavy-oil",
-    localised_name = {"", {"recipe-name.solid-fuel-from-heavy-oil"}, " (", {"technology-name.planetaris-compression"}, ")"},
-    localised_description = {"recipe-description.solid-fuel-from-heavy-oil"},
-    category = "compressing",
-    subgroup = "arig-processes",
-    order = "a[sand-processing]-c-b",
-    icon = "__base__/graphics/icons/solid-fuel-from-heavy-oil.png",
-    auto_recycle = false,
-    enabled = false,
-    energy_required = 1,
-    ingredients =
-    {
-      {type = "fluid", name = "heavy-oil", amount = 20}
-    },
-    results = {{type="item", name="solid-fuel", amount=1}},
-    allow_productivity = true
-  },
-    {
-    type = "recipe",
-    name = "planetaris-solid-fuel-from-light-oil",
-    localised_name = {"", {"recipe-name.solid-fuel-from-light-oil"}, " (", {"technology-name.planetaris-compression"}, ")"},
-    localised_description = {"recipe-description.solid-fuel-from-light-oil"},
-    category = "compressing",
-    subgroup = "arig-processes",
-    order = "a[sand-processing]-c-b",
-    icon = "__base__/graphics/icons/solid-fuel-from-light-oil.png",
-    auto_recycle = false,
-    enabled = false,
-    energy_required = 1,
-    ingredients =
-    {
-      {type = "fluid", name = "light-oil", amount = 10}
-    },
-    results = {{type="item", name="solid-fuel", amount=1}},
-    allow_productivity = true
-  },
-    {
-    type = "recipe",
-    name = "planetaris-solid-fuel-from-petroleum-gas",
-    localised_name = {"", {"recipe-name.solid-fuel-from-petroleum-gas"}, " (", {"technology-name.planetaris-compression"}, ")"},
-    localised_description = {"recipe-description.solid-fuel-from-petroleum-gas"},
-    category = "compressing",
-    subgroup = "arig-processes",
-    order = "a[sand-processing]-c-b",
-    icon = "__base__/graphics/icons/solid-fuel-from-petroleum-gas.png",
-    auto_recycle = false,
-    enabled = false,
-    energy_required = 1,
-    ingredients =
-    {
-      {type = "fluid", name = "petroleum-gas", amount = 20}
-    },
-    results = {{type="item", name="solid-fuel", amount=1}},
-    allow_productivity = true
-  },
-  {
-    type = "recipe",
     name = "planetaris-carbon",
       icons = {
       {icon="__planetaris-arig__/graphics/icons/press.png", scale=0.5, draw_background=true },

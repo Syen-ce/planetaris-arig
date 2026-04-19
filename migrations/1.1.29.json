@@ -1,0 +1,8 @@
+{
+  "recipe":
+  [
+    ["planetaris-solid-fuel-from-heavy-oil", "solid-fuel-from-heavy-oil"],
+    ["planetaris-solid-fuel-from-light-oil", "solid-fuel-from-light-oil"],
+    ["planetaris-solid-fuel-from-petroleum-gas", "solid-fuel-from-petroleum-gas"]
+  ]
+}

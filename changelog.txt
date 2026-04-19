@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.29
+Date: 2026-04-19
+  Changes:
+    - Unified cactus plant and simple entity (natural) to one
+    - Made cactuses selection box bigger
+    - Added solid solid fuel recipes to compression and removed the planetaris ones
+---------------------------------------------------------------------------------------------------
 Version: 1.1.28
 Date: 2026-04-13
   Compatibility:
