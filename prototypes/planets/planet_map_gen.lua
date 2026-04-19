@@ -76,7 +76,7 @@ planet_map_gen.arig = function()
             ["stone"] = {},
             ["arig-big-sand-rock"] = {},
             ["arig-medium-sand-rock"] = {},
-            ["arig-small-cactus-plant"] = {},
+            ["planetaris-cactus-plant"] = {},
             ["heavy-oil-geyser"] = {},
             ["arig-crash"] = {},
           }

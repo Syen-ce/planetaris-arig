@@ -49,7 +49,7 @@ data:extend({
       prerequisites = {"planet-discovery-arig"},
       research_trigger = {
         type = "mine-entity",
-        entity = "arig-small-cactus-plant"
+        entity = "planetaris-cactus-plant"
       },
       order = "ea[arig]",
     },
@@ -159,18 +159,6 @@ data:extend({
         {
           type = "unlock-recipe",
           recipe = "planetaris-plastic-bar"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-solid-fuel-from-heavy-oil"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-solid-fuel-from-light-oil"
-        },
-        {
-          type = "unlock-recipe",
-          recipe = "planetaris-solid-fuel-from-petroleum-gas"
         },
         {
           type = "unlock-recipe",

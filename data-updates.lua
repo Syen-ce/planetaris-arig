@@ -123,6 +123,31 @@ if mods["planetaris-hyarion"] then
   end
 end
 
+-- Add solid fuel to compression
+if data.raw.recipe["solid-fuel-from-petroleum-gas"] then
+  if data.raw.recipe["solid-fuel-from-petroleum-gas"].additional_categories == nil then
+    data.raw.recipe["solid-fuel-from-petroleum-gas"].additional_categories = {"compressing"}
+  else
+    table.insert(data.raw.recipe["solid-fuel-from-petroleum-gas"].additional_categories, "compressing")
+  end
+end
+
+if data.raw.recipe["solid-fuel-from-heavy-oil"] then
+  if data.raw.recipe["solid-fuel-from-heavy-oil"].additional_categories == nil then
+    data.raw.recipe["solid-fuel-from-heavy-oil"].additional_categories = {"compressing"}
+  else
+    table.insert(data.raw.recipe["solid-fuel-from-heavy-oil"].additional_categories, "compressing")
+  end
+end
+
+if data.raw.recipe["solid-fuel-from-light-oil"] then
+  if data.raw.recipe["solid-fuel-from-light-oil"].additional_categories == nil then
+    data.raw.recipe["solid-fuel-from-light-oil"].additional_categories = {"compressing"}
+  else
+    table.insert(data.raw.recipe["solid-fuel-from-light-oil"].additional_categories, "compressing")
+  end
+end
+
 -- Update Agri tower 
 data.raw.technology["condensing-agricultural-tower"].effects = {
     {
