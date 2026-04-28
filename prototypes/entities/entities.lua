@@ -3,7 +3,7 @@ require ("circuit-connector-sprites")
 require ("__space-age__/prototypes/entity/circuit-network")
 require ("__base__/prototypes/entity/circuit-network")
 require ("__base__/prototypes/entity/pipecovers")
-require ("prototypes.tile.tile-collision-masks")
+require("__base__/prototypes/tile/tile-collision-masks")
 require ("__planetaris-arig__/prototypes/entities/planetaris-cover-pictures")
 
 local simulations = require("prototypes.factoriopedia-simulations")
@@ -1240,7 +1240,7 @@ data:extend({
     corpse = "solar-panel-remnants",
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-    collision_mask = {layers = {ground_tile = true, rail_support = true, lava_tile=true, ["deepsea"] = true}},
+    collision_mask = {layers = {ground_tile = true, lava_tile=true}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box_vertical_extension = 1.2,
@@ -1305,7 +1305,7 @@ data:extend({
     corpse = "small-electric-pole-remnants",
     dying_explosion = "small-electric-pole-explosion",
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    collision_mask = {layers = {ground_tile = true, rail_support = true, lava_tile=true, ["deepsea"] = true}},
+    collision_mask = {layers = {ground_tile = true, lava_tile=true}},
     selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
     damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2}, {0.2, 0.2}}),
     drawing_box_vertical_extension = 2.2,

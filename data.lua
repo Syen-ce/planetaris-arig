@@ -19,7 +19,6 @@ require("prototypes.planets.surface-conditions")
 require("prototypes.recipe")
 require("prototypes.technology")
 require("prototypes.tile.arig-tile")
-require("prototypes.tile.tile-collision-masks")
 require("prototypes.tips-and-tricks")
 
 --------------------- Compat

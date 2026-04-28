@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.30
+Date: 2026-04-28
+  Changes:
+    - Removed deep water collision mask
+    - Now supported solar panels and poles can be placed on deep sand and deep oil
+---------------------------------------------------------------------------------------------------
 Version: 1.1.29
 Date: 2026-04-19
   Changes:

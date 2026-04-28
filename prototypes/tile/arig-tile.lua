@@ -1,8 +1,6 @@
 local base_sounds = require("__base__/prototypes/entity/sounds")
 local base_tile_sounds = require("__base__/prototypes/tile/tile-sounds")
 local space_age_tile_sounds = require("__space-age__/prototypes/tile/tile-sounds")
-local planetaris_tile_collision_masks = require("prototypes.tile.tile-collision-masks")
-local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
 local tile_trigger_effects = require("__base__/prototypes/tile/tile-trigger-effects")
 local tile_pollution = require("__base__/prototypes/tile/tile-pollution-values")
 local tile_collision_masks = require("__base__/prototypes/tile/tile-collision-masks")
@@ -424,7 +422,7 @@ data:extend({
     type = "tile",
     order = "a[sand]-a[deep]",
     subgroup = "arig-tiles",
-    collision_mask = planetaris_tile_collision_masks.oil_ocean_deep(),
+    collision_mask = tile_collision_masks.oil_ocean_deep(),
     autoplace = {probability_expression = "deep_sand_level"}, -- target coast at cliff elevation
     layer = 40,
     layer_group = "ground-natural",

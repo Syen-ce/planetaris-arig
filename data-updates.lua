@@ -4,8 +4,6 @@ require("PlanetarisLib")
 
 --------------------------------
 
-local planetaris_tile_collision_masks = require("prototypes.tile.tile-collision-masks")
-
 -- Set Upgrade for level 5 belts
 
 if data.raw["transport-belt"]["planetaris-hyper-transport-belt"] and data.raw["transport-belt"]["planetaris-hyper-transport-belt"].hidden == true then
@@ -72,13 +70,6 @@ table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
         recipe = "planetaris-compression-rocket-fuel",
         change = 0.1}
       )
-
--- add deep sea collision masks to tiles
-
---data.raw.tile["ammoniacal-ocean-2"].collision_mask = planetaris_tile_collision_masks.deep_ammoniacal_ocean()
---data.raw.tile["deepwater"].collision_mask = planetaris_tile_collision_masks.deep_water()
---data.raw.tile["deepwater-green"].collision_mask = planetaris_tile_collision_masks.deep_water()
-data.raw.tile["oil-ocean-deep"].collision_mask = planetaris_tile_collision_masks.oil_ocean_deep()
 
 -- Block other planet recipes from arig
 
