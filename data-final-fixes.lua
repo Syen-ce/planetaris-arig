@@ -1,6 +1,5 @@
 require("compat.castra")
 require("compat.celestial-weather")
-require("compat.aquilo-trenches")
 require("compat.lithium-battery")
 require("compat.maraxsis")
 require("compat.exotic-space-industries")
