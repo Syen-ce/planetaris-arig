@@ -1,9 +1,14 @@
 local utils = require("__any-planet-start__.utils")
 
 if data.raw.technology["planetslib-arig-cargo-drops"] then
-  data.raw.technology["planetslib-arig-cargo-drops"].enabled = true
-  data.raw.technology["planetslib-arig-cargo-drops"].hidden = true
+  data.raw.technology["planetslib-arig-cargo-drops"].research_trigger = {type = "create-space-platform"}
+  data.raw.technology["planetslib-arig-cargo-drops"].prerequisites = {"rocket-silo"}
 end
+
+table.insert(data.raw.technology["planetaris-sand-sifting"].effects, {
+          type = "unlock-recipe",
+          recipe = "planetaris-pure-sand-venting"
+        })
 
 data.raw.technology["electronics"].prerequisites = {"planetaris-sand-sifting"}
 data.raw.technology["steam-power"].prerequisites = {"planetaris-sand-sifting"}
@@ -39,6 +44,12 @@ data.raw.technology["solar-energy"].research_trigger = {
         count = 50
       }
 data.raw.technology["solar-energy"].unit = nil
+
+data.raw.technology["planetaris-glass"].prerequisites = {"planetaris-sand-sifting", "automation-2"}
+data.raw.technology["planetaris-compression"].prerequisites = {"planetaris-glass"}
+data.raw.technology["condensing-agricultural-tower"].prerequisites = {"planetaris-glass"}
+
+data.raw.technology["planetaris-advanced-heavy-oil-cracking"].prerequisites = {"oil-gathering"}
 
 data.raw.technology["oil-processing"].effects = {
       {
@@ -86,4 +97,22 @@ data.raw.technology["oil-processing"].effects = {
     },
     results = {{type="item", name="small-electric-pole", amount=2}}
   },
+  {
+        type = "recipe",
+        name = "planetaris-pure-sand-venting",
+        icons = {
+          {icon="__planetaris-arig__/graphics/icons/fluid/pure-sand.png", draw_background=true },
+          {icon="__planetaris-arig__/graphics/icons/sifter.png", shift={12, 12}, scale=0.4},
+        },
+        icon_size = 64,
+        category = "sifting",
+        subgroup = "arig-processes",
+        order = "a[sand-processing]-a[sifting]-d",
+        enabled = false,
+        auto_recycle = false,
+        energy_required = 2,
+        ingredients = {{type = "fluid", name = "planetaris-pure-sand", amount = 50}},
+        results = nil,
+        allow_productivity = false,
+      },
     })

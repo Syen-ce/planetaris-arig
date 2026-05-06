@@ -89,6 +89,7 @@ data:extend({
         {
       type = "item",
       name = "planetaris-cactus-seeds",
+      localised_name = {"item-name.planetaris-cactus-seeds"},
       icon = "__planetaris-arig__/graphics/icons/cactus-seeds.png",
       pictures =
       {

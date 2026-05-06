@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.32
+Date: 2026-05-06
+  Compatibility:
+    - Any planet start, reorder technologies
+    - Any planet start, fixed error with cargo drops
+    - Any planet start, added pure sand venting
+  Locale:
+    - Fixed locale errors
+  Bugfixes:
+    - Fixed hyper belts, underground and splitter not having the right heating amount
+---------------------------------------------------------------------------------------------------
 Version: 1.1.31
 Date: 2026-04-29
   Bugfixes:
