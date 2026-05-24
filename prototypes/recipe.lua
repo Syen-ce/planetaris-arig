@@ -157,6 +157,7 @@ data:extend(
         enabled = false,
         auto_recycle = false,
         energy_required = 2,
+        allow_as_intermediate = true,
         ingredients = { { type = "fluid", name = "planetaris-pure-sand", amount = 40 } },
         results = { { type = "item", name = "planetaris-sandstone-brick", amount = 1 } }
     },

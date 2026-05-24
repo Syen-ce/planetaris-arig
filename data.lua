@@ -1,3 +1,5 @@
+PlanetarisLib = require("PlanetarisLib")
+
 require("lib")
 require("prototypes.achievements")
 require("prototypes.autoplace-controls")

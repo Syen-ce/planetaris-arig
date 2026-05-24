@@ -1,7 +1,5 @@
 if mods["aai-loaders"] then
 
-require("PlanetarisLib")
-
 if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return end
 
   local hyper_specs = {

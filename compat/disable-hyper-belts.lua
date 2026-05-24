@@ -1,6 +1,3 @@
-if not mods["LithiumBattery"] then return end
-
-
 if settings.startup["disable-hyper-belts"].value == true then
 
     if data.raw.technology["planetaris-hyper-transport-belt"] then

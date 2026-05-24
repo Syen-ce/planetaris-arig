@@ -1511,4 +1511,28 @@ data:extend({
         }
       }
     },
+    {
+    name = "arig-heavy-oil-stain",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]",
+    collision_box = {{-3, -3}, {3, 3}},
+    collision_mask = {layers={doodad=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer =  decal_tile_layer -6,
+    pictures = get_decal_pictures("__planetaris-arig__/graphics/decorative/arig-heavy-oil-stain/arig-heavy-oil-stain-", "", 512, 18)
+  },
+  {
+    name = "arig-heavy-oil-stain-small",
+    type = "optimized-decorative",
+    order = "a[vulcanus]-b[decorative]",
+    collision_box = {{-3, -3}, {3, 3}},
+    collision_mask = {layers={doodad=true}, colliding_with_tiles_only=true},
+    render_layer = "decals",
+    tile_layer =  decal_tile_layer -6,
+    autoplace = {
+      order = "d[ground-surface]-c[stain]-b[calcite]-b[small]",
+      probability_expression = "vulcanus_calcite_stain_small"
+    },
+    pictures = get_decal_pictures("__planetaris-arig__/graphics/decorative/arig-heavy-oil-stain/arig-heavy-oil-stain-spotty-", "", 512, 18)
+  },
 })

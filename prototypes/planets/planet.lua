@@ -141,11 +141,11 @@ PlanetsLib:extend({
             },
             day_night_cycle_color_lookup =
             {
-              {0.0, "__space-age__/graphics/lut/vulcanus-1-day.png"},
-              {0.20, "__space-age__/graphics/lut/vulcanus-1-day.png"},
+              {0.0, "__planetaris-arig__/graphics/lut/arig-1-day.png"},
+              {0.20, "__planetaris-arig__/graphics/lut/arig-1-day.png"},
               {0.45, "__space-age__/graphics/lut/vulcanus-2-night.png"},
               {0.55, "__space-age__/graphics/lut/vulcanus-2-night.png"},
-              {0.80, "__space-age__/graphics/lut/vulcanus-1-day.png"},
+              {0.80, "__planetaris-arig__/graphics/lut/arig-1-day.png"},
             },
         },
     }
