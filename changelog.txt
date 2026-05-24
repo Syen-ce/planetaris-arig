@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.33
+Date: 2026-05-24
+  Features:
+    - Added Heavy oil stains around heavy oil patches to make them more visible
+    - Added setting for hiding hyper transport belt set, this will also hide in AAI loaders and K2SO
+  Changes:
+    - Changed planet LUT to make entities more "sandy"
+  Compatibility:
+    - Maraxsis, added planetaris glass to glass productivity technology
+    - Maraxsis, added super sealant substance recipe to the press
+  Bugfixes:
+    - Removed max level of heavy glass productivity technology
+    - Removed Cloud city mod old surface collision mask
+    - Sandstone brick recipe is now defined as intermediate
+---------------------------------------------------------------------------------------------------
 Version: 1.1.32
 Date: 2026-05-06
   Compatibility:

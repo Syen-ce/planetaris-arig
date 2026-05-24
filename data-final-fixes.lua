@@ -1,6 +1,8 @@
+PlanetarisLib = require("PlanetarisLib")
+
 require("compat.castra")
 require("compat.celestial-weather")
-require("compat.lithium-battery")
+require("compat.disable-hyper-belts")
 require("compat.maraxsis")
 require("compat.exotic-space-industries")
 require("compat.science-group")

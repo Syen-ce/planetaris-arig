@@ -281,6 +281,26 @@ function PlanetarisLib.set_recipe_category(recipe_name, category)
     recipe.crafting_categories = category
 end
 
+--- Adds an additional crafting category
+--- @param recipe_name string
+--- @param category string
+function PlanetarisLib.add_recipe_additional_category(recipe_name, category)
+    local recipe = data.raw.recipe[recipe_name]
+    if not recipe then
+        PlanetarisLib.error("Recipe:" .. recipe_name .. " does not exist.")
+        return
+    end
+    if recipe.additional_categories == nil then
+        recipe.additional_categories = {}
+    end
+    for _, existing_category in pairs(recipe.additional_categories) do
+        if existing_category == category then
+            return
+        end
+    end
+    table.insert(recipe.additional_categories, category)
+end
+
 --- Hide recipe in factoriopedia
 --- @param recipe_name string
 function PlanetarisLib.hide_recipe_factoriopedia(recipe_name)
@@ -440,6 +460,16 @@ function PlanetarisLib.add_tech_prerequisite_if_missing(tech_name, prereq_name)
     end
     
     table.insert(tech.prerequisites, prereq_name)
+end
+
+function PlanetarisLib.add_tech_effect(tech_name, effect)
+    local tech = data.raw.technology[tech_name]
+    if not tech then 
+        PlanetarisLib.error("Tech"..tech_name.."dont exist")
+    return
+    end
+  
+    table.insert(tech.effects, effect)
 end
 
 --- Removes a prerequisite from a technology

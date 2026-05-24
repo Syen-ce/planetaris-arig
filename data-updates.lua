@@ -1,6 +1,7 @@
+PlanetarisLib = require("PlanetarisLib")
+
 require("compat.tiber")
 require("compat.water-harvesting-recipes")
-require("PlanetarisLib")
 
 --------------------------------
 

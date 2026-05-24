@@ -1,5 +1,6 @@
 if not mods["Igrys"] then return end
 
+
     data.extend({
         {
         type = "recipe",

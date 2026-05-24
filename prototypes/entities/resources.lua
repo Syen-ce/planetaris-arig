@@ -171,6 +171,32 @@ data:extend ({
           }
         },
         map_color = {160, 62, 22},
-        map_grid = false
+        map_grid = false,
+        created_effect = {
+          type = "direct",
+          action_delivery =
+          {
+            type = "instant",
+            source_effects =
+            {
+              {
+                type = "create-decorative",
+                decorative = "arig-heavy-oil-stain",
+                spawn_max = 2,
+                spawn_min = 1,
+                spawn_min_radius = 0,
+                spawn_max_radius = 1
+              },
+              {
+                type = "create-decorative",
+                decorative = "arig-heavy-oil-stain-small",
+                spawn_max = 7,
+                spawn_min = 3,
+                spawn_min_radius = 2,
+                spawn_max_radius = 7
+              },
+            }
+          }
+        }
       },
 })

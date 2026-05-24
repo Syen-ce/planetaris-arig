@@ -77,7 +77,6 @@ data:extend({
 })
 end
 
-if mods["LithiumBattery"] then
 data:extend({
 	{
 		type = "bool-setting",
@@ -87,4 +86,3 @@ data:extend({
 		order = "d-a",
 	}
 })
-end

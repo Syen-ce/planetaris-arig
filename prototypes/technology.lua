@@ -632,7 +632,7 @@ data:extend({
         },
       time = 60
     },
-    max_level = 20,
+    max_level = "infinite",
     upgrade = true
   },
   })

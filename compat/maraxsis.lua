@@ -10,3 +10,11 @@ end
 if data.raw["space-connection"]["fulgora-maraxsis"] and mods["planetaris-hyarion"] then
     data.raw["space-connection"]["fulgora-maraxsis"] = nil
 end
+
+PlanetarisLib.add_tech_effect("maraxsis-glass-productivity", {
+            type = "change-recipe-productivity",
+            recipe = "planetaris-glass-panel",
+            change = 0.1
+        })
+
+PlanetarisLib.add_recipe_additional_category("maraxsis-super-sealant-substance", "compressing")
