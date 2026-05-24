@@ -9,6 +9,8 @@ Date: 2026-05-24
   Compatibility:
     - Maraxsis, added planetaris glass to glass productivity technology
     - Maraxsis, added super sealant substance recipe to the press
+  Locale:
+    - Added Polish locale by S3BA
   Bugfixes:
     - Removed max level of heavy glass productivity technology
     - Removed Cloud city mod old surface collision mask
