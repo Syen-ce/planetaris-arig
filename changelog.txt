@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.34
 Date: 2026-05-24
+  Changes:
+    - Raw quartz productivity tech no longer need metallurgic science
   Compatibility:
     - K2SO, added new icon to the hyper belt technology
   Bugfixes:

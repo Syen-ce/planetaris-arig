@@ -594,7 +594,6 @@ data:extend({
           {"chemical-science-pack", 1},
           {"production-science-pack", 1},
           {"space-science-pack", 1},
-          {"metallurgic-science-pack", 1},
           {"planetaris-compression-science-pack", 1},
         },
       time = 60
