@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.34
+Date: 2026-05-24
+  Changes:
+    - Raw quartz productivity tech no longer need metallurgic science
+  Compatibility:
+    - K2SO, added new icon to the hyper belt technology
+  Locale:
+    - Revised Polish locale by Hacai
+  Bugfixes:
+    - Fixed error with K2SO hidding hyper loaders and ignoring new recipes
+---------------------------------------------------------------------------------------------------
 Version: 1.1.33
 Date: 2026-05-24
   Features:

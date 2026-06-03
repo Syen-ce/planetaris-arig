@@ -111,7 +111,7 @@ table.insert(planetaris_sand_sifting,
     {type = "item", name = "kr-rare-metal-ore", amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false})
 
     ---------------------Hyper belts
-if settings.startup["disable-hyper-belts"].value == true then
+if settings.startup["disable-hyper-belts"].value == false then
     if data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then
 
         -- belt
@@ -198,6 +198,8 @@ if settings.startup["disable-hyper-belts"].value == true then
         circuit_wire_max_distance = default_circuit_wire_max_distance,
     },
     })
+
+    data_util.set_icon(data.raw.technology["planetaris-hyper-transport-belt"], "__planetaris-arig__/graphics/compat/k2so/technology/logistics-hyper.png",256)
 
     PlanetarisLib.add_or_replace_recipe_ingredient("kr-superior-loader", "kr-advanced-loader", {type = "item", name = "kr-hyper-loader", amount = 2})
     PlanetarisLib.add_tech_unlock("planetaris-hyper-transport-belt", "kr-hyper-loader")
