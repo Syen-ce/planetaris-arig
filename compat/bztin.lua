@@ -13,3 +13,5 @@ table.insert(arig_crash,
 local planetaris_sand_sifting = data.raw["recipe"]["planetaris-sand-sifting"].results
 table.insert(planetaris_sand_sifting,
     {type = "item", name = "tin-ore", amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false})
+
+PlanetarisLib.add_or_replace_recipe_ingredient("planetaris-press", "", {type = "item", name = "tinned-cable", amount = 10})
