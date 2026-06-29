@@ -132,7 +132,12 @@ if settings.startup["disable-hyper-belts"].value == false then
 
     if settings.startup["kr-loaders"].value then
 
-    local graphics = require("__Krastorio2-spaced-out__.prototypes.buildings.loader-graphics")
+    local graphics = nil
+    if (mods["Krastorio2"]) then
+        graphics = require("__Krastorio2__.prototypes.buildings.loader-graphics")
+    else
+        graphics = require("__Krastorio2-spaced-out__.prototypes.buildings.loader-graphics")
+    end
     local sounds = require("__base__.prototypes.entity.sounds")
 
     data:extend({
