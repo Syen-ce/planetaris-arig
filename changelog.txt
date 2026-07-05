@@ -2,7 +2,7 @@
 Version: 1.1.36
 Date: 2026-07-5
   Compatibility:
-    - K2SO, fixed errors with 2.0 update bt NullCascade
+    - K2SO, fixed errors with 2.0 update by NullCascade
     - Any planet start, added steam condensation unlock in oil processing
   Locale:
     - Revised Chinese locale by Esphas
