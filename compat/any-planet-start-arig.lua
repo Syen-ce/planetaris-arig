@@ -75,7 +75,11 @@ data.raw.technology["oil-processing"].effects = {
       {
         type = "unlock-recipe",
         recipe = "solid-fuel-from-petroleum-gas"
-      }
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "steam-condensation"
+      },
     }
 
     data.raw.technology["oil-processing"].research_trigger =
