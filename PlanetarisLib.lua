@@ -278,27 +278,27 @@ function PlanetarisLib.set_recipe_category(recipe_name, category)
         PlanetarisLib.error("Recipe:" .. recipe_name .. " does not exist.")
         return
     end
-    recipe.crafting_categories = category
+    recipe.categories = category
 end
 
---- Adds an additional crafting category
+--- Adds to recipe category
 --- @param recipe_name string
 --- @param category string
-function PlanetarisLib.add_recipe_additional_category(recipe_name, category)
+function PlanetarisLib.add_recipe_category(recipe_name, category)
     local recipe = data.raw.recipe[recipe_name]
     if not recipe then
         PlanetarisLib.error("Recipe:" .. recipe_name .. " does not exist.")
         return
     end
-    if recipe.additional_categories == nil then
-        recipe.additional_categories = {}
-    end
-    for _, existing_category in pairs(recipe.additional_categories) do
+    --if recipe.categories == nil then
+    --    recipe.categories = {}
+    --end
+    for _, existing_category in pairs(recipe.categories) do
         if existing_category == category then
             return
         end
     end
-    table.insert(recipe.additional_categories, category)
+    table.insert(recipe.categories, category)
 end
 
 --- Hide recipe in factoriopedia

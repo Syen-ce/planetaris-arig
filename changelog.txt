@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.37
+Date: 2026-07-15
+  Features:
+    - Added arig space platform backdrop and color lookup
+  Changes:
+    - Now sifting technology can be unlocked by mining both big and medium sand rocks
+  Compatibility:
+    - Made compatible with factorio 2.1
+---------------------------------------------------------------------------------------------------
 Version: 1.1.36
 Date: 2026-07-5
   Compatibility:

@@ -22,7 +22,7 @@ data:extend({
         type = "recipe",
         name = "msppr-arig",
         subgroup = "science-pack",
-        category = "compressing",
+         categories = {"compressing"},
         surface_conditions =
         {
             {

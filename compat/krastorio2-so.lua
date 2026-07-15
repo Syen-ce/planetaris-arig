@@ -38,7 +38,7 @@ data.extend({
 	{
 		type = "recipe",
 		name = "kr-compression-research-data",
-        category = "compressing",
+        categories = {"compressing"},
         enabled = false,
         auto_recycle = false,
         surface_conditions =
@@ -86,7 +86,7 @@ data_util.set_icon(data.raw.technology["planetaris-compression-science"],"__plan
 
 local planetaris_sand_sifting = data.raw["recipe"]["planetaris-sand-sifting"].results
 table.insert(planetaris_sand_sifting,
-    {type = "item", name = "kr-coke", amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false})
+    {type = "item", name = "kr-coke", amount = 1, independent_probability = 0.02, show_details_in_recipe_tooltip = false})
 
 local arig_crash = data.raw["simple-entity"]["arig-crash"].minable.results
 table.insert(arig_crash,
@@ -108,7 +108,7 @@ table.insert(arig_crash,
 
 local planetaris_sand_sifting = data.raw["recipe"]["planetaris-sand-sifting"].results
 table.insert(planetaris_sand_sifting,
-    {type = "item", name = "kr-rare-metal-ore", amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false})
+    {type = "item", name = "kr-rare-metal-ore", amount = 1, independent_probability = 0.02, show_details_in_recipe_tooltip = false})
 
     ---------------------Hyper belts
 if settings.startup["disable-hyper-belts"].value == false then
@@ -144,7 +144,7 @@ if settings.startup["disable-hyper-belts"].value == false then
     {
         type = "recipe",
         name = "kr-hyper-loader",
-        category = "electromagnetics",
+        categories = {"electromagnetics"},
         energy_required = 2,
         enabled = false,
         ingredients = {

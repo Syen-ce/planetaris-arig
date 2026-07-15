@@ -93,7 +93,7 @@ data:extend ({
               name = "heavy-oil",
               amount_min = 10,
               amount_max = 10,
-              probability = 1
+              independent_probability = 1
             }
           }
         },

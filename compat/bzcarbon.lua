@@ -12,7 +12,7 @@ table.insert(arig_crash,
 
 local planetaris_sand_sifting = data.raw["recipe"]["planetaris-sand-sifting"].results
 table.insert(planetaris_sand_sifting,
-    {type = "item", name = "flake-graphite", amount = 1, probability = 0.02, show_details_in_recipe_tooltip = false})
+    {type = "item", name = "flake-graphite", amount = 1, independent_probability = 0.02, show_details_in_recipe_tooltip = false})
 
 data:extend({
 {
@@ -24,7 +24,7 @@ data:extend({
     },
     localised_name = {"", {"item-name.flake-graphite"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.graphite"},
-    category = "sifting",
+    categories = {"sifting"},
     subgroup = "arig-processes",
     order = "d[graphite]",
     auto_recycle = false,
@@ -49,7 +49,7 @@ data:extend({
     },
     localised_name = {"", {"item-name.graphite"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.graphite"},
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     order = "d[graphite]",
     auto_recycle = false,
@@ -71,7 +71,7 @@ data:extend({
     },
     localised_name = {"", {"item-name.diamond"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.diamond"},
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     order = "d[graphite]-z-a",
     auto_recycle = false,
