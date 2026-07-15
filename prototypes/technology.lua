@@ -49,7 +49,7 @@ data:extend({
       prerequisites = {"planet-discovery-arig"},
       research_trigger = {
         type = "mine-entity",
-        entity = "planetaris-cactus-plant"
+        entities = {"planetaris-cactus-plant"}
       },
       order = "ea[arig]",
     },
@@ -78,7 +78,7 @@ data:extend({
       prerequisites = {"planet-discovery-arig"},
       research_trigger = {
         type = "mine-entity",
-        entity = "arig-big-sand-rock"
+        entities = {"arig-big-sand-rock", "arig-medium-sand-rock"}
       },
       order = "ea[arig]",
     },
@@ -98,7 +98,7 @@ data:extend({
     research_trigger =
     {
       type = "mine-entity",
-      entity = "heavy-oil-geyser"
+      entities = {"heavy-oil-geyser"}
     },
     order = "ea[arig]",
     },

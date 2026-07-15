@@ -1,3 +1,0 @@
-files:
-  - source: /locale/en/en.cfg
-    translation: /locale/%two_letters_code%/%two_letters_code%

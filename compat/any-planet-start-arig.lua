@@ -85,7 +85,7 @@ data.raw.technology["oil-processing"].effects = {
     data.raw.technology["oil-processing"].research_trigger =
     {
       type = "mine-entity",
-      entity = "heavy-oil-geyser"
+      entities = {"heavy-oil-geyser"}
     }
 
     data:extend({
@@ -109,7 +109,7 @@ data.raw.technology["oil-processing"].effects = {
           {icon="__planetaris-arig__/graphics/icons/sifter.png", shift={12, 12}, scale=0.4},
         },
         icon_size = 64,
-        category = "sifting",
+        categories = {"sifting"},
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-d",
         enabled = false,

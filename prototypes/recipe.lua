@@ -46,7 +46,7 @@ data:extend(
         name = "planetaris-sand-sifting",
         icon = "__planetaris-arig__/graphics/icons/fluid/sand.png",
         icon_size = 64,
-        category = "sifting",
+        categories = {"sifting"},
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]",
         enabled = false,
@@ -55,13 +55,13 @@ data:extend(
         ingredients = {{type = "fluid", name = "planetaris-sand", amount = 200}},
         results =
         {
-          {type = "fluid", name = "planetaris-pure-sand",   amount = 25, probability = 0.25, show_details_in_recipe_tooltip = false},
-          {type = "fluid", name = "steam",                  amount = 20, probability = 0.22, temperature = 165, show_details_in_recipe_tooltip = false},         
-          {type = "item", name = "iron-ore",                amount = 2,  probability = 0.20, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "copper-ore",              amount = 2,  probability = 0.20, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "coal",                    amount = 2,  probability = 0.08, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "stone",                   amount = 1,  probability = 0.04, show_details_in_recipe_tooltip = false}, 
-          {type = "item", name = "sulfur",                  amount = 1,  probability = 0.01, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "planetaris-pure-sand",   amount = 25, independent_probability = 0.25, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "steam",                  amount = 20, independent_probability = 0.22, temperature = 165, show_details_in_recipe_tooltip = false},         
+          {type = "item", name = "iron-ore",                amount = 2,  independent_probability = 0.20, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "copper-ore",              amount = 2,  independent_probability = 0.20, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "coal",                    amount = 2,  independent_probability = 0.08, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "stone",                   amount = 1,  independent_probability = 0.04, show_details_in_recipe_tooltip = false}, 
+          {type = "item", name = "sulfur",                  amount = 1,  independent_probability = 0.01, show_details_in_recipe_tooltip = false},
         },
         allow_productivity = false,
         crafting_machine_tint = {primary = {0.871, 0.788, 0.627, 1}, secondary = {0.871, 0.788, 0.627, 1},tertiary = {0.871, 0.788, 0.627, 1}, quaternary = {0.871, 0.788, 0.627, 1}},
@@ -71,7 +71,7 @@ data:extend(
         name = "planetaris-advanced-sand-sifting",
         icon = "__planetaris-arig__/graphics/icons/advanced-sand-sifting.png",
         icon_size = 64,
-        category = "sifting",
+        categories = {"sifting"},
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-b",
         enabled = false,
@@ -80,11 +80,11 @@ data:extend(
         ingredients = {{type = "fluid", name = "planetaris-sand", amount = 200}},
         results =
         {
-          {type = "fluid", name = "planetaris-pure-sand", amount = 20, probability = 0.30, show_details_in_recipe_tooltip = false},
-          {type = "fluid", name = "steam",                amount = 10, probability = 0.10, temperature = 165, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "calcite",               amount = 1,  probability = 0.25, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "sulfur",                amount = 1,  probability = 0.20, show_details_in_recipe_tooltip = false},
-          {type = "item", name = "coal",                  amount = 1,  probability = 0.15, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "planetaris-pure-sand", amount = 20, independent_probability = 0.30, show_details_in_recipe_tooltip = false},
+          {type = "fluid", name = "steam",                amount = 10, independent_probability = 0.10, temperature = 165, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "calcite",               amount = 1,  independent_probability = 0.25, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "sulfur",                amount = 1,  independent_probability = 0.20, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "coal",                  amount = 1,  independent_probability = 0.15, show_details_in_recipe_tooltip = false},
         },
         allow_productivity = false,
         crafting_machine_tint = {primary = {0.871, 0.788, 0.627, 1}, secondary = {0.871, 0.788, 0.627, 1},tertiary = {0.871, 0.788, 0.627, 1}, quaternary = {0.871, 0.788, 0.627, 1}},
@@ -94,7 +94,7 @@ data:extend(
         name = "planetaris-advanced-pure-sand-sifting",
         icon = "__planetaris-arig__/graphics/icons/advanced-pure-sand-sifting.png",
         icon_size = 64,
-        category = "sifting",
+        categories = {"sifting"},
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-c",
         enabled = false,
@@ -116,7 +116,7 @@ data:extend(
           {icon="__planetaris-arig__/graphics/icons/sifter.png", shift={12, 12}, scale=0.4},
         },
         icon_size = 64,
-        category = "sifting",
+        categories = {"sifting"},
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-d",
         enabled = false,
@@ -134,7 +134,7 @@ data:extend(
           {icon="__space-age__/graphics/icons/calcite.png", shift={12, 12}, scale=0.5},
         },
         icon_size = 64,
-        category = "sifting",
+        categories = {"sifting"},
         subgroup = "arig-processes",
         order = "a[sand-processing]-a[sifting]-d",
         enabled = false,
@@ -143,7 +143,7 @@ data:extend(
         ingredients = {{type = "fluid", name = "lithium-brine", amount = 25}},
         results =
         {
-          {type = "item", name = "calcite", amount = 1,  probability = 0.50, show_details_in_recipe_tooltip = false},
+          {type = "item", name = "calcite", amount = 1,  independent_probability = 0.50, show_details_in_recipe_tooltip = false},
           {type = "item", name = "ice", amount = 2, show_details_in_recipe_tooltip = false},
         },
         allow_productivity = false,
@@ -152,7 +152,7 @@ data:extend(
       {
         type = "recipe",
         name = "planetaris-sandstone-brick",
-        category = "compressing",
+        categories = {"compressing"},
         order = "a[sand-processing]-b[sand-processing]",
         enabled = false,
         auto_recycle = false,
@@ -169,7 +169,7 @@ data:extend(
         {icon="__base__/graphics/icons/wood.png", shift={12, 12}, scale=0.4},
       },
       icon_size = 64,
-      category = "organic-or-assembling",
+      categories = {"organic", "crafting"},
       subgroup = "arig-processes",
       order = "a[basic]-a-a-c",
       enabled = false,
@@ -181,7 +181,7 @@ data:extend(
       },
       results = { 
         { type = "item", name = "wood", amount = 3 },
-        { type = "item", name = "planetaris-cactus-seeds", amount = 1,  probability = 0.20}
+        { type = "item", name = "planetaris-cactus-seeds", amount = 1,  independent_probability = 0.20}
     },
     },
     {
@@ -193,7 +193,7 @@ data:extend(
         {icon="__planetaris-arig__/graphics/icons/cactus-seeds.png", shift={6, 12}, scale=0.3},
       },
       icon_size = 64,
-      category = "compressing",
+      categories = {"compressing"},
       subgroup = "arig-processes",
       order = "a[basic]-a-a-d",
       enabled = false,
@@ -205,7 +205,7 @@ data:extend(
       },
       results = { 
         { type = "item", name = "wood", amount = 1 },
-        { type = "item", name = "planetaris-cactus-seeds", amount = 1,  probability = 0.20}
+        { type = "item", name = "planetaris-cactus-seeds", amount = 1,  independent_probability = 0.20}
       },
       allow_productivity = true
     },
@@ -217,7 +217,7 @@ data:extend(
         {icon="__base__/graphics/icons/coal.png", shift={12, 12}, scale=0.4},
       },
       icon_size = 64,
-      category = "compressing",
+      categories = {"compressing"},
       subgroup = "arig-processes",
       order = "a[basic]-a-a-d",
       enabled = false,
@@ -236,7 +236,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-sandstone-foundation",
       icon = "__planetaris-arig__/graphics/icons/sandstone-foundation.png",
-      category = "compressing",
+      categories = {"compressing"},
       order = "a[sand-processing]-b[sand-processing]-b",
       enabled = false,
       auto_recycle = false,
@@ -252,7 +252,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-glass-panel",
-    category = "smelting",
+    categories = {"smelting"},
     subgroup = "arig-processes",
     auto_recycle = false,
     enabled = false,
@@ -271,7 +271,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-heavy-glass",
-    category = "advanced-crafting",
+    categories = {"advanced-crafting"},
     auto_recycle = false,
     enabled = false,
     energy_required = 5,
@@ -293,7 +293,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-raw-quartz",
-    category = "compressing",
+    categories = {"compressing"},
     enabled = false,
     auto_recycle = false,
     energy_required = 2,
@@ -309,7 +309,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-silica",
-    category = "compressing",
+    categories = {"compressing"},
     enabled = false,
     energy_required = 2,
     ingredients =
@@ -324,7 +324,7 @@ data:extend(
     {
     type = "recipe",
     name = "planetaris-compression-rocket-fuel",
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     enabled = false,
     auto_recycle = false,
@@ -342,7 +342,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-advanced-heavy-oil-cracking",
-    category = "chemistry",
+    categories = {"chemistry"},
     subgroup = "arig-processes",
     order = "a[sand-processing]-c-a",
     enabled = false,
@@ -377,7 +377,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-compression-science-pack",
-    category = "compressing",
+    categories = {"compressing"},
     enabled = false,
     auto_recycle = false,
     icon = "__planetaris-arig__/graphics/icons/compression-science-pack.png",
@@ -403,7 +403,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-hyper-transport-belt",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       surface_conditions =
     {
       {
@@ -427,7 +427,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-hyper-splitter",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       surface_conditions =
     {
       {
@@ -451,7 +451,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-hyper-underground-belt",
-      category = "electromagnetics",
+      categories = {"electromagnetics"},
       surface_conditions =
     {
       {
@@ -474,7 +474,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-big-chest",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 20,
       enabled = false,
       ingredients =
@@ -490,7 +490,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-active-provider-big-chest",
       localised_name = {"entity-name.planetaris-active-provider-big-chest"},
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 20,
       enabled = false,
       ingredients =
@@ -506,7 +506,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-passive-provider-big-chest",
       localised_name = {"entity-name.planetaris-passive-provider-big-chest"},
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 20,
       enabled = false,
       ingredients =
@@ -522,7 +522,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-storage-big-chest",
       localised_name = {"entity-name.planetaris-storage-big-chest"},
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 20,
       enabled = false,
       ingredients =
@@ -538,7 +538,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-buffer-big-chest",
       localised_name = {"entity-name.planetaris-buffer-big-chest"},
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 20,
       enabled = false,
       ingredients =
@@ -554,7 +554,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-requester-big-chest",
       localised_name = {"entity-name.planetaris-requester-big-chest"},
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 20,
       enabled = false,
       ingredients =
@@ -584,7 +584,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-advanced-solar-panel",
       energy_required = 20,
-      category = "electronics",
+      categories = {"electromagnetics"},
       enabled = false,
       ingredients =
       {
@@ -597,7 +597,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-supported-solar-panel",
-      category = "electronics",
+      categories = {"electromagnetics"},
       energy_required = 30,
       enabled = false,
       ingredients =
@@ -611,7 +611,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-high-support-electric-pole",
-      category = "electronics",
+      categories = {"electromagnetics"},
       energy_required = 10,
       enabled = false,
       ingredients =
@@ -625,7 +625,7 @@ data:extend(
     {
       type = "recipe",
       name = "planetaris-water-harvester",
-      category = "electronics",
+      categories = {"electromagnetics", "advanced-crafting"},
       subgroup = "arig-production",
       energy_required = 10,
       enabled = false,
@@ -648,7 +648,7 @@ data:extend(
       {
     type = "recipe",
     name = "planetaris-raw-diamond",
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     auto_recycle = false,
     enabled = false,
@@ -674,7 +674,7 @@ data:extend(
     },
     localised_name = {"", {"item-name.sulfur"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.sulfur"},
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     auto_recycle = false,
     enabled = false,
@@ -696,7 +696,7 @@ data:extend(
     },
     localised_name = {"", {"item-name.plastic-bar"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.plastic-bar"},
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     auto_recycle = false,
     enabled = false,
@@ -713,7 +713,7 @@ data:extend(
     type = "recipe",
     name = "planetaris-lithium-plate",
     localised_name = {"", {"item-name.lithium-plate"}, " (", {"technology-name.planetaris-compression"}, ")"},
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     order = "d[lithium]-a[lithium-plate]",
     auto_recycle = false,
@@ -732,7 +732,7 @@ data:extend(
     },
     localised_name = {"", {"item-name.carbon"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.carbon"},
-    category = "compressing",
+    categories = {"compressing"},
     subgroup = "arig-processes",
     auto_recycle = false,
     enabled = false,
@@ -754,7 +754,7 @@ data:extend(
     },
     localised_name = {"", {"item-name.landfill"}, " (", {"technology-name.planetaris-compression"}, ")"},
     localised_description = {"item-description.landfill"},
-    category = "compressing",
+    categories = {"compressing"},
     auto_recycle = false,
     enabled = false,
     energy_required = 0.5,
@@ -772,7 +772,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-water-harvesting",
       localised_name = {"", {"space-location-name.arig"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-a",
       icons = {
@@ -797,7 +797,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-nauvis-water-harvesting",
       localised_name = {"", {"space-location-name.nauvis"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-b",
       icons = {
@@ -827,7 +827,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-vulcanus-water-harvesting",
       localised_name = {"", {"space-location-name.vulcanus"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-c",
       icons = {
@@ -857,7 +857,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-fulgora-water-harvesting",
       localised_name = {"", {"space-location-name.fulgora"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-d",
       icons = {
@@ -886,7 +886,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-gleba-water-harvesting",
       localised_name = {"", {"space-location-name.gleba"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-e",
       icons = {
@@ -921,7 +921,7 @@ data:extend(
       type = "recipe",
       name = "planetaris-aquilo-water-harvesting",
       localised_name = {"", {"space-location-name.aquilo"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-e",
       icons = {
@@ -956,7 +956,7 @@ data:extend(
       name = "planetaris-debug-cactus-recipe",
       icon = "__planetaris-arig__/graphics/icons/cactus.png",
       icon_size = 64,
-      category = "sifting",
+      categories = {"sifting"},
       subgroup = "arig-processes",
       order = "a-a-b[natural]",
       enabled = true,

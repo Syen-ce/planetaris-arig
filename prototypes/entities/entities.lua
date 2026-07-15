@@ -183,7 +183,7 @@ data:extend({
     crafting_categories = {"sifting"},
     icons_positioning =
     {
-      {inventory_index = defines.inventory.furnace_modules, shift = {0, 1}}
+      {inventory_index = defines.inventory.crafter_modules, shift = {0, 1}}
     },
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
     graphics_set =
@@ -636,6 +636,7 @@ data:extend({
   },
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
+  direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
   inventory_size = 190,
   impact_category = "metal",
@@ -670,7 +671,7 @@ data:extend({
         min = 0.1,
       }
     },
-  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_connector = {circuit_connector_definitions["accumulator"]},
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
 {
@@ -697,15 +698,14 @@ data:extend({
   logistic_mode = "active-provider",
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
+  direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
   inventory_size = 190,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
-  animation_sound = sounds.logistics_chest_open,
-  opened_duration = logistic_chest_opened_duration,
-  animation =
+  picture =
   {
     layers =
     {
@@ -714,7 +714,6 @@ data:extend({
         priority = "high",
         width = 264,
         height = 264,
-        frame_count = 7,
         shift = util.by_pixel(0, -2),
         scale = 0.3
       },
@@ -723,12 +722,29 @@ data:extend({
         priority = "high",
         width = 384,
         height = 384,
-        repeat_count = 7,
         shift = util.by_pixel(12, -6),
         draw_as_shadow = true,
         scale = 0.3
       }
     }
+  },
+  robot_door = {
+    animation = {
+      layers =
+      {
+        {
+          filename = "__planetaris-arig__/graphics/entity/container/active-provider-container-animation.png",
+          priority = "high",
+          width = 264,
+          height = 264,
+          frame_count = 7,
+          shift = util.by_pixel(0, -2),
+          scale = 0.3
+        },
+      }
+    },
+    animation_sound = sounds.logistics_chest_open,
+    opened_duration = logistic_chest_opened_duration,
   },
   surface_conditions =
     {
@@ -737,7 +753,7 @@ data:extend({
         min = 0.1,
       }
     },
-  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_connector = {circuit_connector_definitions["accumulator"]},
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
 {
@@ -764,15 +780,14 @@ data:extend({
   logistic_mode = "passive-provider",
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
+  direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
   inventory_size = 190,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
-  animation_sound = sounds.logistics_chest_open,
-  opened_duration = logistic_chest_opened_duration,
-  animation =
+  picture =
   {
     layers =
     {
@@ -781,7 +796,6 @@ data:extend({
         priority = "high",
         width = 264,
         height = 264,
-        frame_count = 7,
         shift = util.by_pixel(0, -2),
         scale = 0.3
       },
@@ -790,12 +804,29 @@ data:extend({
         priority = "high",
         width = 384,
         height = 384,
-        repeat_count = 7,
         shift = util.by_pixel(12, -6),
         draw_as_shadow = true,
         scale = 0.3
       }
     }
+  },
+  robot_door = {
+    animation = {
+      layers =
+      {
+        {
+          filename = "__planetaris-arig__/graphics/entity/container/passive-provider-container-animation.png",
+          priority = "high",
+          width = 264,
+          height = 264,
+          frame_count = 7,
+          shift = util.by_pixel(0, -2),
+          scale = 0.3
+        },
+      }
+    },
+    animation_sound = sounds.logistics_chest_open,
+    opened_duration = logistic_chest_opened_duration,
   },
   surface_conditions =
     {
@@ -804,7 +835,7 @@ data:extend({
         min = 0.1,
       }
     },
-  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_connector = {circuit_connector_definitions["accumulator"]},
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
 {
@@ -832,15 +863,14 @@ data:extend({
   max_logistic_slots = 1,
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
+  direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
   inventory_size = 190,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
-  animation_sound = sounds.logistics_chest_open,
-  opened_duration = logistic_chest_opened_duration,
-  animation =
+  picture =
   {
     layers =
     {
@@ -849,7 +879,6 @@ data:extend({
         priority = "high",
         width = 264,
         height = 264,
-        frame_count = 7,
         shift = util.by_pixel(0, -2),
         scale = 0.3
       },
@@ -858,12 +887,29 @@ data:extend({
         priority = "high",
         width = 384,
         height = 384,
-        repeat_count = 7,
         shift = util.by_pixel(12, -6),
         draw_as_shadow = true,
         scale = 0.3
       }
     }
+  },
+  robot_door = {
+    animation = {
+      layers =
+      {
+        {
+          filename = "__planetaris-arig__/graphics/entity/container/storage-container-animation.png",
+          priority = "high",
+          width = 264,
+          height = 264,
+          frame_count = 7,
+          shift = util.by_pixel(0, -2),
+          scale = 0.3
+        },
+      }
+    },
+    animation_sound = sounds.logistics_chest_open,
+    opened_duration = logistic_chest_opened_duration,
   },
   surface_conditions =
     {
@@ -872,7 +918,7 @@ data:extend({
         min = 0.1,
       }
     },
-  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_connector = {circuit_connector_definitions["accumulator"]},
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
 {
@@ -900,15 +946,14 @@ data:extend({
   trash_inventory_size = 30,
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
+  direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
   inventory_size = 190,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
-  animation_sound = sounds.logistics_chest_open,
-  opened_duration = logistic_chest_opened_duration,
-  animation =
+  picture =
   {
     layers =
     {
@@ -917,7 +962,6 @@ data:extend({
         priority = "high",
         width = 264,
         height = 264,
-        frame_count = 7,
         shift = util.by_pixel(0, -2),
         scale = 0.3
       },
@@ -926,12 +970,29 @@ data:extend({
         priority = "high",
         width = 384,
         height = 384,
-        repeat_count = 7,
         shift = util.by_pixel(12, -6),
         draw_as_shadow = true,
         scale = 0.3
       }
     }
+  },
+  robot_door = {
+    animation = {
+      layers =
+      {
+        {
+          filename = "__planetaris-arig__/graphics/entity/container/buffer-container-animation.png",
+          priority = "high",
+          width = 264,
+          height = 264,
+          frame_count = 7,
+          shift = util.by_pixel(0, -2),
+          scale = 0.3
+        },
+      }
+    },
+    animation_sound = sounds.logistics_chest_open,
+    opened_duration = logistic_chest_opened_duration,
   },
   surface_conditions =
     {
@@ -940,7 +1001,7 @@ data:extend({
         min = 0.1,
       }
     },
-  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_connector = {circuit_connector_definitions["accumulator"]},
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
 {
@@ -966,6 +1027,7 @@ data:extend({
   },
   logistic_mode = "requester",
   trash_inventory_size = 30,
+  direction_count = 1,
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
   damaged_trigger_effect = hit_effects.entity(),
@@ -974,9 +1036,7 @@ data:extend({
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
   close_sound = sounds.metallic_chest_close,
-  animation_sound = sounds.logistics_chest_open,
-  opened_duration = logistic_chest_opened_duration,
-  animation =
+  picture =
   {
     layers =
     {
@@ -985,7 +1045,6 @@ data:extend({
         priority = "high",
         width = 264,
         height = 264,
-        frame_count = 7,
         shift = util.by_pixel(0, -2),
         scale = 0.3
       },
@@ -994,12 +1053,29 @@ data:extend({
         priority = "high",
         width = 384,
         height = 384,
-        repeat_count = 7,
         shift = util.by_pixel(12, -6),
         draw_as_shadow = true,
         scale = 0.3
       }
     }
+  },
+  robot_door = {
+    animation = {
+      layers =
+      {
+        {
+          filename = "__planetaris-arig__/graphics/entity/container/requester-container-animation.png",
+          priority = "high",
+          width = 264,
+          height = 264,
+          frame_count = 7,
+          shift = util.by_pixel(0, -2),
+          scale = 0.3
+        },
+      }
+    },
+    animation_sound = sounds.logistics_chest_open,
+    opened_duration = logistic_chest_opened_duration,
   },
   surface_conditions =
     {
@@ -1008,7 +1084,7 @@ data:extend({
         min = 0.1,
       }
     },
-  circuit_connector = circuit_connector_definitions["accumulator"],
+  circuit_connector = {circuit_connector_definitions["accumulator"]},
   circuit_wire_max_distance = default_circuit_wire_max_distance
 },
 

@@ -5,7 +5,7 @@ if not mods["Igrys"] then return end
         {
         type = "recipe",
         name = "planetaris-glass-panel-to-igrys-glass",
-        category = "crafting",
+        categories = {"crafting"},
         enabled = false,
         energy_required = 2,
         icon = "__Igrys__/Assets/Items/glass.png",
@@ -22,7 +22,7 @@ if not mods["Igrys"] then return end
         {
         type = "recipe",
         name = "igrys-glass-to-planetaris-glass-panel",
-        category = "crafting-with-fluid",
+        categories = {"crafting-with-fluid"},
         enabled = false,
         energy_required = 2,
         icon = "__planetaris-arig__/graphics/icons/glass-panel.png",

@@ -116,28 +116,17 @@ if mods["planetaris-hyarion"] then
 end
 
 -- Add solid fuel to compression
+
 if data.raw.recipe["solid-fuel-from-petroleum-gas"] then
-  if data.raw.recipe["solid-fuel-from-petroleum-gas"].additional_categories == nil then
-    data.raw.recipe["solid-fuel-from-petroleum-gas"].additional_categories = {"compressing"}
-  else
-    table.insert(data.raw.recipe["solid-fuel-from-petroleum-gas"].additional_categories, "compressing")
-  end
+  PlanetarisLib.add_recipe_category("solid-fuel-from-petroleum-gas", "compressing")
 end
 
 if data.raw.recipe["solid-fuel-from-heavy-oil"] then
-  if data.raw.recipe["solid-fuel-from-heavy-oil"].additional_categories == nil then
-    data.raw.recipe["solid-fuel-from-heavy-oil"].additional_categories = {"compressing"}
-  else
-    table.insert(data.raw.recipe["solid-fuel-from-heavy-oil"].additional_categories, "compressing")
-  end
+  PlanetarisLib.add_recipe_category("solid-fuel-from-heavy-oil", "compressing")
 end
 
 if data.raw.recipe["solid-fuel-from-light-oil"] then
-  if data.raw.recipe["solid-fuel-from-light-oil"].additional_categories == nil then
-    data.raw.recipe["solid-fuel-from-light-oil"].additional_categories = {"compressing"}
-  else
-    table.insert(data.raw.recipe["solid-fuel-from-light-oil"].additional_categories, "compressing")
-  end
+  PlanetarisLib.add_recipe_category("solid-fuel-from-light-oil", "compressing")
 end
 
 -- Update Agri tower 
@@ -219,3 +208,122 @@ if settings.startup["press-is-steam-powered"].value == true then
     data.raw["assembling-machine"]["planetaris-press"].energy_usage = "700kW"
 
 end
+
+-- add planet backdrop
+
+data.raw.planet["arig"].platform_surface_render_parameters = util.table.deepcopy(data.raw.planet["nauvis"].platform_surface_render_parameters)
+
+data.raw.planet["arig"].platform_surface_render_parameters.day_night_cycle_color_lookup =
+            {
+              {0.0, "__planetaris-arig__/graphics/lut/arig-1-day.png"},
+              {0.20, "__planetaris-arig__/graphics/lut/arig-1-day.png"},
+              {0.45, "__space-age__/graphics/lut/vulcanus-2-night.png"},
+              {0.55, "__space-age__/graphics/lut/vulcanus-2-night.png"},
+              {0.80, "__planetaris-arig__/graphics/lut/arig-1-day.png"},
+            }
+
+data.raw.planet["arig"].platform_surface_render_parameters.platform_backdrop =
+{
+  atmosphere_color = {
+    28,
+    23,
+    17,
+    30,
+  },
+  atmosphere_ray_light_color_1 = {
+    196,
+    130,
+    55,
+    255,
+  },
+  atmosphere_ray_light_color_2 = {
+    25.5,
+    21.49905,
+    12.900450000000001,
+    255,
+  },
+  atmosphere_thickness = 0.05,
+  cloud_flow_intensity = 2,
+  cloud_flow_seconds = 32,
+  cloud_normal_intensity = 2,
+  cloud_panning_rate = 10,
+  cloud_vertical_offset = 0,
+  cloudiness = 0.6,
+  emission_scalar = 2,
+  emission_scales_with_shadow = true,
+  light_color = {
+    246,
+    241,
+    235,
+    255,
+  },
+  light_direction = {
+    3,
+    0,
+    2,
+  },
+  light_intensity_contrast = 0.52,
+  light_radius = 7,
+  planet_axis = {
+    -35,
+    22,
+  },
+  planet_axis_deviation_amplitude = {
+    0,
+    0,
+  },
+  planet_axis_deviation_seconds = {
+    600,
+    712,
+  },
+  radius = 400,
+  rotation_seconds = 250,
+  specular_color = {
+    255,
+    255,
+    255,
+    255,
+  },
+  specular_intensity = 1,
+  surface_normal_intensity = 0.1,
+
+  position = {-680, 601},
+  parallax_strength = {0.95, 0.95},
+  planet_surface =
+  {
+    filename = "__planetaris-arig__/graphics/space/arig.png",
+    width = 2048,
+    height = 1024
+  },
+  planet_normal = nil,
+  --planet_emission =
+  --{
+  --  filename = "__planetaris-arig__/graphics/space/arig-emission.png",
+  --  width = 2048,
+  --  height = 1024
+  --},
+  planet_reflectivity =
+  {
+    filename = "__planetaris-arig__/graphics/space/arig-reflectivity.png",
+    width = 2048,
+    height = 1024
+  },
+  global_cloud =
+  {
+    filename = "__planetaris-arig__/graphics/space/arig-cloud.png",
+    width = 2048,
+    height = 1024
+  },
+  global_cloud_normal =
+  {
+    filename = "__planetaris-arig__/graphics/space/arig-cloud-normal.png",
+    width = 2048,
+    height = 1024
+  },
+  global_cloud_flow =
+  {
+    filename = "__planetaris-arig__/graphics/space/arig-cloud-flow.png",
+    width = 2048,
+    height = 1024
+  }
+}

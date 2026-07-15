@@ -5,7 +5,7 @@ if settings.startup["alloy-smelting-coke"].value then
     {
     type = "recipe",
     name = "heavy-oil-to-charcoal",
-    category = "chemistry",
+    categories = {"chemistry"},
     enabled = false,
     energy_required = 2,
     icon = "__wood-industry__/graphics/icons/charcoal.png",

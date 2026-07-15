@@ -4,7 +4,7 @@ if mods["planetaris-hyarion"] then
       type = "recipe",
       name = "planetaris-hyarion-water-harvesting",
       localised_name = {"", {"space-location-name.hyarion"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+       categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-d[fulgora]-a",
       icons = {
@@ -40,7 +40,7 @@ if mods["pelagos"] then
       type = "recipe",
       name = "planetaris-pelagos-water-harvesting",
       localised_name = {"", {"space-location-name.pelagos"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-e[gleba]-a",
       icons = {
@@ -81,7 +81,7 @@ if mods["lignumis"] then
       type = "recipe",
       name = "planetaris-lignumis-water-harvesting",
       localised_name = {"", {"space-location-name.lignumis"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-e[gleba]-b",
       icons = {
@@ -122,7 +122,7 @@ if mods["Muria"] then
       type = "recipe",
       name = "planetaris-muria-water-harvesting",
       localised_name = {"", {"space-location-name.muria"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-e[gleba]-c",
       icons = {
@@ -168,7 +168,7 @@ if mods["planetaris-tellus"] then
       type = "recipe",
       name = "planetaris-tellus-water-harvesting",
       localised_name = {"", {"space-location-name.tellus"}, " ", {"recipe-name.planetaris-water-harvesting"}},
-      category = "water-production",
+      categories = {"water-production"},
       subgroup = "water-harvesting",
       order = "a-e[gleba]-a-a",
       icons = {
