@@ -17,4 +17,4 @@ PlanetarisLib.add_tech_effect("maraxsis-glass-productivity", {
             change = 0.1
         })
 
-PlanetarisLib.add_recipe_additional_category("maraxsis-super-sealant-substance", "compressing")
+PlanetarisLib.add_recipe_category("maraxsis-super-sealant-substance", "compressing")
