@@ -65,6 +65,7 @@ data.raw.technology["rail-support-foundations"].localized_description = {"", {"t
 
 -- Adding science packs
 table.insert(data.raw.lab["lab"].inputs, "planetaris-compression-science-pack")
+table.insert(data.raw.lab["biolab"].inputs, "planetaris-compression-science-pack")
 
 table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
         type = "change-recipe-productivity",
@@ -202,6 +203,7 @@ if settings.startup["press-is-steam-powered"].value == true then
 					{ direction = defines.direction.east, position = { 1, 0 }},
 				},
 				production_type = "input-output",
+        filter = "steam",
 			},
     }
 

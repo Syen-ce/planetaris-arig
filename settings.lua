@@ -77,6 +77,18 @@ data:extend({
 })
 end
 
+if (mods["aai-loaders"]) then
+data:extend({
+	{
+		type = "bool-setting",
+		name = "set-hyper-upgrade-to-turbo",
+		setting_type = "startup",
+		default_value = true,
+		order = "d-b",
+	}
+})
+end
+
 data:extend({
 	{
 		type = "bool-setting",

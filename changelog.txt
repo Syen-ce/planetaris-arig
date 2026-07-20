@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.39
+Date: 2026-07-20
+  Compatibility:
+    - K2SO, fixed tech card error
+    - AII Loaders, Fixed recipe error
+    - AII Loaders, added hyper loader as upgrade to turbo loaders, added setting to disable the upgrade
+  Bugfixes:
+    - Added steam filter tot he press fluid box when steam mode is enable
+---------------------------------------------------------------------------------------------------
 Version: 1.1.38
 Date: 2026-07-16
   Compatibility:

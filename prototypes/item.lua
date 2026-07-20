@@ -195,7 +195,7 @@ data:extend({
         weight = 2*kg,
     },
     {
-        type = "tool",
+        type = "item",
         name = "planetaris-compression-science-pack",
         icon = "__planetaris-arig__/graphics/icons/compression-science-pack.png",
         localised_description = {"item-description.science-pack"},
