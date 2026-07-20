@@ -381,6 +381,7 @@ data:extend(
     enabled = false,
     auto_recycle = false,
     icon = "__planetaris-arig__/graphics/icons/compression-science-pack.png",
+    order = "a",
     surface_conditions =
     {
       {

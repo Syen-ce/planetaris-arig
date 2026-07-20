@@ -4,7 +4,7 @@ require("prototypes.entities.transport-belts")
 local data_util = require("__Krastorio2-spaced-out__/data-util")
 
 local function add_light(item)
-	local card = data.raw.tool[item]
+	local card = data.raw.item[item]
 	card.pictures = {
 		layers = {
 			{
@@ -70,12 +70,13 @@ data.extend({
 })
 
 --
-data_util.set_icon(data.raw.tool["planetaris-compression-science-pack"], "__planetaris-arig__/graphics/compat/k2so/icons/compression-tech-card.png")
-data.raw.tool["planetaris-compression-science-pack"].localised_name = { "item-name.kr-compression-tech-card" }
+data_util.set_icon(data.raw.item["planetaris-compression-science-pack"], "__planetaris-arig__/graphics/compat/k2so/icons/compression-tech-card.png")
+data.raw.item["planetaris-compression-science-pack"].localised_name = { "item-name.kr-compression-tech-card" }
 add_light("planetaris-compression-science-pack")
 
 data_util.make_tech_card("planetaris-compression-science-pack", {
 	{ type = "item", name = "kr-compression-research-data", amount = 5 },
+
 })
 data_util.add_recipe_unlock("planetaris-compression-science", "kr-compression-research-data")
 data.raw.technology["planetaris-compression-science"].localised_name = { "item-name.kr-compression-research-data" }

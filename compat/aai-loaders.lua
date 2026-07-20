@@ -1,5 +1,9 @@
 if mods["aai-loaders"] then
 
+local fluid_crafting_categories   = mods["space-age"] and {"crafting-with-fluid", "metallurgy"} or {"crafting-with-fluid"}
+local normal_crafting_categories  = mods["space-age"] and {"crafting", "metallurgy"}            or {"crafting"}
+local express_upgrade             = mods["space-age"] and "aai-turbo-loader"                    or nil
+
 if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return end
 
   local hyper_specs = {
@@ -18,7 +22,7 @@ if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return
       }
     },
     recipe = {
-      crafting_category = "crafting-with-fluid-or-metallurgy",
+      categories = fluid_crafting_categories,
       ingredients = {
         {type = "item", name = "planetaris-hyper-transport-belt", amount = 1},
         {type = "item", name = "planetaris-silica", amount = 30},
@@ -28,7 +32,7 @@ if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return
       energy_required = 2
     },
     unlubricated_recipe = {
-      crafting_category = "crafting-with-fluid-or-metallurgy",
+      categories = fluid_crafting_categories,
       ingredients = {
         {type = "item", name = "planetaris-hyper-transport-belt", amount = 1},
         {type = "item", name = "planetaris-silica", amount = 300},
@@ -60,6 +64,13 @@ if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return
     PlanetarisLib.add_recipe_surface_condition("aai-hyper-loader", "planetaris-crystalization-resistance", 100, 50)
   else
     PlanetarisLib.add_recipe_surface_condition("aai-hyper-loader", "planetaris-dust-concentration", 100, 50)
+  end
+
+  -- set hyper loader as upgrade to turbo
+  if settings.startup["set-hyper-upgrade-to-turbo"].value == true then
+    if data.raw["loader"]["aai-hyper-loader"] and data.raw["transport-belt"]["aai-hyper-loader"].hidden == false then
+      data.raw["loader"]["aai-turbo-loader"].next_upgrade = "aai-hyper-loader"
+    end
   end
 
  return
