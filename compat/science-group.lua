@@ -11,8 +11,8 @@ if not data.raw["item-subgroup"]["science-tab-planetaris-science-pack"] then
     }
 end
 
-data.raw.tool["planetaris-compression-science-pack"].subgroup = "science-tab-planetaris-science-pack"
-data.raw.tool["planetaris-compression-science-pack"].order = "a[arig]-a"
+data.raw.item["planetaris-compression-science-pack"].subgroup = "science-tab-planetaris-science-pack"
+data.raw.item["planetaris-compression-science-pack"].order = "a[arig]-a"
 
 if mods["Krastorio2-spaced-out"] then
     if data.raw["item-group"]["science"] then
