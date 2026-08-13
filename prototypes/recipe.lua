@@ -365,13 +365,13 @@ data:extend(
     subgroup = "arig-processes",
     enabled = false,
     auto_recycle = false,
-    energy_required = 2,
+    energy_required = 3,
     icon = "__planetaris-arig__/graphics/icons/cactus-plastic.png",
     ingredients =
     {
-      {type = "fluid", name = "petroleum-gas", amount = 20},
+      {type = "fluid", name = "petroleum-gas", amount = 15},
       {type = "item", name = "wood", amount = 1},
-      {type = "item", name = "planetaris-cactus", amount = 5},
+      {type = "item", name = "planetaris-cactus", amount = 6},
     },
     results = {{type="item", name="planetaris-cactus-plastic-bar", amount=5}},
     allow_productivity = true
@@ -766,7 +766,7 @@ data:extend(
     },
     auto_recycle = false,
     enabled = false,
-    energy_required = 1,
+    energy_required = 2,
     ingredients =
     {
       {type = "fluid", name = "petroleum-gas", amount = 25}, -- Better than chemistry
