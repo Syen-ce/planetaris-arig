@@ -49,7 +49,13 @@ data.raw.technology["planetaris-glass"].prerequisites = {"planetaris-sand-siftin
 data.raw.technology["planetaris-compression"].prerequisites = {"planetaris-glass"}
 data.raw.technology["condensing-agricultural-tower"].prerequisites = {"planetaris-glass"}
 
-data.raw.technology["planetaris-advanced-heavy-oil-cracking"].prerequisites = {"oil-gathering"}
+data.raw.technology["planetaris-cactus-plastic-production"].prerequisites = {"oil-gathering"}
+table.insert(data.raw.technology["plastics"].prerequisites, "planetaris-cactus-plastic-production")
+data.raw.technology["plastics"].research_trigger = {
+        type = "craft-item",
+        item = "planetaris-cactus-plastic-bar",
+      }
+data.raw.technology["plastics"].unit = nil
 
 data.raw.technology["oil-processing"].effects = {
       {

@@ -73,37 +73,18 @@ table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
         change = 0.1}
       )
 
+table.insert(data.raw.technology["rocket-fuel-productivity"].effects, {
+        type = "change-recipe-productivity",
+        recipe = "planetaris-rocket-biofuel",
+        change = 0.1}
+      )
+
 -- Block other planet recipes from arig
 
-local less_50_dust_concentration = {
-          property = "planetaris-dust-concentration",
-          min = 0,
-          max = 50,
-        }
-
-if data.raw["recipe"]["electromagnetic-plant"] then
-  if data.raw["recipe"]["electromagnetic-plant"].surface_conditions == nil then
-    data.raw["recipe"]["electromagnetic-plant"].surface_conditions = {less_50_dust_concentration}
-  else
-    table.insert(data.raw["recipe"]["electromagnetic-plant"].surface_conditions, less_50_dust_concentration)
-  end
-end
-
-if data.raw["recipe"]["cryogenic-plant"] then
-  if data.raw["recipe"]["cryogenic-plant"].surface_conditions == nil then
-    data.raw["recipe"]["cryogenic-plant"].surface_conditions = {less_50_dust_concentration}
-  else
-    table.insert(data.raw["recipe"]["cryogenic-plant"].surface_conditions, less_50_dust_concentration)
-  end
-end
-
-if data.raw["recipe"]["recycler"] then
-  if data.raw["recipe"]["recycler"].surface_conditions == nil then
-    data.raw["recipe"]["recycler"].surface_conditions = {less_50_dust_concentration}
-  else
-    table.insert(data.raw["recipe"]["recycler"].surface_conditions, less_50_dust_concentration)
-  end
-end
+PlanetarisLib.add_recipe_surface_condition("plastic-bar", "planetaris-dust-concentration", 50)
+PlanetarisLib.add_recipe_surface_condition("electromagnetic-plant", "planetaris-dust-concentration", 50)
+PlanetarisLib.add_recipe_surface_condition("cryogenic-plant", "planetaris-dust-concentration", 50)
+PlanetarisLib.add_recipe_surface_condition("recycler", "planetaris-dust-concentration", 50)
 
 -- Add hyarion advanced quartz recipes to the prod tech
 if mods["planetaris-hyarion"] then

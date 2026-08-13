@@ -34,8 +34,8 @@ planet_map_gen.arig = function()
         ["arig_crash"] = {},
         ["heavy-oil-geyser"] = {
           richness = 2,
-          frequency = 10,
-          Size = 4,
+          frequency = 13,
+          Size = 5,
         },
       },
       autoplace_settings =
