@@ -180,6 +180,7 @@ data:extend({
     crafting_speed = 2,
     energy_usage = "250kW",
     module_slots = 2,
+    use_mirroring = true,
     crafting_categories = {"sifting"},
     icons_positioning =
     {
@@ -429,6 +430,7 @@ data:extend({
   damaged_trigger_effect = hit_effects.entity(),
   drawing_box_vertical_extension = 0.5,
   impact_category = "metal",
+  use_mirroring = true,
   icon_draw_specification = {scale = 1, shift = {0, -0.5}},
   graphics_set =
     {
@@ -586,7 +588,7 @@ data:extend({
       }
     },
   crafting_categories = {"compressing"},
-  crafting_speed = 1.75,
+  crafting_speed = 2,
   energy_source =
   {
     type = "electric",
@@ -638,7 +640,7 @@ data:extend({
   selection_box = {{-1, -1}, {1, 1}},
   direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
-  inventory_size = 190,
+  inventory_size = 48*5,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   picture =
@@ -700,7 +702,7 @@ data:extend({
   selection_box = {{-1, -1}, {1, 1}},
   direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
-  inventory_size = 190,
+  inventory_size = 48*5,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
@@ -782,7 +784,7 @@ data:extend({
   selection_box = {{-1, -1}, {1, 1}},
   direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
-  inventory_size = 190,
+  inventory_size = 48*5,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
@@ -865,7 +867,7 @@ data:extend({
   selection_box = {{-1, -1}, {1, 1}},
   direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
-  inventory_size = 190,
+  inventory_size = 48*5,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
@@ -948,7 +950,7 @@ data:extend({
   selection_box = {{-1, -1}, {1, 1}},
   direction_count = 1,
   damaged_trigger_effect = hit_effects.entity(),
-  inventory_size = 190,
+  inventory_size = 48*5,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
@@ -1031,7 +1033,7 @@ data:extend({
   collision_box = {{-0.9, -0.9}, {0.9, 0.9}},
   selection_box = {{-1, -1}, {1, 1}},
   damaged_trigger_effect = hit_effects.entity(),
-  inventory_size = 190,
+  inventory_size = 48*5,
   impact_category = "metal",
   icon_draw_specification = {scale = 0.7},
   open_sound = sounds.metallic_chest_open,
@@ -1385,7 +1387,7 @@ data:extend({
     selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
     damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2}, {0.2, 0.2}}),
     drawing_box_vertical_extension = 2.2,
-    maximum_wire_distance = 6.5,
+    maximum_wire_distance = 7,
     supply_area_distance = 1.5,
     impact_category = "wood",
     open_sound = sounds.electric_network_open,
