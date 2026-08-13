@@ -62,5 +62,12 @@ if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return
     PlanetarisLib.add_recipe_surface_condition("aai-hyper-loader", "planetaris-dust-concentration", 100, 50)
   end
 
+    -- set hyper loader as upgrade to turbo
+  if settings.startup["set-hyper-upgrade-to-turbo"].value == true then
+    if data.raw["loader"]["aai-hyper-loader"] and data.raw["transport-belt"]["aai-hyper-loader"].hidden == false then
+      data.raw["loader"]["aai-turbo-loader"].next_upgrade = "aai-hyper-loader"
+    end
+  end
+
  return
 end

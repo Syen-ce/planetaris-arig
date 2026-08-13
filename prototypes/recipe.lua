@@ -342,7 +342,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-rocket-biofuel",
-    categories = {"compressing"},
+    category = "compressing",
     subgroup = "arig-processes",
     enabled = false,
     auto_recycle = false,
@@ -361,17 +361,17 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-cactus-plastic-bar",
-    categories = {"compressing"},
+    category = "compressing",
     subgroup = "arig-processes",
     enabled = false,
     auto_recycle = false,
-    energy_required = 2,
+    energy_required = 3,
     icon = "__planetaris-arig__/graphics/icons/cactus-plastic.png",
     ingredients =
     {
-      {type = "fluid", name = "petroleum-gas", amount = 20},
+      {type = "fluid", name = "petroleum-gas", amount = 15},
       {type = "item", name = "wood", amount = 1},
-      {type = "item", name = "planetaris-cactus", amount = 5},
+      {type = "item", name = "planetaris-cactus", amount = 6},
     },
     results = {{type="item", name="planetaris-cactus-plastic-bar", amount=5}},
     allow_productivity = true
@@ -379,7 +379,7 @@ data:extend(
   {
     type = "recipe",
     name = "planetaris-cactus-plastic-washing",
-    categories = {"sifting"},
+    category = "sifting",
     subgroup = "arig-processes",
     order = "c[advance]-a-b",
     enabled = false,
@@ -395,7 +395,7 @@ data:extend(
       {type = "item", name = "planetaris-cactus-plastic-bar", amount = 1},
     },
     results = {{type="item", name="plastic-bar", amount=1}},
-    allow_productivity = true
+    allow_productivity = false
   },
   {
     type = "recipe",
@@ -765,7 +765,7 @@ data:extend(
     },
     auto_recycle = false,
     enabled = false,
-    energy_required = 1,
+    energy_required = 2,
     ingredients =
     {
       {type = "fluid", name = "petroleum-gas", amount = 25}, -- Better than chemistry

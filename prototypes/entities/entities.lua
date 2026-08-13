@@ -180,7 +180,6 @@ data:extend({
     crafting_speed = 2,
     energy_usage = "250kW",
     module_slots = 2,
-    use_mirroring = true,
     crafting_categories = {"sifting"},
     icons_positioning =
     {
@@ -430,7 +429,6 @@ data:extend({
   damaged_trigger_effect = hit_effects.entity(),
   drawing_box_vertical_extension = 0.5,
   impact_category = "metal",
-  use_mirroring = true,
   icon_draw_specification = {scale = 1, shift = {0, -0.5}},
   graphics_set =
     {
@@ -1242,7 +1240,7 @@ data:extend({
     corpse = "solar-panel-remnants",
     dying_explosion = "solar-panel-explosion",
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-    collision_mask = {layers = {ground_tile = true, lava_tile=true}},
+    collision_mask = {layers = {ground_tile = true, lava_tile=true, player = true}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
     drawing_box_vertical_extension = 1.2,
@@ -1307,7 +1305,7 @@ data:extend({
     corpse = "small-electric-pole-remnants",
     dying_explosion = "small-electric-pole-explosion",
     collision_box = {{-0.15, -0.15}, {0.15, 0.15}},
-    collision_mask = {layers = {ground_tile = true, lava_tile=true}},
+    collision_mask = {layers = {ground_tile = true, lava_tile=true, player = true}},
     selection_box = {{-0.4, -0.4}, {0.4, 0.4}},
     damaged_trigger_effect = hit_effects.entity({{-0.2, -2.2}, {0.2, 0.2}}),
     drawing_box_vertical_extension = 2.2,
