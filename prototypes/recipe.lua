@@ -37,7 +37,7 @@ data:extend(
             {type = "item", name = "steel-plate", amount = 20},
             {type = "item", name = "iron-gear-wheel", amount = 15},
             {type = "item", name = "electronic-circuit", amount = 30},
-            {type = "item", name = "plastic-bar", amount = 10}
+            {type = "item", name = "planetaris-glass-panel", amount = 10}
           },
         results = {{type="item", name="planetaris-press", amount=1}}
     },  
@@ -321,7 +321,7 @@ data:extend(
     results = {{type="item", name="planetaris-silica", amount=1}},
     allow_productivity = true
   },
-    {
+  {
     type = "recipe",
     name = "planetaris-compression-rocket-fuel",
     category = "compressing",
@@ -332,11 +332,69 @@ data:extend(
     icon = "__planetaris-arig__/graphics/icons/compression-rocket-fuel.png",
     ingredients =
     {
-      {type = "item", name = "solid-fuel", amount = 2},      
-      {type = "item", name = "coal", amount = 1},
+      {type = "item", name = "solid-fuel", amount = 5},      
+      {type = "fluid", name = "light-oil", amount = 5},
       {type = "item", name = "sulfur", amount = 1},
     },
     results = {{type="item", name="rocket-fuel", amount=1}},
+    allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "planetaris-rocket-biofuel",
+    categories = {"compressing"},
+    subgroup = "arig-processes",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    icon = "__planetaris-arig__/graphics/icons/rocket-biofuel.png",
+    ingredients =
+    {
+      {type = "fluid", name = "light-oil", amount = 20},
+      {type = "item", name = "wood", amount = 10},
+      {type = "item", name = "coal", amount = 1},
+      {type = "item", name = "sulfur", amount = 1},
+    },
+    results = {{type="item", name="planetaris-rocket-biofuel", amount=1}},
+    allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "planetaris-cactus-plastic-bar",
+    categories = {"compressing"},
+    subgroup = "arig-processes",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    icon = "__planetaris-arig__/graphics/icons/cactus-plastic.png",
+    ingredients =
+    {
+      {type = "fluid", name = "petroleum-gas", amount = 20},
+      {type = "item", name = "wood", amount = 1},
+      {type = "item", name = "planetaris-cactus", amount = 5},
+    },
+    results = {{type="item", name="planetaris-cactus-plastic-bar", amount=5}},
+    allow_productivity = true
+  },
+  {
+    type = "recipe",
+    name = "planetaris-cactus-plastic-washing",
+    categories = {"sifting"},
+    subgroup = "arig-processes",
+    order = "c[advance]-a-b",
+    enabled = false,
+    auto_recycle = false,
+    energy_required = 2,
+    icons = {
+      {icon="__base__/graphics/icons/fluid/water.png", scale=0.5, draw_background=true },
+      {icon="__planetaris-arig__/graphics/icons/cactus-plastic.png", shift={12, 12}, scale=0.6},
+    },
+    ingredients =
+    {
+      {type = "fluid", name = "water", amount = 5},
+      {type = "item", name = "planetaris-cactus-plastic-bar", amount = 1},
+    },
+    results = {{type="item", name="plastic-bar", amount=1}},
     allow_productivity = true
   },
   {
@@ -575,7 +633,7 @@ data:extend(
       {
         {type = "item", name = "planetaris-glass-panel", amount = 10},
         {type = "item", name = "steel-plate", amount = 25},
-        {type = "item", name = "iron-gear-wheel", amount = 25},
+        {type = "item", name = "planetaris-cactus-plastic-bar", amount = 20},
         {type = "item", name = "advanced-circuit", amount = 35}
       },
       results = {{type="item", name="planetaris-arig-roboport", amount=1}}
@@ -618,7 +676,7 @@ data:extend(
       {
         {type = "item", name = "copper-cable", amount = 1},
         {type = "item", name = "steel-plate", amount = 5},
-        {type = "item", name = "planetaris-raw-quartz", amount = 1}
+        {type = "item", name = "planetaris-cactus-plastic-bar", amount = 1}
       },
       results = {{type="item", name="planetaris-high-support-electric-pole", amount=1}}
     },
@@ -698,6 +756,13 @@ data:extend(
     localised_description = {"item-description.plastic-bar"},
     category = "compressing",
     subgroup = "arig-processes",
+    surface_conditions =
+    {
+      {
+        property = "planetaris-dust-concentration",
+        max = 50,
+      }
+    },
     auto_recycle = false,
     enabled = false,
     energy_required = 1,
@@ -790,7 +855,7 @@ data:extend(
       energy_required = 10,
       enabled = false,
       ingredients = nil,
-      results = {{type="fluid", name="water", amount=100}},
+      results = {{type="fluid", name="water", amount=50}},
       allow_productivity = true
     },
     {
@@ -947,7 +1012,39 @@ data:extend(
       results = {{type="fluid", name="water", amount=100}},
       allow_productivity = true
     },
+    ----------------------------------------
+    {
+      type = "recipe",
+      name = "planetaris-arig-rocket-part",
+      localised_name = {"", {"item-name.rocket-part"}," (", {"space-location-name.arig"}, ")"},
+      icon = "__planetaris-arig__/graphics/icons/rocket-part.png",
+      localised_description = {"item-description.rocket-part"},
+      energy_required = 2,
+      enabled = false,
+      surface_conditions =
+      {
+        {
+          property = "planetaris-dust-concentration",
+          min = 50,
+          max = 100
+        }
+      },
+      hide_from_player_crafting = true,
+      auto_recycle = false,
+      categories = {"rocket-building"},
+      ingredients =
+      {
+        {type = "item", name = "planetaris-cactus-plastic-bar", amount = 1},
+        {type = "item", name = "planetaris-glass-panel", amount = 1},
+        {type = "item", name = "processing-unit", amount = 1},
+        {type = "item", name = "planetaris-rocket-biofuel", amount = 1}
+      },
+      results = {{type="item", name="rocket-part", amount=1}},
+      allow_productivity = true
+    },
 })
+
+PlanetsLib.assign_rocket_part_recipe("arig","planetaris-arig-rocket-part")
 
  if settings.startup["debug-cactus-recipe"].value == true then
   data:extend({

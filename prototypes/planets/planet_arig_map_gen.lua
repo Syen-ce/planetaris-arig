@@ -26,7 +26,7 @@ local island_noise_persistence = 0.5
 -- elevation levels
 local deep_sand_level = -40       -- Deep sand
 local shallow_sand_level = -20    -- Shallow water
-local beach_level = 0              -- Beach/coast
+local beach_level = 0              -- Coast
 local plateau_level = 20           -- Upper plateau
 
 -- transition thresholds

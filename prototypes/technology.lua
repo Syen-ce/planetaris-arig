@@ -84,15 +84,23 @@ data:extend({
     },
     {
     type = "technology",
-    name = "planetaris-advanced-heavy-oil-cracking",
-    icon = "__base__/graphics/technology/oil-gathering.png",
+    name = "planetaris-cactus-plastic-production",
+    icon = "__planetaris-arig__/graphics/technology/cactus-plastics.png",
     icon_size = 256,
-    prerequisites = {"planetaris-sand-sifting"},
+    prerequisites = {"planetaris-compression"},
     effects =
     {
       {
         type = "unlock-recipe",
         recipe = "planetaris-advanced-heavy-oil-cracking"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "planetaris-cactus-plastic-bar"
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "planetaris-cactus-plastic-washing"
       }
     },
     research_trigger =
@@ -142,7 +150,7 @@ data:extend({
         },
         {
           type = "unlock-recipe",
-          recipe = "planetaris-compression-rocket-fuel"
+          recipe = "planetaris-rocket-biofuel"
         },
         {
           type = "unlock-recipe",
@@ -162,6 +170,10 @@ data:extend({
         },
         {
           type = "unlock-recipe",
+          recipe = "planetaris-compression-rocket-fuel"
+        },
+        {
+          type = "unlock-recipe",
           recipe = "planetaris-carbon"
         },
         {
@@ -169,7 +181,7 @@ data:extend({
           recipe = "planetaris-landfill-compression"
         },
       },
-      prerequisites = {"planetaris-sand-sifting"},
+      prerequisites = {"planetaris-glass"},
       research_trigger =     {
         type = "craft-item",
         item = "planetaris-glass-panel",
@@ -616,6 +628,39 @@ data:extend({
       },
     },
     prerequisites = {"planetaris-heavy-glass"},
+    unit =
+    {
+      count_formula = "1.5^L*1000",
+      ingredients =
+        {
+          {"automation-science-pack", 1},
+          {"logistic-science-pack", 1},
+          {"chemical-science-pack", 1},
+          {"production-science-pack", 1},
+          {"space-science-pack", 1},
+          {"metallurgic-science-pack", 1},
+          {"planetaris-compression-science-pack", 1},
+        },
+      time = 60
+    },
+    max_level = "infinite",
+    upgrade = true
+  },
+  {
+    type = "technology",
+    name = "planetaris-cactus-plastic-productivity",
+    icons = util.technology_icon_constant_recipe_productivity("__planetaris-arig__/graphics/technology/cactus-plastics-productivity.png"),
+    icon_size = 256,
+    essential = false,
+    effects =
+    {
+      {
+        type = "change-recipe-productivity",
+        recipe = "planetaris-cactus-plastic-bar",
+        change = 0.1
+      },
+    },
+    prerequisites = {"planetaris-cactus-plastic-production","planetaris-compression-science"},
     unit =
     {
       count_formula = "1.5^L*1000",
