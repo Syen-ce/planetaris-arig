@@ -395,7 +395,7 @@ data:extend(
       {type = "item", name = "planetaris-cactus-plastic-bar", amount = 1},
     },
     results = {{type="item", name="plastic-bar", amount=1}},
-    allow_productivity = true
+    allow_productivity = false
   },
   {
     type = "recipe",
