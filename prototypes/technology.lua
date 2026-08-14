@@ -231,6 +231,26 @@ data:extend({
     },
     {
       type = "technology",
+      name = "planetaris-arig-rocket-part",
+      icon = "__base__/graphics/technology/rocket-silo.png",
+      icon_size = 256,
+      essential = true,
+      effects = {
+        {
+          type = "unlock-recipe",
+          recipe = "planetaris-arig-rocket-part"
+        },
+      },
+      prerequisites = {"planetaris-compression-science-pack"},
+      research_trigger =     {
+        type = "craft-item",
+        item = "planetaris-compression-science-pack",
+        count = 100
+      },
+      order = "ea[arig]",
+    },
+    {
+      type = "technology",
       name = "planetaris-sandstone-foundation",
       icon = "__planetaris-arig__/graphics/technology/sandstone-foundation.png",
       icon_size = 256,
@@ -697,7 +717,7 @@ if settings.startup["enable-arig-cargo-drops"].value == false then
             },
             time = 60,
           },
-          prerequisites = { "planetaris-compression-science" },
+          prerequisites = { "planetaris-arig-rocket-part" },
         })
       })
       

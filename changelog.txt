@@ -1,4 +1,34 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.43
+Date: 2026-08-14
+  Bugfixes:
+    - Fixed arig rocket recipe not unlocking
+---------------------------------------------------------------------------------------------------
+Version: 1.1.42
+Date: 2026-08-14
+  Features:
+    - Added a starting crash when the player first arrives to arig
+    - Added cacutus plastic bar and cactus plastic washing
+    - Added Rocket biofuel
+    - Added custom rocket part recipe to Arig rocket silo
+    - Added cacutus plastic production technology
+  Changes:
+    - Presses are 12.5% faster to normalize recipe times (1.75 -> 2)
+    - Renamed advanced heavy oil cracking technology to cactus plastic production
+    - Blocked compression and vanilla plastic bar recipes on arig's surface
+    - Extended supported power pole wire distance one tile more (6.5 -> 7)
+    - Increase supported solar panel power production (120kW -> 180kW)
+    - Now containers have 5 times the inventory size of a steel chest (190 -> 240)
+    - Reduced 50% mining time of arig crash remnants (3 -> 1.5)
+  Balancing:
+    - Heavy oil geysers appear 33% more often and 20% bigger
+    - Reduced water from Arig water harvesting 50% to make cactus harvesting more useful (100 -> 50)
+    - Rebalance compression rocket fuel recipe to be more efficient than vanilla
+  Compatibility:
+    - Added compatibility with loaders modernized
+  Bugfixes:
+    - Fixed sifter and press not flipping
+---------------------------------------------------------------------------------------------------
 Version: 1.1.41
 Date: 2026-08-13
   Features:
