@@ -241,7 +241,7 @@ data:extend({
           recipe = "planetaris-arig-rocket-part"
         },
       },
-      prerequisites = {"planetaris-compression"},
+      prerequisites = {"planetaris-compression-science"},
       research_trigger =     {
         type = "craft-item",
         item = "planetaris-compression-science-pack",
