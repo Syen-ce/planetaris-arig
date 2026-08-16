@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.46
+Date: 2026-08-16
+  Bugfixes:
+    - Version 2.0
+    - Fixed error with Planetslib rocket part recipe
+---------------------------------------------------------------------------------------------------
 Version: 1.1.45
 Date: 2026-08-14
   Bugfixes:
@@ -20,10 +26,10 @@ Version: 1.1.42
 Date: 2026-08-14
   Features:
     - Added a starting crash when the player first arrives to arig
-    - Added cacutus plastic bar and cactus plastic washing
+    - Added cactus plastic bar and cactus plastic washing
     - Added Rocket biofuel
     - Added custom rocket part recipe to Arig rocket silo
-    - Added cacutus plastic production technology
+    - Added cactus plastic production technology
   Changes:
     - Presses are 12.5% faster to normalize recipe times (1.75 -> 2)
     - Renamed advanced heavy oil cracking technology to cactus plastic production
@@ -45,10 +51,10 @@ Version: 1.1.41
 Date: 2026-08-13
   Features:
     - Added a starting crash when the player first arrives to arig
-    - Added cacutus plastic bar and cactus plastic washing
+    - Added cactus plastic bar and cactus plastic washing
     - Added Rocket biofuel
     - Added custom rocket part recipe to Arig rocket silo
-    - Added cacutus plastic production technology
+    - Added cactus plastic production technology
   Changes:
     - Presses are 12.5% faster to normalize recipe times (1.75 -> 2)
     - Renamed advanced heavy oil cracking technology to cactus plastic production
