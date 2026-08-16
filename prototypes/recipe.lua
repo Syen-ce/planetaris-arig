@@ -1031,7 +1031,7 @@ data:extend(
       },
       hide_from_player_crafting = true,
       auto_recycle = false,
-      categories = {"rocket-building"},
+      category = "rocket-building",
       ingredients =
       {
         {type = "item", name = "planetaris-cactus-plastic-bar", amount = 1},
