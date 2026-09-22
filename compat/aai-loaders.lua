@@ -68,8 +68,8 @@ if not data.raw["transport-belt"]["planetaris-hyper-transport-belt"] then return
 
   -- set hyper loader as upgrade to turbo
   if settings.startup["set-hyper-upgrade-to-turbo"].value == true then
-    if data.raw["loader"]["aai-hyper-loader"] and data.raw["transport-belt"]["aai-hyper-loader"].hidden == false then
-      data.raw["loader"]["aai-turbo-loader"].next_upgrade = "aai-hyper-loader"
+    if data.raw["loader-1x1"]["aai-hyper-loader"] and not data.raw["loader-1x1"]["aai-hyper-loader"].hidden then
+      data.raw["loader-1x1"]["aai-turbo-loader"].next_upgrade = "aai-hyper-loader"
     end
   end
 
