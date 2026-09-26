@@ -108,7 +108,7 @@ data:extend({
       stack_size = 10,
       default_import_location = "arig",
       weight = 10 * kg,
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       fuel_value = "4MJ"
     },
     {
@@ -127,7 +127,7 @@ data:extend({
           { size = 64, filename = "__planetaris-arig__/graphics/icons/cactus-3.png", scale = 0.5, mipmap_count = 4 },
           { size = 64, filename = "__planetaris-arig__/graphics/icons/cactus-4.png", scale = 0.5, mipmap_count = 4 },
         },
-        fuel_category = "chemical",
+        fuel_categories = {"chemical"},
         fuel_value = "2MJ",
         capsule_action = item_effects.jellynut_speed,
         spoil_ticks = 60 * minute,
@@ -198,7 +198,7 @@ data:extend({
       type = "item",
       name = "planetaris-rocket-biofuel",
       icon = "__planetaris-arig__/graphics/icons/rocket-biofuel.png",
-      fuel_category = "chemical",
+      fuel_categories = {"chemical"},
       fuel_value = "300MJ",
       fuel_acceleration_multiplier = 2.2,
       fuel_top_speed_multiplier = 1.15,
