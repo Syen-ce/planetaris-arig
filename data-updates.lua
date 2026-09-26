@@ -60,6 +60,15 @@ table.insert(data.raw["roboport"]["roboport"].surface_conditions, {
       })
 end
 
+-- No ammonia ocean crater please
+
+if data.raw.explosion["nuke-effects-aquilo"] then
+  table.insert(data.raw.explosion["nuke-effects-aquilo"].surface_conditions, {
+        property = "planetaris-dust-concentration",
+        max = 50
+      })
+end
+
 -- Addon description to rail support on deep sand
 data.raw.technology["rail-support-foundations"].localized_description = {"", {"technology-description.rail-support-foundations"}, "",{"technology-description.rail-support-foundations-addon"}}
 
@@ -85,6 +94,9 @@ PlanetarisLib.add_recipe_surface_condition("plastic-bar", "planetaris-dust-conce
 PlanetarisLib.add_recipe_surface_condition("electromagnetic-plant", "planetaris-dust-concentration", 50)
 PlanetarisLib.add_recipe_surface_condition("cryogenic-plant", "planetaris-dust-concentration", 50)
 PlanetarisLib.add_recipe_surface_condition("recycler", "planetaris-dust-concentration", 50)
+PlanetarisLib.add_recipe_surface_condition("quantum-processor", "planetaris-dust-concentration", 50)
+PlanetarisLib.add_recipe_surface_condition("fusion-reactor", "planetaris-dust-concentration", 50)
+PlanetarisLib.add_recipe_surface_condition("fusion-generator", "planetaris-dust-concentration", 50)
 
 -- Add hyarion advanced quartz recipes to the prod tech
 if mods["planetaris-hyarion"] then
