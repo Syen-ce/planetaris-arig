@@ -7,15 +7,15 @@ require("compat.water-harvesting-recipes")
 
 -- Set Upgrade for level 5 belts
 
-if data.raw["transport-belt"]["planetaris-hyper-transport-belt"] and data.raw["transport-belt"]["planetaris-hyper-transport-belt"].hidden == false then
+if data.raw["transport-belt"]["planetaris-hyper-transport-belt"] and not data.raw["transport-belt"]["planetaris-hyper-transport-belt"].hidden then
   data.raw["transport-belt"]["turbo-transport-belt"].next_upgrade = "planetaris-hyper-transport-belt"
 end
 
-if data.raw["transport-belt"]["planetaris-hyper-underground-belt"] and data.raw["transport-belt"]["planetaris-hyper-underground-belt"].hidden == false then
+if data.raw["underground-belt"]["planetaris-hyper-underground-belt"] and not data.raw["underground-belt"]["planetaris-hyper-underground-belt"].hidden then
   data.raw["underground-belt"]["turbo-underground-belt"].next_upgrade = "planetaris-hyper-underground-belt"
 end
 
-if data.raw["transport-belt"]["planetaris-hyper-splitter"] and data.raw["transport-belt"]["planetaris-hyper-splitter"].hidden == false then
+if data.raw["splitter"]["planetaris-hyper-splitter"] and not data.raw["splitter"]["planetaris-hyper-splitter"].hidden then
   data.raw["splitter"]["turbo-splitter"].next_upgrade = "planetaris-hyper-splitter"
 end
 
