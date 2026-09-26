@@ -1,5 +1,4 @@
--- Scatters container entities around a center position, each with a chance
--- to contain a random subset of items from a loot table.
+-- Scatters container entities around a center position, each with a chance to contain a random subset of items from a loot table.
 
 
 local function spawn_scattered_containers(surface, center, opts)
