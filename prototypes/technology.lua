@@ -472,7 +472,7 @@ data:extend({
           recipe = "planetaris-hyper-splitter"
         },
       },
-      prerequisites = {"planetaris-compression-science", "turbo-transport-belt"},
+      prerequisites = {"planetaris-silica-processing", "turbo-transport-belt"},
       unit =
       {
         count = 3000,
