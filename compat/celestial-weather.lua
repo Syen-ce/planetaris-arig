@@ -1,5 +1,10 @@
 -- Code from the celestial wheather mod
 
+-- Celestial Weather, or one of its Factorio 2.1 continuations: they keep its graphics under the same paths
+local celestial_weather = (mods["celestial-weather"] and "celestial-weather")
+  or (mods["celestial-weather-additions-updated"] and "celestial-weather-additions-updated")
+  or (mods["celestial-weather-updated"] and "celestial-weather-updated")
+
 local cluster_particles = {
   type = "cluster",
   distance = 8,
@@ -55,14 +60,14 @@ local fog = {
   tick_factor = 0.000001,
 }
 
-if mods["celestial-weather"] and settings.startup["enable-arig-weather"].value then
+if celestial_weather and settings.startup["enable-arig-weather"].value then
 
 ---- Arig
 
   local arig_sand = table.deepcopy(data.raw["trivial-smoke"]["aquilo-snow-smoke"])
   arig_sand.name = "arig_sand"
   arig_sand.color = {1, 0.918, 0.78}
-  arig_sand.animation.filename = "__celestial-weather__/graphics/entity/sand-particles.png",
+  arig_sand.animation.filename = "__" .. celestial_weather .. "__/graphics/entity/sand-particles.png",
   data:extend({arig_sand})
 
   local arig_weather = table.deepcopy(cluster_particles)
@@ -77,7 +82,7 @@ if mods["celestial-weather"] and settings.startup["enable-arig-weather"].value t
   arig_fog.color1 = {0.929, 0.812, 0.553, 1.0}
   arig_fog.color2 = {1, 0.929, 0.722, 1.0}
   arig_fog.tick_factor = 0.0003
-  arig_fog.detail_noise_texture.filename = "__celestial-weather__/graphics/entity/dense-clouds.png"
+  arig_fog.detail_noise_texture.filename = "__" .. celestial_weather .. "__/graphics/entity/dense-clouds.png"
 
 -- implement
 

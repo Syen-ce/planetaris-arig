@@ -47,7 +47,7 @@ if (mods["any-planet-start"]) then
   APS.add_choice("arig")
 end
 
-if (mods["celestial-weather"]) then
+if mods["celestial-weather"] or mods["celestial-weather-updated"] or mods["celestial-weather-additions-updated"] then
 data:extend({
 	{
 		type = "bool-setting",
