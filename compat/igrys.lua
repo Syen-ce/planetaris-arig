@@ -17,7 +17,8 @@ if not mods["Igrys"] then return end
         },
         results = {{type="item", name="igrys-glass", amount=1}},
         main_product = "igrys-glass",
-        allow_productivity = false
+        allow_productivity = false,
+        auto_recycle = false
         },
         {
         type = "recipe",
@@ -34,7 +35,8 @@ if not mods["Igrys"] then return end
         },
         results = {{type="item", name="planetaris-glass-panel", amount=1}},
         main_product = "planetaris-glass-panel",
-        allow_productivity = false
+        allow_productivity = false,
+        auto_recycle = false
         },
     })
 
