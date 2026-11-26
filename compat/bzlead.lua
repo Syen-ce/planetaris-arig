@@ -14,5 +14,7 @@ local planetaris_sand_sifting = data.raw["recipe"]["planetaris-sand-sifting"].re
 table.insert(planetaris_sand_sifting,
     {type = "item", name = "lead-ore", amount = 1, independent_probability = 0.05, show_details_in_recipe_tooltip = false})
 
-PlanetarisLib.add_or_replace_recipe_ingredient("planetaris-advanced-solar-panel", "", {type = "item", name = "lead-expansion-bolt", amount = 8})
-PlanetarisLib.add_or_replace_recipe_ingredient("planetaris-water-harvester", "", {type = "item", name = "lead-expansion-bolt", amount = 8})
+if settings.startup["bzlead-more-entities"] and settings.startup["bzlead-more-entities"].value == "yes" then
+    PlanetarisLib.add_or_replace_recipe_ingredient("planetaris-advanced-solar-panel", "", {type = "item", name = "lead-expansion-bolt", amount = 8})
+    PlanetarisLib.add_or_replace_recipe_ingredient("planetaris-water-harvester", "", {type = "item", name = "lead-expansion-bolt", amount = 8})
+end
